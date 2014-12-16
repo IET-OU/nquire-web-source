@@ -2,6 +2,7 @@ app/src/main/webapp/WEB-INF/nquireit.properties
 app/src/main/webapp/WEB-INF/nquireit-tests.properties
 app/src/main/webapp/files*
 app/target
+app/pom.xml
 app/.idea
 
 static/.idea
