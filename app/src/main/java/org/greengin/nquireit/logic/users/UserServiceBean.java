@@ -5,6 +5,7 @@ import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.files.FileMapUpload;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,10 +23,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.math.BigInteger;
+import java.net.URL;
 import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Vector;
 
 
@@ -48,6 +51,18 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
     SecureRandom random;
 
     Vector<String> newUsers = new Vector<String>();
+
+    @Value("${recaptcha.secretKey}")
+    private String recaptchaSecretKey;
+
+    @Value("${recaptcha.siteKey}")
+    private String recaptchaSiteKey;
+
+    @Value("${server.proxyHost}")
+    private String proxyHost;
+
+    @Value("${server.proxyPort}")
+    private String proxyPort;
 
     public void newUser(String id) {
         if (!newUsers.contains(id)) {
@@ -273,6 +288,33 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
                 result.getResponses().put("registration", "email_exists");
                 return result;
             } catch (UsernameNotFoundException e2) {
+                String string = new String();
+
+                try {
+                    // Newer versions of Java need a "http." prefix on the system properties
+                    System.setProperty("proxyHost", this.proxyHost);
+                    System.setProperty("proxyPort", this.proxyPort);
+                    System.setProperty("http.proxyHost", this.proxyHost);
+                    System.setProperty("http.proxyPort", this.proxyPort);
+                    URL url = new URL("https://www.google.com/recaptcha/api/siteverify?secret=" + this.recaptchaSecretKey + "&response=" + data.getRecaptcha());
+System.out.println(url.toString());
+                    Scanner scanner = new Scanner(url.openStream());
+                    while (scanner.hasNext()) {
+                        string += scanner.nextLine();
+                    }
+                    scanner.close();
+                } catch (java.io.IOException e3) {
+                    System.out.println("!!!!!" + e3.toString() + "!!!!!");
+                }
+
+                if (string.indexOf("true") == -1) {
+                    StatusResponse result = new StatusResponse();
+                    result.setLogged(false);
+                    result.setProfile(null);
+                    result.getResponses().put("registration", "bad_recaptcha");
+                    return result;
+                }
+
                 UserProfile user = context.getUserProfileDao().createUser(data.getUsername(), data.getPassword(), data.getEmail(), false);
                 login(user, request, response);
                 return status(connections, request.getSession());

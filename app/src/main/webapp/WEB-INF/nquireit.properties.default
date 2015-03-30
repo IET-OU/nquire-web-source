@@ -7,8 +7,19 @@ server.appUrl=http://localhost
 server.proxyHost=
 server.proxyPort=
 
+security.encryptPassword=password
+security.encryptSalt=salt
+security.encodingSecret=secret
+
 facebook.clientId=id
 facebook.clientSecret=secret
 
 google.consumerKey=key
 google.consumerSecret=secret
+
+twitter.consumerKey=key
+twitter.consumerSecret=secret
+
+# The siteKey is hard-coded into profile-controller.js - TODO use this config file
+recaptcha.siteKey=key
+recaptcha.secretKey=secret

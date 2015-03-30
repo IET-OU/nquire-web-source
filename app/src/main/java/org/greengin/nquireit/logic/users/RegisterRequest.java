@@ -11,4 +11,8 @@ public class RegisterRequest extends LoginRequest {
     @Getter
     @Setter
     String email;
+
+    @Getter
+    @Setter
+    String recaptcha = "";
 }

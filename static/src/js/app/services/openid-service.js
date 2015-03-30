@@ -72,11 +72,12 @@ angular.module('senseItServices', null, null).factory('OpenIdService', ['RestSer
     });
   };
 
-  service.register = function (username, password, email, callback) {
+  service.register = function (username, password, email, recaptcha, callback) {
     return service._openIdRequest('api/security/register', true, true, 'post', {
       username: username,
       password: password,
-      email: email
+      email: email,
+      recaptcha: recaptcha
     }).then(function (data) {
       service._update(false);
       return data;

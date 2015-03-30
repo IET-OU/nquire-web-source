@@ -7,8 +7,11 @@
              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
 
-    <bean id="userService"
-          class="org.greengin.nquireit.logic.users.UserServiceBean">
+    <bean id="userService" class="org.greengin.nquireit.logic.users.UserServiceBean">
+        <property name="recaptchaSecretKey" value="${recaptcha.secretKey}"/>
+        <property name="recaptchaSiteKey" value="${recaptcha.siteKey}"/>
+        <property name="proxyHost" value="${server.proxyHost}"/>
+        <property name="proxyPort" value="${server.proxyPort}"/>
     </bean>
 
     <bean id="securityContextRepository"

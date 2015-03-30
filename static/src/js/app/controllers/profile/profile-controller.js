@@ -153,6 +153,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
   };
 
   $scope.register = {
+    recaptcha: {siteKey: "6LdCDQQTAAAAAMCRBAIBUPoCoizvve9n0nofETNT"},
     editing: {username: '', password: '', repeatPassword: '', email: ''},
     error: {username: false, password: false, repeatPassword: false, email: false},
     clearPassword: function () {
@@ -169,6 +170,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 
       this.editing.username = this.editing.username.trim();
       this.editing.email = this.editing.email.trim();
+      this.editing.recaptcha = document.getElementById("g-recaptcha-response").value;
 
       if (this.editing.username.length == 0) {
         this.error.username = 'Username cannot be empty.';
@@ -189,15 +191,24 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         ok = false;
       }
 
+      if (this.editing.recaptcha === '') {
+        this.error.recaptcha = 'Are you are human being or a robot?';
+        ok = false;
+      }
+
       if (ok) {
         var error = this.error = {username: false, password: false, repeatPassword: false, email: false};
-        OpenIdService.register(this.editing.username, this.clearPassword(), this.editing.email).then(function (data) {
+        OpenIdService.register(this.editing.username, this.clearPassword(), this.editing.email, this.editing.recaptcha).then(function (data) {
           switch (data.responses.registration) {
             case 'username_exists':
               error.username = 'Username not available.';
               break;
             case 'email_exists':
               error.email = 'eMail already associated with a different account.';
+              break;
+            case 'bad_recaptcha':
+              error.recaptcha = 'Captcha failed.  Try again.';
+              grecaptcha.reset();
               break;
           }
         });

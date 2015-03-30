@@ -104,6 +104,22 @@
                       class="profile-login-password-error">{{register.error.repeatPassword}}</span>
                 </div>
 
+                <div class="form-group">
+                    <label for="g-recaptcha-response" class="control-label">
+                        <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">
+                            Captcha
+                        </abbr>:
+                    </label>
+                    <div class="input-container">
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <div class="g-recaptcha" data-sitekey="{{register.recaptcha.siteKey}}">
+                        </div>
+                        <span xdata-ng-if="register.error.recaptcha" class="profile-login-password-error">
+                            {{register.error.recaptcha}}
+                        </span>
+                   </div>
+                </div>
+
                 <div class="btn-group">
                     <button class="btn btn-default" data-ng-click="register.submit()">
                         Register new account
