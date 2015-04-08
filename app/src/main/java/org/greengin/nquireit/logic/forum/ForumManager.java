@@ -11,10 +11,16 @@ import org.greengin.nquireit.logic.rating.CommentFeedResponse;
 import org.greengin.nquireit.logic.rating.CommentRequest;
 import org.greengin.nquireit.logic.rating.VoteCount;
 import org.greengin.nquireit.logic.rating.VoteRequest;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Vector;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Properties;
+import javax.mail.*;
+import javax.mail.internet.*;
 
 /**
  * Created by evilfer on 6/26/14.
@@ -31,7 +37,9 @@ public class ForumManager extends AbstractContentManager {
         super(context, user, tokenOk);
     }
 
+    private String appUrl = "http://nquire-it.org";
 
+    private String smtpHost = "smtpmail.open.ac.uk";
 
     /* view actions */
 
@@ -136,6 +144,40 @@ public class ForumManager extends AbstractContentManager {
             if (thread != null) {
                 Comment comment = context.getCommentsDao().getComment(thread, commentId);
                 if (comment != null) {
+                    if (voteData.isReport()) {
+                        try {
+                            Properties properties = new Properties();
+                            properties.put("mail.smtp.host", this.smtpHost);
+                            Session session = Session.getInstance(properties, null);
+                            session.setDebug(true);
+                            MimeMessage msg = new MimeMessage(session);
+                            msg.setFrom(new InternetAddress("no-reply@nquire-it.org", "nQuire-it"));
+                            msg.setSubject("Inappropriate content at " + this.appUrl);
+                            msg.setText(
+                                "Dear nQuire-it administrator,\n\n" +
+                                "Inappropriate content has been reported on the nQuire-it website.\n\n" +
+                                "Please review the reports and take appropriate action.\n\n" +
+                                this.appUrl + "/#/admin/reported\n\n" +
+                                "This is an automatically generated e-mail sent to all administrators.  " +
+                                "To stop receiving these messages, arrange for your administrator status to be revoked."
+                            );
+
+                            List<UserProfile> admins = context.getUserProfileDao().listAdmins();
+                            for(UserProfile admin: admins) {
+                                msg.addRecipient(
+                                    MimeMessage.RecipientType.TO,
+                                    new InternetAddress(admin.getEmail(),
+                                    admin.getUsername())
+                                );
+                            }
+
+                            Transport.send(msg);
+                        } catch (UnsupportedEncodingException ex) {
+                            ex.printStackTrace();
+                        } catch (MessagingException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
                     return context.getVoteDao().vote(user, comment, voteData);
                 }
             }

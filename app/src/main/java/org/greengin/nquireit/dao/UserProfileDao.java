@@ -22,6 +22,7 @@ import java.util.List;
 public class UserProfileDao {
 
     static final String ALL_USERS_QUERY = "SELECT u FROM UserProfile u";
+    static final String ALL_ADMINS_QUERY = "SELECT u FROM UserProfile u WHERE admin = 1 AND email IS NOT NULL";
     static final String AUTHORITY_QUERY = "SELECT userId FROM UserConnection WHERE providerId = ? AND providerUserId = ?";
     static final String USER_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.username)=LOWER(:username)";
     static final String USER_EMAIL_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.email)=LOWER(:email)";
@@ -175,6 +176,10 @@ public class UserProfileDao {
         if (visibility != null) {
             user.setVisibility(visibility);
         }
+    }
+
+    public List<UserProfile> listAdmins() {
+        return em.createQuery(ALL_ADMINS_QUERY, UserProfile.class).getResultList();
     }
 
     public List<UserProfile> listUsers() {
