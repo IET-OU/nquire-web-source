@@ -31,6 +31,11 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Properties;
+import javax.mail.*;
+import javax.mail.internet.*;
+
 
 public class UserServiceBean implements UserDetailsService, InitializingBean {
 
@@ -64,6 +69,9 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
     @Value("${server.proxyPort}")
     private String proxyPort;
 
+    @Value("${server.smtpHost}")
+    private String smtpHost;
+
     public void newUser(String id) {
         if (!newUsers.contains(id)) {
             newUsers.add(id);
@@ -83,6 +91,10 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
     @Override
     public UserProfile loadUserByUsername(String s) throws UsernameNotFoundException {
         return context.getUserProfileDao().loadUserByUsername(s);
+    }
+
+    public UserProfile loadUserByUsernameOrEmail(String s) throws UsernameNotFoundException {
+        return context.getUserProfileDao().loadUserByUsernameOrEmail(s, s);
     }
 
     private StatusResponse createResponse(Authentication auth, HashMap<String, Connection<?>> connections, HttpSession session) {
@@ -291,6 +303,9 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
                 String string = new String();
 
                 try {
+                    System.out.println("ProxyHost=" + this.proxyHost);
+                    System.out.println("ProxyPort=" + this.proxyPort);
+                    System.out.println("recaptchaSecretKey=" + this.recaptchaSecretKey);
                     // Newer versions of Java need a "http." prefix on the system properties
                     System.setProperty("proxyHost", this.proxyHost);
                     System.setProperty("proxyPort", this.proxyPort);
@@ -319,6 +334,85 @@ System.out.println(url.toString());
                 login(user, request, response);
                 return status(connections, request.getSession());
             }
+        }
+    }
+
+
+    public StatusResponse remindUser(RegisterRequest data, HashMap<String, Connection<?>> connections, HttpServletRequest request, HttpServletResponse response) {
+        StatusResponse result = new StatusResponse();
+        String string = new String();
+
+        try {
+            UserProfile userProfile = loadUserByUsernameOrEmail(data.getEmail());
+
+            System.out.println("ProxyHost=" + this.proxyHost);
+            System.out.println("ProxyPort=" + this.proxyPort);
+            System.out.println("recaptchaSecretKey=" + this.recaptchaSecretKey);
+            // Newer versions of Java need a "http." prefix on the system properties
+            System.setProperty("proxyHost", this.proxyHost);
+            System.setProperty("proxyPort", this.proxyPort);
+            System.setProperty("http.proxyHost", this.proxyHost);
+            System.setProperty("http.proxyPort", this.proxyPort);
+            URL url = new URL("https://www.google.com/recaptcha/api/siteverify?secret=" + this.recaptchaSecretKey + "&response=" + data.getRecaptcha());
+            System.out.println(url.toString());
+            Scanner scanner = new Scanner(url.openStream());
+            while (scanner.hasNext()) {
+                string += scanner.nextLine();
+            }
+            scanner.close();
+
+            result.setLogged(false);
+            result.setProfile(null);
+            result.getResponses().put("reminder", "reminder_sent");
+
+            if (string.indexOf("true") == -1) {
+                result.setLogged(false);
+                result.setProfile(null);
+                result.getResponses().put("reminder", "bad_recaptcha");
+                return result;
+            }
+
+            try {
+                // Simple random password with 16 hex digits
+                String newPassword = Long.toHexString(Double.doubleToLongBits(Math.random()));
+
+                context.getUserProfileDao().setPassword(userProfile, newPassword);
+
+                Properties properties = new Properties();
+                properties.put("mail.smtp.host", this.smtpHost);
+                Session session = Session.getInstance(properties, null);
+                session.setDebug(true);
+                MimeMessage msg = new MimeMessage(session);
+                msg.setFrom(new InternetAddress("no-reply@nquire-it.org", "nQuire-it"));
+                msg.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress(userProfile.getEmail(), userProfile.getUsername()));
+                msg.setSubject("Your nQuire-it account");
+                msg.setText(
+                    "Dear nQuire-it user,\n\n" +
+                    "You (or someone claiming to be you) has requested a new password for your account.\n\n" +
+                    "Your username is " + userProfile.getUsername() + "\n" +
+                    "Your new password is " + newPassword + "\n\n" +
+                    "You should login and change this to something more memorable as soon as possible."
+                );
+
+                Transport.send(msg);
+            } catch (UnsupportedEncodingException ex) {
+                ex.printStackTrace();
+            } catch (MessagingException ex) {
+                ex.printStackTrace();
+            }
+
+            return result;
+        } catch (UsernameNotFoundException e) {
+            result.setLogged(false);
+            result.setProfile(null);
+            result.getResponses().put("reminder", "email_not_exists");
+            return result;
+        } catch (java.io.IOException e3) {
+            System.out.println("!!!!!" + e3.toString() + "!!!!!");
+            result.setLogged(false);
+            result.setProfile(null);
+            result.getResponses().put("reminder", "bad_recaptcha");
+            return result;
         }
     }
 

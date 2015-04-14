@@ -216,6 +216,51 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
     }
   };
 
+
+  $scope.reminder = {
+    recaptcha: {siteKey: "6LdCDQQTAAAAAMCRBAIBUPoCoizvve9n0nofETNT"},
+    editing: {email: ''},
+    error: {email: false},
+    reset: function () {
+      this.editing = {email: ''};
+      this.error = {email: false};
+    },
+    submit: function () {
+      var ok = true;
+
+      this.editing.email = this.editing.email.trim();
+      this.editing.recaptcha = document.getElementById("g-recaptcha-response").value;
+
+      if (this.editing.email.length == 0) {
+        this.error.email = 'Email cannot be empty.';
+        ok = false;
+      }
+
+      if (this.editing.recaptcha === '') {
+        this.error.recaptcha = 'Are you are human being or a robot?';
+        ok = false;
+      }
+
+      if (ok) {
+        var error = this.error = {email: false};
+        OpenIdService.reminder(this.editing.email, this.editing.recaptcha).then(function (data) {
+	        grecaptcha.reset();
+          switch (data.responses.reminder) {
+            case 'email_not_exists':
+              error.email = 'No account found with that email or username.';
+              break;
+            case 'bad_recaptcha':
+              error.recaptcha = 'Captcha failed.  Try again.';
+              break;
+            case 'reminder_sent':
+              error.email = 'A password reminder has been sent.';
+              break;
+          }
+        });
+      }
+    }
+  };
+
   $scope.password = {
     set: function () {
       return $scope.status.profile.passwordSet;

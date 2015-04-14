@@ -8,6 +8,7 @@
 
 
     <bean id="userService" class="org.greengin.nquireit.logic.users.UserServiceBean">
+        <property name="smtpHost" value="${server.smtpHost}"/>
         <property name="recaptchaSecretKey" value="${recaptcha.secretKey}"/>
         <property name="recaptchaSiteKey" value="${recaptcha.siteKey}"/>
         <property name="proxyHost" value="${server.proxyHost}"/>

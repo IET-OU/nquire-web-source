@@ -4,6 +4,7 @@ database.url=jdbc:mysql://localhost/senseit
 persistence.unit=nquire-it-jpa
 
 server.appUrl=http://localhost
+server.smtpHost=localhost
 server.proxyHost=
 server.proxyPort=
 

@@ -84,6 +84,16 @@ angular.module('senseItServices', null, null).factory('OpenIdService', ['RestSer
     });
   };
 
+  service.reminder = function (email, recaptcha, callback) {
+    return service._openIdRequest('api/security/reminder', true, true, 'post', {
+      email: email,
+      recaptcha: recaptcha
+    }).then(function (data) {
+      service._update(false);
+      return data;
+    });
+  };
+
   service.logout = function () {
     return service._openIdRequest('api/security/logout', false, true, 'post');
   };

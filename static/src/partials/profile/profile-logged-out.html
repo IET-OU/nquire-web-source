@@ -7,6 +7,11 @@
         <a href data-ng-click="loginMode.set('register')"
            data-ng-class="{'active': loginMode.is('register')}">Register</a>
     </span>
+    <span>|</span>
+    <span>
+        <a href data-ng-click="loginMode.set('reminder')"
+           data-ng-class="{'active': loginMode.is('reminder')}">Password reminder</a>
+    </span>
 </div>
 <div class="profile-page">
 
@@ -117,7 +122,7 @@
                         <span xdata-ng-if="register.error.recaptcha" class="profile-login-password-error">
                             {{register.error.recaptcha}}
                         </span>
-                   </div>
+                    </div>
                 </div>
 
                 <div class="btn-group">
@@ -130,6 +135,48 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <div class="profile-logged-out" data-ng-if="loginMode.is('reminder')">
+
+        <div class="profile-logged-out-register-form-container">
+            <p>I forgot my password: </p>
+
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="reminder_email" class="control-label">Email or username:</label>
+
+                    <div class="input-container">
+                        <input id="reminder_email" type="email" class="form-control"
+                               data-ng-model="reminder.editing.email"/>
+                    </div>
+                <span data-ng-if="reminder.error.email"
+                      class="profile-login-username-error">{{reminder.error.email}}</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="g-recaptcha-response" class="control-label">
+                        <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">
+                            Captcha
+                        </abbr>:
+                    </label>
+                    <div class="input-container">
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <div class="g-recaptcha" data-sitekey="{{reminder.recaptcha.siteKey}}">
+                        </div>
+                        <span xdata-ng-if="reminder.error.recaptcha" class="profile-login-password-error">
+                            {{reminder.error.recaptcha}}
+                        </span>
+                    </div>
+                </div>
+
+                <button class="btn btn-default" data-ng-click="reminder.submit()">
+                    Send reminder
+                </button>
+            </form>
+        </div>
+
+    </div>
 
     </div>
 </div>

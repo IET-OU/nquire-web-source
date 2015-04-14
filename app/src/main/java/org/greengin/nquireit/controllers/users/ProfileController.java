@@ -158,6 +158,14 @@ public class ProfileController {
         return context.getUsersManager().registerUser(data, getConnections(), request, response);
     }
 
+    @RequestMapping(value = "/api/security/reminder", method = RequestMethod.POST)
+    @ResponseBody
+    @ResponseView(value = Views.UserProfileData.class)
+    public StatusResponse performReminder(@RequestBody RegisterRequest data, HttpServletRequest request, HttpServletResponse response) {
+        resetLoginSessionAttr(request);
+        return context.getUsersManager().remindUser(data, getConnections(), request, response);
+    }
+
     @RequestMapping(value = "/api/security/connection/{providerId}", method = RequestMethod.DELETE)
     @ResponseBody
     @ResponseView(value = Views.UserProfileData.class)
