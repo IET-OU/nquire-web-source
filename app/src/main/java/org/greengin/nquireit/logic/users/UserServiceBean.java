@@ -259,6 +259,10 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
             }
         }
 
+        if (!data.getEmail().isEmpty() && !data.getEmail().equals(currentStatus.getProfile().getEmail())) {
+          context.getUserProfileDao().updateEmail(currentStatus.getProfile(), data.getEmail());
+        }
+
         context.getUserProfileDao().updateUserInformation(currentStatus.getProfile(), data.getMetadata(), data.getVisibility());
 
         return true;

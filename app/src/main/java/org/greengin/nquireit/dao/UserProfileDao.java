@@ -161,6 +161,12 @@ public class UserProfileDao {
     }
 
     @Transactional
+    public void updateEmail(UserProfile user, String email) {
+        em.persist(user);
+        user.setEmail(email);
+    }
+
+    @Transactional
     public void updateUserInformation(UserProfile user, HashMap<String, String> metadata, HashMap<String, Boolean> visibility) {
         em.persist(user);
 

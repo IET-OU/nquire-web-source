@@ -16,7 +16,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         $scope.status.profile.visibility = {};
       }
       return $scope.status.profile;
-    }, ['username', 'metadata', 'visibility'], function () {
+    }, ['username', 'email', 'metadata', 'visibility'], function () {
       $scope.status.newUser = false;
       $scope.openIdService.saveProfile().then(function (data) {
         $scope.formError = data.responses.username || null;

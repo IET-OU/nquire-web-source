@@ -76,6 +76,36 @@
         </form>
     </div>
 
+    <!-- email -->
+    <div data-ng-if="!form.isOpen('email')" class="profile-logged-in-right-section-data">
+        <span class="profile-logged-in-right-section-data-label">Email:</span>
+        <span class="profile-logged-in-right-section-data-value">{{status.profile.email}}
+        <button data-ng-if="!form.isOpen()"
+                class="btn btn-default"
+                data-ng-click="form.open('email')">Edit
+        </button></span>
+    </div>
+    <div data-ng-if="form.isOpen('email')" class="profile-logged-in-right-section-data">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" class="form-control" type="text" placeholder="Email"
+                       data-ng-model="form.values.email"/>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-default"
+                        data-ng-disabled="form.okButtonDisabled()" data-ng-click="form.save()">
+                    Save
+                </button>
+                <button class="btn btn-default"
+                        data-ng-disabled="form.resetButtonDisabled()"
+                        data-ng-click="form.cancel()">Cancel
+                </button>
+            </div>
+            <div data-ng-if="formError" class="email">{{formErrorText()}}</div>
+        </form>
+    </div>
+
     <!-- password -->
     <div data-ng-if="!password.editing" class="profile-logged-in-right-section-data">
         <p>

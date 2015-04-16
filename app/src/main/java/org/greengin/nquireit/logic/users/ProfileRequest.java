@@ -14,6 +14,10 @@ public class ProfileRequest {
 
     @Getter
     @Setter
+    String email;
+
+    @Getter
+    @Setter
     HashMap<String, String> metadata;
 
     @Getter
