@@ -3,6 +3,7 @@ package org.greengin.nquireit.logic.users;
 import org.greengin.nquireit.entities.users.UserProfile;
 import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.files.FileMapUpload;
+import org.greengin.nquireit.logic.mail.Mailer;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,15 +27,11 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.security.SecureRandom;
 import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Vector;
-
-import java.io.UnsupportedEncodingException;
-import java.util.Properties;
-import javax.mail.*;
-import javax.mail.internet.*;
 
 
 public class UserServiceBean implements UserDetailsService, InitializingBean {
@@ -68,9 +65,6 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
 
     @Value("${server.proxyPort}")
     private String proxyPort;
-
-    @Value("${server.smtpHost}")
-    private String smtpHost;
 
     public void newUser(String id) {
         if (!newUsers.contains(id)) {
@@ -372,34 +366,26 @@ System.out.println(url.toString());
                 return result;
             }
 
-            try {
-                // Simple random password with 16 hex digits
-                String newPassword = Long.toHexString(Double.doubleToLongBits(Math.random()));
+            // Simple random password with 16 hex digits
+            String newPassword = Long.toHexString(Double.doubleToLongBits(Math.random()));
 
-                context.getUserProfileDao().setPassword(userProfile, newPassword);
+            context.getUserProfileDao().setPassword(userProfile, newPassword);
 
-                Properties properties = new Properties();
-                properties.put("mail.smtp.host", this.smtpHost);
-                Session session = Session.getInstance(properties, null);
-                session.setDebug(true);
-                MimeMessage msg = new MimeMessage(session);
-                msg.setFrom(new InternetAddress("no-reply@nquire-it.org", "nQuire-it"));
-                msg.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress(userProfile.getEmail(), userProfile.getUsername()));
-                msg.setSubject("Your nQuire-it account");
-                msg.setText(
-                    "Dear nQuire-it user,\n\n" +
-                    "You (or someone claiming to be you) has requested a new password for your account.\n\n" +
-                    "Your username is " + userProfile.getUsername() + "\n" +
-                    "Your new password is " + newPassword + "\n\n" +
-                    "You should login and change this to something more memorable as soon as possible."
-                );
+            List<UserProfile> recipients = new ArrayList<UserProfile>();
+            recipients.add(userProfile);
 
-                Transport.send(msg);
-            } catch (UnsupportedEncodingException ex) {
-                ex.printStackTrace();
-            } catch (MessagingException ex) {
-                ex.printStackTrace();
-            }
+            Mailer mailer = new Mailer();
+            mailer.sendMail(
+                "account information",
+                "Hello nQuire-it user,\n\n" +
+                "You (or someone claiming to be you) has requested a new password for your account.\n\n" +
+                "Your username is " + userProfile.getUsername() + "\n" +
+                "Your new password is " + newPassword + "\n\n" +
+                "You should login and change this to something more memorable as soon as possible.\n\n" +
+                "Warm regards,\nnQuire-it team",
+                recipients,
+                false
+            );
 
             return result;
         } catch (UsernameNotFoundException e) {
