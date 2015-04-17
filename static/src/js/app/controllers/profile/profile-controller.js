@@ -1,5 +1,10 @@
 angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($scope, OpenIdService, $state, fileReader) {
 
+	$scope.noyes = [
+		{value: '0', label: 'no'},
+		{value: '1', label: 'yes'}
+	];
+
   if (!$scope.status.logged && $state.params.goBack) {
     OpenIdService.registerWatcher($scope, function () {
       if ($scope.status.logged) {
@@ -16,7 +21,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         $scope.status.profile.visibility = {};
       }
       return $scope.status.profile;
-    }, ['username', 'email', 'metadata', 'visibility'], function () {
+    }, ['username', 'email', 'notify1', 'notify2', 'notify3', 'notify4', 'notify5', 'metadata', 'visibility'], function () {
       $scope.status.newUser = false;
       $scope.openIdService.saveProfile().then(function (data) {
         $scope.formError = data.responses.username || null;

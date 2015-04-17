@@ -21,6 +21,11 @@ public class Mailer {
     private String smtpHost = "smtpmail.open.ac.uk";
 
     public boolean sendMail(String subject, String message, List<UserProfile> recipients, boolean useBcc) {
+        if (recipients.isEmpty()) {
+            System.out.println("Sending message '" + subject + "' - but no recipients!");
+            return true;
+        }
+
         try {
             System.out.println("Sending mail via SMTP host " + smtpHost);
             Properties properties = new Properties();
@@ -36,8 +41,10 @@ public class Mailer {
                 if (recipient.getEmail().isEmpty()) {
                   System.out.println("User " + recipient.getUsername() + " does not have an email address");
                 } else if (useBcc) {
+                  System.out.println("BCC: " + recipient.getEmail());
                     msg.addRecipient(MimeMessage.RecipientType.BCC, new InternetAddress(recipient.getEmail(),recipient.getUsername()));
                 } else {
+                  System.out.println("To: " + recipient.getEmail());
                     msg.addRecipient(MimeMessage.RecipientType.TO, new InternetAddress(recipient.getEmail(),recipient.getUsername()));
                 }
             }

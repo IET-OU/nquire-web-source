@@ -102,6 +102,20 @@ public class ForumManager extends AbstractContentManager {
         if (loggedWithToken) {
             ForumThread thread = context.getForumDao().findThread(threadId);
             context.getForumDao().comment(user, thread, data);
+
+            Mailer mailer = new Mailer();
+            mailer.sendMail(
+                "New forum post - " + thread.getTitle(),
+                "Hello nQuire-it user,\n\n" +
+                "A new forum post has been made on the nQuire-it website\n" +
+                "http://www.nquire-it.org/#/forum/thread/" + thread.getId() + "\n\n" +
+                "To stop receiving these messages, update your notification preferences at:\n" +
+                "http://www.nquire-it.org/#/profile\n\n" +
+                "Warm regards,\nnQuire-it team",
+                context.getUserProfileDao().forumNotifications(thread.getId(), user.getId()),
+                true
+            );
+
             return thread;
         }
 

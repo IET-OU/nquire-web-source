@@ -106,6 +106,11 @@ angular.module('senseItServices', null, null).factory('OpenIdService', ['RestSer
     return service._openIdRequest('api/security/profile', true, false, 'put', {
       username: service.status.profile.username,
       email: service.status.profile.email,
+      notify1: service.status.profile.notify1,
+      notify2: service.status.profile.notify2,
+      notify3: service.status.profile.notify3,
+      notify4: service.status.profile.notify4,
+      notify5: service.status.profile.notify5,
       metadata: service.status.profile.metadata,
       visibility: service.status.profile.visibility
     });

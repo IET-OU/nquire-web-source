@@ -159,6 +159,77 @@
     </div>
 
     <div class="profile-logged-in-right-section-header">
+        Email notifications
+        <button class="btn btn-default" data-ng-if="!form.isOpen()"
+                data-ng-click="form.open('notify')">
+            Edit
+        </button>
+    </div>
+
+    <div>
+        <span class="profile-logged-in-right-section-data-label">Send a notification to the above email address whenever the following events occur:</span>
+    </div>
+
+    <div data-ng-if="!form.isOpen('notify')">
+        <div class="profile-logged-in-right-section-data">
+            <span class="profile-logged-in-right-section-data-value">
+                Someone posts to a mission that I created: {{status.profile.notify1=='1' ? 'Yes' : 'No'}}
+            </span>
+        </div>
+        <div class="profile-logged-in-right-section-data">
+            <span class="profile-logged-in-right-section-data-value">
+                Someone comments on a mission that I created: {{status.profile.notify2=='1' ? 'Yes' : 'No'}}
+            </span>
+        </div>
+        <div class="profile-logged-in-right-section-data">
+            <span class="profile-logged-in-right-section-data-value">
+                Someone comments on a mission that I have commented on: {{status.profile.notify3=='1' ? 'Yes' : 'No'}}
+            </span>
+        </div>
+        <div class="profile-logged-in-right-section-data">
+            <span class="profile-logged-in-right-section-data-value">
+                Someone comments on a forum thread that I created: {{status.profile.notify4=='1' ? 'Yes' : 'No'}}
+            </span>
+        </div>
+        <div class="profile-logged-in-right-section-data">
+            <span class="profile-logged-in-right-section-data-value">
+                Someone comments on a forum thread that I have commented on: {{status.profile.notify5=='1' ? 'Yes' : 'No'}}
+            </span>
+        </div>
+    </div>
+
+
+    <div data-ng-if="form.isOpen('notify')" class="profile-logged-in-right-section-data">
+        <form role="form">
+            <div class="form-group">
+                <label for="notify1">Someone posts to a mission that I created:</label>
+                <select id="notify1" class="form-control" type="text" ng-model="form.values.notify1" ng-options="x.value as x.label for x in noyes"></select>
+            </div>
+            <div class="form-group">
+                <label for="notify2">Someone comments on a mission that I created:</label>
+                <select id="notify2" class="form-control" type="text" ng-model="form.values.notify2" ng-options="x.value as x.label for x in noyes"></select>
+            </div>
+            <div class="form-group">
+                <label for="notify3">Someone comments on a mission that I have commented on:</label>
+                <select id="notify3" class="form-control" type="text" ng-model="form.values.notify3" ng-options="x.value as x.label for x in noyes"></select>
+            </div>
+            <div class="form-group">
+                <label for="notify4">Someone comments on a forum thread that I created:</label>
+                <select id="notify4" class="form-control" type="text" ng-model="form.values.notify4" ng-options="x.value as x.label for x in noyes"></select>
+            </div>
+            <div class="form-group">
+                <label for="notify5">Someone comments on a forum thread that I have commented on:</label>
+                <select id="notify5" class="form-control" type="text" ng-model="form.values.notify5" ng-options="x.value as x.label for x in noyes"></select>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-default" data-ng-click="form.save()">Save</button>
+                <button class="btn btn-default" data-ng-click="form.cancel()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="profile-logged-in-right-section-header">
         Profile information
         <button class="btn btn-default" data-ng-if="!form.isOpen()"
                 data-ng-click="form.open('metadata')">

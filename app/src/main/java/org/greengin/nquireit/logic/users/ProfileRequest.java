@@ -18,6 +18,26 @@ public class ProfileRequest {
 
     @Getter
     @Setter
+    String notify1;
+
+    @Getter
+    @Setter
+    String notify2;
+
+    @Getter
+    @Setter
+    String notify3;
+
+    @Getter
+    @Setter
+    String notify4;
+
+    @Getter
+    @Setter
+    String notify5;
+
+    @Getter
+    @Setter
     HashMap<String, String> metadata;
 
     @Getter

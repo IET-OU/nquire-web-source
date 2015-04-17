@@ -23,6 +23,8 @@ public class UserProfileDao {
 
     static final String ALL_USERS_QUERY = "SELECT u FROM UserProfile u";
     static final String ALL_ADMINS_QUERY = "SELECT u FROM UserProfile u WHERE admin = 1 AND email IS NOT NULL";
+    static final String FORUM_NOTIFICATIONS_QUERY = "SELECT DISTINCT userprofile.* FROM forumthread JOIN comment ON comment.target_ENTITY_ID = forumthread.ENTITY_ID JOIN userprofile ON (userprofile.ENTITY_ID = forumthread.author_ENTITY_ID AND userprofile.notify4 = '1' OR userprofile.ENTITY_ID = comment.author_ENTITY_ID AND userprofile.notify5 = '1') WHERE forumthread.ENTITY_ID = :thread_id AND userprofile.ENTITY_ID <> :author_id";
+    static final String COMMENT_NOTIFICATIONS_QUERY = "SELECT DISTINCT userprofile.* FROM project JOIN comment ON comment.target_ENTITY_ID = project.ENTITY_ID JOIN userprofile ON (userprofile.ENTITY_ID = project.author_ENTITY_ID AND userprofile.notify2 = '1' OR userprofile.ENTITY_ID = comment.author_ENTITY_ID AND userprofile.notify3 = '1') WHERE project.ENTITY_ID = :project_id AND userprofile.ENTITY_ID <> :author_id";
     static final String AUTHORITY_QUERY = "SELECT userId FROM UserConnection WHERE providerId = ? AND providerUserId = ?";
     static final String USER_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.username)=LOWER(:username)";
     static final String USER_EMAIL_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.email)=LOWER(:email)";
@@ -167,6 +169,36 @@ public class UserProfileDao {
     }
 
     @Transactional
+    public void updateNotify1(UserProfile user, String notify1) {
+        em.persist(user);
+        user.setNotify1(notify1);
+    }
+
+    @Transactional
+    public void updateNotify2(UserProfile user, String notify2) {
+        em.persist(user);
+        user.setNotify2(notify2);
+    }
+
+    @Transactional
+    public void updateNotify3(UserProfile user, String notify3) {
+        em.persist(user);
+        user.setNotify3(notify3);
+    }
+
+    @Transactional
+    public void updateNotify4(UserProfile user, String notify4) {
+        em.persist(user);
+        user.setNotify4(notify4);
+    }
+
+    @Transactional
+    public void updateNotify5(UserProfile user, String notify5) {
+        em.persist(user);
+        user.setNotify5(notify5);
+    }
+
+    @Transactional
     public void updateUserInformation(UserProfile user, HashMap<String, String> metadata, HashMap<String, Boolean> visibility) {
         em.persist(user);
 
@@ -186,6 +218,28 @@ public class UserProfileDao {
 
     public List<UserProfile> listAdmins() {
         return em.createQuery(ALL_ADMINS_QUERY, UserProfile.class).getResultList();
+    }
+
+    public List<UserProfile> commentNotifications(Long project_id, Long author_id) {
+        System.out.println("===========================");
+        System.out.println("project_id=" + project_id);
+        System.out.println("author_id=" + author_id);
+        System.out.println("SQL=" + COMMENT_NOTIFICATIONS_QUERY);
+        System.out.println("===========================");
+
+        return em
+            .createNativeQuery(COMMENT_NOTIFICATIONS_QUERY, UserProfile.class)
+            .setParameter("project_id", project_id)
+            .setParameter("author_id", author_id)
+            .getResultList();
+    }
+
+    public List<UserProfile> forumNotifications(Long thread_id, Long author_id) {
+        return em
+            .createNativeQuery(FORUM_NOTIFICATIONS_QUERY, UserProfile.class)
+            .setParameter("thread_id", thread_id)
+            .setParameter("author_id", author_id)
+            .getResultList();
     }
 
     public List<UserProfile> listUsers() {

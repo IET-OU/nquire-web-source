@@ -8,6 +8,7 @@ import org.greengin.nquireit.entities.users.RoleType;
 import org.greengin.nquireit.entities.users.UserProfile;
 import org.greengin.nquireit.logic.AbstractContentManager;
 import org.greengin.nquireit.logic.ContextBean;
+import org.greengin.nquireit.logic.mail.Mailer;
 import org.greengin.nquireit.logic.project.metadata.ProjectRequest;
 import org.greengin.nquireit.logic.rating.CommentFeedResponse;
 import org.greengin.nquireit.logic.rating.VoteCount;
@@ -319,6 +320,20 @@ public class ProjectActions extends AbstractContentManager {
         if (hasAccess(PermissionType.PROJECT_COMMENT)) {
             context.getCommentsDao().comment(user, project, request);
             context.getProjectDao().updateActivityTimestamp(project);
+
+            Mailer mailer = new Mailer();
+            mailer.sendMail(
+                "New mission comment - " + project.getTitle(),
+                "Hello nQuire-it user,\n\n" +
+                "A new mission comment has been made on the nQuire-it website\n" +
+                "http://www.nquire-it.org/#/project/" + project.getId() + "\n\n" +
+                "To stop receiving these messages, update your notification preferences at:\n" +
+                "http://www.nquire-it.org/#/profile\n\n" +
+                "Warm regards,\nnQuire-it team",
+                context.getUserProfileDao().commentNotifications(project.getId(), user.getId()),
+                true
+            );
+
             return project.getComments();
         }
 
