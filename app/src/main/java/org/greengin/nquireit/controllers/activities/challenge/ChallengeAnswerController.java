@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.mangofactory.jsonview.ResponseView;
 import org.greengin.nquireit.entities.activities.challenge.ChallengeAnswer;
 import org.greengin.nquireit.json.Views;
+import org.greengin.nquireit.logic.mail.Mailer;
 import org.greengin.nquireit.logic.project.challenge.ChallengeActivityActions;
 import org.greengin.nquireit.logic.project.challenge.ChallengeAnswerRequest;
 import org.greengin.nquireit.logic.project.challenge.NewChallengeAnswerResponse;
@@ -40,7 +41,7 @@ public class ChallengeAnswerController extends AbstractChallengeController{
 	public NewChallengeAnswerResponse create(@PathVariable("projectId") Long projectId, @RequestBody ChallengeAnswerRequest answerData, HttpServletRequest request) {
         return createManager(projectId, request).createAnswer(answerData);
 	}
-	
+
 	@RequestMapping(value = "/{answerId}", method = RequestMethod.PUT)
     @ResponseBody
 	public Collection<ChallengeAnswer> update(@PathVariable("projectId") Long projectId, @PathVariable("answerId") Long answerId, @RequestBody ChallengeAnswerRequest answerData, HttpServletRequest request) {
@@ -56,6 +57,20 @@ public class ChallengeAnswerController extends AbstractChallengeController{
     @RequestMapping(value = "/{answerId}/submit", method = RequestMethod.POST)
     @ResponseBody
 	public Collection<ChallengeAnswer> submit(@PathVariable("projectId") Long projectId, @PathVariable("answerId") Long answerId, HttpServletRequest request) {
+
+        Mailer mailer = new Mailer();
+        mailer.sendMail(
+            "New mission idea",
+            "Hello nQuire-it user,\n\n" +
+            "A new mission idea has been added to the nQuire-it website\n" +
+            "http://www.nquire-it.org/#/project/" + projectId + "\n\n" +
+            "To stop receiving these messages, update your notification preferences at:\n" +
+            "http://www.nquire-it.org/#/profile\n\n" +
+            "Warm regards,\nnQuire-it team",
+            context.getUserProfileDao().projectNotifications(projectId),
+            false
+        );
+
         return createManager(projectId, request).submitAnswer(answerId, true);
 	}
 

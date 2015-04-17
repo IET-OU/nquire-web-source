@@ -325,7 +325,7 @@ public class ProjectActions extends AbstractContentManager {
             mailer.sendMail(
                 "New mission comment - " + project.getTitle(),
                 "Hello nQuire-it user,\n\n" +
-                "A new mission comment has been made on the nQuire-it website\n" +
+                "A new mission comment has been added to the nQuire-it website\n" +
                 "http://www.nquire-it.org/#/project/" + project.getId() + "\n\n" +
                 "To stop receiving these messages, update your notification preferences at:\n" +
                 "http://www.nquire-it.org/#/profile\n\n" +

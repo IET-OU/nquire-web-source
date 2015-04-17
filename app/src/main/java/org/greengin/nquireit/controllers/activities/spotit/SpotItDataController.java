@@ -10,6 +10,7 @@ import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.data.NewDataItemResponse;
 import org.greengin.nquireit.logic.files.FileMapUpload;
 import org.greengin.nquireit.logic.files.RequestsUtils;
+import org.greengin.nquireit.logic.mail.Mailer;
 import org.greengin.nquireit.logic.project.senseit.SenseItSeriesManipulator;
 import org.greengin.nquireit.logic.project.senseit.UpdateTitleRequest;
 import org.greengin.nquireit.logic.project.spotit.SpotItActivityActions;
@@ -90,6 +91,19 @@ public class SpotItDataController {
             requestData.setDate(RequestsUtils.getLong(multiPartRequest, "date", (new Date()).getTime()));
 
             FileMapUpload.FileData file = RequestsUtils.getFile(request, "image");
+
+            Mailer mailer = new Mailer();
+            mailer.sendMail(
+                "New mission observation",
+                "Hello nQuire-it user,\n\n" +
+                "A new mission observation has been uploaded on the nQuire-it website\n" +
+                "http://www.nquire-it.org/#/project/" + projectId + "\n\n" +
+                "To stop receiving these messages, update your notification preferences at:\n" +
+                "http://www.nquire-it.org/#/profile\n\n" +
+                "Warm regards,\nnQuire-it team",
+                context.getUserProfileDao().projectNotifications(projectId),
+                false
+            );
 
             return createManager(projectId, request).createData(new SpotItObservationManipulator(context, requestData, file, null));
         } catch (IOException e) {
