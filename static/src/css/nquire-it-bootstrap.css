@@ -11563,3 +11563,8 @@ tr.senseit-series-even td {
     background: #f6f5f5; }
 
 /*# sourceMappingURL=nquire-it-bootstrap.css.map */
+
+.profile-login-password-error,
+.profile-login-username-error {
+	color: #f00;
+}

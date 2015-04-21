@@ -160,7 +160,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
   $scope.register = {
     recaptcha: {siteKey: "6LdCDQQTAAAAAMCRBAIBUPoCoizvve9n0nofETNT"},
     editing: {username: '', password: '', repeatPassword: '', email: ''},
-    error: {username: false, password: false, repeatPassword: false, email: false},
+    error: {username: false, password: false, repeatPassword: false, email: false, recaptcha: false},
     clearPassword: function () {
       var p = this.editing.password;
       this.editing.password = this.editing.repeatPassword = "";
@@ -168,7 +168,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
     },
     reset: function () {
       this.editing = {username: '', password: '', repeatPassword: '', email: ''};
-      this.error = {username: false, password: false, repeatPassword: false, email: false};
+      this.error = {username: false, password: false, repeatPassword: false, email: false, recaptcha: false};
     },
     submit: function () {
       var ok = true;
@@ -176,6 +176,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       this.editing.username = this.editing.username.trim();
       this.editing.email = this.editing.email.trim();
       this.editing.recaptcha = document.getElementById("g-recaptcha-response").value;
+      this.error = {username: false, password: false, repeatPassword: false, email: false, recaptcha: false};
 
       if (this.editing.username.length == 0) {
         this.error.username = 'Username cannot be empty.';

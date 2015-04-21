@@ -34,27 +34,27 @@ public class UserProfile extends AbstractEntity implements UserDetails {
     @Basic
     @Setter
     @Getter
-    String notify1 = "0";
+    String notify1 = "1";
 
     @Basic
     @Setter
     @Getter
-    String notify2 = "0";
+    String notify2 = "1";
 
     @Basic
     @Setter
     @Getter
-    String notify3 = "0";
+    String notify3 = "1";
 
     @Basic
     @Setter
     @Getter
-    String notify4 = "0";
+    String notify4 = "1";
 
     @Basic
     @Setter
     @Getter
-    String notify5 = "0";
+    String notify5 = "1";
 
     @Basic
     @Getter

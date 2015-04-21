@@ -41,6 +41,9 @@
                     <button class="btn btn-default" data-ng-click="login.submit()">
                         Sign in
                     </button>
+										<button class="btn btn-link" data-ng-click="loginMode.set('reminder')">
+							        I forgot my password
+										</button>
                 </div>
             </form>
         </div>
@@ -111,15 +114,13 @@
 
                 <div class="form-group">
                     <label for="g-recaptcha-response" class="control-label">
-                        <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">
-                            Captcha
-                        </abbr>:
+                        Verify yourself:
                     </label>
                     <div class="input-container">
                         <script src='https://www.google.com/recaptcha/api.js'></script>
                         <div class="g-recaptcha" data-sitekey="{{register.recaptcha.siteKey}}">
                         </div>
-                        <span xdata-ng-if="register.error.recaptcha" class="profile-login-password-error">
+                        <span data-ng-if="register.error.recaptcha" class="profile-login-password-error">
                             {{register.error.recaptcha}}
                         </span>
                     </div>
@@ -156,9 +157,7 @@
 
                 <div class="form-group">
                     <label for="g-recaptcha-response" class="control-label">
-                        <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">
-                            Captcha
-                        </abbr>:
+                        Verify yourself:
                     </label>
                     <div class="input-container">
                         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -173,6 +172,9 @@
                 <button class="btn btn-default" data-ng-click="reminder.submit()">
                     Send reminder
                 </button>
+								<button class="btn btn-link" data-ng-click="loginMode.set('login')">
+					        Sign in
+								</button>
             </form>
         </div>
 
