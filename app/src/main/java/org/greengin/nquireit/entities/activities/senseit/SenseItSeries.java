@@ -1,7 +1,6 @@
 package org.greengin.nquireit.entities.activities.senseit;
 
-import java.util.HashMap;
-import java.util.Vector;
+import java.util.*;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -42,7 +41,7 @@ public class SenseItSeries extends AbstractDataProjectItem {
     @NonNull
     HashMap<Long, Vector<TimeValue>> data = new HashMap<Long, Vector<TimeValue>>();
 
-	transient SenseItProcessedSeries processData;
+	transient SenseItProcessedSeries processData = null;
 
 
 	public HashMap<String, TimeValue> getVarValue() {
@@ -56,7 +55,9 @@ public class SenseItSeries extends AbstractDataProjectItem {
 	}
 
 	private void processData() {
-		processData = SenseItOperations.instance().process(this.data, (SenseItActivity) this.dataStore);
+        if (processData == null) {
+            processData = SenseItOperations.instance().process(this.data, (SenseItActivity) this.dataStore);
+        }
 	}
 
     @Override
@@ -76,5 +77,19 @@ public class SenseItSeries extends AbstractDataProjectItem {
         info.setPath(getReportedPath(context));
         info.setAuthor(getAuthor());
         info.addInfo("Title", title);
+    }
+
+
+    @Override
+    public Date getDate() {
+        Iterator<Vector<TimeValue>> iter = data.values().iterator();
+        if (iter.hasNext()) {
+            Vector<TimeValue> values = iter.next();
+            if (values.size() > 0) {
+                return new Date(values.firstElement().getT());
+            }
+        }
+
+        return super.getDate();
     }
 }
