@@ -1,0 +1,9 @@
+{
+  "name": "nQuire-it",
+  "version": "0.9.0",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-gettext": "^2.1.0",
+    "grunt-msg-init-merge": "0.0.5"
+  }
+}

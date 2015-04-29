@@ -1,8 +1,8 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>Texts</th>
-        <th>Content</th>
+        <th translate>Texts</th>
+        <th translate>Content</th>
         <th></th>
     </tr>
     </thead>
@@ -24,18 +24,11 @@
         </td>
         <td>
             <div class="btn-group" data-ng-if="!form.isOpen()">
-                <button class="btn btn-default btn-xs"
-                        data-ng-click="form.open()">
-                    Edit
-                </button>
+                <button class="btn btn-default btn-xs" data-ng-click="form.open()" translate>Edit </button>
             </div>
             <div class="btn-group" data-ng-if="form.isOpen()">
-                <button class="btn btn-default" data-ng-click="form.save()">
-                    Save
-                </button>
-                <button class="btn btn-default" data-ng-click="form.cancel()">
-                    Cancel
-                </button>
+                <button class="btn btn-default" data-ng-click="form.save()" translate>Save</button>
+                <button class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
             </div>
         </td>
     </tr>

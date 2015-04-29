@@ -1,65 +1,40 @@
 <div data-ng-if="!data.status.logged">
-    <p>You need to <a href data-ng-click="close(data.provider.login)">Sign in</a> before posting on
-        {{data.provider.name}}.</p>
+    <p translate>You need to <a href data-ng-click="close(data.provider.login)">sign in</a> before posting on {{data.provider.name}}.</p>
 </div>
 <div data-ng-if="data.status.logged">
     <div data-ng-if="!data.provider.connected()">
 
-        <p>You have not linked a {{data.provider.name}} account yet.</p>
+        <p translate>You have not linked a {{data.provider.name}} account yet.</p>
 
         <p>
-            <button class="btn btn-default" data-ng-click="data.provider.oauthLogin()">
-                Sign in with {{data.provider.name}}
-            </button>
+            <button class="btn btn-default" data-ng-click="data.provider.oauthLogin()" translate>Sign in with {{data.provider.name}}</button>
         </p>
     </div>
 
     <div data-ng-if="data.provider.connected()" class="social-posting-dialog">
         <div data-ng-if="data.result.state == 'posting'">
-            <p><img src="media/throbber.gif"/> Awaiting response from {{data.provider.name}}... </p>
+            <p><img src="media/throbber.gif"/> <translate>Awaiting response from {{data.provider.name}}…</translate>translate></p>
         </div>
 
         <div data-ng-if="data.result.state != 'posting'" data-ng-switch="data.result.error">
 
-            <p data-ng-switch-when="duplicate">
-                Sorry, you have posted already the same content! You may need to edit it
-                before posting.
-            </p>
+            <p data-ng-switch-when="duplicate" translate>Sorry, you have posted already the same content! You may need to edit it before posting.</p>
 
-            <p data-ng-switch-when="permission">
-                Sorry, there was a problem with the permisions with
-                {{data.provider.name}}.
-            </p>
+            <p data-ng-switch-when="permission" translate>Sorry, there was a problem with the permissions with {{data.provider.name}}.</p>
 
-            <p data-ng-switch-when="authorization">
-                Sorry, there was a problem with the authorization with
-                {{data.provider.name}}.
-            </p>
+            <p data-ng-switch-when="authorization" translate>Sorry, there was a problem with the authorisation with {{data.provider.name}}.</p>
 
-            <p data-ng-switch-when="rate">
-                Sorry, there was a problem with the rate with
-                {{data.provider.name}}.
-            </p>
+            <p data-ng-switch-when="rate" translate>Sorry, there was a problem with the rate with {{data.provider.name}}.</p>
 
-            <p data-ng-switch-when="api">
-                Sorry, there was a problem with the api with
-                {{data.provider.name}}.
-            </p>
+            <p data-ng-switch-when="api" translate>Sorry, there was a problem with the API with {{data.provider.name}}.</p>
 
-            <p data-ng-switch-when="connection">
-                Sorry, there was a problem with the connection with
-                {{data.provider.name}}.
-            </p>
+            <p data-ng-switch-when="connection" translate>Sorry, there was a problem with the connection with {{data.provider.name}}.</p>
 
-            <p data-ng-switch-when="unknown">
-                Sorry, there was a problem when trying to post your comment.
-            </p>
+            <p data-ng-switch-when="unknown" translate>Sorry, there was a problem when trying to post your comment.</p>
         </div>
 
 
-        <p data-ng-if="data.result.state == 'completed'">
-            Post successful: <a href="{{data.result.url}}" target="_blank">{{data.result.url}}</a>
-        </p>
+        <p data-ng-if="data.result.state == 'completed'" translate>Post successful: <a href="{{data.result.url}}" target="_blank">{{data.result.url}}</a></p>
 
 
         <div data-ng-switch="data.provider.id">
@@ -73,18 +48,18 @@
             <div data-ng-switch-when="facebook">
                 <form>
                     <div class="form-group">
-                        <label for="fb-link" class="control-label">Link</label>
+                        <label for="fb-link" class="control-label" translate>Link</label>
                         <input id="fb-link" type="text" data-ng-disabled="editDisabled()" class="form-control"
                                data-ng-model="data.posting.content.link"
                                auto-focus/>
                     </div>
                     <div class="form-group">
-                        <label for="fb-caption" class="control-label">Caption</label>
+                        <label for="fb-caption" class="control-label" translate>Caption</label>
                         <input id="fb-caption" type="text" data-ng-disabled="editDisabled()" class="form-control"
                                data-ng-model="data.posting.content.caption"/>
                     </div>
                     <div class="form-group">
-                        <label for="fb-description" class="control-label">Email</label>
+                        <label for="fb-description" class="control-label" translate>Email</label>
                         <input id="fb-description" type="text" data-ng-disabled="editDisabled()" class="form-control"
                                data-ng-model="data.posting.content.description"/>
                     </div>

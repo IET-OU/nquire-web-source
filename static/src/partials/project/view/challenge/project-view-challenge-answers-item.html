@@ -23,14 +23,10 @@
                     {{itemView.isNew ? 'Create' : 'Save'}}
                 </button>
                 <button data-ng-if="!itemView.isNew" class="btn btn-default" data-ng-disabled="form.okButtonDisabled()"
-                        data-ng-click="save(true)">
-                    Save and continue
-                </button>
+                        data-ng-click="save(true)" translate>Save and continue</button>
                 <button class="btn btn-default"
                         data-ng-disabled="form.resetButtonDisabled()"
-                        data-ng-click="cancelForm()">
-                    Cancel
-                </button>
+                        data-ng-click="cancelForm()" translate>Cancel</button>
             </div>
         </form>
 
@@ -42,24 +38,19 @@
             <span data-ng-if="itemView.answer.author.id == status.profile.id">
                 <span class="btn-group">
                     <button data-ng-if="answerData.editable" class="btn btn-default"
-                            data-ng-click="form.open()">
-                        Edit
-                    </button>
+                            data-ng-click="form.open()" translate>Edit</button>
                     <button data-ng-if="answerData.editable" class="btn btn-default"
                             data-ng-click="submitAnswer()">
                         {{itemView.answer.published ? 'Withdraw' : 'Submit'}}
                     </button>
                     <button data-ng-if="answerData.editable" class="btn btn-default"
-                            data-ng-click="deleteAnswer()">
-                        Delete
-                    </button>
+                            data-ng-click="deleteAnswer()" translate>Delete</button>
                 </span>
                 <button data-ng-if="answerData.selectable" class="btn"
                         data-ng-class="itemView.answer.id == answerData.selectedAnswer ? 'btn-success' : 'btn-default'"
-                        data-ng-click="answerData.selectCallback(itemView.answer)">Select
-                </button>
+                        data-ng-click="answerData.selectCallback(itemView.answer)" translate>Select</button>
             </span>
-            <a href data-ng-click="itemView.close()">Go back to list</a>
+            <a href data-ng-click="itemView.close()" translate>Go back to the list</a>
         </p>
     </div>
 </div>

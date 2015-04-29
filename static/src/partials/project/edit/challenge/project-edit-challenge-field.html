@@ -4,18 +4,18 @@
 <div data-ng-if="form.isOpen()">
     <form role="form">
         <div class="form-group">
-            <label for="label">Field label:</label>
+            <label for="label" translate>Field label:</label>
             <input id="label" class="form-control" type="text" placeholder="Label" data-ng-model="form.values.label"/>
         </div>
 
         {{form.values}}
         <div class="form-group">
 
-            <label for="type">Field type:</label>
+            <label for="type" translate>Field type:</label>
             <select id="type" class="form-control" data-ng-model="form.values.type">
-                <option value="textfield">Single-line text</option>
-                <option value="textarea">Multiple-line plain text</option>
-                <option value="textangular">Multiple-line formatted text</option>
+                <option value="textfield" translate>Single-line text</option>
+                <option value="textarea" translate>Multiple-line plain text</option>
+                <option value="textangular" translate>Multiple-line formatted text</option>
             </select>
         </div>
         <div class="btn-group">
@@ -24,28 +24,25 @@
                     data-ng-click="form.save()">
                 {{isNew ? 'Create' : 'Save'}}
             </button>
-            <button class="btn btn-default" data-ng-disabled="form.resetButtonDisabled()"
-                    data-ng-click="form.cancel()">
-                Cancel
-            </button>
+            <button class="btn btn-default" data-ng-disabled="form.resetButtonDisabled()" data-ng-click="form.cancel()" translate>Cancel</button>
         </div>
     </form>
 </div>
 <div data-ng-if="!form.isOpen()">
     <div data-ng-if="isNew">
-        <button class="btn btn-default" data-ng-click="form.open()">Add field</button>
+        <button class="btn btn-default" data-ng-click="form.open()" translate>Add field</button>
     </div>
     <div data-ng-if="!isNew">
         <p>
             <b>{{field.label}}</b>
     <span data-ng-switch="field.type">
-        <span data-ng-switch-when="textfield">(Single-line text)</span>
-        <span data-ng-switch-when="textarea">(Multiple-line plain text)</span>
-        <span data-ng-switch-when="textangular">(Multiple-line formatted text)</span>
+        <span data-ng-switch-when="textfield" translate>(Single-line text)</span>
+        <span data-ng-switch-when="textarea" translate>(Multiple-line plain text)</span>
+        <span data-ng-switch-when="textangular" translate>(Multiple-line formatted text)</span>
     </span>
 
     <span class="btn-group">
-        <button class="btn btn-default" data-ng-click="form.open()">Edit</button>
+        <button class="btn btn-default" data-ng-click="form.open()" translate>Edit</button>
         <button type="button" class="btn btn-default" data-ng-disabled="$last"
                 data-ng-click="moveField(false)">
             <i class="fa fa-arrow-down"></i>

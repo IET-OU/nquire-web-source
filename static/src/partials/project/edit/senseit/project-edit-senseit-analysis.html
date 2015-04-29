@@ -4,7 +4,7 @@
 
     <!-- TRANSFORMATIONS -->
 
-    <p class="project-section-content-header">Data processing</p>
+    <p class="project-section-content-header" translate>Data processing</p>
 
     <ul class="siw-transformations">
         <li data-ng-repeat="variable in transformations.variables | orderBy:'weight'">
@@ -38,9 +38,7 @@
             </span>
             <span>: {{variable.outputLabel()}}</span>
             <button data-ng-if="txEdit.editable(variable)" class="btn btn-default"
-                    data-ng-click="txEdit.deleteVariable(variable)">
-                Delete
-            </button>
+                    data-ng-click="txEdit.deleteVariable(variable)" translate>Delete</button>
         </li>
     </ul>
 
@@ -49,7 +47,7 @@
 
         <div class="btn-group dropup">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                Add transformation <span class="caret"></span>
+                <translate>Add transformation</translate> <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
                 <li data-ng-repeat="(t, label) in availableTransformations">
@@ -60,21 +58,13 @@
         </p>
 
         <p class="btn-group">
-            <button class="btn btn-default"
-                    data-ng-disabled="txForm.okButtonDisabled()"
-                    data-ng-click="txForm.save()">
-                Save
-            </button>
-            <button class="btn btn-default"
-                    data-ng-disabled="txForm.resetButtonDisabled()"
-                    data-ng-click="txForm.cancel()">
-                Cancel
-            </button>
+            <button class="btn btn-default" data-ng-disabled="txForm.okButtonDisabled()" data-ng-click="txForm.save()" translate>Save</button>
+            <button class="btn btn-default" data-ng-disabled="txForm.resetButtonDisabled()" data-ng-click="txForm.cancel()" translate>Cancel</button>
         </p>
     </div>
     <div data-ng-if="!txForm.isOpen()">
         <p>
-            <button class="btn btn-default" data-ng-click="txEdit.open()">Edit</button>
+            <button class="btn btn-default" data-ng-click="txEdit.open()" translate>Edit</button>
         </p>
     </div>
 </div>

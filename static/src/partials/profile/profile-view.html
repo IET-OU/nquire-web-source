@@ -1,5 +1,5 @@
 <div class="content-sidebar">
-    <div class="profile-header">User profile: <b>{{profile.username}}</b></div>
+    <div class="profile-header" translate>User profile: {{profile.username}}</div>
     <div class="profile-page">
 
 
@@ -11,7 +11,7 @@
 
             <div class="profile-project-list">
                 <div data-ng-if="!!profile.projects.admin">
-                    <div class="profile-project-list-header">Projects created by {{profile.username}}:</div>
+                    <div class="profile-project-list-header" translate>Projects created by {{profile.username}}:</div>
                     <ul>
                         <li data-ng-repeat="project in profile.projects.admin">
                             <a href data-ui-sref="project.view.home({projectId:project.id})">
@@ -22,7 +22,7 @@
                 </div>
 
                 <div data-ng-if="!!profile.projects.member">
-                    <div class="profile-project-list-header">Projects joined by {{profile.username}}</div>
+                    <div class="profile-project-list-header" translate>Projects joined by {{profile.username}}</div>
                     <ul>
                         <li data-ng-repeat="project in profile.projects.member">
                             <a href data-ui-sref="project.view.home({projectId:project.id})">
@@ -37,35 +37,31 @@
         </div>
 
         <div class="profile-logged-in-right-section">
-            <div class="profile-logged-in-right-section-header">
-                Login information
-            </div>
+            <div class="profile-logged-in-right-section-header" translate>Login information</div>
 
             <!-- username -->
             <div class="profile-logged-in-right-section-data">
-                <span class="profile-logged-in-right-section-data-label">Username:</span>
+                <span class="profile-logged-in-right-section-data-label" translate>Username:</span>
                 <span class="profile-logged-in-right-section-data-value">{{profile.username}}</span>
             </div>
 
 
             <div data-ng-if="profile.metadata">
-                <div class="profile-logged-in-right-section-header">
-                    Profile information
-                </div>
+                <div class="profile-logged-in-right-section-header" translate>Profile information</div>
                 <div data-ng-if="!!profile.metadata.name" class="profile-logged-in-right-section-data">
-                    <span class="profile-logged-in-right-section-data-label">Name:</span>
+                    <span class="profile-logged-in-right-section-data-label" translate>Name:</span>
                     <span class="profile-logged-in-right-section-data-value">{{profile.metadata.name}}</span>
                 </div>
                 <div data-ng-if="!!profile.metadata.location" class="profile-logged-in-right-section-data">
-                    <span class="profile-logged-in-right-section-data-label">Location:</span>
+                    <span class="profile-logged-in-right-section-data-label" translate>Location:</span>
                     <span class="profile-logged-in-right-section-data-value">{{profile.metadata.location}}</span>
                 </div>
                 <div data-ng-if="!!profile.metadata.description" class="profile-logged-in-right-section-data">
-                    <span class="profile-logged-in-right-section-data-label">Description:</span>
+                    <span class="profile-logged-in-right-section-data-label" translate>Description:</span>
                     <span class="profile-logged-in-right-section-data-value">{{profile.metadata.description}}</span>
                 </div>
                 <div data-ng-if="!!profile.metadata.interests" class="profile-logged-in-right-section-data">
-                    <span class="profile-logged-in-right-section-data-label">Interests:</span>
+                    <span class="profile-logged-in-right-section-data-label" translate>Interests:</span>
                     <span class="profile-logged-in-right-section-data-value">{{profile.metadata.interests}}</span>
                 </div>
             </div>

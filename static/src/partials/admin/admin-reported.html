@@ -13,10 +13,10 @@
 <table data-ng-if="content" class="table table-striped">
     <thead>
     <tr>
-        <th>Author</th>
-        <th>Content id</th>
-        <th>Reports</th>
-        <th>Actions</th>
+        <th translate>Author</th>
+        <th translate>Content id</th>
+        <th translate>Reports</th>
+        <th translate>Actions</th>
         <th data-ng-repeat="infoKey in blocks">{{infoKey}}</th>
     </tr>
     </thead>
@@ -26,8 +26,8 @@
         <td><a ng-href="#{{item.path}}" target="_blank">{{item.id}}</a></td>
         <td>{{item.count}}</td>
         <td>
-            <button class="btn btn-default btn-xs" data-ng-click="deleteReportedContent(item)">Delete</button>
-            <button class="btn btn-default btn-xs" data-ng-click="approveReportedContent(item)">Approve</button>
+            <button class="btn btn-default btn-xs" data-ng-click="deleteReportedContent(item)" translate>Delete</button>
+            <button class="btn btn-default btn-xs" data-ng-click="approveReportedContent(item)" translate>Approve</button>
         </td>
         <td data-ng-repeat="block in item.info">
             <div data-ng-bind-html="block.content"></div>

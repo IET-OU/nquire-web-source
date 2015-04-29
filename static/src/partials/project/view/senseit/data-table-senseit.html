@@ -1,13 +1,13 @@
 <table data-siw-sortable-table-widget data-table-data="dataList" class="table table-bordered">
     <thead>
     <tr>
-        <th data-ng-class="headerClass('title')" data-ng-click="headerSort('title')">Title</th>
-        <th data-ng-class="headerClass('author')" data-ng-click="headerSort('author')">Author</th>
-        <th data-ng-class="headerClass('date')" data-ng-click="headerSort('date')">Date</th>
+        <th data-ng-class="headerClass('title')" data-ng-click="headerSort('title')" translate>Title</th>
+        <th data-ng-class="headerClass('author')" data-ng-click="headerSort('author')" translate>Author</th>
+        <th data-ng-class="headerClass('date')" data-ng-click="headerSort('date')" translate>Date</th>
         <th data-ng-repeat="v in dataInfo.tableVariables"
             data-ng-class="headerClass(v.id)" data-ng-click="headerSort(v.id)">{{v.label()}}
         </th>
-        <th data-ng-class="headerClass('votes')" data-ng-click="headerSort('votes')">Votes</th>
+        <th data-ng-class="headerClass('votes')" data-ng-click="headerSort('votes')" translate>Votes</th>
     </tr>
     </thead>
     <tbody>
@@ -19,12 +19,8 @@
 
                 <div data-ng-if="item.author.id == status.profile.id">
                     <p class="btn-group">
-                        <button class="btn btn-default btn-xs" data-ng-click="edit.open(item)">
-                            Edit title
-                        </button>
-                        <button class="btn btn-default btn-xs" data-ng-click="deleteData(item)">
-                            Delete series
-                        </button>
+                        <button class="btn btn-default btn-xs" data-ng-click="edit.open(item)" translate>Edit title</button>
+                        <button class="btn btn-default btn-xs" data-ng-click="deleteData(item)" translate>Delete series</button>
                     </p>
                 </div>
             </div>
@@ -33,23 +29,17 @@
                     <input class="form-control" data-ng-model="form.values.title" placeholder="title"/>
 
                     <div class="btn-group">
-                        <button class="btn btn-default" data-ng-click="form.save()">
-                            Save
-                        </button>
-                        <button class="btn btn-default" data-ng-click="form.cancel()">
-                            Cancel
-                        </button>
+                        <button class="btn btn-default" data-ng-click="form.save()" translate>Save</button>
+                        <button class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
                     </div>
                 </form>
             </div>
             <div>
                 <p>
-                    <small><a href data-ng-click="plots.togglePlot(item)">Toggle plot</a>
+                    <small>
+                        <a href data-ng-click="plots.togglePlot(item)" translate>Toggle plot</a>
                         <span data-ng-if="projectData.project.activity.profile.geolocated"> | </span>
-                        <a href data-ng-if="projectData.project.activity.profile.geolocated"
-                           data-ui-sref="project.view.data-map({item: item.id})">
-                            Open map
-                        </a>
+                        <a href data-ng-if="projectData.project.activity.profile.geolocated" data-ui-sref="project.view.data-map({item: item.id})" translate>Open map</a>
                     </small>
                 </p>
             </div>

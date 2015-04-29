@@ -11,6 +11,14 @@ Requirements
 This app is build on Spring 4.0 and AngujarJS.
 Other dependencies are listed in the file app/pom.xml
 
+I18N
+----
+
+Updating the .PO files requires grunt.
+npm install -g grunt-cli
+npm install grunt --save-dev
+npm install grunt-angular-gettext --save-dev
+
 Licence
 -------
 

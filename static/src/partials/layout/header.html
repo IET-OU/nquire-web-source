@@ -12,18 +12,17 @@
 
         <div id="header-top-box-container">
             <div id="header-menu">
-                <a href data-ui-sref="home({type: null, status: null, filter: ull, kw: null})">Home</a>
-                <a href data-ui-sref="forum.list">Forums</a>
-                <a href data-ui-sref="about">About</a>
-                <a href data-ui-sref="create">Create</a>
-                <a href data-ui-sref="admin.users"
-                   data-ng-if="status.profile.admin">Admin</a>
+                <a href data-ui-sref="home({type: null, status: null, filter: ull, kw: null})" translate>Home</a>
+                <a href data-ui-sref="forum.list" translate>Forums</a>
+                <a href data-ui-sref="about" translate>About</a>
+                <a href data-ui-sref="create" translate>Create</a>
+                <a href data-ui-sref="admin.users" data-ng-if="status.profile.admin" translate>Administrator</a>
             </div>
             <div id="header-search-form-container">
 
                 <form class="form-inline" role="form">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="header-search-box" placeholder="Search missions"
+                        <input type="text" class="form-control" id="header-search-box" placeholder="{{'Search missions'|translate}}…"
                                ng-model="keyword" data-ng-enter="search()"/>
                     <span class="input-group-btn">
                         <button id="header-search-submit" type="submit" class="btn btn-default"><i
@@ -40,19 +39,16 @@
             <div data-ng-if="status.ready">
                 <div data-ng-if="status.logged">
                     <div id="header-profile-username-block">
-                        <div>Hi, <a href data-ui-sref="profile">{{status.profile.username}}</a>,</div>
-                        <div>you are signed in.</div>
-                        <div><a href data-ng-click="openIdService.logout()">Sign out</a></div>
+                        <div translate>Hi, <a href data-ui-sref="profile">{{status.profile.username}}</a>,<br>you are signed in.</div>
+                        <div><a href data-ng-click="openIdService.logout()" translate>Sign out</a></div>
                     </div>
                     <a data-ui-sref="profile"><span data-siw-user-image data-user="status.profile"></span></a>
                 </div>
                 <div data-ng-if="!status.logged">
-                    <a href data-ng-click="openIdService.loginAndComeBack()">Sign in</a>
+                    <a href data-ng-click="openIdService.loginAndComeBack()" translate>Sign in</a>
                 </div>
             </div>
-            <div data-ng-if="!status.ready">
-                loading...
-            </div>
+            <div data-ng-if="!status.ready" translate>Loading…</div>
         </div>
     </div>
 </div>

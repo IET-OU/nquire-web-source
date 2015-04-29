@@ -6,86 +6,60 @@
     <div class="sidebar-teaser" data-ng-bind-html="txt.nquireTeaser">
     </div>
 
-    <div class="sidebar-header">
-        View
-    </div>
+    <div class="sidebar-header" translate>View</div>
     <div class="sidebar-menu">
 
         <ul>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null})"
-                   data-ng-class="menuItemClass('filter', null)">
-                    Featured missions
-                </a>
+                   data-ng-class="menuItemClass('filter', null)" translate>Featured missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: 'all'})"
-                   data-ng-class="menuItemClass('filter', 'all')">
-                    All
-                </a>
+                   data-ng-class="menuItemClass('filter', 'all')" translate>All missions</a>
             </li>
         </ul>
     </div>
 
-    <div class="sidebar-header">
-        Mission type
-    </div>
+    <div class="sidebar-header" translate>Mission type</div>
     <div class="sidebar-menu">
         <ul>
             <li>
                 <a data-ui-sref="home({type: null, status: projectListFilter.status, filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('type', null)">
-                    Any type
-                </a>
+                   data-ng-class="menuItemClass('type', null)" translate>Any type</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: 'sense-it', status: projectListFilter.status, filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('type', 'sense-it')">
-                    <span class="sidebar-type-senseit">Sense-it</span> missions
-                </a>
+                   data-ng-class="menuItemClass('type', 'sense-it')" translate><span class="sidebar-type-senseit">Sense-it</span> missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: 'spot-it', status: projectListFilter.status, filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('type', 'spot-it')">
-                    <span class="sidebar-type-spotit">Spot-it</span> missions
-                </a>
+                   data-ng-class="menuItemClass('type', 'spot-it')" translate><span class="sidebar-type-spotit">Spot-it</span> missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: 'win-it', status: projectListFilter.status, filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('type', 'win-it')">
-                    <span class="sidebar-type-winit">Win-it</span> missions
-                </a>
+                   data-ng-class="menuItemClass('type', 'win-it')" translate><span class="sidebar-type-winit">Win-it</span> missions</a>
             </li>
         </ul>
     </div>
-    <div class="sidebar-header">
-        Status
-    </div>
+    <div class="sidebar-header" translate>Status</div>
     <div class="sidebar-menu">
         <ul>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: null, filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('status', null)">
-                    All missions
-                </a>
+                   data-ng-class="menuItemClass('status', null)" translate>All missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: 'joined', filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('status', 'joined')">
-                    Joined missions
-                </a>
+                   data-ng-class="menuItemClass('status', 'joined')" translate>Joined missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: 'not-joined', filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('status', 'not-joined')">
-                    Not joined missions
-                </a>
+                   data-ng-class="menuItemClass('status', 'not-joined')" translate>Not joined missions</a>
             </li>
             <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: 'mine', filter: projectListFilter.filter})"
-                   data-ng-class="menuItemClass('status', 'mine')">
-                    Created by me
-                </a>
+                   data-ng-class="menuItemClass('status', 'mine')" translate>Missions created by me</a>
             </li>
         </ul>
     </div>

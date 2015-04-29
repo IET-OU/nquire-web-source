@@ -1,10 +1,10 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>email</th>
-        <th>Admin?</th>
+        <th translate>Id</th>
+        <th translate>Username</th>
+        <th translate>email</th>
+        <th translate>Administrator</th>
     </tr>
     </thead>
     <tbody>
@@ -14,17 +14,12 @@
         <td>{{user.email}}</td>
         <td>
             <span data-ng-if="user.admin">
-                <b>Yes</b>
-                <button data-ng-if="user.id != status.profile.id"
-                        class="btn btn-default btn-xs"
-                        data-ng-click="actions.setAdmin(user.id, false)">Remove permission
-                </button>
+                <b translate>Yes</b>
+                <button data-ng-if="user.id != status.profile.id" class="btn btn-default btn-xs" data-ng-click="actions.setAdmin(user.id, false)" translate>Remove permission</button>
             </span>
             <span data-ng-if="!user.admin">
-                No
-                <button class="btn btn-default btn-xs"
-                        data-ng-click="actions.setAdmin(user.id, true)">Grant permission
-                </button>
+                <translate>No</translate>
+                <button class="btn btn-default btn-xs" data-ng-click="actions.setAdmin(user.id, true)" translate>Grant permission</button>
             </span>
         </td>
     </tr>

@@ -1,13 +1,4 @@
 <ul>
-    <li><b>{{projectData.data.members}}</b>
-        <span ng-pluralize count="projectData.data.members"
-              when="{'1': 'member',
-                     'other': 'members'}">
-        </span>
-    <li><b>{{projectData.data.data}}</b>
-        <span ng-pluralize count="projectData.data.data"
-          when="{'1': 'image',
-                     'other': 'images'}">
-        </span>
-    </li>
+    <li translate translate-n="{{projectData.data.members}}" translate-plural="{{projectData.data.members}} members">{{projectData.data.members}} member</li>
+    <li translate translate-n="{{projectData.data.data}}" translate-plural="{{projectData.data.data}} images">{{projectData.data.data}} image</li>
 </ul>

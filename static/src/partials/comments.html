@@ -6,19 +6,17 @@
 
     <div class="comment-new" data-ng-if="commentThread.postingEnabled()">
         <div data-ng-if="!posting.isOpen">
-            <a href data-ng-click="posting.open()">New comment</a>
+            <a href data-ng-click="posting.open()" translate>New comment</a>
         </div>
         <div data-ng-if="posting.isOpen">
             <form role="form">
                 <div class="form-group">
-                    <label for="comment-text-area">Comment:</label>
+                    <label for="comment-text-area" translate>Comment:</label>
                     <textarea id="comment-text-area" class="form-control" data-ng-model="posting.comment"></textarea>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm" data-ng-click="posting.submit()">Submit
-                    </button>
-                    <button type="button" class="btn btn-default btn-sm" data-ng-click="posting.cancel()">Cancel
-                    </button>
+                    <button type="button" class="btn btn-default btn-sm" data-ng-click="posting.submit()" translate>Submit</button>
+                    <button type="button" class="btn btn-default btn-sm" data-ng-click="posting.cancel()" translate>Cancel</button>
                 </div>
             </form>
         </div>
@@ -40,18 +38,14 @@
                     <span class="comment-vote" data-siw-vote-widget data-vote-manager="commentVoteManager"
                           data-vote-target="comment"></span>
 
-                    <div class="comment-author">
-                        <span class="comment-author-username" siw-user-link="comment.author"></span> said:
-                    </div>
+                    <div class="comment-author" translate><span class="comment-author-username" siw-user-link="comment.author"></span> said:</div>
                 </div>
             </div>
         </div>
         <div class="comment-content" data-ng-bind-html="comment.comment | htmlLinky:'_blank'"></div>
         <div data-ng-if="canDelete(comment.id)" class="comment-controls">
-            <!--<a href data-ng-click="posting.open()">Reply</a>-->
-            <a href data-ng-click="posting.deleteComment(comment.id)"
-                    >Delete
-            </a>
+            <!--<a href data-ng-click="posting.open()" translate>Reply</a>-->
+            <a href data-ng-click="posting.deleteComment(comment.id)" translate>Delete</a>
         </div>
     </div>
 

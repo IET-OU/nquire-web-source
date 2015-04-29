@@ -4,21 +4,18 @@
 <div data-ng-if="form.isOpen()">
     <form role="form">
         <div class="form-group">
-            <label for="geolocated">Geolocated data:
+            <label for="geolocated">
+                <translate>Geolocated data:</translate>
                 <input id="geolocated" type="checkbox" placeholder="Title" data-ng-model="form.values.geolocated">
             </label>
         </div>
 
         <div class="btn-group">
             <button class="btn btn-default" data-ng-disabled="form.okButtonDisabled()"
-                    data-ng-click="form.save()">
-                Save
-            </button>
+                    data-ng-click="form.save()" translate>Save</button>
             <button class="btn btn-default"
                     data-ng-disabled="form.resetButtonDisabled()"
-                    data-ng-click="form.cancel()">
-                Cancel
-            </button>
+                    data-ng-click="form.cancel()" translate>Cancel</button>
         </div>
     </form>
 </div>

@@ -1,21 +1,18 @@
 <span data-active-manager="projectMenu">
     <span class="project-menu-main" data-ng-if="projectData.access.admin">
-        <span data-siw-menu-item data-menu-linked-state="'project.view.home'" data-menu-label="'Participant'"
-              data-menu-active-state="'project.view'"></span>
-        <span data-siw-menu-item data-menu-linked-state="'project.admin.home'" data-menu-label="'Admin'"
-              data-menu-active-state="'project.admin'"></span>
-        <span data-siw-menu-item data-menu-linked-state="'project.edit.home'" data-menu-label="'Edit'"
-              data-menu-active-state="'project.edit'"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.view.home'" data-menu-label="'Participant'" data-menu-active-state="'project.view'"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.admin.home'" data-menu-label="'Admin'" data-menu-active-state="'project.admin'"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.edit.home'" data-menu-label="'Edit'" data-menu-active-state="'project.edit'"></span>
     </span>
     <span class="project-menu-main" data-ng-if="!projectData.access.admin">
         <a class="project-menu-item menu-item" href data-ui-sref="project.view.home">
-            <b data-ng-switch="projectData.project.type">
-                <span data-ng-switch-when="senseit">Sense-it</span>
-                <span data-ng-switch-when="spotit">Spot-it</span>
-                <span data-ng-switch-when="challenge">Win-it</span>
-            </b> mission
+            <span data-ng-switch="projectData.project.type">
+                <span data-ng-switch-when="senseit" translate><b>Sense-it</b> mission</span>
+                <span data-ng-switch-when="spotit" translate><b>Spot-it</b> mission</span>
+                <span data-ng-switch-when="challenge" translate><b>Win-it</b> mission</span>
+            </span>
             <span data-ng-if="projectData.access.member">
-                | <b>Joined</b>
+                | <b translate>Joined</b>
             </span>
         </a>
     </span>

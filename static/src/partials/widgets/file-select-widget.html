@@ -1,4 +1,4 @@
-<span data-ng-if="hasOriginal" data-ng-class="originalClass()">Current file: {{original}}</span><br/>
+<span data-ng-if="hasOriginal" data-ng-class="originalClass()" translate>Current file: {{original}}</span><br/>
 
 <span data-ng-if="originalModified">
     <button class="btn btn-default btn-sm" data-ng-click="actions.cancel()">
@@ -7,9 +7,7 @@
 </span>
 
 <span data-ng-if="!originalModified && hasOriginal">
-    <button class="btn btn-default btn-sm" data-ng-click="actions.deleteFile()">
-        Delete file
-    </button>
+    <button class="btn btn-default btn-sm" data-ng-click="actions.deleteFile()" translate>Delete file</button>
 </span>
 
 <span class="btn btn-default btn-file" data-ng-class="{'btn-sm': hasFile}">
@@ -17,9 +15,7 @@
     <input type="file" onchange="angular.element(this).scope().fileChosen(this.files[0])"/>
 </span>
 <br/>
-<span data-ng-if="selectedFile">
-    Selected file: {{selectedFile.name}}
-</span>
+<span data-ng-if="selectedFile" translate>Selected file: {{selectedFile.name}}</span>
 
 
 

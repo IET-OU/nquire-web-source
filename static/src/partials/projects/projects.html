@@ -1,14 +1,10 @@
 <div class="content-sidebar">
     <div class="row">
         <div data-ng-if="projectList.projects.length == 0 && projectList.ready">
-            <p>No missions available at the moment.</p>
+            <p translate>No missions available at the moment.</p>
             <ul>
-                <li data-ng-if="projectListFilter.onlyFeatured">
-                    Try searching including <a href data-ui-sref="home({filter: 'all'})">non-featured missions</a>.
-                </li>
-                <li data-ng-if="projectListFilter.hasConditions">
-                    Try without <a href data-ui-sref="home({kw: null, status: null, type: null})">search conditions</a>.
-                </li>
+                <li data-ng-if="projectListFilter.onlyFeatured" translate>Try searching including <a href data-ui-sref="home({filter: 'all'})">non-featured missions</a>.</li>
+                <li data-ng-if="projectListFilter.hasConditions" translate>Try without <a href data-ui-sref="home({kw: null, status: null, type: null})">search conditions</a>.</li>
             </ul>
         </div>
         <div data-ng-repeat="projectData in projectList.projects" class="col-xs-12 col-sm-6 col-lg-4">
@@ -27,9 +23,9 @@
                     </div>
 
                     <div class="project-item-type" data-ng-switch="projectData.project.type">
-                        <span data-ng-switch-when="senseit">Sense-it</span>
-                        <span data-ng-switch-when="spotit">Spot-it</span>
-                        <span data-ng-switch-when="challenge">Win-it</span>
+                        <span data-ng-switch-when="senseit" translate>Sense-it</span>
+                        <span data-ng-switch-when="spotit" translate>Spot-it</span>
+                        <span data-ng-switch-when="challenge" translate>Win-it</span>
                     </div>
 
                     <p class="project-item-teaser">{{projectData.project.metadata.teaser}}</p>
@@ -38,17 +34,14 @@
                          data-ng-if="projectData.project.type == 'challenge'">
                         <ul>
                             <li><span data-ng-switch="projectData.project.activity.stage">
-                            <span data-ng-switch-when="proposal">Send your ideas</span>
-                            <span data-ng-switch-when="voting">Voting</span>
-                            <span data-ng-switch-when="outcome">Ended</span>
+                            <span data-ng-switch-when="proposal" translate>Send your ideas</span>
+                            <span data-ng-switch-when="voting" translate>Voting</span>
+                            <span data-ng-switch-when="outcome" translate>Ended</span>
                         </span></li>
                         </ul>
                     </div>
 
-                    <div class="project-item-author">
-                        A mission created by
-                        <span data-siw-user-link="projectData.project.author"></span>.
-                    </div>
+                    <div class="project-item-author" translate>A mission created by <span data-siw-user-link="projectData.project.author"></span>.</div>
                 </div>
                 <div class="project-item-banner">
                     <a href data-ui-sref="project.view.home({projectId: projectData.project.id})">
@@ -56,13 +49,11 @@
                             {{projectData.data.members}} <i class="fa fa-child"></i>
                             {{projectData.data.data}} <i class="fa fa-database"></i>
                         </span>
-                        A
-                        <span class="project-item-banner-type" data-ng-switch="projectData.project.type">
-                            <span data-ng-switch-when="senseit">Sense-it</span>
-                            <span data-ng-switch-when="spotit">Spot-it</span>
-                            <span data-ng-switch-when="challenge">Win-it</span>
+                        <span data-ng-switch="projectData.project.type">
+                            <span data-ng-switch-when="senseit" translate>A <span class="project-item-banner-type">Sense-it</span> mission</span>
+                            <span data-ng-switch-when="spotit" translate>A <span class="project-item-banner-type">Spot-it</span> mission</span>
+                            <span data-ng-switch-when="challenge" translate>A <span class="project-item-banner-type">Win-it</span> mission</span>
                         </span>
-                        mission
                     </a>
                 </div>
             </div>

@@ -7,22 +7,21 @@
 
     <div class="project-section-content-column">
 
-        <p class="project-section-content-header">Upload picture</p>
+        <p class="project-section-content-header" translate>Upload picture</p>
 
         <div data-ng-if="!status.logged">
-            <p>You need to <a href data-ng-click="openIdService.loginAndComeBack()">sign in</a> or register to upload
-                images to this mission.</p>
+            <p translate>You need to <a href data-ng-click="openIdService.loginAndComeBack()">sign in</a> to upload images to this mission.</p>
         </div>
 
         <div data-ng-if="status.logged">
             <div data-ng-if="!projectData.access.member">
-                <p>You need to <a href data-ui-sref="project.view.home">join this mission </a> to upload images.</p>
+                <p translate>You need to <a href data-ui-sref="project.view.home">join this mission</a> to upload images.</p>
             </div>
 
             <div data-ng-if="projectData.access.member">
                 <form>
                     <div class="form-group">
-                        <label for="title">Title:</label>
+                        <label for="title" translate>Title:</label>
                         <input type="text" id="title" placeholder="Title" class="form-control"
                                data-ng-model="formData.title"
                                data-ng-disabled="busy"/>
@@ -39,10 +38,8 @@
                         </div>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-default"
-                                data-ng-click="upload()" data-ng-disabled="!formData.imageSrc || busy">Upload image
-                        </button>
-                        <span data-ng-if="busy">Uploading...</span>
+                        <button type="button" class="btn btn-default" data-ng-click="upload()" data-ng-disabled="!formData.imageSrc || busy" translate>Upload image</button>
+                        <span data-ng-if="busy" translate>Uploading…</span>
                     </div>
                 </form>
             </div>

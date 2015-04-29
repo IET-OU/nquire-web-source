@@ -13,40 +13,33 @@
                  data-ng-bind-html="projectData.project.metadata.outline"></div>
 
             <div data-ng-if="!form.isOpen()" class="btn-group">
-                <button type="button" class="btn btn-default" data-ng-click="form.open('teaser')">
-                    Edit
-                </button>
+                <button type="button" class="btn btn-default" data-ng-click="form.open('teaser')" translate>Edit</button>
             </div>
         </div>
 
         <div data-ng-if="form.isOpen('teaser')">
             <form role="form">
                 <div class="form-group">
-                    <label>Outline:</label>
+                    <label translate>Outline:</label>
                     <text-angular name="outline" data-ng-model="form.values.metadata.outline"></text-angular>
                 </div>
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default" data-ng-click="form.save()">Save</button>
-                    <button type="button" class="btn btn-default" data-ng-click="form.cancel()">Cancel</button>
+                    <button type="button" class="btn btn-default" data-ng-click="form.save()" translate>Save</button>
+                    <button type="button" class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
                 </div>
             </form>
         </div>
 
-        <p class="project-section-content-header">Mission administration</p>
+        <p class="project-section-content-header" translate>Mission administration</p>
+
+        <p translate>This project is currently <b>closed</b>. Therefore, you can edit it, but participants cannot access it.  Click on “Open project” to make the project public. </p>
 
         <p>
-            This project is currently <b>closed</b>. Therefore, you can edit it, but participants cannot access it.
-            Click on "Open project" to make the project public.
+            <button class="btn btn-default" data-ng-click="openProject()" translate>Open project</button>
+            <button class="btn btn-default" data-ng-click="deleteProject()" translate>Delete project</button>
         </p>
 
-        <p>
-            <button class="btn btn-default" data-ng-click="openProject()">Open project</button>
-            <button class="btn btn-default" data-ng-click="deleteProject()">Delete project</button>
-        </p>
-
-        <p>
-            (Please note that you cannot edit the project while it is open.)
-        </p>
+        <p translate>Please note that you cannot edit the project while it is open.</p>
 
     </div>
 </div>

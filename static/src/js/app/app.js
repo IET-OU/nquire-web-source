@@ -2,7 +2,7 @@
 
 /* App Module */
 
-angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.bootstrap', 'senseItServices'], null).config([
+angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.bootstrap', 'senseItServices', 'gettext'], null).config([
   '$provide',
   '$stateProvider',
   '$urlRouterProvider',
@@ -211,4 +211,6 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   }
 ]).run(function (TrackingService) {
   TrackingService.registerGA();
+}).run(function (gettextCatalog) {
+	gettextCatalog.setCurrentLanguage('el');
 });

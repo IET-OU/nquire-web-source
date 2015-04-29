@@ -1,5 +1,5 @@
 <div class="forum-header">
-    <a href data-ui-sref="forum.list">Forum</a> ▸
+    <a href data-ui-sref="forum.list" translate>Forum</a> ▸
     <a href data-ui-sref="forum.node.list({forumId: forum.thread.forum.id})">{{forum.thread.forum.title}}</a> ▸
     {{forum.thread.title}}
 </div>
@@ -11,26 +11,12 @@
             <div class="date">{{comment.date | fuzzyDate }}</div>
             <div class="controls">
                 <span data-ng-if="!form.isOpen()">
-                <button class="btn btn-xs btn-default"
-                        data-ng-if="canEdit(comment)"
-                        ng-click="form.open($index)">
-                    Edit
-                </button>
-                <button class="btn btn-xs btn-default"
-                        data-ng-if="!$first && canEdit(comment)"
-                        ng-click="deleteComment(comment)">
-                    Delete
-                </button>
+                <button class="btn btn-xs btn-default" data-ng-if="canEdit(comment)" ng-click="form.open($index)" translate>Edit</button>
+                <button class="btn btn-xs btn-default" data-ng-if="!$first && canEdit(comment)" ng-click="deleteComment(comment)" translate>Delete</button>
                 </span>
                 <span data-ng-if="form.isOpen($index)">
-                    <button class="btn btn-xs btn-default"
-                            ng-click="form.save()">
-                        Save
-                    </button>
-                    <button class="btn btn-xs btn-default"
-                            ng-click="form.cancel()">
-                        Cancel
-                    </button>
+                    <button class="btn btn-xs btn-default" ng-click="form.save()" translate>Save</button>
+                    <button class="btn btn-xs btn-default" ng-click="form.cancel()" translate>Cancel</button>
                 </span>
                 <span data-siw-vote-widget data-vote-manager="dataVoteManager" data-vote-target="comment"></span>
             </div>
@@ -55,18 +41,18 @@
     </div>
 
     <div data-ng-if="!status.logged">
-        <p><a href data-ng-click="openIdService.loginAndComeBack()">Sign in</a> to post replies in this thread.</p>
+        <p translate><a href data-ng-click="openIdService.loginAndComeBack()">Sign in</a> to post replies in this thread.</p>
     </div>
 
     <div data-ng-if="status.logged">
         <div data-ng-if="!form.isOpen()">
-            <button class="btn btn-default" data-ng-click="form.open('new')">Post comment</button>
+            <button class="btn btn-default" data-ng-click="form.open('new')" translate>Post comment</button>
         </div>
         <div data-ng-if="form.isOpen('new')">
 
             <form role="form">
                 <div class="form-group">
-                    <label>Comment:</label>
+                    <label translate>Comment:</label>
                     <text-angular id="comment"
                                   name="comment"
                                   data-ng-model="form.values.comment"

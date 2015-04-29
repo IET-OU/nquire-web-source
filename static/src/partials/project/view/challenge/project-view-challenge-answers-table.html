@@ -2,15 +2,15 @@
     <form class="form-inline">
         <div class="form-group">
             <select id="author" data-ng-model="filter.params.type" class="form-control">
-                <option value="any">All answers</option>
-                <option value="mine">Only mine</option>
-                <option value="others">Only by others</option>
+                <option value="any" translate>All answers</option>
+                <option value="mine" translate>Only mine</option>
+                <option value="others" translate>Only by others</option>
             </select>
 
             <input type="search" placeholder="Search" data-ng-model="filter.params.search" class="form-control"/>
         </div>
         <div class="btn-group">
-            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="reset" class="btn btn-default" translate>Reset</button>
         </div>
     </form>
 </div>
@@ -22,15 +22,11 @@
         <thead>
         <tr>
             <th data-ng-if="answerData.showAuthor" data-ng-class="headerClass('author')"
-                data-ng-click="headerSort('author')">
-                Author
-            </th>
+                data-ng-click="headerSort('author')" translate>Author</th>
             <th data-ng-if="answerData.showVoting" data-ng-class="headerClass('votes')"
-                data-ng-click="headerSort('votes')">
-                Votes
-            </th>
+                data-ng-click="headerSort('votes')" translate>Votes</th>
             <th  colspan="2" data-ng-class="headerClass('answer')" data-ng-click="headerSort('answer')">{{titleLabel}}</th>
-            <th data-ng-class="headerClass('submitted')" data-ng-click="headerSort('submitted')">Submitted</th>
+            <th data-ng-class="headerClass('submitted')" data-ng-click="headerSort('submitted')" translate>Submitted</th>
             <th></th>
         </tr>
         </thead>
@@ -51,8 +47,7 @@
                 </button>
                 <button data-ng-if="answerData.selectable" class="btn"
                         data-ng-class="answer.id == answerData.selectedAnswer ? 'btn-primary btn-active' : 'btn-default'"
-                        data-ng-click="answerData.selectCallback(answer)">Select
-                </button>
+                        data-ng-click="answerData.selectCallback(answer)" translate>Select</button>
             </td>
         </tr>
         </tbody>
@@ -64,14 +59,11 @@
 
             <div data-ng-if="answerData.editable">
                 <div data-ng-if="maxAnswersReached()">
-                    <p>You have created the maximum number of allowed ideas:
-                        {{projectData.project.activity.maxAnswers}}.</p>
+                    <p translate>You have created the maximum number of allowed ideas: {{projectData.project.activity.maxAnswers}}.</p>
                 </div>
                 <div data-ng-if="!maxAnswersReached()">
-                    <p>You can create up to {{projectData.project.activity.maxAnswers}} ideas.</p>
-                    <button class="btn btn-default" data-ng-click="itemView.openNew()">
-                        Create new idea
-                    </button>
+                    <p translate>You can create up to {{projectData.project.activity.maxAnswers}} ideas.</p>
+                    <button class="btn btn-default" data-ng-click="itemView.openNew()" translate>Create new idea</button>
                 </div>
             </div>
         </div>

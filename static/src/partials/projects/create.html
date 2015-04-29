@@ -4,21 +4,11 @@
              data-ng-click="select('senseit')"></div>
         <div class="project-create-type-info">
             <p class="project-create-type-info-header"
-               data-ng-click="select('senseit')">Sense-it</p>
+               data-ng-click="select('senseit')" translate>Sense-it</p>
 
             <div data-ng-bind-html="txt.createSenseIt"></div>
-            <!--
-            <p>Is there something you are curious about - asking how, where, when and what?</p>
 
-            <p>Find answers by using the sensors in your phone! Invite others to help collect data!</p>
-
-            <p>Make it your <span class="project-create-type">Sense-it</span> mission!</p>
-            -->
-
-            <div class="project-create-type-banner"
-                 data-ng-click="select('senseit')">
-                Create your own <b>Sense-it</b> mission
-            </div>
+            <div class="project-create-type-banner" data-ng-click="select('senseit')" translate>Create your own <b>Sense-it</b> mission</div>
         </div>
     </div>
 
@@ -27,7 +17,7 @@
              data-ng-click="select('spotit')"></div>
         <div class="project-create-type-info">
             <p class="project-create-type-info-header"
-               data-ng-click="select('spotit')">Spot-it</p>
+               data-ng-click="select('spotit')" translate>Spot-it</p>
 
             <div data-ng-bind-html="txt.createSpotIt"></div>
             <!--
@@ -38,9 +28,7 @@
             <p>Make it your <span class="project-create-type">Spot-it</span> mission!</p>
             -->
             <div class="project-create-type-banner"
-                 data-ng-click="select('spotit')">
-                Create your own <b>Spot-it</b> mission
-            </div>
+                 data-ng-click="select('spotit')" translate>Create your own <b>Spot-it</b> mission</div>
         </div>
     </div>
 
@@ -49,7 +37,7 @@
              data-ng-click="select('challenge')"></div>
         <div class="project-create-type-info">
             <p class="project-create-type-info-header"
-               data-ng-click="select('challenge')">Win-it</p>
+               data-ng-click="select('challenge')" translate>Win-it</p>
 
             <div data-ng-bind-html="txt.createWinIt"></div>
             <!--
@@ -60,10 +48,7 @@
             -->
             <p>Create a <b>Win-it</b> mission!</p>
 
-            <div class="project-create-type-banner"
-                 data-ng-click="select('challenge')">
-                Create your own <b>Win-it</b> mission
-            </div>
+            <div class="project-create-type-banner" data-ng-click="select('challenge')" translate>Create your own <b>Win-it</b> mission</div>
         </div>
     </div>
 
@@ -103,7 +88,7 @@
              data-ng-bind-html="txt.createWinItHelp">
             <!--
             <p>
-                Win-it missions are competitive projects in which participante propose answers to a question or
+                Win-it missions are competitive projects in which participants propose answers to a question or
                 challenge.
             </p>
 
@@ -122,37 +107,27 @@
         </div>
         <div data-ng-if="status.logged">
             <form class="form-inline" role="form">
-                <p>
-                    Enter the title of your new
-                    <b><span data-ng-switch="type">
-                        <span data-ng-switch-when="senseit">Sense-it</span>
-                        <span data-ng-switch-when="challenge">Win-it</span>
-                        <span data-ng-switch-when="spotit">Spot-it</span>
-                        </span>
-                    </b>
-                    mission and click "Create".
+                <p data-ng-switch="type">
+                    <span data-ng-switch-when="senseit">Enter the title of your new <b>Sense-it</b> mission and click "Create".</span>
+                    <span data-ng-switch-when="challenge">Enter the title of your new <b>Win-it</b> mission and click "Create".</span>
+                    <span data-ng-switch-when="spotit">Enter the title of your new <b>Spot-it</b> mission and click "Create".</span>
                 </p>
 
                 <div class="form-group">
-                    <label for="create-project-title">Title: </label>
-                    <input id="create-project-title" type="text" class="form-control" placeholder="Create"
-                           data-ng-model="title"/>
+                    <label for="create-project-title" translate>Title: </label>
+                    <input id="create-project-title" type="text" class="form-control" placeholder="Create" data-ng-model="title"/>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-default" data-ng-disabled="title.length == 0" data-ng-click="create()">Create
-                    </button>
-                    <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                    <button class="btn btn-default" data-ng-disabled="title.length == 0" data-ng-click="create()" translate>Create</button>
+                    <button class="btn btn-default" data-ng-click="cancel()" translate>Cancel</button>
                 </div>
             </form>
         </div>
         <div data-ng-if="!status.logged">
-            <p>
-                You need to <a href data-ng-click="openIdService.loginAndComeBack()">sign in or register</a> in order to
-                create your own projects!
-            </p>
+            <p translate>You need to <a href data-ng-click="openIdService.loginAndComeBack()">sign in</a> in order to create your own projects.</p>
 
             <p>
-                <button class="btn btn-default" data-ng-click="cancel()">Cancel</button>
+                <button class="btn btn-default" data-ng-click="cancel()" translate>Cancel</button>
             </p>
         </div>
     </div>
