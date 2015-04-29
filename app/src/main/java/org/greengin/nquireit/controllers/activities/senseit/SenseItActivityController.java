@@ -2,6 +2,7 @@ package org.greengin.nquireit.controllers.activities.senseit;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.greengin.nquireit.entities.projects.Project;
 import org.greengin.nquireit.logic.mail.Mailer;
 import org.greengin.nquireit.logic.project.ProjectResponse;
 import org.greengin.nquireit.logic.project.senseit.SensorInputRequest;
@@ -24,12 +25,14 @@ public class SenseItActivityController extends AbstractSenseItController {
     @ResponseBody
 	public ProjectResponse create(@PathVariable("projectId") Long projectId, @RequestBody SensorInputRequest inputData, HttpServletRequest request) {
 
+        Project project = context.getProjectDao().project(projectId);
+
         Mailer mailer = new Mailer();
         mailer.sendMail(
-            "New sensor input",
+            "New mission data - " + project.getTitle(),
             "Hello nQuire-it user,\n\n" +
-            "A new sensor input has been added to the nQuire-it website\n" +
-            "http://www.nquire-it.org/#/project/" + projectId + "\n\n" +
+            "New data has been added to the nQuire-it mission '" + project.getTitle() + "':\n" +
+            "http://www.nquire-it.org/#/project/" + projectId + "/data\n\n" +
             "To stop receiving these messages, update your notification preferences at:\n" +
             "http://www.nquire-it.org/#/profile\n\n" +
             "Warm regards,\nnQuire-it team",

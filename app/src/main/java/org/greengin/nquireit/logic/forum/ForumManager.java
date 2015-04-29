@@ -107,7 +107,7 @@ public class ForumManager extends AbstractContentManager {
             mailer.sendMail(
                 "New forum post - " + thread.getTitle(),
                 "Hello nQuire-it user,\n\n" +
-                "A new forum post has been made on the nQuire-it website\n" +
+                "A new post has been made on the nQuire-it forum '" + thread.getTitle() + "':\n" +
                 "http://www.nquire-it.org/#/forum/thread/" + thread.getId() + "\n\n" +
                 "To stop receiving these messages, update your notification preferences at:\n" +
                 "http://www.nquire-it.org/#/profile\n\n" +

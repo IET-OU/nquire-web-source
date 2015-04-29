@@ -396,7 +396,7 @@ System.out.println(url.toString());
 
             Mailer mailer = new Mailer();
             mailer.sendMail(
-                "account information",
+                "Account information",
                 "Hello nQuire-it user,\n\n" +
                 "You (or someone claiming to be you) has requested a new password for your account.\n\n" +
                 "Your username is " + userProfile.getUsername() + "\n" +

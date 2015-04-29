@@ -3,6 +3,7 @@ package org.greengin.nquireit.controllers.activities.spotit;
 import com.mangofactory.jsonview.ResponseView;
 import org.greengin.nquireit.entities.activities.senseit.SenseItSeries;
 import org.greengin.nquireit.entities.activities.spotit.SpotItObservation;
+import org.greengin.nquireit.entities.projects.Project;
 import org.greengin.nquireit.entities.rating.Comment;
 import org.greengin.nquireit.json.JacksonObjectMapper;
 import org.greengin.nquireit.json.Views;
@@ -92,12 +93,14 @@ public class SpotItDataController {
 
             FileMapUpload.FileData file = RequestsUtils.getFile(request, "image");
 
+            Project project = context.getProjectDao().project(projectId);
+
             Mailer mailer = new Mailer();
             mailer.sendMail(
-                "New mission observation",
+                "New mission observation - " + project.getTitle(),
                 "Hello nQuire-it user,\n\n" +
-                "A new mission observation has been uploaded on the nQuire-it website\n" +
-                "http://www.nquire-it.org/#/project/" + projectId + "\n\n" +
+                "A new observation has been added to the nQuire-it mission '" + project.getTitle() + "':\n" +
+                "http://www.nquire-it.org/#/project/" + projectId + "/data\n\n" +
                 "To stop receiving these messages, update your notification preferences at:\n" +
                 "http://www.nquire-it.org/#/profile\n\n" +
                 "Warm regards,\nnQuire-it team",

@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.mangofactory.jsonview.ResponseView;
 import org.greengin.nquireit.entities.activities.challenge.ChallengeAnswer;
+import org.greengin.nquireit.entities.projects.Project;
 import org.greengin.nquireit.json.Views;
 import org.greengin.nquireit.logic.mail.Mailer;
 import org.greengin.nquireit.logic.project.challenge.ChallengeActivityActions;
@@ -58,12 +59,14 @@ public class ChallengeAnswerController extends AbstractChallengeController{
     @ResponseBody
 	public Collection<ChallengeAnswer> submit(@PathVariable("projectId") Long projectId, @PathVariable("answerId") Long answerId, HttpServletRequest request) {
 
+        Project project = context.getProjectDao().project(projectId);
+
         Mailer mailer = new Mailer();
         mailer.sendMail(
-            "New mission idea",
+            "New mission idea - " + project.getTitle(),
             "Hello nQuire-it user,\n\n" +
-            "A new mission idea has been added to the nQuire-it website\n" +
-            "http://www.nquire-it.org/#/project/" + projectId + "\n\n" +
+            "A new idea has been added to the nQuire-it mission '" + project.getTitle() + "':\n" +
+            "http://www.nquire-it.org/#/project/" + projectId + "/challenge\n\n" +
             "To stop receiving these messages, update your notification preferences at:\n" +
             "http://www.nquire-it.org/#/profile\n\n" +
             "Warm regards,\nnQuire-it team",
