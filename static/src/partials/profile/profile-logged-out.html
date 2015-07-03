@@ -131,18 +131,16 @@
     <div class="profile-logged-out" data-ng-if="loginMode.is('reminder')">
 
         <div class="profile-logged-out-register-form-container">
-            <p translate>I forgot my password: </p>
+            <p translate>I forgot my password:</p>
 
             <form class="form-horizontal" role="form">
                 <div class="form-group">
                     <label for="reminder_email" class="control-label" translate>Email:</label>
 
                     <div class="input-container">
-                        <input id="reminder_email" type="email" class="form-control"
-                               data-ng-model="reminder.editing.email"/>
+                        <input id="reminder_email" type="email" class="form-control" data-ng-model="reminder.editing.email"/>
                     </div>
-                <span data-ng-if="reminder.error.email"
-                      class="profile-login-username-error">{{reminder.error.email}}</span>
+                <span data-ng-if="reminder.error.email" class="profile-login-username-error">{{reminder.error.email}}</span>
                 </div>
 
                 <div class="form-group">

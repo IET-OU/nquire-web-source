@@ -14,7 +14,7 @@
         <td>{{user.email}}</td>
         <td>
             <span data-ng-if="user.admin">
-                <b translate>Yes</b>
+                <translate>Yes</translate>
                 <button data-ng-if="user.id != status.profile.id" class="btn btn-default btn-xs" data-ng-click="actions.setAdmin(user.id, false)" translate>Remove permission</button>
             </span>
             <span data-ng-if="!user.admin">

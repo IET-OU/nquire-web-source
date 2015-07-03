@@ -222,7 +222,7 @@ msgstr ""
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:62
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:16
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:29
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:27
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:24
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:23
 #: static/src/partials/project/view/senseit/data-table-senseit.html:33
 #: static/src/partials/project/view/spotit/data-item-spotit.html:42
@@ -234,6 +234,10 @@ msgstr ""
 
 #: static/src/partials/social/social-post-dialog.html:57
 msgid "Caption"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:3
+msgid "Challenge"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:132
@@ -264,6 +268,7 @@ msgid "Content id"
 msgstr ""
 
 #: static/src/partials/layout/header.html:18
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
 #: static/src/partials/projects/create.html:121
 msgid "Create"
 msgstr ""
@@ -292,7 +297,13 @@ msgstr ""
 msgid "Current password:"
 msgstr ""
 
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:3
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:3
+msgid "Data"
+msgstr ""
+
 #: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:10
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:4
 msgid "Data collection"
 msgstr ""
 
@@ -314,7 +325,7 @@ msgstr ""
 #: static/src/partials/forum/forum-list-category.html:8
 #: static/src/partials/forum/forum-thread.html:15
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:46
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
 msgid "Delete"
 msgstr ""
 
@@ -347,6 +358,15 @@ msgstr ""
 msgid "Description:"
 msgstr ""
 
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:3
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:3
+#: static/src/partials/project/edit/spotit/spotit-edit-menu.html:3
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:2
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:2
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:2
+msgid "Details"
+msgstr ""
+
 #: static/src/partials/project/view/data/project-view-data-table.html:9
 msgid "Download CSV"
 msgstr ""
@@ -366,7 +386,7 @@ msgstr ""
 #: static/src/partials/project/edit/project-edit-outline-page.html:16
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:67
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:54
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:40
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:35
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:31
 msgid "Edit"
 msgstr ""
@@ -430,7 +450,7 @@ msgstr ""
 msgid "Geolocated data:"
 msgstr ""
 
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:53
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
 msgid "Go back to the list"
 msgstr ""
 
@@ -447,6 +467,7 @@ msgid "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>
 msgstr ""
 
 #: static/src/partials/layout/header.html:15
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
 msgid "Home"
 msgstr ""
 
@@ -463,6 +484,8 @@ msgstr ""
 msgid "Id"
 msgstr ""
 
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:4
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:3
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:2
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-vote.html:1
 msgid "Ideas"
@@ -549,6 +572,10 @@ msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:11
 msgid "Magnetic field"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:4
+msgid "Map"
 msgstr ""
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:38
@@ -697,6 +724,15 @@ msgstr ""
 msgid "Outcome stage"
 msgstr ""
 
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:2
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:2
+#: static/src/partials/project/edit/spotit/spotit-edit-menu.html:2
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:1
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:1
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:1
+msgid "Outline"
+msgstr ""
+
 #: static/src/partials/project/edit/project-edit-outline-page.html:23
 msgid "Outline:"
 msgstr ""
@@ -768,6 +804,10 @@ msgstr ""
 msgid "Project image:"
 msgstr ""
 
+#: static/src/partials/admin/admin.html:4
+msgid "Projects"
+msgstr ""
+
 #: static/src/partials/profile/profile-project-list.html:14
 msgid "Projects Iʼve joined:"
 msgstr ""
@@ -825,6 +865,10 @@ msgstr ""
 msgid "Replies"
 msgstr ""
 
+#: static/src/partials/admin/admin.html:6
+msgid "Reported content"
+msgstr ""
+
 #: static/src/partials/admin/admin-reported.html:18
 msgid "Reports"
 msgstr ""
@@ -856,13 +900,14 @@ msgstr ""
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:61
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:14
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:27
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:22
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:20
 #: static/src/partials/project/view/senseit/data-table-senseit.html:32
 #: static/src/partials/project/view/spotit/data-item-spotit.html:41
 msgid "Save"
 msgstr ""
 
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:25
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:23
 msgid "Save and continue"
 msgstr ""
 
@@ -890,7 +935,7 @@ msgstr ""
 msgid "See the outcome of this mission here."
 msgstr ""
 
-#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:49
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:48
 msgid "Select"
 msgstr ""
@@ -915,7 +960,7 @@ msgstr ""
 msgid "Send a notification to the above email address whenever the following events occur:"
 msgstr ""
 
-#: static/src/partials/profile/profile-logged-out.html:160
+#: static/src/partials/profile/profile-logged-out.html:158
 msgid "Send a reminder"
 msgstr ""
 
@@ -954,7 +999,7 @@ msgid "Show value:"
 msgstr ""
 
 #: static/src/partials/layout/header.html:48
-#: static/src/partials/profile/profile-logged-out.html:161
+#: static/src/partials/profile/profile-logged-out.html:159
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
@@ -1067,6 +1112,10 @@ msgstr ""
 msgid "Submission limit"
 msgstr ""
 
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:4
+msgid "Submissions"
+msgstr ""
+
 #: static/src/partials/comments.html:18
 msgid "Submit"
 msgstr ""
@@ -1080,6 +1129,7 @@ msgid "Text:"
 msgstr ""
 
 #: static/src/partials/admin/admin-texts.html:4
+#: static/src/partials/admin/admin.html:5
 msgid "Texts"
 msgstr ""
 
@@ -1157,6 +1207,10 @@ msgstr ""
 msgid "Unlink {{providerName}} account"
 msgstr ""
 
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:4
+msgid "Upload"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:17
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:41
 msgid "Upload image"
@@ -1194,12 +1248,16 @@ msgstr ""
 msgid "Username:"
 msgstr ""
 
+#: static/src/partials/admin/admin.html:3
+msgid "Users"
+msgstr ""
+
 #: static/src/partials/projects/projects-sidebar-feeds.html:20
 msgid "Users logged in"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-out.html:112
-#: static/src/partials/profile/profile-logged-out.html:149
+#: static/src/partials/profile/profile-logged-out.html:147
 msgid "Verify yourself:"
 msgstr ""
 
@@ -1306,6 +1364,18 @@ msgstr ""
 
 #: static/src/partials/admin/admin-users.html:6
 msgid "email"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:4
+msgid "project.admin"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:5
+msgid "project.edit"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:3
+msgid "project.view"
 msgstr ""
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:26

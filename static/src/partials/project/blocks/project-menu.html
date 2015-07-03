@@ -1,8 +1,8 @@
 <span data-active-manager="projectMenu">
     <span class="project-menu-main" data-ng-if="projectData.access.admin">
-        <span data-siw-menu-item data-menu-linked-state="'project.view.home'" data-menu-label="'Participant'" data-menu-active-state="'project.view'"></span>
-        <span data-siw-menu-item data-menu-linked-state="'project.admin.home'" data-menu-label="'Admin'" data-menu-active-state="'project.admin'"></span>
-        <span data-siw-menu-item data-menu-linked-state="'project.edit.home'" data-menu-label="'Edit'" data-menu-active-state="'project.edit'"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.view.home'" data-menu-label="'Participant'" data-menu-active-state="{{'project.view'|translate}}"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.admin.home'" data-menu-label="'Admin'" data-menu-active-state="{{'project.admin'|translate}}"></span>
+        <span data-siw-menu-item data-menu-linked-state="'project.edit.home'" data-menu-label="'Edit'" data-menu-active-state="{{'project.edit'|translate}}"></span>
     </span>
     <span class="project-menu-main" data-ng-if="!projectData.access.admin">
         <a class="project-menu-item menu-item" href data-ui-sref="project.view.home">

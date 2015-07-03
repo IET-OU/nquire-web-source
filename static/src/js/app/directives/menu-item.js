@@ -4,7 +4,7 @@ angular.module('senseItWeb', null, null).directive('siwMenuItem', function () {
         scope: {
             'menuActiveState' : '=?',
             'menuLinkedState': '=',
-            'menuLabel': '='
+            'menuLabel': '@'
         },
         controller: function ($scope, $state) {
             $scope.menuActiveState = $scope.menuActiveState ? $scope.menuActiveState : $scope.menuLinkedState;
