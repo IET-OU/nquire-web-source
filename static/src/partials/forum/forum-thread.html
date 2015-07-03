@@ -53,17 +53,12 @@
             <form role="form">
                 <div class="form-group">
                     <label translate>Comment:</label>
-                    <text-angular id="comment"
-                                  name="comment"
-                                  data-ng-model="form.values.comment"
-                                  placeholder="Comment">
-                    </text-angular>
+                    <text-angular id="comment" name="comment" data-ng-model="form.values.comment" placeholder="{{'Comment'|translate}}"></text-angular>
                 </div>
                 <div class="btn-group">
 
-                    <button class="btn btn-default" data-ng-disabled="okDisabled()" data-ng-click="form.save()">Post
-                    </button>
-                    <button class="btn btn-default" data-ng-click="form.cancel()">Cancel</button>
+                    <button class="btn btn-default" data-ng-disabled="okDisabled()" data-ng-click="form.save()" translate>Post</button>
+                    <button class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
                 </div>
             </form>
         </div>

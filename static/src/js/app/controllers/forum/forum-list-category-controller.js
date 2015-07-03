@@ -18,7 +18,7 @@ angular.module('senseItWeb', null, null).controller('ForumListCategoryCtrl', fun
 
         $scope.deleteForumCategory = function (category) {
             ModalService.open({
-                body: '<p>Are you sure you want forum group "' + category.title + '"?</p>' +
+                body: '<p>Are you sure you want forum group “' + category.title + '”?</p>' +
                 '<p>This will remove all the forums and threads in it.</p>',
                 title: 'Delete forum',
                 ok: function () {

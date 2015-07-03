@@ -108,14 +108,14 @@
         <div data-ng-if="status.logged">
             <form class="form-inline" role="form">
                 <p data-ng-switch="type">
-                    <span data-ng-switch-when="senseit">Enter the title of your new <b>Sense-it</b> mission and click "Create".</span>
-                    <span data-ng-switch-when="challenge">Enter the title of your new <b>Win-it</b> mission and click "Create".</span>
-                    <span data-ng-switch-when="spotit">Enter the title of your new <b>Spot-it</b> mission and click "Create".</span>
+                    <span data-ng-switch-when="senseit">Enter the title of your new <b>Sense-it</b> mission and click “Create”.</span>
+                    <span data-ng-switch-when="challenge">Enter the title of your new <b>Win-it</b> mission and click “Create”.</span>
+                    <span data-ng-switch-when="spotit">Enter the title of your new <b>Spot-it</b> mission and click “Create”.</span>
                 </p>
 
                 <div class="form-group">
                     <label for="create-project-title" translate>Title: </label>
-                    <input id="create-project-title" type="text" class="form-control" placeholder="Create" data-ng-model="title"/>
+                    <input id="create-project-title" type="text" class="form-control" placeholder="{{'Create'|translate}}" data-ng-model="title"/>
                 </div>
                 <div class="btn-group">
                     <button class="btn btn-default" data-ng-disabled="title.length == 0" data-ng-click="create()" translate>Create</button>

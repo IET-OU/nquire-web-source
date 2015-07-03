@@ -235,9 +235,10 @@ msgstr ""
 #: static/src/partials/admin/admin-texts.html:31
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
-#: static/src/partials/forum/forum-list-forum.html:28
+#: static/src/partials/forum/forum-list-forum.html:24
 #: static/src/partials/forum/forum-node-new-thread.html:16
 #: static/src/partials/forum/forum-thread.html:19
+#: static/src/partials/forum/forum-thread.html:61
 #: static/src/partials/profile/profile-logged-in.html:134
 #: static/src/partials/profile/profile-logged-in.html:212
 #: static/src/partials/profile/profile-logged-in.html:267
@@ -288,6 +289,10 @@ msgstr ""
 msgid "Close project"
 msgstr ""
 
+#: static/src/partials/forum/forum-thread.html:56
+msgid "Comment"
+msgstr ""
+
 #: static/src/partials/comments.html:14
 #: static/src/partials/forum/forum-thread.html:55
 msgid "Comment:"
@@ -303,6 +308,7 @@ msgstr ""
 
 #: static/src/partials/layout/header.html:18
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
+#: static/src/partials/projects/create.html:118
 #: static/src/partials/projects/create.html:121
 msgid "Create"
 msgstr ""
@@ -357,6 +363,7 @@ msgstr ""
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
+#: static/src/partials/forum/forum-list-forum.html:8
 #: static/src/partials/forum/forum-thread.html:15
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
@@ -381,12 +388,16 @@ msgstr ""
 msgid "Delete series"
 msgstr ""
 
+#: static/src/partials/forum/forum-list-forum.html:20
+msgid "Description"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:255
 msgid "Description of myself:"
 msgstr ""
 
 #: static/src/partials/forum/forum-list-category.html:29
-#: static/src/partials/forum/forum-list-forum.html:22
+#: static/src/partials/forum/forum-list-forum.html:19
 #: static/src/partials/profile/profile-logged-in.html:232
 #: static/src/partials/profile/profile-view.html:60
 msgid "Description:"
@@ -407,6 +418,7 @@ msgstr ""
 
 #: static/src/partials/admin/admin-texts.html:27
 #: static/src/partials/forum/forum-list-category.html:7
+#: static/src/partials/forum/forum-list-forum.html:7
 #: static/src/partials/forum/forum-thread.html:14
 #: static/src/partials/profile/profile-logged-in.html:141
 #: static/src/partials/profile/profile-logged-in.html:219
@@ -702,6 +714,10 @@ msgstr ""
 msgid "New comment"
 msgstr ""
 
+#: static/src/partials/forum/forum-list-forum.html:6
+msgid "New forum"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:113
 msgid "New password:"
 msgstr ""
@@ -802,6 +818,7 @@ msgid "Please note that you cannot edit the project while it is open."
 msgstr ""
 
 #: static/src/partials/forum/forum-node-new-thread.html:15
+#: static/src/partials/forum/forum-thread.html:60
 msgid "Post"
 msgstr ""
 
@@ -928,7 +945,7 @@ msgstr ""
 
 #: static/src/partials/admin/admin-texts.html:30
 #: static/src/partials/forum/forum-list-category.html:34
-#: static/src/partials/forum/forum-list-forum.html:27
+#: static/src/partials/forum/forum-list-forum.html:23
 #: static/src/partials/forum/forum-thread.html:18
 #: static/src/partials/profile/profile-logged-in.html:211
 #: static/src/partials/profile/profile-logged-in.html:266
@@ -1243,7 +1260,7 @@ msgid "Title"
 msgstr ""
 
 #: static/src/partials/forum/forum-list-category.html:25
-#: static/src/partials/forum/forum-list-forum.html:18
+#: static/src/partials/forum/forum-list-forum.html:15
 #: static/src/partials/forum/forum-node-new-thread.html:6
 #: static/src/partials/project/blocks/project-title-edit.html:40
 #: static/src/partials/project/edit/project-edit-details-page.html:42

@@ -3,12 +3,9 @@
         <span class="arrow">▸</span>
         <a href data-ui-sref="forum.node.list({forumId: forumNode.id})"><b>{{forumNode.title}}</b></a>
         <span class="btn-group">
-            <button data-ng-if="adminAccess()" class="btn btn-default btn-xs" data-ng-click="form.open()">
-                {{isNew ? 'New forum' : 'Edit'}}
-            </button>
-            <button data-ng-if="adminAccess() && !isNew" class="btn btn-default btn-xs"
-                    data-ng-click="deleteForum(forumNode)">Delete
-            </button>
+            <button data-ng-if="adminAccess() && isNew" class="btn btn-default btn-xs" data-ng-click="form.open()" translate>New forum</button>
+            <button data-ng-if="adminAccess() && !isNew" class="btn btn-default btn-xs" data-ng-click="form.open()" translate>Edit</button>
+            <button data-ng-if="adminAccess() && !isNew" class="btn btn-default btn-xs" data-ng-click="deleteForum(forumNode)" translate>Delete</button>
         </span>
     </div>
 
@@ -20,8 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="description" translate>Description:</label>
-                <textarea id="description" class="form-control" data-ng-model="form.values.description"
-                          placeholder="Description"></textarea>
+                <textarea id="description" class="form-control" data-ng-model="form.values.description" placeholder="{{'Description'|translate}}"></textarea>
             </div>
             <div class="btn-group">
                 <button class="btn btn-default" data-ng-click="form.save()" translate>Save</button>
