@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-07-01 10:49+0000\n"
-"Last-Translator: Administrator <greg.roach@open.ac.uk>\n"
+"PO-Revision-Date: 2015-07-16 12:04+0000\n"
+"Last-Translator: Koula Charitonos <koula.charitonos@open.ac.uk>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1451,10 +1451,13 @@ msgid ""
 msgstr ""
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:18
+#, fuzzy
 msgid ""
 "You need to <a href=\"\" data-ui-sref=\"project.view.home\">join this "
 "mission</a> to upload images."
 msgstr ""
+"Για να ανεβάσεις φωτογραφίες πρέπει να <a href=\"\" data-ui-sref=\""
+"project.view.home\"> μπεις στην αποστολή </a>."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:25
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:13
@@ -1493,20 +1496,20 @@ msgstr[1] ""
 
 #: static/src/partials/forum/forum-node-new-thread.html:1
 msgid "{{forum.node.title}}: New thread"
-msgstr ""
+msgstr "{{forum.node.title}}: Νεα συνομιλία"
 
 #: static/src/partials/project/view/spotit/spotit-project-data.html:3
 msgid "{{projectData.data.data}} image"
 msgid_plural "{{projectData.data.data}} images"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{projectData.data.data}} εικόνα"
+msgstr[1] "{{projectData.data.data}} εικόνες"
 
 #: static/src/partials/project/view/spotit/spotit-project-data.html:2
 msgid "{{projectData.data.members}} member"
 msgid_plural "{{projectData.data.members}} members"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{{projectData.data.members}} χρήστης"
+msgstr[1] "{{projectData.data.members}} χρήστες"
 
 #: static/src/partials/profile/profile-logged-out.html:48
 msgid "…or sign in using one of the following identity providers:"
-msgstr ""
+msgstr "…χρησιμοποίησε ένα από τους ακόλουθους λογαριασμούς πρόσβασης:"
