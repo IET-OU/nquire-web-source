@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-07-16 12:04+0000\n"
+"PO-Revision-Date: 2015-07-16 13:52+0000\n"
 "Last-Translator: Koula Charitonos <koula.charitonos@open.ac.uk>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,16 +14,23 @@ msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"«<span class=\"feed-comment\">{{item.comment}}</span>» στο/η <a data-ui-sref="
+"\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:5
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"«<span class=\"feed-comment\">{{item.comment}}</span>» στο/στη <a data-ui-"
+"sref=\"project.view.home({projectId: item.threadId})\""
+">{{item.threadTitle}}</a>"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
+#, fuzzy
 msgid "(Ideas are always visible during voting and outcome.)"
 msgstr ""
+"(Οποιοσδήποτε μπορεί να δει τις συμμετοχές ενώ ψηφίζει και στο αποτέλεσμα)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:41
 msgid "(Multiple-line formatted text)"
