@@ -212,5 +212,14 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 ]).run(function (TrackingService) {
   TrackingService.registerGA();
 }).run(function (gettextCatalog) {
-	gettextCatalog.setCurrentLanguage('el');
+  var W = window
+    , L = W.location.href
+    , N = W.navigator
+    , m_lang = L.match(/[\?&]lang=(el)/)
+    , m_debug = L.match(/[\?&]debug=1/);
+
+  if (m_lang) {
+    gettextCatalog.setCurrentLanguage(m_lang[ 1 ]);
+  }
+  m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, W.$.fn.jquery);
 });
