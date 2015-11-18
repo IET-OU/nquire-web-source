@@ -2,7 +2,7 @@
 
     <div id="logo-container">
         <a href data-ui-sref="home({type: null, status: null, filter: ull, kw: null})">
-            <img src="css/images/nquire-it-logo.jpg" alt="{{'nQuire-it home page'|translate}}"/>
+            <img src="css/images/nquire-it-logo.jpg" alt="{{ 'nQuire-it home page' | translate }}"/>
         </a>
 
         <p>{{txt.headerSubtitle}}<!--Join missions to explore your world...--></p>
@@ -22,10 +22,11 @@
 
                 <form class="form-inline" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="header-search-box" placeholder="{{'Search missions'|translate}}…"
-                               ng-model="keyword" data-ng-enter="search()"/>
+                        <input type="text" class="form-control" id="header-search-box" placeholder="{{ 'Search missions' | translate }}…"
+                               ng-model="keyword" data-ng-enter="search()" aria-label="{{ 'Search missions' | translate }}"/>
                     <span class="input-group-btn">
-                        <button id="header-search-submit" type="submit" class="btn btn-default"><i
+                        <button id="header-search-submit" type="submit" class="btn btn-default"
+                                aria-label="{{ 'Search' | translate }}"><i
                                 class="fa" data-ng-class="{'fa-search': !params.kw, 'fa-times': params.kw}"
                                 data-ng-click="searchButtonAction()"></i>
                         </button>

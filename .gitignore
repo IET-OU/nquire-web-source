@@ -8,3 +8,5 @@ app/pom.xml
 node_modules
 
 *.sass-cache
+
+po/el.po~
