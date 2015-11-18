@@ -2,13 +2,13 @@
 
     <div id="logo-container">
         <a href data-ui-sref="home({type: null, status: null, filter: ull, kw: null})">
-            <img src="css/images/nquire-it-logo.jpg"/>
+            <img src="css/images/nquire-it-logo.jpg" alt="{{'nQuire-it home page'|translate}}"/>
         </a>
 
         <p>{{txt.headerSubtitle}}<!--Join missions to explore your world...--></p>
     </div>
 
-    <div id="header-right-panel" data-ng-controller="NavBarCtrl">
+    <div id="header-right-panel" data-ng-controller="NavBarCtrl" role="navigation">
 
         <div id="header-top-box-container">
             <div id="header-menu">
@@ -20,7 +20,7 @@
             </div>
             <div id="header-search-form-container">
 
-                <form class="form-inline" role="form">
+                <form class="form-inline" role="search">
                     <div class="input-group">
                         <input type="text" class="form-control" id="header-search-box" placeholder="{{'Search missions'|translate}}…"
                                ng-model="keyword" data-ng-enter="search()"/>
