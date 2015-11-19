@@ -22,7 +22,7 @@
 
                 <form class="form-inline" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="header-search-box" placeholder="{{ 'Search missions' | translate }}…"
+                        <input required type="search" class="form-control" id="header-search-box" placeholder="{{ 'Search missions' | translate }}…"
                                ng-model="keyword" data-ng-enter="search()" aria-label="{{ 'Search missions' | translate }}"/>
                     <span class="input-group-btn">
                         <button id="header-search-submit" type="submit" class="btn btn-default"
@@ -50,6 +50,14 @@
                 </div>
             </div>
             <div data-ng-if="!status.ready" translate>Loading…</div>
+        </div>
+
+        <div id="header-lang">
+          <a data-ng-repeat="(c, lang) in langs" href="/{{c}}" hreflang="{{c}}"
+              title="{{'Switch to language:' | translate}} {{lang | translate}}" translate>{{lang}}<i class="fa fa-x-language fa-flag"></i></a>
+
+          <!--<i class="fa fa-language" title="{{ 'Choose your language' | translate }}"></i>-->
+          <b translate>English</b> <b translate>Greek</b>
         </div>
     </div>
 </div>

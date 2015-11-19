@@ -1,0 +1,22 @@
+#
+# Rewrite rules to allow for language codes in URLs (i18n).
+# Example:   http://nquire-it.org/el#/create
+#
+
+
+# Note, the rewrite rules need to be in ".htaccess".
+# When I tried them in "httpd/*/*_nquire.conf" the ENV variables (REQUEST_FILENAME) weren't available.
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+    RewriteEngine  On
+    #RewriteBase  /
+    ###RewriteRule ^index\.php$ - [L]
+    RewriteRule  ^index\.html - [L]
+    RewriteCond  %{REQUEST_FILENAME} !-f
+    RewriteCond  %{REQUEST_FILENAME} !-d
+    ###RewriteRule . /index.php [L]
+    RewriteRule  . /index.html [L]
+</IfModule>
+# END WordPress

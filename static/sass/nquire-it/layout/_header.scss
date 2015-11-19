@@ -73,3 +73,22 @@ div#header {
     }
   }
 }
+
+// Internationalization/ localization/ I18n / translation [Bug: #3]
+#header-lang {
+  a {
+    display: inline-block;
+    margin-right: 14px;
+
+    i {
+      font-size: 1.05em;
+      display: inline-block;
+      padding-left: 4px;
+      color: #333;
+    }
+  }
+
+  & > b {
+    display: none;
+  }
+}

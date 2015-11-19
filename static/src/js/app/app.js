@@ -9,8 +9,15 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   function ($provide, $stateProvider, $urlRouterProvider) {
 
     $stateProvider
+      /*.state('app', {
+        abstract: true,
+        url: '/{lang:(?:el|en)}',
+        template: '<ui-view/>',
+        //controller: 'RootController'
+        controller: 'MainCtrl'
+      })*/
       .state('home', {
-        url: '/home?type&filter&status&kw',
+        url: '/home?type&filter&status&kw&debug',
         templateUrl: 'partials/projects/projects.html',
         controller: 'ProjectListCtrl'
       })
@@ -212,14 +219,35 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 ]).run(function (TrackingService) {
   TrackingService.registerGA();
 }).run(function (gettextCatalog) {
+  // I18n / translation [Bug: #3]
   var W = window
-    , L = W.location.href
+    , L = W.location
     , N = W.navigator
-    , m_lang = L.match(/[\?&]lang=(el)/)
-    , m_debug = L.match(/[\?&]debug=1/);
+    //Was:, m_lang = L.match(/[\?&]lang=(el)/)
+    //http://nquire/el#/home?kw=climate&debug=1
+    , m_lang = L.pathname.match(/^\/(el|en)/)
+    , m_debug = L.href.match(/[\?&\/]debug=1/);
 
-  if (m_lang) {
-    gettextCatalog.setCurrentLanguage(m_lang[ 1 ]);
-  }
-  m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, W.$.fn.jquery);
+  W.angular.element("[ data-ng-controller ]").ready(function () {
+
+    var $scope = W.angular.element("[ data-ng-controller ]").scope();
+
+    $scope.debug = m_debug && 1;
+    $scope.activeLang = m_lang ? m_lang[ 1 ] : 'en';
+    $scope.langs = {
+      en: "English",
+      el: "Greek"
+    };
+
+    if (m_lang) {
+      gettextCatalog.setCurrentLanguage($scope.activeLang);
+    }
+
+    W.$("html").attr({
+      "data-debug": $scope.debug,
+      "data-lang_ui": $scope.activeLang
+    });
+
+    m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, W.$.fn.jquery);
+  });
 });
