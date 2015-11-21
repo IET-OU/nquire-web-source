@@ -119,3 +119,17 @@ div#header {
     display: none;
   }
 }
+
+
+// Approval/ test server message [Bug: #5]
+#approval-msg {
+  text-align: center;
+  background: #fafafa;
+  border: 2px solid darkorange;
+  color: darkorange;
+  padding: 4px;
+  font-size: 1.15em;
+}
+[ data-approval ] div#header {
+  border-bottom: 0;
+}

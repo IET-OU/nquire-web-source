@@ -9,13 +9,6 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   function ($provide, $stateProvider, $urlRouterProvider) {
 
     $stateProvider
-      /*.state('app', {
-        abstract: true,
-        url: '/{lang:(?:el|en)}',
-        template: '<ui-view/>',
-        //controller: 'RootController'
-        controller: 'MainCtrl'
-      })*/
       .state('home', {
         url: '/home?type&filter&status&kw&debug',
         templateUrl: 'partials/projects/projects.html',
@@ -226,6 +219,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
     //Was:, m_lang = L.match(/[\?&]lang=(el)/)
     //http://nquire/el#/home?kw=climate&debug=1
     , m_lang = L.pathname.match(/^\/(el|en)/)
+    , m_approval = L.href.match(/\/(approval|localhost|nquire\/|pegasos\.)/)
     , m_debug = L.href.match(/[\?&\/]debug=1/);
 
   W.angular.element("[ data-ng-controller ]").ready(function () {
@@ -233,9 +227,10 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
     var $scope = W.angular.element("[ data-ng-controller ]").scope();
 
     $scope.debug = m_debug && 1;
+    $scope.approval = m_approval && 1;
     $scope.activeLang = m_lang ? m_lang[ 1 ] : 'en';
     $scope.langs = {
-      en: "English",
+      en: "English", //gettextCatalog.getString("English"),
       el: "Greek"
     };
 
@@ -245,9 +240,26 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 
     W.$("html").attr({
       "data-debug": $scope.debug,
+      "data-approval": $scope.approval,
       "data-lang_ui": $scope.activeLang
     });
 
-    m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, W.$.fn.jquery);
+    m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, m_approval);
   });
+
+
+  // Approval/ test server message [Bug: #5]
+  if (m_approval) {
+    W.angular.element("[ data-ng-controller ]").ready(function () {
+      setTimeout(function () {
+
+        W.$("#header").after(
+        "<p id='approval-msg'>" +
+        "This is a test server <small>(some broken images!)</small> You may want <a href='http://www.nquire-it.org/'>www.nquire-it.org</a></p>"
+        );
+
+      }, 100);
+    });
+  }
+
 });
