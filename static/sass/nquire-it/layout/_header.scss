@@ -48,14 +48,24 @@ div#header {
           #header-search-box,
           #header-search-submit {
             border: 1px solid $color-header-search-box;
-            border-radius: 0px;
+            border-radius: 0;
             height: $dim-header-search-box-height;
+
+            &:hover,
+            &:focus {
+              border-color: $color-header-search-focus;
+            }
           }
 
           #header-search-submit {
             background: $color-header-search-box;
             color: white;
             padding: 2px 8px;
+
+            &:hover,
+            &:focus {
+              background: $color-header-search-focus;
+            }
           }
         }
       }
@@ -74,6 +84,21 @@ div#header {
   }
 }
 
+// Accessibility fixes [Bug: #1]
+::-webkit-input-placeholder {
+  color: $color-header-search-box;
+}
+::-moz-placeholder {  // Firefox 19+
+  color: $color-header-search-box;
+}
+:-ms-input-placeholder {
+   color: $color-header-search-box;
+}
+::-webkit-input-placeholder:hover {
+  //?? color: $color-header-search-focus;
+}
+
+
 // Internationalization/ localization/ I18n / translation [Bug: #3]
 #header-lang {
   a {
@@ -86,7 +111,7 @@ div#header {
       font-size: 1.1em;
       display: inline-block;
       padding-left: 2px;
-      color: #333;
+      color: #444;
     }
   }
 

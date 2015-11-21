@@ -1,9 +1,18 @@
+
+// Accessibility fixes [Bug: #1]
+
 $color-dark-background-link: #73A9D7;
 $color-dark-grey: #444444;
-$color-medium-grey: #777777;
-$color-light-grey: #aaaaaa;
+//Was: $color-medium-grey: #777777;
+//Was: $color-light-grey: #aaaaaa;
+$color-medium-grey: #666;
+$color-light-grey: #888;
 
-$color-header-search-box: #e6e6e6;
+
+$color-placeholder: #a2a2a2;
+//Was: $color-header-search-box: #e6e6e6;
+$color-header-search-box: #c2c2c2;
+$color-header-search-focus: #777;
 
 $color-orange: #f39a19;
 
@@ -14,3 +23,13 @@ $color-mission-winit: #c4388a;
 $color-light-background: #f6f5f5;
 
 $color-forum-thread-comment: #e0e0e0;
+
+
+// http://webaim.org/resources/contrastchecker/?fcolor=428bca&bcolor=ffffff&
+//Was: $brand-primary:         #428bca !default; //$link-color
+$link-color:            #347cba;
+
+
+a {
+  color: $link-color;
+}
