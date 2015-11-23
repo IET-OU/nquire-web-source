@@ -1,5 +1,17 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
+		sass: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				files: {
+					'static/src/css/nquire-it-bootstrap.css':
+						'static/sass/nquire-it/nquire-it-bootstrap.scss'
+				}
+			}
+		},
+
 		nggettext_extract: {
 			pot: {
 				files: {
@@ -36,10 +48,13 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-angular-gettext');
 	grunt.loadNpmTasks('grunt-msg-init-merge');
+	grunt.loadNpmTasks('grunt-sass');
 
-	grunt.registerTask('default', [
+	grunt.registerTask('gettext', [
 		'nggettext_extract',
 		'nggettext_compile',
 		'msgInitMerge'
 	]);
+
+	grunt.registerTask('default', [ 'gettext', 'sass' ]);
 };
