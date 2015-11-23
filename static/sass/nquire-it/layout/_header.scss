@@ -124,9 +124,9 @@ div#header {
 // Approval/ test server message [Bug: #5]
 #approval-msg {
   text-align: center;
-  background: #fafafa;
-  border: 2px solid darkorange;
-  color: darkorange;
+  background: #fdfdfd;
+  border: 2px solid $color-orange;
+  color: $color-dark-orange;
   padding: 4px;
   font-size: 1.15em;
 }

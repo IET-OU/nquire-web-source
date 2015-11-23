@@ -216,15 +216,16 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   var W = window
     , L = W.location
     , N = W.navigator
+    , $controller = W.angular.element("[ data-ng-controller ]")
     //Was:, m_lang = L.match(/[\?&]lang=(el)/)
     //http://nquire/el#/home?kw=climate&debug=1
     , m_lang = L.pathname.match(/^\/(el|en)/)
     , m_approval = L.href.match(/\/(approval|localhost|nquire\/|pegasos\.)/)
     , m_debug = L.href.match(/[\?&\/]debug=1/);
 
-  W.angular.element("[ data-ng-controller ]").ready(function () {
+  $controller.ready(function () {
 
-    var $scope = W.angular.element("[ data-ng-controller ]").scope();
+    var $scope = $controller.scope();
 
     $scope.debug = m_debug && 1;
     $scope.approval = m_approval && 1;
@@ -250,15 +251,15 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 
   // Approval/ test server message [Bug: #5]
   if (m_approval) {
-    W.angular.element("[ data-ng-controller ]").ready(function () {
-      setTimeout(function () {
+    $controller.ready(function () {
+      W.setTimeout(function () {
 
         W.$("#header").after(
-        "<p id='approval-msg'>" +
+        "<p id='approval-msg' role='note'>" +
         "This is a test server <small>(some broken images!)</small> You may want <a href='http://www.nquire-it.org/'>www.nquire-it.org</a></p>"
         );
 
-      }, 100);
+      }, 50);
     });
   }
 
