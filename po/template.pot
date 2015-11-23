@@ -428,6 +428,11 @@ msgstr ""
 msgid "Ended"
 msgstr ""
 
+#. Maybe translate as: 'English – αγγλική'
+#: static/src/partials/layout/header.html:59
+msgid "English"
+msgstr ""
+
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:15
 msgid "Explanation:"
 msgstr ""
@@ -470,11 +475,15 @@ msgstr ""
 msgid "Grant permission"
 msgstr ""
 
+#: static/src/partials/layout/header.html:59
+msgid "Greek"
+msgstr ""
+
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:12
 msgid "Gyroscope"
 msgstr ""
 
-#: static/src/partials/layout/header.html:42
+#: static/src/partials/layout/header.html:43
 msgid "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,<br>you are signed in."
 msgstr ""
 
@@ -562,7 +571,7 @@ msgstr ""
 msgid "Linked accounts"
 msgstr ""
 
-#: static/src/partials/layout/header.html:51
+#: static/src/partials/layout/header.html:52
 #: static/src/partials/project/project.html:27
 msgid "Loading…"
 msgstr ""
@@ -928,7 +937,12 @@ msgstr ""
 msgid "Save and continue"
 msgstr ""
 
+#: static/src/partials/layout/header.html:29
+msgid "Search"
+msgstr ""
+
 #: static/src/partials/layout/header.html:25
+#: static/src/partials/layout/header.html:26
 msgid "Search missions"
 msgstr ""
 
@@ -1015,7 +1029,7 @@ msgstr ""
 msgid "Show value:"
 msgstr ""
 
-#: static/src/partials/layout/header.html:48
+#: static/src/partials/layout/header.html:49
 #: static/src/partials/profile/profile-logged-out.html:159
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
@@ -1030,7 +1044,7 @@ msgstr ""
 msgid "Sign in with {{data.provider.name}}"
 msgstr ""
 
-#: static/src/partials/layout/header.html:43
+#: static/src/partials/layout/header.html:44
 msgid "Sign out"
 msgstr ""
 
@@ -1139,6 +1153,10 @@ msgstr ""
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:29
 msgid "Submitted"
+msgstr ""
+
+#: static/src/partials/layout/header.html:57
+msgid "Switch to language:"
 msgstr ""
 
 #: static/src/partials/project/edit/project-edit-details-page.html:47
@@ -1381,6 +1399,14 @@ msgstr ""
 
 #: static/src/partials/admin/admin-users.html:6
 msgid "email"
+msgstr ""
+
+#: static/src/partials/layout/header.html:5
+msgid "nQuire-it home page"
+msgstr ""
+
+#: static/src/index.html:6
+msgid "nQuire-it — join missions to explore your world"
 msgstr ""
 
 #: static/src/partials/project/blocks/project-menu.html:4
