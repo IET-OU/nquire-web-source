@@ -217,9 +217,8 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
     , L = W.location
     , N = W.navigator
     , $controller = W.angular.element("[ data-ng-controller ]")
-    //Was:, m_lang = L.match(/[\?&]lang=(el)/)
     //http://nquire/el#/home?kw=climate&debug=1
-    , m_lang = L.pathname.match(/^\/(el|en)/)
+    , m_lang = L.pathname.match(/^(\/approval)?\/(el|en)/)
     , m_approval = L.href.match(/\/(approval|localhost|nquire\/|pegasos\.)/)
     , m_debug = L.href.match(/[\?&\/]debug=1/);
 
@@ -229,7 +228,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 
     $scope.debug = m_debug && 1;
     $scope.approval = m_approval && 1;
-    $scope.activeLang = m_lang ? m_lang[ 1 ] : 'en';
+    $scope.activeLang = m_lang ? m_lang[ 2 ] : 'en';
     $scope.langs = {
       en: "English", //gettextCatalog.getString("English"),
       el: "Greek"
@@ -259,7 +258,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
         "This is a test server <small>(some broken images!)</small> You may want <a href='http://www.nquire-it.org/'>www.nquire-it.org</a></p>"
         );
 
-      }, 50);
+      }, 250);
     });
   }
 

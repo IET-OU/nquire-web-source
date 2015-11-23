@@ -164,7 +164,7 @@ msgstr ""
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
 msgid "About"
-msgstr "Σχετικά με τη σελίδα"
+msgstr "Σχετικά με την ιστοσελίδα"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
 msgid "Accelerometer"
