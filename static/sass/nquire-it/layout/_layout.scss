@@ -23,3 +23,17 @@ html {
   }
 
 }
+
+
+#footer {
+
+  .footer-content {
+    //@extend .container-fluid;
+    @extend .container;
+    //padding: $dim-common-margin 0 0 0;
+
+    @media (min-width: $screen-md-min) {
+      padding: 0 $dim-common-small-margin $dim-common-margin $dim-common-margin;
+    }
+  }
+}

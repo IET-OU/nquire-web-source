@@ -99,13 +99,17 @@ div#header {
 }
 
 
+
 // Internationalization/ localization/ I18n / translation [Bug: #3]
+#footer #lang,
 #header-lang {
+  margin: 5px 0;
+
   a {
     display: inline-block;
     margin-right: 12px;
-    font-size: 0.88em;
-    word-spacing: -0.12em;
+    //font-size: 0.88em;
+    //word-spacing: -0.12em;
 
     i {
       font-size: 1.1em;
@@ -118,6 +122,9 @@ div#header {
   & > b {
     display: none;
   }
+}
+#footer #lang {
+  //text-align: right;
 }
 
 
