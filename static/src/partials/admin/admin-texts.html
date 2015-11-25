@@ -1,3 +1,8 @@
+
+<div ng-controller="AdminTextItemCtrl" class="admin-page-texts">
+
+<button ng-click="toggleTranslations()">Show/hide translations</button>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -7,8 +12,21 @@
     </tr>
     </thead>
     <tbody>
-    <tr data-ng-repeat="item in itemList" data-ng-controller="AdminTextItemCtrl">
-        <td>{{item.label}}</td>
+    <tr class="row-add-form">
+      <td colspan="3">
+      <form ng-submit="submit()" name="addForm">
+        <table><tr>
+        <td class="key"><input class="form-control" data-ng-model="text.key" required
+               placeholder="Key, eg. 'about_el'" title="Key, eg. 'about_el'"/></td>
+        <td class="value"><input class="form-control" data-ng-model="text.value" required
+               placeholder="Text value ..."/></td>
+        <td class="btn"><button class="btn btn-default" type="submit" ng-disabled="addForm.$invalid" translate>Add</button></td>
+        </tr></table>
+      </form>
+      </td>
+    </tr>
+    <tr data-ng-repeat="item in itemList" data-ng-controller="AdminTextItemCtrl" data-row-lang="{{item.lang}}" class="row-lang-{{item.lang}}">
+        <td title="Key: {{item.id}}">{{item.label}}</td>
         <td>
             <div data-ng-if="!form.isOpen()" data-ng-bind-html="txt[item.id]"></div>
             <div data-ng-if="form.isOpen() && item.format">
@@ -36,3 +54,7 @@
     </tbody>
 
 </table>
+
+<button ng-click="toggleTranslations()">Show/hide translations</button>
+
+</div>

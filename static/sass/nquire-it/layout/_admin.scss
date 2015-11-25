@@ -30,4 +30,41 @@
       }
     }
   }
+
+
+  // Translate help/about pages [Bug: #6]
+  .admin-page-texts {
+    & > button {
+      float: right;
+    }
+
+    tr.row-add-form,
+    tr.row-lang-el {
+      //&[ data-row-lang != '' ] {
+      display: none;
+    }
+
+    .row-add-form {
+      table {
+        width: 100%;
+
+        td {
+          padding: 0 6px 0 0;
+        }
+
+        .key,
+        .btn {
+          width: 70px;
+
+          input {
+            padding: 6px 1px;
+            font-size: .94em;
+          }
+        }
+        .value {
+          width: 87%;
+        }
+      }
+    }
+  }
 }
