@@ -212,54 +212,13 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 ]).run(function (TrackingService) {
   TrackingService.registerGA();
 }).run(function (gettextCatalog) {
-  // I18n / translation [Bug: #3]
-  var W = window
-    , L = W.location
-    , N = W.navigator
-    , $controller = W.angular.element("[ data-ng-controller ]")
-    //http://nquire/el#/home?kw=climate&debug=1
-    , m_lang = L.pathname.match(/^(\/approval)?\/(el|en)/)
-    , m_approval = L.href.match(/\/(approval|localhost|nquire\/|pegasos\.)/)
-    , m_debug = L.href.match(/[\?&\/]debug=1/);
 
-  $controller.ready(function () {
+}).run(function ($rootScope) {
 
-    var $scope = $controller.scope();
-
-    $scope.debug = m_debug && 1;
-    $scope.approval = m_approval && 1;
-    $scope.activeLang = m_lang ? m_lang[ 2 ] : 'en';
-    $scope.langs = {
-      en: "English", //gettextCatalog.getString("English"),
-      el: "Greek"
-    };
-
-    if (m_lang) {
-      gettextCatalog.setCurrentLanguage($scope.activeLang);
-    }
-
-    W.$("html").attr({
-      "data-debug": $scope.debug,
-      "data-approval": $scope.approval,
-      "data-lang_ui": $scope.activeLang
-    });
-
-    m_debug && W.console && console.log("Lang:", m_lang, N.languages, m_debug, m_approval);
-  });
-
-
-  // Approval/ test server message [Bug: #5]
-  if (m_approval) {
-    $controller.ready(function () {
-      W.setTimeout(function () {
-
-        W.$("#header").after(
-        "<p id='approval-msg' role='note'>" +
-        "This is a test server <small>(some broken images!)</small> You may want <a href='http://www.nquire-it.org/'>www.nquire-it.org</a></p>"
-        );
-
-      }, 250);
-    });
-  }
+  $rootScope.langs = {
+    en: "English", //gettextCatalog.getString("English"),
+    el: "Greek"
+  };
+  $rootScope.lang_url_regex = /(\/approval)?\/(el|en)/;
 
 });

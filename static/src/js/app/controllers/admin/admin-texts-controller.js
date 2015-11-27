@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function ($scope, $log) {
+angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function ($scope) {
 
     $scope.itemList = [
         {id: 'headerSubtitle', label: 'Header subtitle', format: false},
@@ -14,10 +14,10 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
     ];
 
 
-    translateExtendItemList();
+    translateExtendItemList($scope);
 
 
-    function translateExtendItemList() {
+    function translateExtendItemList($scope) {
       var idx = 0
         , item
         , lang
@@ -43,5 +43,5 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
       }
     }
 
-    $log.debug("i18n: itemList: ", $scope.itemList);
+    $scope.log("i18n: itemList: ", $scope.itemList);
 });
