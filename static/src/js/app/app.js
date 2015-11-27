@@ -215,6 +215,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 
 }).run(function ($rootScope, $location) {
 
+  // I18n / translation - add available languages to list and regex [Bug: #3]
   $rootScope.langs = {
     en: "English", //gettextCatalog.getString("English"),
     el: "Greek"

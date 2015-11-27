@@ -37,6 +37,7 @@ module.exports = function(grunt) {
 					'po/template.pot'
 				],
 				options: {
+					// I18n / translation - list available languages, except 'en' [Bug: #3]
 					'locales': [
 						'el'
 					],
