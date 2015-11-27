@@ -213,7 +213,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   TrackingService.registerGA();
 }).run(function (gettextCatalog) {
 
-}).run(function ($rootScope) {
+}).run(function ($rootScope, $location) {
 
   $rootScope.langs = {
     en: "English", //gettextCatalog.getString("English"),
@@ -221,4 +221,5 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   };
   $rootScope.lang_url_regex = /(\/approval)?\/(el|en)/;
 
+  $rootScope.location = $location;
 });
