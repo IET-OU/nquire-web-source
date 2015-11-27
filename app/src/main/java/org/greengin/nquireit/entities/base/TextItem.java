@@ -6,7 +6,8 @@ import org.greengin.nquireit.entities.AbstractEntity;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
-import javax.persistence.Lob;
+import javax.persistence.Column;
+
 
 @Entity
 public class TextItem extends AbstractEntity {
@@ -16,8 +17,9 @@ public class TextItem extends AbstractEntity {
     @Setter
     String textId;
 
-    @Lob
+    @Basic
     @Getter
     @Setter
+    @Column(columnDefinition = "MEDIUMTEXT")
     String content;
 }
