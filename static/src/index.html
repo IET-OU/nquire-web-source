@@ -200,6 +200,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="main" data-ng-controller="MainCtrl">
         <div id="header" data-ng-include="'partials/layout/header.html'" role="banner"></div>
 
+        <div id="site-message" role="note" data-ng-if="txt.siteMessage">
+          <div data-ng-bind-html="txt.siteMessage"></div>
+        </div>
+
         <div class="main-content-section" role="main">
             <div class="main-content">
                 <div class="main-content-inner" data-ui-view></div>

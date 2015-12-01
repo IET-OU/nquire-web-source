@@ -14,8 +14,19 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     });
 
     RestService.get('api/text').then(function(data) {
+        var it;
+        for (it in data) {
+          if (data[ it ].length < 1) {
+            data[ it ] = false;
+          }
+        }
 
         $scope.txt = data;
+
+        // Site/ approval/ test server message [Bug: #5][Bug: #9]
+        if ($scope.txt.siteMessage) {
+          $("html").attr("data-site-message", 1);
+        }
 
         translateSwitchApiTexts($scope, $location);
     });
