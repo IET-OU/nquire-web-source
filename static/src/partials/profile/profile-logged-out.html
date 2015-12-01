@@ -20,10 +20,10 @@
         <div class="profile-logged-out-form-container">
             <p translate>Sign in with your username and password: </p>
 
-            <form class="form-inline" role="form">
+            <form class="form-inline" name="loginForm" role="form" data-ng-submit="login.submit()">
                 <div class="form-group">
                     <label for="login_username" translate>Username:</label>
-                    <input id="login_username" type="text" class="form-control"
+                    <input id="login_username" type="text" class="form-control" required
                            data-ng-model="login.editing.username"/>
                 <span data-ng-if="login.error.username"
                       class="profile-login-username-error">{{login.error.username}}</span>
@@ -31,14 +31,14 @@
 
                 <div class="form-group">
                     <label for="login_password" translate>Password:</label>
-                    <input id="login_password" type="password" class="form-control"
+                    <input id="login_password" type="password" class="form-control" required
                            data-ng-model="login.editing.password"/>
                 <span data-ng-if="login.error.password"
                       class="profile-login-password-error">{{login.error.password}}</span>
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn btn-default" data-ng-click="login.submit()" translate>Sign in</button>
+                    <button class="btn btn-default" type="submit" data-ng-XX-click="login.submit()" ng-disabled="loginForm.$invalid" translate>Sign in</button>
                     <button class="btn btn-link" data-ng-click="loginMode.set('reminder')" translate>I forgot my password</button>
                 </div>
             </form>
@@ -48,12 +48,12 @@
             <p translate>…or sign in using one of the following identity providers:</p>
 
             <p>
-                <img class="identity-provider" data-ng-click="providerLogin('google', 'login')"
-                     src="media/sign-in-with-google.png"/>
-                <img class="identity-provider" data-ng-click="providerLogin('facebook', 'login')"
-                     src="media/facebook-login-button.png"/>
-                <img class="identity-provider" data-ng-click="providerLogin('twitter', 'login')"
-                     src="media/TwitterLogin.png"/>
+                <img class="identity-provider" ng-click="providerLogin('google', 'login')" data-ng-keypress="providerLogin('google', 'login')"
+                     src="media/sign-in-with-google.png" alt="{{'Sign in with Google' | translate}}" role="button" tabindex="0"/>
+                <img class="identity-provider" ng-click="providerLogin('facebook', 'login')" ng-keypress="providerLogin('facebook', 'login')"
+                     src="media/facebook-login-button.png" alt="{{'Sign in with Facebook' | translate}}" role="button" tabindex="0"/>
+                <img class="identity-provider" ng-click="providerLogin('twitter', 'login')" ng-keypress="providerLogin('twitter', 'login')"
+                     src="media/TwitterLogin.png" alt="{{'Sign in with Twitter' | translate}}" role="button" tabindex="0"/>
             </p>
         </div>
     </div>

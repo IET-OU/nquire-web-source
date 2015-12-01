@@ -14,3 +14,9 @@
     background: $color-light-background;
   }
 }
+
+// Seems to be missing from CSS.
+.profile-login-password-error,
+.profile-login-username-error {
+	color: $color-error;
+}
