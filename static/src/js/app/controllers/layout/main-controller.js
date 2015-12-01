@@ -2,8 +2,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     OpenIdService.registerWatcher($scope);
 
     initDebug($scope, $location, $log);
-
-    approvalServerMessage($scope, $location, $timeout);
+    initApprovalServer($scope, $location);
 
     initTranslation($scope, $location, gettextCatalog);
 
@@ -76,23 +75,11 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     }
 
 
-    // Approval/ test server message [Bug: #5]
-    function approvalServerMessage($scope, $location, $timeout) {
+    // Approval/ test server [Bug: #5]
+    function initApprovalServer($scope, $location) {
         var m_approval = $location.absUrl().match(/\/(approval|localhost|nquire\/|pegasos\.)/);
 
         $scope.approval = m_approval && 1;
-
-        if ($scope.approval) {
-            $timeout(function () {
-
-                $("#header").after(
-                "<p id='approval-msg' role='note'>" +
-                "This is a test server <small>(some broken images!)</small> You may want <a href='http://www.nquire-it.org/'>www.nquire-it.org</a></p>"
-                );
-
-                $scope.log("Approval message.");
-            }, 500);
-        }
     }
 
 
