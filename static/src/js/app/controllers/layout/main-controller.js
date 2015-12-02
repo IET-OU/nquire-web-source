@@ -31,6 +31,13 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     });
 
 
+    RestService.get('api/filter').then(function(data) {
+        $scope.filters = data;
+
+        $scope.log("Filters: ", data);
+    });
+
+
     // I18n / translation [Bug: #3]
     function initTranslation($scope, $location, gettextCatalog) {
         //http://nquire/el#/home?kw=climate&debug=1

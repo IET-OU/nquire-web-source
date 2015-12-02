@@ -27,5 +27,10 @@ public class MainController {
         return contextBean.getTextDao().getTexts();
     }
 
+    @RequestMapping(value = "/api/filter", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, String> filters(HttpServletRequest request) {
 
+        return contextBean.getFilterDao().getFilters();
+    }
 }

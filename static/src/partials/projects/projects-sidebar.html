@@ -18,7 +18,12 @@
                 <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: 'all'})"
                    data-ng-class="menuItemClass('filter', 'all')" translate>All missions</a>
             </li>
+
+            <li data-ng-repeat="(label, url) in filters" class="custom">
+                <a href="{{ url }}" data-ng-class="menuItemClass('filter', 'all')" translate>{{ label }}</a>
+            </li>
         </ul>
+        <i class="i18n hide" translate-comment="">Greek schools missions</i>
     </div>
 
     <div class="sidebar-header" translate>Mission type</div>

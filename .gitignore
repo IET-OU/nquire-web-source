@@ -11,3 +11,7 @@ node_modules
 
 po/el.po~
 static/src/js/app/min/
+
+*BAK*
+*copy*
+
