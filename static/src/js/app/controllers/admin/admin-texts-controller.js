@@ -14,7 +14,7 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
 
         // Site/ approval/ test server message [Bug: #9]
         {id: 'siteMessage', label: 'Site message', format: true},
-        {id: 'siteMessageTpl', label: '(Site message template)', format: true}
+        //Was: {id: 'siteMessageTpl', label: '(Site message template)', format: true}
     ];
 
 

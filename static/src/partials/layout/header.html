@@ -52,6 +52,12 @@
             <div data-ng-if="!status.ready" translate>Loading…</div>
         </div>
 
-
     </div>
+
+
+    <div id="lang" class="lang-switch" data-ng-if="cfg.lang_switch === 'top'">
+      <a data-ng-repeat="(lang, label) in cfg.langs" data-ng-href="{{lang}}#{{location.url()}}" hreflang="{{lang}}"
+          title="{{'Choose language:' | translate}} {{label | translate}} ({{ lang }})">{{label | translate}}<i class="fa fa-x-language fa-flag"></i></a>
+    </div>
+
 </div>

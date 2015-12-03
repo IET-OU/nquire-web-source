@@ -101,8 +101,9 @@ div#header {
 
 
 // Internationalization/ localization/ I18n / translation [Bug: #3]
-#footer #lang,
-#header-lang {
+#footer .lang-switch,
+#header .lang-switch {
+  clear: both;
   margin: 5px 0;
 
   a {
@@ -119,8 +120,14 @@ div#header {
     }
   }
 }
-#footer #lang {
-  //text-align: right;
+#header .lang-switch {
+  position: absolute;
+  right: -10px;
+  top: 90px;
+
+  @media (max-width: 605px) {
+    top: 108px;
+  }
 }
 
 
@@ -138,7 +145,6 @@ div#header {
     margin: .4em 0;
   }
 }
-[ data-site-message ] div#header,
-[ data-approval ] div#header {
+[ data-site-message ] div#header {
   border-bottom: 0;
 }

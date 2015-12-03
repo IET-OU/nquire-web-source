@@ -42,7 +42,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     function initTranslation($scope, $location, gettextCatalog) {
         //http://nquire/el#/home?kw=climate&debug=1
         //Was: location.pathname.match(/^(\/approval)?\/(el|en)/)
-        var m_lang = $location.absUrl().match($scope.lang_url_regex);
+        var m_lang = $location.absUrl().match($scope.cfg.lang_url_regex);
 
         $scope.activeLang = m_lang ? m_lang[ 2 ] : 'en';
 
@@ -51,7 +51,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         }
 
         // navigator.languages?
-        $scope.log("Lang:", m_lang, $location.absUrl(), angular.version);
+        $scope.log("Lang:", $scope.cfg, m_lang, $location.absUrl(), angular.version);
     }
 
 

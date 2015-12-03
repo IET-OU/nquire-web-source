@@ -6,7 +6,8 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   '$provide',
   '$stateProvider',
   '$urlRouterProvider',
-  function ($provide, $stateProvider, $urlRouterProvider) {
+  'senseItConfig',
+  function ($provide, $stateProvider, $urlRouterProvider, senseItConfig) {
 
     $stateProvider
       .state('home', {
@@ -213,14 +214,8 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   TrackingService.registerGA();
 }).run(function (gettextCatalog) {
 
-}).run(function ($rootScope, $location) {
+}).run(function ($rootScope, $location, senseItConfig) {
 
-  // I18n / translation - add available languages to list and regex [Bug: #3]
-  $rootScope.langs = {
-    en: "English", //gettextCatalog.getString("English"),
-    el: "Greek"
-  };
-  $rootScope.lang_url_regex = /(\/approval)?\/(el|en)/;
-
+  $rootScope.cfg = senseItConfig;
   $rootScope.location = $location;
 });

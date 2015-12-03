@@ -1,11 +1,9 @@
 
 <div class="footer-content">
 
-  <div id="lang">
-    <a data-ng-repeat="(c, lang) in langs" data-ng-href="{{c}}#{{location.url()}}" hreflang="{{c}}"
-        title="{{'Switch to language:' | translate}} {{lang | translate}}">{{lang | translate}}<i class="fa fa-x-language fa-flag"></i></a>
-
-    <i class="i18n hide" translate-comment="Maybe translate as: 'English – αγγλική'" translate>English</i> <i class="i18n hide" translate>Greek</i>
+  <div id="lang" class="lang-switch" data-ng-if="cfg.lang_switch === 'bottom'">
+    <a data-ng-repeat="(lang, label) in cfg.langs" data-ng-href="{{lang}}#{{location.url()}}" hreflang="{{lang}}"
+        title="{{'Choose language:' | translate}} {{label | translate}} ({{ lang }})">{{label | translate}}<i class="fa fa-x-language fa-flag"></i></a>
   </div>
 
 </div>

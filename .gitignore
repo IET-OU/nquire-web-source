@@ -4,6 +4,8 @@ app/src/main/webapp/files*
 app/target
 app/pom.xml
 
+static/src/js/app/config.js
+
 .idea
 node_modules
 
@@ -14,4 +16,3 @@ static/src/js/app/min/
 
 *BAK*
 *copy*
-
