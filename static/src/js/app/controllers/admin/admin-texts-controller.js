@@ -27,6 +27,7 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
         , lang
         , id
         , label
+        , $the_langs = $scope.cfg.langs
         , length = $scope.itemList.length;
 
       if (! $scope.activeLang) {
@@ -36,11 +37,11 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
       for (idx = 0; idx < length; idx++) {
           item = $scope.itemList[ idx ];
           ///
-          for (lang in $scope.langs) {
+          for (lang in $the_langs) {
               if ("en" === lang) continue;
 
               id = item.id + "_" + lang;
-              label = item.label + " (" + $scope.langs[ lang ] + ")";
+              label = item.label + " (" + $the_langs[ lang ] + ")";
 
               $scope.itemList.push({ id: id, label: label, format: item.format, lang: lang });
           }

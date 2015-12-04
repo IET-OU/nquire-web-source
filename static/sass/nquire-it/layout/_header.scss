@@ -83,6 +83,12 @@ div#header {
     }
   }
 }
+[ data-lang_switch = top ] #header {
+  // Above -- height: 145px;
+  height: 170px;
+}
+
+
 
 // Accessibility fixes [Bug: #1]
 ::-webkit-input-placeholder {
@@ -123,10 +129,12 @@ div#header {
 #header .lang-switch {
   position: absolute;
   right: -10px;
-  top: 90px;
+  // Space for the "logged in" block!
+  top: 128px;
+  //Was: top: 90px;
 
   @media (max-width: 605px) {
-    top: 108px;
+    //Was: top: 108px;
   }
 }
 

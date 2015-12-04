@@ -9,6 +9,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     $("html").attr({
       "data-debug": $scope.debug,
       "data-approval": $scope.approval,
+      "data-lang_switch": $scope.cfg.lang_switch,
       "data-lang_ui": $scope.activeLang
     });
 
