@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-03 14:40+0000\n"
+"PO-Revision-Date: 2015-12-04 22:42+0000\n"
 "Last-Translator: Marina Charalampidi <Charalampidi.Marina@gmail.com>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -195,15 +195,16 @@ msgstr "Σχετικά με την ιστοσελίδα"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
 msgid "Accelerometer"
-msgstr ""
+msgstr "Επιταχυνσιόμετρο"
 
 #: static/src/partials/admin/admin-reported.html:19
 msgid "Actions"
 msgstr "Δράσεις"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:62
+#, fuzzy
 msgid "Add block"
-msgstr ""
+msgstr "Μπλοκάρω"
 
 #: static/src/partials/forum/forum-list-category.html:14
 msgid "Add category"
@@ -214,12 +215,14 @@ msgid "Add field"
 msgstr "Πρόσθεσε ένα πεδίο"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
+#, fuzzy
 msgid "Add sensor input"
-msgstr ""
+msgstr "Προσθέτω αισθητήρα"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:50
+#, fuzzy
 msgid "Add transformation"
-msgstr ""
+msgstr "Προσθέτω μετασχηματισμό"
 
 #: static/src/partials/admin/admin-users.html:7
 #: static/src/partials/layout/header.html:19
@@ -241,7 +244,7 @@ msgstr "Όλες οι αποστολές"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:16
 msgid "Ambient temperature"
-msgstr ""
+msgstr "Θερμοκρασία περιβάλλοντος"
 
 #: static/src/partials/projects/projects-sidebar.html:28
 msgid "Any type"
@@ -346,8 +349,9 @@ msgid "Content"
 msgstr "Περιεχόμενο"
 
 #: static/src/partials/admin/admin-reported.html:17
+#, fuzzy
 msgid "Content id"
-msgstr ""
+msgstr "Ταυτότητα περιεχομένου"
 
 #: static/src/partials/layout/header.html:18
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
@@ -432,8 +436,9 @@ msgid ""
 msgstr ""
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:23
+#, fuzzy
 msgid "Delete series"
-msgstr ""
+msgstr "Διαγραφή σειράς"
 
 #: static/src/partials/forum/forum-list-forum.html:20
 msgid "Description"
@@ -461,8 +466,9 @@ msgid "Details"
 msgstr "Λεπτομέρειες"
 
 #: static/src/partials/project/view/data/project-view-data-table.html:9
+#, fuzzy
 msgid "Download CSV"
-msgstr ""
+msgstr "Κατεβάζω το CSV"
 
 #: static/src/partials/admin/admin-texts.html:27
 #: static/src/partials/forum/forum-list-category.html:7
@@ -525,7 +531,7 @@ msgstr "Προτεινόμενες αποστολές"
 
 #: static/src/partials/admin/admin-projects.html:8
 msgid "Featured?"
-msgstr ""
+msgstr "Προτεινόμενο;"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:7
 #, fuzzy
@@ -539,22 +545,24 @@ msgstr "Είδος πεδίου:"
 
 #: static/src/partials/forum/forum-list.html:7
 #: static/src/partials/forum/forum-thread.html:2
+#, fuzzy
 msgid "Forum"
-msgstr ""
+msgstr "Χώρος συζήτησης"
 
 #: static/src/partials/forum/forum-list.html:1
 #: static/src/partials/layout/header.html:16
+#, fuzzy
 msgid "Forums"
-msgstr ""
+msgstr "Συζητήσεις"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
+#, fuzzy
 msgid "Geolocated data:"
-msgstr ""
+msgstr "Δεδομένα γεωτοποθέτησης:"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
-#, fuzzy
 msgid "Go back to the list"
-msgstr "Πήγαινε πίσω στη λίστα"
+msgstr "Πηγαίνω πίσω στη λίστα"
 
 #: static/src/partials/admin/admin-users.html:22
 msgid "Grant permission"
@@ -566,7 +574,7 @@ msgstr "Ελληνικά – Greek"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:12
 msgid "Gyroscope"
-msgstr ""
+msgstr "Γυροσκόπιο"
 
 #: static/src/partials/layout/header.html:43
 msgid ""
@@ -592,7 +600,7 @@ msgstr "Ξέχασα τον κωδικό μου:"
 #: static/src/partials/admin/admin-projects.html:4
 #: static/src/partials/admin/admin-users.html:4
 msgid "Id"
-msgstr ""
+msgstr "Ταυτότητα"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:4
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:3
@@ -608,110 +616,120 @@ msgstr "Ορατότητα ιδεών"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:17
 #: static/src/partials/project/edit/project-edit-open-page.html:14
+#, fuzzy
 msgid ""
 "If you need to edit this project, click on “Close project” to enable editing."
 msgstr ""
+"Αν χρειάζεται να επεξεργαστώ αυτό το πρότζεκτ, κάνω κλικ στο \"Κλείνω το "
+"πρότζεκτ\" για να επιτρέψω την επεξεργασία."
 
 #: static/src/partials/profile/profile-logged-in.html:236
 #: static/src/partials/profile/profile-view.html:64
 msgid "Interests:"
-msgstr ""
+msgstr "Ενδιαφέροντα:"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:18
+#, fuzzy
 msgid "Join mission"
-msgstr ""
+msgstr "Γίνομαι μέλος στην αποστολή"
 
 #: static/src/partials/project/blocks/project-menu.html:15
+#, fuzzy
 msgid "Joined"
-msgstr ""
+msgstr "Έγινα μέλος"
 
 #: static/src/partials/projects/projects-sidebar.html:53
+#, fuzzy
 msgid "Joined missions"
-msgstr ""
+msgstr "Κοινές αποστολές"
 
 #: static/src/partials/profile/profile-logged-in.html:293
+#, fuzzy
 msgid "Joined projects:"
-msgstr ""
+msgstr "Κοινά πρότζεκτς:"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:2
 msgid "Last picture"
-msgstr ""
+msgstr "Τελευταία φωτογραφία"
 
 #: static/src/partials/forum/forum-list.html:8
 #: static/src/partials/forum/forum-node-list.html:16
 msgid "Last post"
-msgstr ""
+msgstr "Τελευταία ανάρτηση"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:19
 msgid "Leave mission"
-msgstr ""
+msgstr "Εγκαταλείπω την αποστολή"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:15
 msgid "Light"
-msgstr ""
+msgstr "Φως"
 
 #: static/src/partials/social/social-post-dialog.html:51
 msgid "Link"
-msgstr ""
+msgstr "Σύνδεσμος"
 
 #: static/src/partials/profile/profile-provider-item.html:14
+#, fuzzy
 msgid "Link with {{providerName}}"
-msgstr ""
+msgstr "Σύνδεσμος με {{providerName}}"
 
 #: static/src/partials/profile/profile-logged-in.html:308
 msgid "Linked accounts"
-msgstr ""
+msgstr "Συνδεδεμένοι λογαριασμοί"
 
 #: static/src/partials/layout/header.html:52
 #: static/src/partials/project/project.html:27
 msgid "Loading…"
-msgstr ""
+msgstr "Φορτίζει…"
 
 #: static/src/partials/profile/profile-logged-in.html:228
 #: static/src/partials/profile/profile-logged-in.html:250
 #: static/src/partials/profile/profile-view.html:56
 msgid "Location:"
-msgstr ""
+msgstr "Τοποθεσία:"
 
 #: static/src/partials/profile/profile-logged-in.html:43
 #: static/src/partials/profile/profile-view.html:40
 msgid "Login information"
-msgstr ""
+msgstr "Πληροφορίες σύνδεσης"
 
 #: static/src/partials/profile/profile-logged-in.html:3
 msgid "Logout"
-msgstr ""
+msgstr "Αποσυνδέομαι"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:11
 msgid "Magnetic field"
-msgstr ""
+msgstr "Μαγνητικό πεδίο"
 
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:4
 msgid "Map"
-msgstr ""
+msgstr "Χάρτης"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:38
 msgid ""
 "Max answers per participant: {{projectData.project.activity.maxAnswers}}"
 msgstr ""
+"Μέγιστος αριθμός απαντήσεων ανά συμμετέχοντα: "
+"{{projectData.project.activity.maxAnswers}}"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:28
 msgid "Maximum answers per participant."
-msgstr ""
+msgstr "Μέγιστος αριθμός απαντήσεων ανά συμμετέχοντα."
 
 #: static/src/partials/project/admin/project-admin-users.html:27
 msgid "Member"
-msgstr ""
+msgstr "Μέλος"
 
 #: static/src/partials/forum/forum-node-new-thread.html:10
 msgid "Message:"
-msgstr ""
+msgstr "Μήνυμα:"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:12
 #: static/src/partials/project/edit/project-edit-open-page.html:10
 #: static/src/partials/project/edit/project-edit-outline-page.html:33
 msgid "Mission administration"
-msgstr ""
+msgstr "Διαχείριση αποστολής"
 
 #: static/src/partials/project/blocks/project-metadata.html:13
 msgid ""
@@ -724,7 +742,7 @@ msgstr ""
 #: static/src/partials/project/edit/project-edit-details-page.html:8
 #: static/src/partials/project/view/home/project-view-details-page.html:14
 msgid "Mission details"
-msgstr ""
+msgstr "Πληροφορίες αποστολής"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -733,15 +751,15 @@ msgstr ""
 
 #: static/src/partials/project/view/home/project-view-home-page.html:25
 msgid "Mission outline"
-msgstr ""
+msgstr "Περίγραμμα αποστολής"
 
 #: static/src/partials/projects/projects-sidebar.html:24
 msgid "Mission type"
-msgstr ""
+msgstr "Τύπος αποστολής"
 
 #: static/src/partials/projects/projects-sidebar.html:61
 msgid "Missions created by me"
-msgstr ""
+msgstr "Αποστολές που δημιούργησα εγώ"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:18
 msgid "Multiple-line formatted text"
@@ -752,40 +770,44 @@ msgid "Multiple-line plain text"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:282
+#, fuzzy
 msgid ""
 "My <a data-ui-sref=\"profile-view({uid: status.profile.id})\">public "
 "profile</a>."
 msgstr ""
+"Το <a data-ui-sref=\"profile-view({uid: status.profile.id})\">δημόσιο προφίλ "
+"μου</a>."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:3
 msgid "My ideas"
-msgstr ""
+msgstr "Οι ιδέες μου"
 
 #: static/src/partials/profile/profile-logged-in.html:260
 msgid "My interests:"
-msgstr ""
+msgstr "Τα ενδιαφέροντά μου:"
 
 #: static/src/partials/profile/profile-project-list.html:3
 msgid "My projects:"
-msgstr ""
+msgstr "Τα πρότζεκτς μου:"
 
 #: static/src/partials/profile/profile-logged-in.html:224
 #: static/src/partials/profile/profile-logged-in.html:245
 #: static/src/partials/profile/profile-view.html:52
 msgid "Name:"
-msgstr ""
+msgstr "Όνομα:"
 
 #: static/src/partials/comments.html:9
 msgid "New comment"
-msgstr ""
+msgstr "Νέο σχόλιο"
 
 #: static/src/partials/forum/forum-list-forum.html:6
+#, fuzzy
 msgid "New forum"
-msgstr ""
+msgstr "Νέος χώρος συζήτησης"
 
 #: static/src/partials/profile/profile-logged-in.html:113
 msgid "New password:"
-msgstr ""
+msgstr "Νέος κωδικός:"
 
 #: static/src/partials/admin/admin-users.html:21
 #: static/src/partials/profile/profile-logged-in.html:153
@@ -796,31 +818,35 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:94
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:26
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:9
+#, fuzzy
 msgid "No answer has been selected yet."
-msgstr ""
+msgstr "Δεν επέλεξες καμία απάντηση ακόμη."
 
 #: static/src/partials/projects/projects.html:4
+#, fuzzy
 msgid "No missions available at the moment."
-msgstr ""
+msgstr "Δεν υπάρχουν διαθέσιμες αποστολές προς το παρόν."
 
 #: static/src/partials/project/view/spotit/data-table-spotit.html:12
 msgid "No title"
-msgstr ""
+msgstr "Χωρίς τίτλο"
 
 #: static/src/partials/projects/projects-sidebar.html:57
 msgid "Not joined missions"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
+#, fuzzy
 msgid "Only by others"
-msgstr ""
+msgstr "Μόνο από τους άλλους"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:6
+#, fuzzy
 msgid "Only mine"
-msgstr ""
+msgstr "Μόνο οι δικές μου"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:42
 msgid "Open map"
@@ -829,23 +855,23 @@ msgstr ""
 #: static/src/partials/project/admin/project-admin-home-page.html:27
 #: static/src/partials/project/edit/project-edit-outline-page.html:38
 msgid "Open project"
-msgstr ""
+msgstr "Ανοίγω το πρότζεκτ"
 
 #: static/src/partials/admin/admin-projects.html:7
 msgid "Open?"
-msgstr ""
+msgstr "Να ανοίξει;"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:13
 msgid "Orientation"
-msgstr ""
+msgstr "Προσανατολισμός"
 
 #: static/src/partials/profile/profile-logged-in.html:278
 msgid "Other users can see about me:"
-msgstr ""
+msgstr "Οι άλλοι χρήστες μπορούν να δουν για μένα:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:18
 msgid "Outcome stage"
-msgstr ""
+msgstr "Στάδιο αποτελέσματος"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:2
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:2
@@ -854,11 +880,11 @@ msgstr ""
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:1
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:1
 msgid "Outline"
-msgstr ""
+msgstr "Περίγραμμα"
 
 #: static/src/partials/project/edit/project-edit-outline-page.html:23
 msgid "Outline:"
-msgstr ""
+msgstr "Περίγραμμα:"
 
 #: static/src/partials/project/admin/project-admin-users.html:3
 msgid "Participants administration"
