@@ -65,6 +65,15 @@ public class AdminActions extends AbstractContentManager {
 
     }
 
+    public Boolean setFilter(String label, String query, Long id) {
+        if (isAdmin) {
+            return context.getFilterDao().setFilter(label, query, id);
+        }
+
+        return false;
+
+    }
+
 
     public HashMap<String, List<ReportedContent>> getReportedContent() {
         if (isAdmin) {

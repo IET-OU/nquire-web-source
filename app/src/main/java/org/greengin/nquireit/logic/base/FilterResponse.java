@@ -4,9 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Created by nfreear on 29//11/15.
+ * Created by nfreear on 05/12/15.
  */
-public class FilterRequest {
+public class FilterResponse {
     @Getter
     @Setter
     Long id;
