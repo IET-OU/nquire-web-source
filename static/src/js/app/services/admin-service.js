@@ -1,9 +1,17 @@
 'use strict';
 
-angular.module('senseItServices', null, null).factory('AdminService', ['RestService', function (RestService) {
+angular.module('senseItServices', null, null).factory('AdminService', ['RestService', '$log', function (RestService, $log) {
 
   var AdminManager = function () {
     this.data = {};
+  };
+
+  var thenPutPost = function (data) {
+    if ("true" === data) {
+      $log.info("Success. ", [ data ]);
+    } else {
+      $log.error("Failure - not logged in? ", [ data ]);
+    }
   };
 
 
@@ -19,6 +27,16 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
       key: key,
       content: content
     });
+  };
+
+  AdminManager.prototype.setFilter = function (label, query, id) {
+    id = id || null;
+    RestService.put('api/admin/filter', {
+      label: label,
+      query: query,
+      id: id
+    })
+    .then(thenPutPost);
   };
 
   AdminManager.prototype.setAdmin = function (userId, isAdmin) {

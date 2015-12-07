@@ -32,10 +32,20 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     });
 
 
-    RestService.get('api/filter').then(function(data) {
-        $scope.filters = data;
+    RestService.get('api/filter').then(function (data) {
+        // Enable editing via the admin UI.
+        var it, item, key
+          , filters = {};
+        for (it in data) {
+            item = data[ it ];
+            key = "_idx_" + item.id;
+            filters[ key ]= item;
+            filters[ key ]._idx = key;
+            filters[ key ].active = ! item.label.match(/DISABLE/)
+        }
+        $scope.filters = filters;
 
-        $scope.log("Filters: ", data);
+        $scope.log("Filters: ", $scope.filters);
     });
 
 

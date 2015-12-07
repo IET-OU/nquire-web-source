@@ -1,7 +1,8 @@
 <div data-ng-if="adminAccess()" class="admin-page">
-    <div class="admin-header">
+    <div class="admin-header" role="navigation" aria-label="{{'Admin menu' | translate}}">
         <span data-siw-menu-item data-menu-linked-state="'admin.users'" data-menu-label="{{'Users'|translate}}"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.projects'" data-menu-label="{{'Projects'|translate}}"></span>
+        <span data-siw-menu-item data-menu-linked-state="'admin.filters'" data-menu-label="{{'Filters'|translate}}"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.texts'" data-menu-label="{{'Texts'|translate}}"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.reported'" data-menu-label="{{'Reported content'|translate}}"></span>
     </div>
@@ -9,6 +10,6 @@
     <div class="admin-content" data-ui-view></div>
 </div>
 
-<div data-ng-if="!adminAccess()" class="admin-page">
+<div data-ng-if="!adminAccess()" class="admin-page warn http-401 error-unauthorized">
     <p translate>Sorry, you need administrator access to view this page.</p>
 </div>

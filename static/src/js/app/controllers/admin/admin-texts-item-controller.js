@@ -21,6 +21,8 @@ angular.module('senseItWeb', null, null).controller('AdminTextItemCtrl', functio
         $scope.form = new SiwFormManager($scope.txt, [$scope.item.id], function() {
             $scope.admin.setText($scope.item.id, $scope.txt[$scope.item.id]);
         });
+
+        $scope.log("$scope.form (txt):", $scope.form, $scope.item);
     }
 
 });

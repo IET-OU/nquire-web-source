@@ -40,6 +40,11 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
         templateUrl: 'partials/admin/admin-projects.html',
         controller: 'AdminProjectsCtrl'
       })
+      .state('admin.filters', {
+        url: '/filters',
+        templateUrl: 'partials/admin/admin-filters.html',
+        controller: 'AdminFiltersCtrl'
+      })
       .state('admin.texts', {
         url: '/texts',
         templateUrl: 'partials/admin/admin-texts.html',
