@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-07 13:48+0000\n"
+"PO-Revision-Date: 2015-12-08 14:43+0000\n"
 "Last-Translator: Marina Charalampidi <Charalampidi.Marina@gmail.com>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1455,63 +1455,72 @@ msgid "Title:"
 msgstr "Τίτλος:"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:11
+#, fuzzy
 msgid ""
 "To configure this Win-it mission, you need to configure the fields that will "
 "be used by participants to create their answers."
 msgstr ""
+"Για να ρυθμίσω αυτή την αποστολή Win-it, χρειάζεται να ρυθμίσω τα πεδία που "
+"θα χρησιμοποιήσουν οι συμμετέχοντες για να δημιουργήσουν τις απαντήσεις τους."
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:40
 msgid "Toggle plot"
 msgstr ""
 
 #: static/src/partials/projects/projects.html:6
+#, fuzzy
 msgid ""
 "Try searching including <a href=\"\" data-ui-sref=\"home({filter: "
 "'all'})\">non-featured missions</a>."
 msgstr ""
+"Προσπάθησε να ψάξεις συμπεριλαμβάνοντας τις <a href=\"\" data-ui-sref=\""
+"home({filter: 'all'})\">μη προτεινόμενες αποστολές</a>."
 
 #: static/src/partials/projects/projects.html:7
 msgid ""
 "Try without <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
 "null})\">search conditions</a>."
 msgstr ""
+"Προσπάθησε χωρίς <a href=\"\" data-ui-sref=\"home({kw: null, status: null, "
+"type: null})\">όροι αναζήτησης</a>."
 
 #: static/src/partials/profile/profile-provider-item.html:8
+#, fuzzy
 msgid "Unlink {{providerName}} account"
-msgstr ""
+msgstr "Αποσυνδέω {{providerName}} το λογαριασμό"
 
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:4
 msgid "Upload"
-msgstr ""
+msgstr "Ανεβάζω"
 
 #: static/src/partials/profile/profile-logged-in.html:17
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:41
 msgid "Upload image"
-msgstr ""
+msgstr "Ανεβάζω εικόνα"
 
 #: static/src/partials/profile/profile-logged-in.html:16
 msgid "Upload new image"
-msgstr ""
+msgstr "Ανεβάζω καινούρια εικόνα"
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:10
 msgid "Upload picture"
-msgstr ""
+msgstr "Ανεβάζω φωτογραφία"
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:42
 msgid "Uploading…"
-msgstr ""
+msgstr "Ανεβαίνει…"
 
 #: static/src/partials/project/admin/project-admin-users.html:9
 msgid "User"
-msgstr ""
+msgstr "Χρήστης"
 
 #: static/src/partials/profile/profile-view.html:2
 msgid "User profile: {{profile.username}}"
-msgstr ""
+msgstr "Προφίλ χρήστη: {{profile.username}}"
 
 #: static/src/partials/admin/admin-users.html:5
 msgid "Username"
-msgstr ""
+msgstr "Όνομα χρήστη"
 
 #: static/src/partials/profile/profile-logged-in.html:47
 #: static/src/partials/profile/profile-logged-in.html:55
@@ -1519,39 +1528,41 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-out.html:69
 #: static/src/partials/profile/profile-view.html:44
 msgid "Username:"
-msgstr ""
+msgstr "Όνομα χρήστη:"
 
 #: static/src/partials/admin/admin.html:3
 msgid "Users"
-msgstr ""
+msgstr "Χρήστες"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:20
 msgid "Users logged in"
-msgstr ""
+msgstr "Συνδεδεμένοι χρήστες"
 
 #: static/src/partials/profile/profile-logged-out.html:112
 #: static/src/partials/profile/profile-logged-out.html:147
+#, fuzzy
 msgid "Verify yourself:"
-msgstr ""
+msgstr "Επιβεβαιώνω τον εαυτό μου:"
 
 #: static/src/partials/projects/projects-sidebar.html:9
+#, fuzzy
 msgid "View"
-msgstr ""
+msgstr "Βλέπω"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:26
 #: static/src/partials/project/view/senseit/data-table-senseit.html:10
 #: static/src/partials/project/view/senseit/senseit-data-map.html:10
 msgid "Votes"
-msgstr ""
+msgstr "Ψήφοι"
 
 #: static/src/partials/project/view/challenge/challenge-project-data.html:6
 #: static/src/partials/projects/projects.html:38
 msgid "Voting"
-msgstr ""
+msgstr "Ψηφοφορία"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:17
 msgid "Voting stage"
-msgstr ""
+msgstr "Στάδιο ψηφοφορίας"
 
 #: static/src/partials/projects/create.html:39
 #: static/src/partials/projects/projects.html:28
@@ -1560,7 +1571,7 @@ msgstr ""
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:3
 msgid "Winner"
-msgstr ""
+msgstr "Νικητής"
 
 #: static/src/partials/admin/admin-users.html:17
 #: static/src/partials/profile/profile-logged-in.html:152
@@ -1571,21 +1582,25 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:93
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:27
 msgid "Yes"
-msgstr ""
+msgstr "Ναι"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:65
 msgid "You can create up to {{projectData.project.activity.maxAnswers}} ideas."
 msgstr ""
+"Μπορώ να δημιουργήσω μέχρι {{projectData.project.activity.maxAnswers}} ιδέες."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:62
 msgid ""
 "You have created the maximum number of allowed ideas: {{projectData.project."
 "activity.maxAnswers}}."
 msgstr ""
+"Δημιούργησα το μέγιστο επιτρεπόμενο αριθμό ιδεών: "
+"{{projectData.project.activity.maxAnswers}}."
 
 #: static/src/partials/social/social-post-dialog.html:7
+#, fuzzy
 msgid "You have not linked a {{data.provider.name}} account yet."
-msgstr ""
+msgstr "Δεν έχω συνδέσει ένα {{data.provider.name}} λογαριασμό ακόμη."
 
 #: static/src/partials/profile/profile-project-list.html:15
 msgid ""
@@ -1593,6 +1608,10 @@ msgid ""
 "\"home\">existing projects</a> to find interesting ones, or <a href=\"\" "
 "data-ui-sref=\"create\">create</a> your own."
 msgstr ""
+"Δεν έχω γίνει μέλος σε πρότζεκτ ακόμη. Μπορώ να εξερευνήσω <a href=\"\" data-"
+"ui-sref=\"home\">τα υπάρχοντα πρότεκτς</a> για να βρω αυτά που με "
+"ενδιαφέρουν, ή <a href=\"\" data-ui-sref=\"create\">να δημιουργήσω</a> τα "
+"δικά μου."
 
 #: static/src/partials/project/admin/project-admin-home-page.html:5
 msgid "You need administrator rights to access this page."
