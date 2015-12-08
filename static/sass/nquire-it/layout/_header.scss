@@ -110,7 +110,30 @@ div#header {
 #footer .lang-switch,
 #header .lang-switch {
   clear: both;
-  margin: 5px 0;
+  //margin: 5px 0;
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-size: 1.05em;
+    min-width: 7em;
+    border: 1px solid $color-header-search-box;
+    border-radius: 0;
+    background: #fff;
+    padding: 3px 16px;
+    text-align: center;
+
+    position: relative;
+    top: -8px;
+    margin-left: 16px;
+
+    option {
+      //font-size: 1.5em;
+      //padding: 3px 10px;
+    }
+  }
 
   a {
     display: inline-block;
@@ -126,7 +149,7 @@ div#header {
     }
   }
 }
-#header .lang-switch {
+#XX-header .lang-switch {
   position: absolute;
   right: -10px;
   // Space for the "logged in" block!
