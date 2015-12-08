@@ -37,7 +37,7 @@
 
             <span id="lang" class="lang-switch" data-ng-if="cfg.lang_switch === 'top'">
               <select aria-label="{{'Choose language' | translate}}" ng-XX-change="switchLanguage(lang)">
-                 <option value="{{lang}}" ng-repeat="(lang, label) in cfg.langs" ng-selected="lang === activeLang">{{label | translate}}</option>
+                <option value="{{lang}}" ng-repeat="(lang, label) in cfg.langs" ng-selected="lang === activeLang">{{label | translate}}</option>
               </select>
             </span>
         </div>
@@ -59,12 +59,5 @@
         </div>
 
     </div>
-
-<!--
-    <div id="lang" class="lang-switch" data-ng-if="cfg.lang_switch === 'top'">
-      <a data-ng-repeat="(lang, label) in cfg.langs" data-ng-href="{{lang}}#{{location.url()}}" hreflang="{{lang}}"
-          title="{{'Choose language:' | translate}} {{label | translate}} ({{ lang }})">{{label | translate}}<i class="fa fa-x-language fa-flag"></i></a>
-    </div>
--->
 
 </div>

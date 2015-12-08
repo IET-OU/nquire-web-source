@@ -85,7 +85,7 @@ div#header {
 }
 [ data-lang_switch = top ] #header {
   // Above -- height: 145px;
-  height: 170px;
+  //Was: height: 170px;
 }
 
 
@@ -124,6 +124,7 @@ div#header {
     background: #fff;
     padding: 3px 16px;
     text-align: center;
+    cursor: pointer;
 
     position: relative;
     top: -8px;
