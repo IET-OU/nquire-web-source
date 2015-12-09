@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-08 14:43+0000\n"
+"PO-Revision-Date: 2015-12-09 22:46+0000\n"
 "Last-Translator: Marina Charalampidi <Charalampidi.Marina@gmail.com>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -87,9 +87,12 @@ msgstr ""
 "εγγραφή</a> για να δημοσιεύσεις απαντήσεις σε αυτή τη συζήτηση."
 
 #: static/src/partials/forum/forum-node-list.html:1
+#, fuzzy
 msgid ""
 "<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 msgstr ""
+"<a href=\"\" data-ui-sref=\"forum.list\">Χώρος συζητήσεων</a> ▸ "
+"{{forum.node.title}}"
 
 #: static/src/partials/project/comments/posting-disabled.html:2
 msgid ""
@@ -132,8 +135,9 @@ msgid "<b>Win-it</b> mission"
 msgstr "<b>Win-it</b> αποστολή"
 
 #: static/src/partials/project/view/senseit/senseit-project-data.html:7
+#, fuzzy
 msgid "<b>{{projectData.data.data}}</b> series"
-msgstr ""
+msgstr "<b>{{projectData.data.data}}</b> σειρές"
 
 #: static/src/partials/comments.html:41
 #, fuzzy
@@ -326,8 +330,8 @@ msgid ""
 "Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
 "for your favourite!"
 msgstr ""
-"Κάνε κλικ <a href=\"\" data-ui-sref=\"project.view.challenge\">εδώ</a> για "
-"να ψηφίσεις την αγαπημένη σου!"
+"Κάνω κλικ <a href=\"\" data-ui-sref=\"project.view.challenge\">εδώ</a> για "
+"να ψηφίσω την αγαπημένη μου!"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
@@ -1616,30 +1620,39 @@ msgstr ""
 #: static/src/partials/project/admin/project-admin-home-page.html:5
 msgid "You need administrator rights to access this page."
 msgstr ""
+"Χρειάζομαι δικαιώματα διαχειριστή για να έχω πρόσβαση σε αυτή τη σελίδα."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:48
 msgid ""
 "You need to <a data-ng-click=\"openIdService.loginAndComeBack()\">sign in</"
 "a> to vote for ideas."
 msgstr ""
+"Χρειάζεται να <a data-ng-click=\"openIdService.loginAndComeBack()\">κάνω "
+"εγγραφή</a> για να ψηφίσω ιδέες."
 
 #: static/src/partials/social/social-post-dialog.html:2
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"close(data.provider.login)\">sign "
 "in</a> before posting on {{data.provider.name}}."
 msgstr ""
+"Χρειάζεται να <a href=\"\" data-ng-click=\"close(data.provider.login)\">κάνω "
+"εγγραφή</a> πριν να δημοσιεύσω στο {{data.provider.name}}."
 
 #: static/src/partials/project/view/home/project-view-home-page.html:13
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> before you can participate in projects."
 msgstr ""
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">κάνω εγγραφή</a> πριν να συμμετάσχω σε πρότζεκτς."
 
 #: static/src/partials/projects/create.html:127
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> in order to create your own projects."
 msgstr ""
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">κάνω εγγραφή</a> για να δημιουργήσω τα δικά μου πρότζεκτς."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:29
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:17
@@ -1647,58 +1660,68 @@ msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> to post ideas."
 msgstr ""
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">κάνω εγγραφή</a> για να δημοσιεύσω ιδέες."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:13
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> to upload images to this mission."
 msgstr ""
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">κάνω εγγραφή</a> για να ανεβάσω εικόνες σε αυτή την αποστολή."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:18
-#, fuzzy
 msgid ""
 "You need to <a href=\"\" data-ui-sref=\"project.view.home\">join this "
 "mission</a> to upload images."
 msgstr ""
-"Για να ανεβάσεις φωτογραφίες πρέπει να <a href=\"\" data-ui-sref=\"project."
-"view.home\"> μπεις στην αποστολή </a>."
+"Χρειάζεται να<a href=\"\" data-ui-sref=\"project.view.home\">γίνω μέλος σε "
+"αυτή την αποστολή</a> για να ανεβάσω εικόνες."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:25
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:13
 msgid "You need to join this project to post ideas."
 msgstr ""
+"Χρειάζεται να γίνω μέλος σε αυτό το πρότζεκτ για να δημοσιεύσω τις ιδέες μου."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:45
 msgid "You need to join this project to vote for ideas."
-msgstr ""
+msgstr "Χρειάζεται να γίνω μέλος σε αυτό το πρότζεκτ για να ψηφίσω τις ιδέες."
 
 #: static/src/partials/profile/profile-logged-in.html:2
+#, fuzzy
 msgid "Your profile page"
-msgstr ""
+msgstr "Η σελίδα προφίλ μου"
 
 #: static/src/partials/admin/admin-users.html:6
 msgid "email"
-msgstr ""
+msgstr "ηλεκτρονικό ταχυδρομείο"
 
 #: static/src/partials/layout/header.html:5
 msgid "nQuire-it home page"
-msgstr ""
+msgstr "nQuire-it αρχική σελίδα"
 
 #: static/src/index.html:6
+#, fuzzy
 msgid "nQuire-it — join missions to explore your world"
 msgstr ""
+"nQuire-it — γίνομαι μέλος/παίρνω μέρος σε αποστολές για να εξερευνήσω τον "
+"κόσμο μου"
 
 #: static/src/partials/project/blocks/project-menu.html:4
 msgid "project.admin"
-msgstr ""
+msgstr "πρότζεκτ.διαχειριστής"
 
 #: static/src/partials/project/blocks/project-menu.html:5
+#, fuzzy
 msgid "project.edit"
-msgstr ""
+msgstr "πρότζεκτ.επεξεργάζομαι"
 
 #: static/src/partials/project/blocks/project-menu.html:3
+#, fuzzy
 msgid "project.view"
-msgstr ""
+msgstr "πρότζεκτ.βλέπω"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:26
 msgid "{{feed.count}} user is online"
