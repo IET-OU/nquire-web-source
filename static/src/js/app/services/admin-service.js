@@ -49,7 +49,16 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
   AdminManager.prototype.getProjects = function () {
     var self = this;
     RestService.get('api/admin/projects').then(function (data) {
-      self.data.projects = data;
+      var it, item, key, projects = {};
+      for (it in data) {
+      //for (it = 0; it < data.length; it++) {
+        item = data[ it ];
+        key = "_idx_" + item.id;
+
+        projects[ key ]= item;
+        projects[ key ]._idx = key;
+      }
+      self.data.projects = projects;
     });
   };
 
@@ -74,10 +83,16 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     return this._reportedContentRequest('post', 'api/admin/reported/' + id + '/approve');
   };
 
-
   AdminManager.prototype.setFeatured = function (projectId, isFeatured) {
     var self = this;
     RestService.put('api/admin/project/' + projectId + '/featured', {featured: isFeatured}).then(function (data) {
+      self.data.projects = data;
+    });
+  };
+
+  AdminManager.prototype.setProjectFilter = function (projectId, filters) {
+    var self = this;
+    RestService.put('api/admin/project/' + projectId + '/filters', {filters: filters}).then(function (data) {
       self.data.projects = data;
     });
   };

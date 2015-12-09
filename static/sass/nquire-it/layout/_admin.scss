@@ -52,31 +52,52 @@
         td {
           padding: 0 6px 0 0;
         }
-
-        .key,
-        .btn {
-          width: 70px;
-
-          input {
-            padding: 6px 1px;
-            font-size: .94em;
-          }
-        }
-        .value {
-          width: 87%;
-        }
       }
+    }
+
+    .key,
+    .col-btn {
+      width: 70px;
+
+      input {
+        padding: 6px 1px;
+        font-size: .94em;
+      }
+    }
+    .value {
+      width: 87%;
     }
   }
 
-  .admin-page-filters tr.row-add-form {
-    display: table-row;
+  .admin-page-filters table {
+    tr.row-add-form {
+      display: table-row;
+    }
 
     .key {
-      width: 248px;
+      width: 40%;
+      //width: 248px;
     }
     .value {
-      width: 72%;
+      width: 45%
+      //width: 72%;
+    }
+  }
+
+
+  .admin-page-projects {
+
+    .col-filters {
+      min-width: 12em;
+    }
+
+    input.filters {
+      padding: 6px 1px;
+      font-size: .94em;
+    }
+
+    input, button {
+      margin-top: 4px;
     }
   }
 

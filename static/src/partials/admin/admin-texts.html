@@ -6,9 +6,9 @@
 <table class="table table-striped">
     <thead>
     <tr>
-        <th translate>Texts</th>
-        <th translate>Content</th>
-        <th></th>
+        <th class="key" translate>Texts</th>
+        <th class="value" translate>Content</th>
+        <th class="col-btn"></th>
     </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
                placeholder="Key, eg. 'about_el'" title="Key, eg. 'about_el'"/></td>
         <td class="value"><input class="form-control" data-ng-model="text.value" required
                placeholder="Text value ..."/></td>
-        <td class="btn"><button class="btn btn-default" type="submit" ng-disabled="addForm.$invalid" translate>Add</button></td>
+        <td class="col-btn"><button class="btn btn-default" type="submit" ng-disabled="addForm.$invalid" translate>Add</button></td>
         </tr></table>
       </form>
       </td>

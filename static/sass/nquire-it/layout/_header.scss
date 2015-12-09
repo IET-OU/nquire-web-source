@@ -122,12 +122,13 @@ div#header {
     border: 1px solid $color-header-search-box;
     border-radius: 0;
     background: #fff;
-    padding: 3px 16px;
+    padding: 2px 16px;
     text-align: center;
     cursor: pointer;
 
     position: relative;
     top: -8px;
+    height: $dim-header-search-box-height + 1px;
     margin-left: 16px;
 
     option {
