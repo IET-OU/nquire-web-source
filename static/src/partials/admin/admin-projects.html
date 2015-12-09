@@ -1,5 +1,9 @@
 <div class="admin-page-projects">
 
+<datalist id="filter-list">
+    <option data-ng-repeat="f in filters" value="{{f.query}}"/>
+</datalist>
+
 <table class="table table-striped">
     <thead>
     <tr>
@@ -12,7 +16,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr data-ng-repeat="(idx, project) in admin.data.projects" data-ng-controller="AdminProjectsItemCtrl">
+    <tr data-ng-repeat="(idx, project) in admin.data.projects" data-ng-controller="AdminProjectsItemCtrl" data-idx="{{idx}}">
         <td>{{project.id}}</td>
         <td>{{project.title}}</td>
         <td>{{project.author.username}}</td>
@@ -24,13 +28,14 @@
                 {{project.featured ? 'Unfeature' : 'Feature project'}}
             </button>
         </td>
-        <td data-title="IDX: {{idx}}">
+        <td>
           <div data-ng-if="!form.isOpen()">
             {{project.filters}}
             <button class="btn btn-default btn-xs" data-ng-click="form.open()" data-ng-XX-click="actions.filters(project)" translate>Edit filters</button>
           </div>
           <div data-ng-if="form.isOpen()">
             <input class="form-control filters" data-ng-XX-model="form.values[idx].filters" data-ng-model="project.filters" required
+                   list="filter-list"
                    placeholder="{{'Comma separated filters'|translate}}" title="Format: letters, numbers, dashes, commas." pattern="[\w\-,]+"//>
 
             <button class="btn btn-default btn-sm" data-ng-click="form.save()" translate>Save</button>
