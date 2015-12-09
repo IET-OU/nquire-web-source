@@ -16,9 +16,10 @@ import java.util.Map;
  * Created by nfreear on 29/11/15.
  */
 public class FilterDao {
-    static final String FILTER_KEY_QUERY = "SELECT f FROM Filter f WHERE f.label=:label";
     static final String FILTER_ID_QUERY = "SELECT f FROM Filter f WHERE f.id=:id"; //f.ENTITY_ID=:id
     static final String FILTER_QUERY = "SELECT f FROM Filter f";
+    static final String FILTER_DELETE = "DELETE FROM Filter f WHERE f.id=:filter_id";
+
 
     @PersistenceContext
     EntityManager em;
@@ -47,29 +48,13 @@ public class FilterDao {
         return true;
     }
 
-
     @Transactional
-    public Boolean setFilter_OLD(String label, String the_query) {
-        TypedQuery<Filter> query = em.createQuery(FILTER_KEY_QUERY, Filter.class);
-        query.setParameter("label", label);
-        List<Filter> filters = query.getResultList();
-        if (filters.size() == 0) {
-            Filter filter = new Filter();
-            filter.setLabel(label);
-            filter.setQuery(the_query);
-            em.persist(filter);
-        } else {
-            Filter filter = filters.get(0);
-            filter.setQuery(the_query);
-
-            for (int i = 1; i < filters.size(); i++) {
-                em.remove(filters.get(i));
-            }
-        }
-
+    public Boolean deleteFilter(Filter filter) {
+        //context.getRoleDao().removeContextRoles(project);
+        em.persist(filter);
+        em.remove(filter);
         return true;
     }
-
 
     public List<FilterResponse> getFilters() {
         List<FilterResponse> response = new Vector<FilterResponse>();

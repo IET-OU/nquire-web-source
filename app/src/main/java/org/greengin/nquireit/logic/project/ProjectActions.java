@@ -101,7 +101,7 @@ public class ProjectActions extends AbstractContentManager {
 
         if (hasAccess(PermissionType.BROWSE)) {
 
-            for (Project p : context.getProjectDao().getProjects(type, !"all".equals(filter))) {
+            for (Project p : context.getProjectDao().getProjects(type, !"all".equals(filter), filter)) {
 
                 AccessLevel access = context.getSubscriptionManager().getAccessLevel(p, user);
                 if (access.isAdmin() || p.getOpen()) {

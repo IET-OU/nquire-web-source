@@ -7,6 +7,7 @@ import org.greengin.nquireit.json.Views;
 import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.admin.AdminActions;
 import org.greengin.nquireit.logic.admin.ProjectFeaturedRequest;
+import org.greengin.nquireit.logic.admin.ProjectFiltersRequest;
 import org.greengin.nquireit.logic.admin.ReportedContent;
 import org.greengin.nquireit.logic.admin.UserAdminRequest;
 import org.greengin.nquireit.logic.base.TextRequest;
@@ -61,6 +62,15 @@ public class AdminController {
     public List<Project> setFeatured(@PathVariable("projectId") Long projectId, @RequestBody ProjectFeaturedRequest data, HttpServletRequest request) {
         AdminActions manager = createAdminManager(request);
         manager.setFeatured(projectId, data);
+        return manager.getProjects();
+    }
+
+    @RequestMapping(value = "/project/{projectId}/filters", method = RequestMethod.PUT)
+    @ResponseBody
+    @ResponseView(value = Views.UserProfileData.class)
+    public List<Project> setProjectFilters(@PathVariable("projectId") Long projectId, @RequestBody ProjectFiltersRequest data, HttpServletRequest request) {
+        AdminActions manager = createAdminManager(request);
+        manager.setProjectFilters(projectId, data);
         return manager.getProjects();
     }
 

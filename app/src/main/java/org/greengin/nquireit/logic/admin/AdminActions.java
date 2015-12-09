@@ -48,6 +48,12 @@ public class AdminActions extends AbstractContentManager {
         }
     }
 
+    public void setProjectFilters(Long projectId, ProjectFiltersRequest data) {
+        if (isAdmin) {
+            context.getProjectDao().setFilters(projectId, data.getFilters());
+        }
+    }
+
     public Boolean updateModel() {
         if (isAdmin) {
             context.getProjectDao().updateDataModel();
