@@ -72,6 +72,15 @@
           }
         }
 
+        .project-section-description-tags a {
+          display: inline-block;
+          margin-right: .3em;
+
+          &:after {
+            //content: ",";
+          }
+        }
+
 
 
         .project-section-description-text {

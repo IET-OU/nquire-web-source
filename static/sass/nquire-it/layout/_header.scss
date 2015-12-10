@@ -113,17 +113,18 @@ div#header {
   //margin: 5px 0;
 
   select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //appearance: none;
 
     font-size: 1.05em;
     min-width: 7em;
     border: 1px solid $color-header-search-box;
-    border-radius: 0;
+    //border-radius: 0;
     background: #fff;
+    color: #666;
     padding: 2px 16px;
-    text-align: center;
+    //text-align: center;
     cursor: pointer;
 
     position: relative;
@@ -134,6 +135,12 @@ div#header {
     option {
       //font-size: 1.5em;
       //padding: 3px 10px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $color-header-search-focus;
+      color: #222;
     }
   }
 

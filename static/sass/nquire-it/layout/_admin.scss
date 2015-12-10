@@ -2,8 +2,19 @@
 @import "../variables/dimensions";
 @import "../variables/colors";
 
+
+input:invalid, input.ng-invalid {
+  //border-color: orange;
+}
+
+
 .admin-page {
   padding: 0 $dim-common-margin;
+
+  .btn-xs {
+    padding: 2px 6px;
+    //Was: padding: 1px 5px;
+  }
 
   .admin-header {
     @include basic-header;
