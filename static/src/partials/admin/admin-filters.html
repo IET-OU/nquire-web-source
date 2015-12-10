@@ -13,7 +13,7 @@
       </thead>
       <tbody>
       <tr class="XX-WAS-row-add-form"> </tr>
-      <tr data-ng-repeat="(idx, item) in filters" data-ng-controller="AdminFiltersCtrl">
+      <tr data-ng-repeat="(idx, item) in tags.data.filters" data-ng-controller="AdminFiltersCtrl">
           <td title="ID: {{item.id}}">
               <div data-ng-if="!form.isOpen()" data-ng-bind-html="item.label"></div>
               <div data-ng-if="form.isOpen()">

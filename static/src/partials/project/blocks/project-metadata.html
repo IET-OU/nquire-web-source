@@ -4,6 +4,11 @@
 </div>
 <div class="project-section-description-text">
     <p class="project-section-description-text-title" role="heading" aria-level="1" translate><span class="project-section-description-text-mission">Mission:</span> {{projectData.project.title}}</p>
+    <p class="project-section-description-tags" data-ng-if="tags.data.projectTags">
+      <span translate>Tags:</span>
+      <a data-ng-repeat="(tag, label) in tags.data.projectTags"
+        data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: tag})" data-ng-bind-html="label"></a>
+    </p>
 
     <div class="project-section-description-text-author">
                         <span class="project-section-description-text-author-image" data-siw-user-image

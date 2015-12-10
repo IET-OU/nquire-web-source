@@ -2,8 +2,6 @@ angular.module('senseItWeb', null, null).controller('AdminProjectsCtrl', functio
 
     $scope.admin.getProjects();
 
-    ///$scope.projectList = $scope.admin.data.projects;
-
     $scope.actions = {
         toggleFeatured: function (project) {
             $scope.admin.setFeatured(project.id, !project.featured);

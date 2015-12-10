@@ -1,14 +1,5 @@
 angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function ($scope) {
 
-    /*var it
-      , filters = $scope.filters;
-
-    $scope.filterList = {};
-    for (it in filters) {
-      $scope.filterList[] = {
-        id: it, label: it, query: filters[ it ]
-      }
-    }*/
 
     $scope.submit = function () {
         $scope.admin.setFilter($scope.new_filter.label, $scope.new_filter.query);
@@ -19,9 +10,9 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
 
     if ($scope.item) {
         // ng-repeat context.
-        $scope.form = new SiwFormManager($scope.filters, [ $scope.item._idx ], function () {
+        $scope.form = new SiwFormManager($scope.tags.data.filters, [ $scope.item._idx ], function saveCallback(formValid) {
             var idx = $scope.item._idx
-              , filters = $scope.filters;
+              , filters = $scope.tags.data.filters;
 
             $scope.admin.setFilter(filters[ idx ].label, filters[ idx ].query, filters[ idx ].id);
 

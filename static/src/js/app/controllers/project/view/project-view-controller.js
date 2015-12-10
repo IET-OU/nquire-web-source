@@ -1,6 +1,6 @@
 angular.module('senseItWeb', null, null).controller('ProjectViewCtrl', function ($scope, $state, ProjectService) {
 
-
+    $scope.tags.projectTags($scope.projectData.project);
 
 
     $scope.joinProject = function () {
@@ -37,4 +37,3 @@ angular.module('senseItWeb', null, null).controller('ProjectViewCtrl', function 
 
 
 });
-

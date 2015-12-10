@@ -1,10 +1,13 @@
-angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, $location, $timeout, $log) {
+angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, FilterTagService, $location, $timeout, $log) {
     OpenIdService.registerWatcher($scope);
 
     initDebug($scope, $location, $log);
     initApprovalServer($scope, $location);
 
     initTranslation($scope, $location, gettextCatalog);
+
+    FilterTagService.get($scope);
+    $scope.tags.getList();
 
     $("html").attr({
       "data-debug": $scope.debug,
@@ -30,30 +33,6 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
 
         translateSwitchApiTexts($scope, $location);
     });
-
-
-    RestService.get('api/filter').then(function (data) {
-        // Enable editing via the admin UI.
-        var it, item, key, is_valid
-          , filters = {};
-        for (it in data) {
-            item = data[ it ];
-            key = "_idx_" + item.id;
-            is_valid = item.query.match(/^[\w\-]+$/);
-
-            filters[ key ]= item;
-            filters[ key ]._idx = key;
-            filters[ key ].active = ! item.label.match(/DISABLE/) && is_valid;
-
-            if (! is_valid) {
-                $log.warn("Error, invalid filter (spaces?) ", item);
-            }
-        }
-        $scope.filters = filters;
-
-        $scope.log("Filters: ", $scope.filters);
-    });
-
 
     // I18n / translation [Bug: #3]
     function initTranslation($scope, $location, gettextCatalog) {
