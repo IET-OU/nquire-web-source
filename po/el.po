@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-09 22:46+0000\n"
+"PO-Revision-Date: 2015-12-10 22:17+0000\n"
 "Last-Translator: Marina Charalampidi <Charalampidi.Marina@gmail.com>\n"
 "Language: el\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,80 +14,78 @@ msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
-"«<span class=\"feed-comment\">{{item.comment}}</span>» στο/η <a data-ui-sref="
-"\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" στο/η <a data-ui-"
+"sref=\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:5
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
-"«<span class=\"feed-comment\">{{item.comment}}</span>» στο/στη <a data-ui-"
-"sref=\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</"
-"a>"
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" στο/στη <a data-ui-"
+"sref=\"project.view.home({projectId: item.threadId})\""
+">{{item.threadTitle}}</a>"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
-#, fuzzy
 msgid "(Ideas are always visible during voting and outcome.)"
 msgstr ""
-"(Οι ιδέες είναι πάντα ορατές κατά τη διάρκεια της ψηφοφορίας και στην "
-"ανακοίνωση του αποτελέσματος.)"
+"(Οι ιδέες είναι πάντα ορατές κατά τη διάρκεια της ψηφοφορίας και κατά την "
+"ανακοίνωση του/της νικητή/τριας.)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:41
 msgid "(Multiple-line formatted text)"
-msgstr "(Μακροσκελές μορφοποιημένο κείμενο)"
+msgstr "(Μορφοποιημένο κείμενο πολλαπλών γραμμών)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:40
 msgid "(Multiple-line plain text)"
-msgstr "(Μακροσκελές απλό κείμενο)"
+msgstr "(Απλό κείμενο πολλαπλών γραμμών)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
 msgid "(Single-line text)"
-msgstr "(Σύντομο κείμενο)"
+msgstr "(Κείμενο μονής γραμμής)"
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνε "
-"εγγραφή</a> για να σχολιάσεις αυτά τα δεδομένα."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνω "
+"εγγραφή</a> για να σχολιάσω αυτή τη σειρά δεδομένων."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
-#, fuzzy
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνε "
-"εγγραφή</a> για να σχολιάσεις αυτή την αποστολή."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνω "
+"εγγραφή</a> για να σχολιάσω αυτή την αποστολή."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνε "
-"εγγραφή</a> για να σχολιάσεις αυτή τη φωτογραφία."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνω "
+"εγγραφή</a> για να σχολιάσω αυτή τη φωτογραφία."
 
 #: static/src/partials/forum/forum-node-list.html:8
+#, fuzzy
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνε "
-"εγγραφή</a> για να ξεκινήσεις νέα συζήτηση."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνω "
+"εγγραφή</a> για να δημοσιεύσω νέες συζητήσεις."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνε "
-"εγγραφή</a> για να δημοσιεύσεις απαντήσεις σε αυτή τη συζήτηση."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Κάνω "
+"εγγραφή</a> για να δημοσιεύσω απαντήσεις σε αυτή τη συζήτηση."
 
 #: static/src/partials/forum/forum-node-list.html:1
-#, fuzzy
 msgid ""
 "<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 msgstr ""
@@ -99,24 +97,24 @@ msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about it."
 msgstr ""
-"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνε μέλος</a> σε αυτή την "
-"αποστολή για να τη συζητήσεις."
+"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνομαι μέλος</a> σε αυτή "
+"την αποστολή για να τη συζητήσω."
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this data series."
 msgstr ""
-"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνε μέλος</a> σε αυτή την "
-"αποστολή για να συζητήσεις αυτά τα δεδομένα."
+"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνομαι μέλος</a> σε αυτή "
+"την αποστολή για να συζητήσω αυτή τη σειρά δεδομένων."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this picture."
 msgstr ""
-"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνε μέλος</a> σε αυτή την "
-"αποστολή για να συζητήσεις για αυτή τη φωτογραφία."
+"<a href=\"\" data-ui-sref=\"project.view.home\">Γίνομαι μέλος</a> σε αυτή "
+"την αποστολή για να συζητήσω για αυτή τη φωτογραφία."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
 msgid "<b>Explanation:</b> {{outcome.explanation}}"
@@ -135,12 +133,10 @@ msgid "<b>Win-it</b> mission"
 msgstr "<b>Win-it</b> αποστολή"
 
 #: static/src/partials/project/view/senseit/senseit-project-data.html:7
-#, fuzzy
 msgid "<b>{{projectData.data.data}}</b> series"
 msgstr "<b>{{projectData.data.data}}</b> σειρές"
 
 #: static/src/partials/comments.html:41
-#, fuzzy
 msgid ""
 "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
 "span> said:"
@@ -162,17 +158,14 @@ msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
 msgstr "<span class=\"sidebar-type-senseit\">Sense-it</span> αποστολές"
 
 #: static/src/partials/projects/projects-sidebar.html:36
-#, fuzzy
 msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
 msgstr "<span class=\"sidebar-type-spotit\">Spot-it</span> αποστολές"
 
 #: static/src/partials/projects/projects-sidebar.html:40
-#, fuzzy
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
 msgstr "<span class=\"sidebar-type-winit\">Win-it</span> αποστολές"
 
 #: static/src/partials/projects/projects.html:53
-#, fuzzy
 msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
 msgstr "Μία <span class=\"project-item-banner-type\">Sense-it</span> αποστολή"
 
@@ -195,7 +188,7 @@ msgstr ""
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
 msgid "About"
-msgstr "Σχετικά με την ιστοσελίδα"
+msgstr "Σχετικά"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
 msgid "Accelerometer"
@@ -206,17 +199,16 @@ msgid "Actions"
 msgstr "Δράσεις"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:62
-#, fuzzy
 msgid "Add block"
 msgstr "Μπλοκάρω"
 
 #: static/src/partials/forum/forum-list-category.html:14
 msgid "Add category"
-msgstr "Πρόσθεσε μία κατηγορία"
+msgstr "Προσθέτω κατηγορία"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:33
 msgid "Add field"
-msgstr "Πρόσθεσε ένα πεδίο"
+msgstr "Προσθέτω πεδίο"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
 #, fuzzy
@@ -259,7 +251,6 @@ msgid "Approve"
 msgstr "Εγκρίνω"
 
 #: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1
-#, fuzzy
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
 msgstr ""
 "Είσαι σίγουρος/η ότι θες να διαγράψεις τα δεδομένα "
@@ -274,7 +265,6 @@ msgid "Author"
 msgstr "Συγγραφέας"
 
 #: static/src/partials/social/social-post-dialog.html:16
-#, fuzzy
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr "Αναμονή απάντησης από τον/την {{data.provider.name}}…"
 
@@ -322,10 +312,9 @@ msgstr "Πρόκληση"
 #: static/src/partials/profile/profile-logged-in.html:132
 #: static/src/partials/profile/profile-logged-in.html:95
 msgid "Change password"
-msgstr "Αλλαγή κωδικού"
+msgstr "Αλλάζω τον κωδικό"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:42
-#, fuzzy
 msgid ""
 "Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
 "for your favourite!"
@@ -336,17 +325,16 @@ msgstr ""
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
 msgid "Close project"
-msgstr "Κλείσιμο του πρότζεκτ"
+msgstr "Κλείνω το πρότζεκτ"
 
 #: static/src/partials/forum/forum-thread.html:56
-#, fuzzy
 msgid "Comment"
-msgstr "Σχόλιο"
+msgstr "Σχολιάζω"
 
 #: static/src/partials/comments.html:14
 #: static/src/partials/forum/forum-thread.html:55
 msgid "Comment:"
-msgstr "Σχολίασε:"
+msgstr "Σχολιάζω:"
 
 #: static/src/partials/admin/admin-texts.html:5
 msgid "Content"
@@ -361,33 +349,30 @@ msgstr "Ταυτότητα περιεχομένου"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
 #: static/src/partials/projects/create.html:118
 #: static/src/partials/projects/create.html:121
-#, fuzzy
 msgid "Create"
 msgstr "Δημιουργώ"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:66
-#, fuzzy
 msgid "Create new idea"
 msgstr "Δημιουργώ νέα ιδέα"
 
 #: static/src/partials/projects/create.html:11
 msgid "Create your own <b>Sense-it</b> mission"
-msgstr "Δημιούργησε τη δικιά σου <b>Sense-it</b> αποστολή"
+msgstr "Δημιουργώ τη δικιά μου <b>Sense-it</b> αποστολή"
 
 #: static/src/partials/projects/create.html:30
 msgid "Create your own <b>Spot-it</b> mission"
-msgstr "Δημιούργησε τη δικιά σου <b>Spot-it</b> αποστολή"
+msgstr "Δημιουργώ τη δικιά μου <b>Spot-it</b> αποστολή"
 
 #: static/src/partials/projects/create.html:51
 msgid "Create your own <b>Win-it</b> mission"
-msgstr "Δημιούργησε τη δικιά σου <b>Win-it</b> αποστολή"
+msgstr "Δημιουργώ τη δικιά μου <b>Win-it</b> αποστολή"
 
 #: static/src/partials/widgets/file-select-widget.html:1
 msgid "Current file: {{original}}"
 msgstr "Τρέχον αρχείο: {{original}}"
 
 #: static/src/partials/profile/profile-logged-in.html:103
-#, fuzzy
 msgid "Current password:"
 msgstr "Τρέχοντας κωδικός:"
 
@@ -422,27 +407,26 @@ msgstr "Ημερομηνία"
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
 msgid "Delete"
-msgstr "Διαγραφή"
+msgstr "Διαγράφω"
 
 #: static/src/partials/widgets/file-select-widget.html:10
-#, fuzzy
 msgid "Delete file"
-msgstr "Διαγραφή αρχείου"
+msgstr "Διαγράφω το αρχείο"
 
 #: static/src/partials/project/edit/project-edit-outline-page.html:39
 msgid "Delete project"
-msgstr "Διαγραφή πρότζεκτ"
+msgstr "Διαγράφω το πρότζεκτ"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
+#, fuzzy
 msgid ""
 "Delete sensor\n"
 "            input"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:23
-#, fuzzy
 msgid "Delete series"
-msgstr "Διαγραφή σειράς"
+msgstr "Διαγράφω τη σειρά"
 
 #: static/src/partials/forum/forum-list-forum.html:20
 msgid "Description"
@@ -457,7 +441,7 @@ msgstr "Περιγραφή του εαυτού μου:"
 #: static/src/partials/profile/profile-logged-in.html:232
 #: static/src/partials/profile/profile-view.html:60
 msgid "Description:"
-msgstr "Περιγραφή:"
+msgstr "Περιγράφω:"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:3
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:3
@@ -465,12 +449,10 @@ msgstr "Περιγραφή:"
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:2
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:2
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:2
-#, fuzzy
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
 #: static/src/partials/project/view/data/project-view-data-table.html:9
-#, fuzzy
 msgid "Download CSV"
 msgstr "Κατεβάζω το CSV"
 
@@ -493,12 +475,12 @@ msgstr "Κατεβάζω το CSV"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:35
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:31
 msgid "Edit"
-msgstr "Επεξεργασία"
+msgstr "Επεξεργάζομαι"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:22
 #: static/src/partials/project/view/spotit/data-item-spotit.html:21
 msgid "Edit title"
-msgstr "Επεξεργασία τίτλου"
+msgstr "Επεξεργάζομαι τον τίτλο"
 
 #: static/src/partials/social/social-post-dialog.html:62
 msgid "Email"
@@ -549,18 +531,15 @@ msgstr "Είδος πεδίου:"
 
 #: static/src/partials/forum/forum-list.html:7
 #: static/src/partials/forum/forum-thread.html:2
-#, fuzzy
 msgid "Forum"
 msgstr "Χώρος συζήτησης"
 
 #: static/src/partials/forum/forum-list.html:1
 #: static/src/partials/layout/header.html:16
-#, fuzzy
 msgid "Forums"
-msgstr "Συζητήσεις"
+msgstr "Χώροι συζήτησης"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
-#, fuzzy
 msgid "Geolocated data:"
 msgstr "Δεδομένα γεωτοποθέτησης:"
 
@@ -570,7 +549,7 @@ msgstr "Πηγαίνω πίσω στη λίστα"
 
 #: static/src/partials/admin/admin-users.html:22
 msgid "Grant permission"
-msgstr "Παραχώρηση άδειας"
+msgstr "Παραχωρώ άδεια"
 
 #: static/src/partials/layout/header.html:59
 msgid "Greek"
@@ -614,7 +593,6 @@ msgid "Ideas"
 msgstr "Ιδέες"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:21
-#, fuzzy
 msgid "Ideas visibility"
 msgstr "Ορατότητα ιδεών"
 
@@ -633,12 +611,10 @@ msgid "Interests:"
 msgstr "Ενδιαφέροντα:"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:18
-#, fuzzy
 msgid "Join mission"
 msgstr "Γίνομαι μέλος στην αποστολή"
 
 #: static/src/partials/project/blocks/project-menu.html:15
-#, fuzzy
 msgid "Joined"
 msgstr "Έγινα μέλος"
 
@@ -659,7 +635,7 @@ msgstr "Τελευταία φωτογραφία"
 #: static/src/partials/forum/forum-list.html:8
 #: static/src/partials/forum/forum-node-list.html:16
 msgid "Last post"
-msgstr "Τελευταία ανάρτηση"
+msgstr "Τελευταία δημοσίευση"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:19
 msgid "Leave mission"
@@ -676,7 +652,7 @@ msgstr "Σύνδεσμος"
 #: static/src/partials/profile/profile-provider-item.html:14
 #, fuzzy
 msgid "Link with {{providerName}}"
-msgstr "Σύνδεσμος με {{providerName}}"
+msgstr "Συνδέομαι με {{providerName}}"
 
 #: static/src/partials/profile/profile-logged-in.html:308
 msgid "Linked accounts"
@@ -696,7 +672,7 @@ msgstr "Τοποθεσία:"
 #: static/src/partials/profile/profile-logged-in.html:43
 #: static/src/partials/profile/profile-view.html:40
 msgid "Login information"
-msgstr "Πληροφορίες σύνδεσης"
+msgstr "Πληροφορίες εισόδου"
 
 #: static/src/partials/profile/profile-logged-in.html:3
 msgid "Logout"
@@ -740,13 +716,13 @@ msgid ""
 "Mission created by <span siw-user-link=\"projectData.project.author\"></"
 "span>."
 msgstr ""
-"Μια αποστολή που δημιουργήθηκε από τον <span siw-user-link=\"projectData."
-"project.author\"></span>."
+"Μια αποστολή που δημιουργήθηκε από τον/την <span siw-user-link=\""
+"projectData.project.author\"></span>."
 
 #: static/src/partials/project/edit/project-edit-details-page.html:8
 #: static/src/partials/project/view/home/project-view-details-page.html:14
 msgid "Mission details"
-msgstr "Πληροφορίες αποστολής"
+msgstr "Λεπτομέρειες αποστολής"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -759,7 +735,7 @@ msgstr "Περίγραμμα αποστολής"
 
 #: static/src/partials/projects/projects-sidebar.html:24
 msgid "Mission type"
-msgstr "Τύπος αποστολής"
+msgstr "Είδος αποστολής"
 
 #: static/src/partials/projects/projects-sidebar.html:61
 msgid "Missions created by me"
@@ -767,14 +743,13 @@ msgstr "Αποστολές που δημιούργησα εγώ"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:18
 msgid "Multiple-line formatted text"
-msgstr ""
+msgstr "Μορφοποιημένο κείμενο πολλαπλών γραμμών"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:17
 msgid "Multiple-line plain text"
-msgstr ""
+msgstr "Απλό κείμενο πολλαπλών γραμμών"
 
 #: static/src/partials/profile/profile-logged-in.html:282
-#, fuzzy
 msgid ""
 "My <a data-ui-sref=\"profile-view({uid: status.profile.id})\">public "
 "profile</a>."
@@ -805,7 +780,6 @@ msgid "New comment"
 msgstr "Νέο σχόλιο"
 
 #: static/src/partials/forum/forum-list-forum.html:6
-#, fuzzy
 msgid "New forum"
 msgstr "Νέος χώρος συζήτησης"
 
@@ -825,12 +799,10 @@ msgid "No"
 msgstr "Όχι"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:9
-#, fuzzy
 msgid "No answer has been selected yet."
 msgstr "Δεν επέλεξες καμία απάντηση ακόμη."
 
 #: static/src/partials/projects/projects.html:4
-#, fuzzy
 msgid "No missions available at the moment."
 msgstr "Δεν υπάρχουν διαθέσιμες αποστολές προς το παρόν."
 
@@ -843,19 +815,16 @@ msgid "Not joined missions"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
-#, fuzzy
 msgid "Only by others"
 msgstr "Μόνο από τους άλλους"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:6
-#, fuzzy
 msgid "Only mine"
 msgstr "Μόνο οι δικές μου"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:42
-#, fuzzy
 msgid "Open map"
-msgstr "Ανοίγω (ή Άνοιξε) το χάρτη"
+msgstr "Ανοίγω το χάρτη"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:27
 #: static/src/partials/project/edit/project-edit-outline-page.html:38
@@ -871,12 +840,13 @@ msgid "Orientation"
 msgstr "Προσανατολισμός"
 
 #: static/src/partials/profile/profile-logged-in.html:278
+#, fuzzy
 msgid "Other users can see about me:"
 msgstr "Οι άλλοι χρήστες μπορούν να δουν για μένα:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:18
 msgid "Outcome stage"
-msgstr "Στάδιο αποτελέσματος"
+msgstr "Στάδιο ανακοίνωσης νικητή/τριας"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:2
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:2
@@ -903,7 +873,7 @@ msgstr "Υπενθύμιση κωδικού"
 #: static/src/partials/profile/profile-logged-in.html:91
 #, fuzzy
 msgid "Password set:"
-msgstr "Ορισμός κωδικού:"
+msgstr "Ορίζω τον κωδικό:"
 
 #: static/src/partials/profile/profile-logged-out.html:33
 #: static/src/partials/profile/profile-logged-out.html:91
@@ -924,9 +894,8 @@ msgid "Post"
 msgstr "Δημοσιεύω"
 
 #: static/src/partials/forum/forum-thread.html:49
-#, fuzzy
 msgid "Post comment"
-msgstr "Δημοσιεύω το/τα σχόλιο/α"
+msgstr "Δημοσιεύω το σχόλιο"
 
 #: static/src/partials/forum/forum-node-list.html:5
 msgid "Post new thread"
@@ -959,6 +928,7 @@ msgid "Profile information"
 msgstr "Πληροφορίες για το προφίλ"
 
 #: static/src/partials/profile/profile-logged-in.html:289
+#, fuzzy
 msgid "Profile information:"
 msgstr "Πληροφορίες για το προφίλ:"
 
@@ -967,7 +937,6 @@ msgid "Profile visibility"
 msgstr "Ορατότητα προφίλ"
 
 #: static/src/partials/project/blocks/project-title-edit.html:11
-#, fuzzy
 msgid "Project image:"
 msgstr "Εικόνα του πρότζεκτ:"
 
@@ -984,7 +953,6 @@ msgid "Projects created by me:"
 msgstr "Πρότζεκτς τα οποία δημιούργησα εγώ:"
 
 #: static/src/partials/profile/profile-view.html:14
-#, fuzzy
 msgid "Projects created by {{profile.username}}:"
 msgstr "Πρότζεκτς τα οποία δημιούργησε ο/η {{profile.username}}:"
 
@@ -993,31 +961,28 @@ msgid "Projects joined by {{profile.username}}"
 msgstr "Πρότζεκτς στα οποία έγινε μέλος ο/η {{profile.username}}"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:16
-#, fuzzy
 msgid "Proposal stage"
-msgstr "Στάδιο υποβολής πρότασης/προτάσεων"
+msgstr "Στάδιο υποβολής προτάσεων"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:12
-#, fuzzy
 msgid "Recent forum posts"
 msgstr "Πρόσφατες αναρτήσεις στους χώρους συζήτησης"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:3
-#, fuzzy
 msgid "Recent mission comments"
-msgstr "Πρόσφατα σχόλια για τις αποστολές/την αποστολή"
+msgstr "Πρόσφατα σχόλια για την αποστολή"
 
 #: static/src/partials/profile/profile-logged-out.html:7
-#, fuzzy
 msgid "Register"
 msgstr "Κάνω εγγραφή"
 
 #: static/src/partials/profile/profile-logged-out.html:124
 #, fuzzy
 msgid "Register new account"
-msgstr "Δημιουργώ νέο λογαριασμό"
+msgstr "Καταγράφω / Δημιουργώ νέο λογαριασμό"
 
 #: static/src/partials/profile/profile-logged-out.html:65
+#, fuzzy
 msgid "Register new account:"
 msgstr "Δημιουργώ νέο λογαριασμό:"
 
@@ -1026,13 +991,11 @@ msgid "Relative humidity"
 msgstr "Σχετική υγρασία"
 
 #: static/src/partials/admin/admin-users.html:18
-#, fuzzy
 msgid "Remove permission"
-msgstr "Αφαίρεση άδειας"
+msgstr "Αφαιρώ την άδεια"
 
 #: static/src/partials/profile/profile-logged-in.html:122
 #: static/src/partials/profile/profile-logged-out.html:101
-#, fuzzy
 msgid "Repeat password:"
 msgstr "Επαναλαμβάνω τον κωδικό:"
 
@@ -1041,8 +1004,9 @@ msgid "Replies"
 msgstr "Απαντήσεις"
 
 #: static/src/partials/admin/admin.html:6
+#, fuzzy
 msgid "Reported content"
-msgstr ""
+msgstr "Περιεχόμενο που αναφέρθηκε"
 
 #: static/src/partials/admin/admin-reported.html:18
 msgid "Reports"
@@ -1050,7 +1014,6 @@ msgstr "Αναφορές"
 
 #: static/src/partials/profile/profile-logged-out.html:125
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
-#, fuzzy
 msgid "Reset"
 msgstr "Επαναφέρω"
 
@@ -1088,14 +1051,13 @@ msgid "Save and continue"
 msgstr "Αποθηκεύω και συνεχίζω"
 
 #: static/src/partials/layout/header.html:29
-#, fuzzy
 msgid "Search"
-msgstr "Ψάχνω"
+msgstr "Αναζητώ"
 
 #: static/src/partials/layout/header.html:25
 #: static/src/partials/layout/header.html:26
 msgid "Search missions"
-msgstr "Αναζήτηση αποστολές"
+msgstr "Αναζητώ αποστολές"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:64
 msgid "See <a href=\"\" data-ui-sref=\"project.view.challenge\">all ideas</a>"
@@ -1103,9 +1065,8 @@ msgstr ""
 "Βλέπω <a href=\"\" data-ui-sref=\"project.view.challenge\">όλες τις ιδέες</a>"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:4
-#, fuzzy
 msgid "See all"
-msgstr "Βλέπω τα πάντα / Τα βλέπω όλα"
+msgstr "Βλέπω τα πάντα"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:6
 msgid "See and edit your ideas for this mission here."
@@ -1136,9 +1097,9 @@ msgstr ""
 "συμμετέχοντες:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:22
-#, fuzzy
 msgid "Select whether ideas are visible during the proposal stage."
-msgstr "Επιλέγω κατά πόσο οι ιδέες είναι ορατές κατά το στάδιο της εισήγησης."
+msgstr ""
+"Επιλέγω κατά πόσο οι ιδέες είναι ορατές κατά το στάδιο υποβολής προτάσεων."
 
 #: static/src/partials/widgets/file-select-widget.html:18
 msgid "Selected file: {{selectedFile.name}}"
@@ -1191,7 +1152,6 @@ msgid "Set password"
 msgstr "Καθορίζω τον κωδικό"
 
 #: static/src/partials/social/social.html:2
-#, fuzzy
 msgid "Share this"
 msgstr "Το μοιράζομαι"
 
@@ -1205,7 +1165,7 @@ msgstr "Δείχνω την αξία:"
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
-msgstr "Συνδεθείτε"
+msgstr "Κάνω εγγραφή"
 
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
@@ -1220,13 +1180,11 @@ msgid "Sign out"
 msgstr "Αποσυνδέομαι"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:16
-#, fuzzy
 msgid "Single-line text"
 msgstr "Κείμενο μονής γραμμής"
 
 #: static/src/partials/profile/profile-logged-in.html:172
 #: static/src/partials/profile/profile-logged-in.html:202
-#, fuzzy
 msgid "Someone comments on a forum thread that I created:"
 msgstr "Κάποιος σχολιάζει σε μια συζήτηση που δημιούργησα εγώ:"
 
@@ -1242,15 +1200,13 @@ msgstr "Κάποιος σχολιάζει σε μια αποστολή την ο
 
 #: static/src/partials/profile/profile-logged-in.html:165
 #: static/src/partials/profile/profile-logged-in.html:198
-#, fuzzy
 msgid "Someone comments on a mission that I have commented on:"
 msgstr "Κάποιος σχολιάζει σε μια αποστολή στην οποία σχολίασα κι εγώ:"
 
 #: static/src/partials/profile/profile-logged-in.html:151
 #: static/src/partials/profile/profile-logged-in.html:190
-#, fuzzy
 msgid "Someone posts to a mission that I created:"
-msgstr "Κάποιος αναρτάει/δημοσιεύει σε μια αποστολή την οποία δημιούργησα εγώ:"
+msgstr "Κάποιος δημοσιεύει σε μια αποστολή την οποία δημιούργησα εγώ:"
 
 #: static/src/partials/social/social-post-dialog.html:33
 msgid "Sorry, there was a problem when trying to post your comment."
@@ -1261,9 +1217,7 @@ msgstr ""
 #: static/src/partials/social/social-post-dialog.html:29
 #, fuzzy
 msgid "Sorry, there was a problem with the API with {{data.provider.name}}."
-msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με το API με (ή του/της) "
-"{{data.provider.name}}."
+msgstr "Συγγνώμη, προέκυψε κάποιο πρόβλημα με το API με {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:25
 #, fuzzy
@@ -1275,19 +1229,17 @@ msgstr ""
 "του/της) {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:31
-#, fuzzy
 msgid ""
 "Sorry, there was a problem with the connection with {{data.provider.name}}."
 msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τη σύνδεση με τον/την (ή του/της) "
+"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τη σύνδεση με τον/την "
 "{{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:23
-#, fuzzy
 msgid ""
 "Sorry, there was a problem with the permissions with {{data.provider.name}}."
 msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τις άδειες με τον/την (ή του/της) "
+"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τις άδειες με τον/την "
 "{{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:27
@@ -1298,16 +1250,14 @@ msgstr ""
 "του/της) {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:21
-#, fuzzy
 msgid ""
 "Sorry, you have posted already the same content! You may need to edit it "
 "before posting."
 msgstr ""
-"Συγγνώμη, ήδη δημοσίευσες (ή δημοσιεύσατε;;;) το ίδιο περιεχόμενο! Ίσως "
-"χρειάζεται να το επεξεργαστείς πριν να το δημοσιεύσεις."
+"Συγγνώμη, ήδη δημοσίευσες το ίδιο περιεχόμενο! Ίσως χρειάζεται να το "
+"επεξεργαστείς πριν να το δημοσιεύσεις."
 
 #: static/src/partials/admin/admin.html:13
-#, fuzzy
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Συγγνώμη, μόνο ο διαχειριστής μπορεί να δει αυτή τη σελίδα."
 
@@ -1318,12 +1268,11 @@ msgstr "Ήχος"
 #: static/src/partials/projects/create.html:19
 #: static/src/partials/projects/projects.html:27
 msgid "Spot-it"
-msgstr ""
+msgstr "Spot-it"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:13
-#, fuzzy
 msgid "Stage selection"
-msgstr "Επιλογή σταδίου (Επιλέγω το στάδιο;;;)"
+msgstr "Επιλέγω το στάδιο"
 
 #: static/src/partials/forum/forum-node-list.html:15
 #, fuzzy
@@ -1363,7 +1312,7 @@ msgstr "Υποβλήθηκε"
 
 #: static/src/partials/layout/header.html:57
 msgid "Switch to language:"
-msgstr "Αλλαγή σε γλώσσα:"
+msgstr "Αλλάζω σε γλώσσα:"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:47
 msgid "Text:"
@@ -1383,11 +1332,8 @@ msgstr ""
 "project.view.challenge\">όλες τις ιδέες</a>."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:33
-#, fuzzy
 msgid "This mission is now voting the submitted ideas!"
-msgstr ""
-"Αυτή η αποστολή ψηφίζει τώρα τις ιδέες που υποβλήθηκαν! (Ψηφίζω τώρα τις "
-"ιδέες που υποβλήθηκαν για αυτή την αποστολή!)"
+msgstr "Ψηφίζω τώρα τις ιδέες που υποβλήθηκαν για αυτή την αποστολή!"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:62
 msgid "This mission is waiting for the winner decision!"
@@ -1433,12 +1379,10 @@ msgid "This project is still being edited by its author."
 msgstr "Ο συγγραφέας επεξεργάζεται ακόμη αυτό το πρότζεκτ."
 
 #: static/src/partials/forum/forum-node-list.html:14
-#, fuzzy
 msgid "Thread"
 msgstr "Συζήτηση"
 
 #: static/src/partials/forum/forum-list.html:9
-#, fuzzy
 msgid "Threads"
 msgstr "Συζητήσεις"
 
@@ -1459,7 +1403,6 @@ msgid "Title:"
 msgstr "Τίτλος:"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:11
-#, fuzzy
 msgid ""
 "To configure this Win-it mission, you need to configure the fields that will "
 "be used by participants to create their answers."
@@ -1481,15 +1424,15 @@ msgstr ""
 "home({filter: 'all'})\">μη προτεινόμενες αποστολές</a>."
 
 #: static/src/partials/projects/projects.html:7
+#, fuzzy
 msgid ""
 "Try without <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
 "null})\">search conditions</a>."
 msgstr ""
-"Προσπάθησε χωρίς <a href=\"\" data-ui-sref=\"home({kw: null, status: null, "
-"type: null})\">όροι αναζήτησης</a>."
+"Προσπάθησε χωρίς τους <a href=\"\" data-ui-sref=\"home({kw: null, status: "
+"null, type: null})\">όρους αναζήτησης</a>."
 
 #: static/src/partials/profile/profile-provider-item.html:8
-#, fuzzy
 msgid "Unlink {{providerName}} account"
 msgstr "Αποσυνδέω {{providerName}} το λογαριασμό"
 
@@ -1504,7 +1447,7 @@ msgstr "Ανεβάζω εικόνα"
 
 #: static/src/partials/profile/profile-logged-in.html:16
 msgid "Upload new image"
-msgstr "Ανεβάζω καινούρια εικόνα"
+msgstr "Ανεβάζω νέα εικόνα"
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:10
 msgid "Upload picture"
@@ -1549,7 +1492,6 @@ msgid "Verify yourself:"
 msgstr "Επιβεβαιώνω τον εαυτό μου:"
 
 #: static/src/partials/projects/projects-sidebar.html:9
-#, fuzzy
 msgid "View"
 msgstr "Βλέπω"
 
@@ -1571,7 +1513,7 @@ msgstr "Στάδιο ψηφοφορίας"
 #: static/src/partials/projects/create.html:39
 #: static/src/partials/projects/projects.html:28
 msgid "Win-it"
-msgstr ""
+msgstr "Win-it"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:3
 msgid "Winner"
@@ -1602,7 +1544,6 @@ msgstr ""
 "{{projectData.project.activity.maxAnswers}}."
 
 #: static/src/partials/social/social-post-dialog.html:7
-#, fuzzy
 msgid "You have not linked a {{data.provider.name}} account yet."
 msgstr "Δεν έχω συνδέσει ένα {{data.provider.name}} λογαριασμό ακόμη."
 
@@ -1703,23 +1644,18 @@ msgid "nQuire-it home page"
 msgstr "nQuire-it αρχική σελίδα"
 
 #: static/src/index.html:6
-#, fuzzy
 msgid "nQuire-it — join missions to explore your world"
-msgstr ""
-"nQuire-it — γίνομαι μέλος/παίρνω μέρος σε αποστολές για να εξερευνήσω τον "
-"κόσμο μου"
+msgstr "nQuire-it — γίνομαι μέλος σε αποστολές για να εξερευνήσω τον κόσμο μου"
 
 #: static/src/partials/project/blocks/project-menu.html:4
 msgid "project.admin"
 msgstr "πρότζεκτ.διαχειριστής"
 
 #: static/src/partials/project/blocks/project-menu.html:5
-#, fuzzy
 msgid "project.edit"
 msgstr "πρότζεκτ.επεξεργάζομαι"
 
 #: static/src/partials/project/blocks/project-menu.html:3
-#, fuzzy
 msgid "project.view"
 msgstr "πρότζεκτ.βλέπω"
 
@@ -1731,7 +1667,7 @@ msgstr[1] "{{feed.count}} οι χρήστες είναι συνδεδεμένο�
 
 #: static/src/partials/forum/forum-node-new-thread.html:1
 msgid "{{forum.node.title}}: New thread"
-msgstr "{{forum.node.title}}: Νεα συνομιλία"
+msgstr "{{forum.node.title}}: Νέα συζήτηση"
 
 #: static/src/partials/project/view/spotit/spotit-project-data.html:3
 msgid "{{projectData.data.data}} image"
@@ -1747,4 +1683,5 @@ msgstr[1] "{{projectData.data.members}} χρήστες"
 
 #: static/src/partials/profile/profile-logged-out.html:48
 msgid "…or sign in using one of the following identity providers:"
-msgstr "…χρησιμοποίησε ένα από τους ακόλουθους λογαριασμούς πρόσβασης:"
+msgstr ""
+"…ή κάνω εγγραφή χρησιμοποιώντας έναν από τους ακόλουθους παροχείς ταυτότητας:"
