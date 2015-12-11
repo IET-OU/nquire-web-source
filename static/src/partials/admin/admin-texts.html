@@ -26,7 +26,7 @@
       </td>
     </tr>
     <tr data-ng-repeat="item in itemList" data-ng-controller="AdminTextItemCtrl" data-row-lang="{{item.lang}}" class="row-lang-{{item.lang}}">
-        <td title="Key: {{item.id}}">{{item.label}}</td>
+        <th data-id="{{item.id}}" data-ng-bind-html="item.label"></th>
         <td>
             <div data-ng-if="!form.isOpen()" data-ng-bind-html="txt[item.id]"></div>
             <div data-ng-if="form.isOpen() && item.format">

@@ -50,9 +50,19 @@ input:invalid, input.ng-invalid {
       float: right;
     }
 
+    tbody th {
+      font-weight: normal;
+
+      b {
+        font-size: .85em;
+        display: block;
+        line-height: 1.28em;
+      }
+    }
+
     tr.row-add-form,
     tr.row-lang-el {
-      //&[ data-row-lang != '' ] {
+      //&[ data-row-lang != 'en' ] {
       display: none;
     }
 
