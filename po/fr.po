@@ -1,120 +1,147 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2015-12-13 18:10+0000\n"
+"Last-Translator: Maxime Lasserre <maxime.lasserre@telecom-bretagne.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.2\n"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:14
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" dans <a data-ui-"
+"sref=\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:5
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" dans <a data-ui-"
+"sref=\"project.view.home({projectId: item.threadId})\""
+">{{item.threadTitle}}</a>"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
 msgid "(Ideas are always visible during voting and outcome.)"
-msgstr ""
+msgstr "(Les idées sont toujours visibles lors du vote et des résultats.)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:41
 msgid "(Multiple-line formatted text)"
-msgstr ""
+msgstr "(Texte formaté multi-ligne)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:40
 msgid "(Multiple-line plain text)"
-msgstr ""
+msgstr "(Texte brut multi-ligne)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
 msgid "(Single-line text)"
-msgstr ""
+msgstr "(Texte sur une seule ligne)"
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Se "
+"connecter</a> pour commenter cette série de données."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Se "
+"connecter</a> pour commenter cette mission."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Se "
+"connecter</a> pour commenter cette photo."
 
 #: static/src/partials/forum/forum-node-list.html:8
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Se "
+"connecter</a> pour poster de nouveaux sujets."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Se "
+"connecter</a> pour poster des réponses à ce sujet."
 
 #: static/src/partials/forum/forum-node-list.html:1
+#, fuzzy
 msgid ""
 "<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 msgstr ""
+"<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 
 #: static/src/partials/project/comments/posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about it."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Rejoindre</a> cette mission "
+"pour discuter à son sujet."
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this data series."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Rejoindre</a> cette mission "
+"pour discuter à propos de cette série de données."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this picture."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Rejoindre</a> cette mission "
+"pour discuter de cette photo."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
 msgid "<b>Explanation:</b> {{outcome.explanation}}"
-msgstr ""
+msgstr "<b>Explication :</b> {{outcome.explanation}}"
 
 #: static/src/partials/project/blocks/project-menu.html:10
 msgid "<b>Sense-it</b> mission"
-msgstr ""
+msgstr "Mission <b>Sense-it</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:11
 msgid "<b>Spot-it</b> mission"
-msgstr ""
+msgstr "Mission <b>Spot-it</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:12
 msgid "<b>Win-it</b> mission"
-msgstr ""
+msgstr "Mission <b>Win-it</b>"
 
 #: static/src/partials/project/view/senseit/senseit-project-data.html:7
 msgid "<b>{{projectData.data.data}}</b> series"
-msgstr ""
+msgstr "Série <b>{{projectData.data.data}}</b>"
 
 #: static/src/partials/comments.html:41
 msgid ""
 "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
 "span> said:"
 msgstr ""
+"<span class=\"comment-author-username\" siw-user-link=\"comment.author\""
+"></span> a dit :"
 
 #: static/src/partials/project/blocks/project-metadata.html:6
 #: static/src/partials/project/blocks/project-title-edit.html:25
@@ -122,49 +149,54 @@ msgid ""
 "<span class=\"project-section-description-text-mission\">Mission:</span> "
 "{{projectData.project.title}}"
 msgstr ""
+"<span class=\"project-section-description-text-mission\">Mission :</span> "
+"{{projectData.project.title}}"
 
 #: static/src/partials/projects/projects-sidebar.html:32
 msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
-msgstr ""
+msgstr "Missions <span class=\"sidebar-type-senseit\">Sense-it</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:36
 msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
-msgstr ""
+msgstr "Missions <span class=\"sidebar-type-spotit\">Spot-it</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:40
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
-msgstr ""
+msgstr "Missions <span class=\"sidebar-type-winit\">Win-it</span>"
 
 #: static/src/partials/projects/projects.html:53
 msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
-msgstr ""
+msgstr "Une mission <span class=\"project-item-banner-type\">Sense-it</span>"
 
 #: static/src/partials/projects/projects.html:54
 msgid "A <span class=\"project-item-banner-type\">Spot-it</span> mission"
-msgstr ""
+msgstr "Une mission <span class=\"project-item-banner-type\">Spot-it</span>"
 
 #: static/src/partials/projects/projects.html:55
 msgid "A <span class=\"project-item-banner-type\">Win-it</span> mission"
-msgstr ""
+msgstr "Une mission <span class=\"project-item-banner-type\">Win-it</span>"
 
 #: static/src/partials/projects/projects.html:44
 msgid ""
 "A mission created by <span data-siw-user-link=\"projectData.project.author"
 "\"></span>."
 msgstr ""
+"Une mission créée par <span data-siw-user-link=\"projectData.project.author\""
+"></span>."
 
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
 msgid "About"
-msgstr ""
+msgstr "A propos"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
 msgid "Accelerometer"
-msgstr ""
+msgstr "Accéléromètre"
 
 #: static/src/partials/admin/admin-reported.html:19
+#, fuzzy
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:62
 msgid "Add block"
@@ -172,53 +204,61 @@ msgstr ""
 
 #: static/src/partials/forum/forum-list-category.html:14
 msgid "Add category"
-msgstr ""
+msgstr "Ajouter une catégorie"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:33
+#, fuzzy
 msgid "Add field"
-msgstr ""
+msgstr "Ajouter un champ"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
+#, fuzzy
 msgid "Add sensor input"
-msgstr ""
+msgstr "Ajouter un type de données"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:50
+#, fuzzy
 msgid "Add transformation"
-msgstr ""
+msgstr "Ajouter une transformation"
 
 #: static/src/partials/admin/admin-users.html:7
 #: static/src/partials/layout/header.html:19
 msgid "Administrator"
-msgstr ""
+msgstr "Administrateur"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:5
+#, fuzzy
 msgid "All answers"
-msgstr ""
+msgstr "Toutes les réponses"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-outcome.html:4
 msgid "All ideas"
-msgstr ""
+msgstr "Toutes les idées"
 
 #: static/src/partials/projects/projects-sidebar.html:18
 #: static/src/partials/projects/projects-sidebar.html:49
 msgid "All missions"
-msgstr ""
+msgstr "Toutes les missions"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:16
 msgid "Ambient temperature"
-msgstr ""
+msgstr "Température ambiante"
 
 #: static/src/partials/projects/projects-sidebar.html:28
+#, fuzzy
 msgid "Any type"
-msgstr ""
+msgstr "N'importe quel type"
 
 #: static/src/partials/admin/admin-reported.html:30
 msgid "Approve"
-msgstr ""
+msgstr "Approuver"
 
 #: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1
+#, fuzzy
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
 msgstr ""
+"Êtes vous sur de vouloir supprimer les données nommées "
+"<b>{{data.item.title}}</b> ?"
 
 #: static/src/partials/admin/admin-projects.html:6
 #: static/src/partials/admin/admin-reported.html:16
@@ -226,11 +266,11 @@ msgstr ""
 #: static/src/partials/project/view/senseit/data-table-senseit.html:5
 #: static/src/partials/project/view/senseit/senseit-data-map.html:5
 msgid "Author"
-msgstr ""
+msgstr "Auteur"
 
 #: static/src/partials/social/social-post-dialog.html:16
 msgid "Awaiting response from {{data.provider.name}}…"
-msgstr ""
+msgstr "En attente d'une réponse de la part de {{data.provider.name}}…"
 
 #: static/src/partials/admin/admin-texts.html:31
 #: static/src/partials/comments.html:19
@@ -263,11 +303,12 @@ msgstr ""
 #: static/src/partials/projects/create.html:130
 #: static/src/partials/widgets/modal-template.html:10
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: static/src/partials/social/social-post-dialog.html:57
+#, fuzzy
 msgid "Caption"
-msgstr ""
+msgstr "Légende"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:3
 msgid "Challenge"
@@ -276,31 +317,37 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:132
 #: static/src/partials/profile/profile-logged-in.html:95
 msgid "Change password"
-msgstr ""
+msgstr "Changer de mot de passe"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:42
+#, fuzzy
 msgid ""
 "Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
 "for your favourite!"
 msgstr ""
+"Cliquer <a href=\"\" data-ui-sref=\"project.view.challenge\">ici</a> pour "
+"voter pour votre favori !"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
+#, fuzzy
 msgid "Close project"
-msgstr ""
+msgstr "Fermer le project"
 
 #: static/src/partials/forum/forum-thread.html:56
+#, fuzzy
 msgid "Comment"
-msgstr ""
+msgstr "Commentaire"
 
 #: static/src/partials/comments.html:14
 #: static/src/partials/forum/forum-thread.html:55
 msgid "Comment:"
-msgstr ""
+msgstr "Commentaire :"
 
 #: static/src/partials/admin/admin-texts.html:5
+#, fuzzy
 msgid "Content"
-msgstr ""
+msgstr "Contenu"
 
 #: static/src/partials/admin/admin-reported.html:17
 msgid "Content id"
@@ -310,8 +357,9 @@ msgstr ""
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
 #: static/src/partials/projects/create.html:118
 #: static/src/partials/projects/create.html:121
+#, fuzzy
 msgid "Create"
-msgstr ""
+msgstr "Créer"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:66
 msgid "Create new idea"
