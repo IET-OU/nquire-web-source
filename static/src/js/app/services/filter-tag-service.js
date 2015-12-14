@@ -34,7 +34,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
         filters[ key ]= item;
         filters[ key ]._idx = key;
-        filters[ key ].active = ! item.label.match(label_hide_regex) && is_valid;
+        filters[ key ].active = item.label && ! item.label.match(label_hide_regex) && is_valid;
 
         query_list[ item.query ] = item.label;
 
@@ -59,10 +59,14 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
   FilterTagManager.prototype.projectTags = function (project) {
     var self = this
-      , filter_r = project.filters.split(/,/)
+      , filter_r = project.filters && project.filters.split(/,/)
       , query_list = self.query_list
       , tags = {}
       , it, tag, label;
+
+    if (! project.filters) {
+      return;
+    }
 
     for (it in filter_r) {
       tag = filter_r[ it ].trim();
@@ -110,6 +114,9 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
     }
   };
 
+  FilterTagManager.prototype.testUnique = function () {
+    //TODO: ??
+  }
 
   return {
     get: function (scope, updateCallback) {
