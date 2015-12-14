@@ -18,11 +18,14 @@ public class Filter extends AbstractEntity {
     @Basic
     @Getter
     @Setter
+    @Column(columnDefinition = "TEXT")
     String label;
 
     @Basic
     @Getter
     @Setter
-    @Column(columnDefinition = "TEXT")
+    //Was: @Column(columnDefinition = "TEXT") ->> varchar(255)
+    //Try: @Column(length = 255), @Size(max = 255)
+    @Column(unique = true, nullable = false)
     String query;
 }

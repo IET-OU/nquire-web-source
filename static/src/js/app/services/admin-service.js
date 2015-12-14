@@ -47,6 +47,9 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
 
   AdminManager.prototype.setFilter = function (label, query, id, callback) {
     id = id || null;
+    if (!query || query.trim() === '') {
+      $log.error("Put error: empty filter", label);
+    }
     var prom = RestService.put('api/admin/filter', {
       label: label,
       query: query,
