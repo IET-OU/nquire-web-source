@@ -111,7 +111,10 @@
                 <div class="form-group">
                     <label for="g-recaptcha-response" class="control-label" translate>Verify yourself:</label>
                     <div class="input-container">
-                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <!-- i18n/translation: per-language <script> [Bug: 17] -->
+                        <script src="https://www.google.com/recaptcha/api.js?hl=en" data-ng-if="'en' === activeLang" async defer></script>
+                        <script src="https://www.google.com/recaptcha/api.js?hl=el" data-ng-if="'el' === activeLang" async defer></script>
+                        <script src="https://www.google.com/recaptcha/api.js?hl=fr" data-ng-if="'fr' === activeLang" async defer></script>
                         <div class="g-recaptcha" data-sitekey="{{register.recaptcha.siteKey}}">
                         </div>
                         <span data-ng-if="register.error.recaptcha" class="profile-login-password-error">
