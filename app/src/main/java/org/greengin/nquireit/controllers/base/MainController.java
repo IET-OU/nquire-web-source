@@ -2,6 +2,7 @@ package org.greengin.nquireit.controllers.base;
 
 import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.base.FilterResponse;
+import org.greengin.nquireit.logic.base.OkFailResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,9 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.persistence.RollbackException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 import java.util.List;
+
 
 /**
  * Created by evilfer on 8/11/14.
@@ -37,10 +41,21 @@ public class MainController {
         return contextBean.getFilterDao().getFilters();
     }
 
-    @RequestMapping(value = "/api/filter_OLD", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/test/fail", method = RequestMethod.GET)
     @ResponseBody
-    public Map<String, String> filters_OLD(HttpServletRequest request) {
+    public OkFailResponse testFail(HttpServletRequest request, HttpServletResponse response) {
+        OkFailResponse stat = new OkFailResponse("/api/test/fail");
+        try {
+            stat.throwTestException();
+        } catch (RollbackException ex) {  //Was: (JpaSystemException ex)
+            stat.setError(ex, response);
+        }
+        return stat;
+    }
 
-        return contextBean.getFilterDao().getFilters_OLD();
+    @RequestMapping(value = "/api/test/ok", method = RequestMethod.GET)
+    @ResponseBody
+    public OkFailResponse testOk(HttpServletRequest request) {
+        return new OkFailResponse("/api/test/ok");
     }
 }

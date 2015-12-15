@@ -12,13 +12,17 @@ import org.greengin.nquireit.logic.admin.ReportedContent;
 import org.greengin.nquireit.logic.admin.UserAdminRequest;
 import org.greengin.nquireit.logic.base.TextRequest;
 import org.greengin.nquireit.logic.base.FilterRequest;
+import org.greengin.nquireit.logic.base.OkFailResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
+
+import org.springframework.orm.jpa.JpaSystemException;
 
 
 @Controller
@@ -107,9 +111,16 @@ public class AdminController {
     @RequestMapping(value = "/filter", method = RequestMethod.PUT)
     @ResponseBody
     @ResponseView(value = Views.UserProfileData.class)
-    public Boolean setFilter(@RequestBody FilterRequest data, HttpServletRequest request) {
+    public OkFailResponse setFilter(@RequestBody FilterRequest data, HttpServletRequest request, HttpServletResponse response) {
         AdminActions manager = createAdminManager(request);
-        return manager.setFilter(data.getLabel(), data.getQuery(), data.getId());
+        OkFailResponse stat = new OkFailResponse("/filter");
+        try {
+            manager.setFilter(data.getLabel(), data.getQuery(), data.getId());
+            stat.setMessage("Filter saved successfully.");
+        } catch (JpaSystemException ex) {  //Was: (RollbackException ex)
+            stat.setError(ex, response);
+        }
+        return stat;
     }
 
 
