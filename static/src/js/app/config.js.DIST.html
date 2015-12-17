@@ -9,11 +9,8 @@
 angular.module('senseItWeb').constant('senseItConfig', {
 
   // REMOVE ME - just for translation purposes!
-  langs_translate: [
-    "{{ 'English' | translate }}",
-    "{{ 'Greek' | translate }}",
-    "{{ 'Spanish' | translate }}",
-    "{{ 'French' | translate }}",
+  texts_translate: [
+    "{{ 'Weather-it missions' | translate }}",
     "{{ 'Greek schools missions' | translate }}"
   ],
   // The list to appear in the language switcher.
@@ -38,7 +35,7 @@ angular.module('senseItWeb').constant('senseItConfig', {
   site_message_class: "alert alert-warning",
 
   base_url: "/",
-  // Show custom filter-tags? Set false for now.
+  // Show custom filter-tags? (true, false)
   custom_filters: true
 
 });

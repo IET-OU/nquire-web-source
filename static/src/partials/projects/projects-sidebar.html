@@ -11,12 +11,12 @@
 
         <ul>
             <li>
-                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null})"
-                   data-ng-class="menuItemClass('filter', null)" translate>Featured missions</a>
-            </li>
-            <li>
                 <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: 'all'})"
                    data-ng-class="menuItemClass('filter', 'all')" translate>All missions</a>
+            </li>
+            <li>
+                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null})"
+                   data-ng-class="menuItemClass('filter', null)" translate>Featured missions</a>
             </li>
 
             <li data-ng-if="cfg.custom_filters && tag.active" data-ng-repeat="tag in tags.data.filters" class="custom">
@@ -24,7 +24,6 @@
                    data-ng-class="menuItemClass('filter', tag.query)" data-ng-bind-html="tag.label"></a>
             </li>
         </ul>
-        <i class="i18n hide" translate-comment="">Greek schools missions</i>
     </div>
 
     <div class="sidebar-header" translate>Mission type</div>

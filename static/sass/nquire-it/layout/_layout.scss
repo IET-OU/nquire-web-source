@@ -37,3 +37,11 @@ html {
     }
   }
 }
+
+
+.admin-page .error-unauthorized,
+.error-not-found {
+  margin: 1.2em 0;
+  //Or, font-size: 1.6rem;
+  font-size: 1.15em;
+}
