@@ -37,7 +37,7 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     });
   };
 
-  AdminManager.prototype.setFilter = function (label, query, id, callback) {
+  AdminManager.prototype.setFilter = function (label, query, id) {
     id = id || null;
     var promise = RestService.put('api/admin/filter', {
       label: label,
@@ -45,6 +45,10 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
       id: id
     });
     return promise;
+  };
+
+  AdminManager.prototype.deleteFilter = function (filterId) {
+    return RestService.delete('api/admin/filter/' + parseInt(filterId));
   };
 
   AdminManager.prototype.setAdmin = function (userId, isAdmin) {

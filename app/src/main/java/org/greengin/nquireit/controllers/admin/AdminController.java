@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 
 import org.springframework.orm.jpa.JpaSystemException;
@@ -113,7 +114,7 @@ public class AdminController {
     @ResponseView(value = Views.UserProfileData.class)
     public OkFailResponse setFilter(@RequestBody FilterRequest data, HttpServletRequest request, HttpServletResponse response) {
         AdminActions manager = createAdminManager(request);
-        OkFailResponse stat = new OkFailResponse("/filter");
+        OkFailResponse stat = new OkFailResponse("/api/admin/filter");
         try {
             manager.setFilter(data.getLabel(), data.getQuery(), data.getId());
             stat.setMessage("Filter saved successfully.");
@@ -123,6 +124,23 @@ public class AdminController {
         return stat;
     }
 
+    @RequestMapping(value = "/filter/{ID}", method = RequestMethod.DELETE)
+    @ResponseBody
+    @ResponseView(value = Views.UserProfileData.class)
+    public OkFailResponse deleteFilter(@PathVariable("ID") Long filterId, HttpServletRequest request, HttpServletResponse response) {
+        AdminActions manager = createAdminManager(request);
+        OkFailResponse stat = new OkFailResponse("/api/admin/filter/{ID}");
+        Map<String, Long> details = new HashMap<String, Long>();
+        details.put("ID", filterId);
+        stat.setDetails(details);
+        try {
+            manager.deleteFilter(filterId);
+            stat.setMessage("Filter deleted successfully.");
+        } catch (Exception ex) {
+            stat.setError(ex, response);
+        }
+        return stat;  //HTTP codes: 405; 415; 500.
+    }
 
     @RequestMapping(value = "/model/update", method = RequestMethod.POST)
     @ResponseBody

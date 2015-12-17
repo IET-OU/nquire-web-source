@@ -106,12 +106,19 @@ input:invalid, input.ng-invalid {
       }
     }
 
+    button[ ng-click *= delete ] {
+      color: $color-dark-orange;
+    }
+
+    .col-btn {
+      width: 1px;
+    }
     .key {
-      width: 40%;
-      //width: 248px;
+      width: 41%;
+      //Was: width: 248px;
     }
     .value {
-      width: 45%
+      width: 40%
       //width: 72%;
     }
   }

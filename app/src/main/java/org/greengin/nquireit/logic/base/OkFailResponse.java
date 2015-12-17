@@ -36,12 +36,16 @@ public class OkFailResponse {
     @Setter
     String url = null;
 
+    @Getter
+    @Setter
+    Object details = null;
+
     /* Constructor(s).
     */
     public OkFailResponse() {}
 
     public OkFailResponse(String url) {
-      setUrl(url);
+        setUrl(url);
     }
 
 

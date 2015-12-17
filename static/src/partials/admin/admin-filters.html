@@ -39,11 +39,12 @@
           </td>
           <td>
               <div class="btn-group" data-ng-if="!form.isOpen()">
-                  <button class="btn btn-default btn-sm" data-ng-click="form.open()" translate>Edit</button>
+                  <button class="btn btn-default btn-sm" ng-click="form.open()" translate>Edit</button>
               </div>
               <div class="btn-group" data-ng-if="form.isOpen()">
-                  <button class="btn btn-default" data-ng-click="form.save()" type="submit" data-ng-disabled="editForm.$invalid" translate>Save</button>
-                  <button class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
+                  <button class="btn btn-default btn-sm" ng-click="form.save()" type="submit" ng-disabled="editForm.$invalid" translate>Save</button>
+                  <button class="btn btn-default btn-sm" ng-click="deleteFilter(idx)" translate>Delete</button>
+                  <button class="btn btn-default btn-sm" ng-click="form.cancel()" translate>Cancel</button>
               </div>
           </td>
       </tr>
