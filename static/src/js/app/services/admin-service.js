@@ -6,14 +6,6 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     this.data = {};
   };
 
-  function thenPutPost(data) {
-    if ("true" === data) {
-      $log.info("Put success. ", [ data ]);
-    } else {
-      $log.error("Put failure - not logged in? ", [ data ]);
-    }
-  };
-
   function arrayToObject(data, callbackEach) {
     var it, item, key, items = {};
     for (it in data) {
@@ -47,17 +39,12 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
 
   AdminManager.prototype.setFilter = function (label, query, id, callback) {
     id = id || null;
-    if (!query || query.trim() === '') {
-      $log.error("Put error: empty filter", label);
-    }
-    var prom = RestService.put('api/admin/filter', {
+    var promise = RestService.put('api/admin/filter', {
       label: label,
       query: query,
       id: id
-    })
-    .then(thenPutPost);
-
-    callback && prom && prom.then(callback);
+    });
+    return promise;
   };
 
   AdminManager.prototype.setAdmin = function (userId, isAdmin) {

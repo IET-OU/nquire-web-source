@@ -6,16 +6,30 @@
 
 'use strict';
 
-angular.module('senseItServices', null, null).factory('FilterTagService', ['RestService', 'AdminService', '$log', function (RestService, AdminService, $log) {
+angular.module('senseItServices', null, null).factory('FilterTagService', ['RestService', '$rootScope', '$log', '$timeout',
+  function (RestService, $rootScope, $log, $timeout) {
 
   var tag_label_hide = ".HIDE.new"
     , label_hide_regex = /(DISABLE|HIDE|PRIVATE)/
-    , valid_tag_regex = /^[\w\-]+$/
+    , valid_tag_regex = /^[a-z0-9\-]+$/   //Was: /^[a-z\-]+$/ or /^[\w\-]+$/
+    , error_timeout = 3000
+    , form_errors = {}
     , manager;
 
   var FilterTagManager = function () {
     this.data = {};
   };
+
+  function testRestError() {
+    RestService.get('api/test/ok');
+    RestService.get('api/test/fail');
+    //Was: RestService.get('api/test/fail/400');
+  }
+
+  FilterTagManager.prototype.pattern = function () {
+    // ngPattern does not work in Angular ~1.2 :(.
+    return valid_tag_regex;
+  }
 
 
   FilterTagManager.prototype.getList = function () {
@@ -114,9 +128,39 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
     }
   };
 
-  FilterTagManager.prototype.testUnique = function () {
-    //TODO: ??
+  FilterTagManager.prototype.validTag = function (query, which) {
+    var is_valid = query.trim().match(valid_tag_regex);
+    if (! is_valid && '' === query) {
+      setFormError("empty-tag", which);
+    }
+    else if (! is_valid) {
+      setFormError("invalid-tag", which);
+    }
+    return is_valid;
   }
+
+  FilterTagManager.prototype.catchDuplicateTag = function (resp, which) {
+    var b_catch = resp.data && resp.data.message && resp.data.message.match(/javax.persistence.RollbackException/);
+    if (b_catch) {
+      setFormError("duplicate-tag", which);
+    }
+    return b_catch;
+  }
+
+  FilterTagManager.prototype.formError = function (which) {
+    which = which || "default";
+    return form_errors.which;
+  }
+
+  function setFormError(error, which) {
+    which = which || "default";
+    form_errors.which = error;
+
+    $timeout(function () {
+      form_errors.which = null;
+    }, error_timeout);
+  }
+
 
   return {
     get: function (scope, updateCallback) {

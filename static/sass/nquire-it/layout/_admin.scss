@@ -95,6 +95,16 @@ input:invalid, input.ng-invalid {
       display: table-row;
     }
 
+    td {
+      vertical-align: top;
+
+      [ data-ng-if *= formError ],
+      [ ng-switch *= formError ] p {
+        color: #d00;
+        margin: 5px 2px;
+      }
+    }
+
     .key {
       width: 40%;
       //width: 248px;

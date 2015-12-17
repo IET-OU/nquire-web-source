@@ -18,16 +18,21 @@
               <div data-ng-if="!form.isOpen()" data-ng-bind-html="item.label"></div>
               <div data-ng-if="form.isOpen()">
                   <input class="form-control" type="text" data-ng-model="form.values[idx].label" data-ng-required="1"
-                         placeholder="Label, eg. 'Greek Schools missions'" />
+                         placeholder="Label, eg. Greek Schools missions" />
               </div>
           </td>
           <td>
               <div data-ng-if="!form.isOpen()">{{item.query}}</div>
               <div data-ng-if="form.isOpen()">
                   <input class="form-control" name="tag" data-ng-model="form.values[idx].query"
-                         placeholder="Tag-term, eg. 'greek-schools'" title="Tag-term format: letters, numbers, dashes, no spaces."
-                         data-ng-required="1" pattern="[\w\-]+" maxlength="32"/>
+                         placeholder="Tag-term, eg. greek-schools" title="Tag-term format: letters, numbers, dashes, no spaces."
+                         data-ng-required="1" pattern="[a-z0-9\-]+" maxlength="32"/>
 
+                         <div role="alert" ng-switch="tags.formError('edit')">
+                           <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{form.values[idx].query}}</tt></p>
+                           <p ng-switch-when="invalid-tag" translate>Sorry! This tag term is invalid - spaces?</p>
+                           <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
+                         </div>
                   <!--<p ng-show="editForm.tag.$invalid && editForm.tag.dirty">The tag is not valid.</p>-->
               </div>
           </td>
@@ -50,11 +55,19 @@
 <form name="addForm" ng-submit="submit()">
   <table><tr>
   <td class="key"><input class="form-control" data-ng-model="new_filter.label"
-      placeholder="Label, eg. 'Greek Schools missions'" title="Label, eg. 'Greek Schools missions'"
+      placeholder="Label, eg. Greek Schools missions" title="Label, eg. Greek Schools missions"
       data-ng-required="1"/></td>
   <td class="value"><input class="form-control" data-ng-model="new_filter.query"
-      placeholder="Tag-term, eg. 'greek-schools'" title="Tag-term format: letters, numbers, dashes, no spaces."
-      data-ng-required="1" pattern="[\w\-]+" maxlength="32"/></td>
+      placeholder="Tag-term, eg. greek-schools" title="Tag-term format: letters, numbers, dashes, no spaces."
+      data-ng-required="1" pattern="[a-z0-9\-]+" maxlength="32"/>
+
+    <div role="alert" ng-switch="tags.formError('add')">
+      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{new_filter.query}}</tt></p>
+      <p ng-switch-when="invalid-tag" translate>Sorry! This tag term is invalid - spaces?</p>
+      <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
+      <!--<p ng-switch-default translate>Sorry! Unknown error.</p>-->
+    </div>
+  </td>
   <td class="col-btn"><button class="btn btn-default" type="submit" ng-disabled="addForm.$invalid" translate>Add</button></td>
   </tr></table>
 </form>

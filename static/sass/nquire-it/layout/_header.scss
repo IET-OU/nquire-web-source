@@ -172,9 +172,12 @@ div#header {
 
 
 // Site/ approval/ test server message [Bug: #5][Bug: #9]
-#site-message,
-#approval-msg {
+#alert-message, #site-message {
   text-align: center;
+}
+#alert-message.default,
+#site-message.default,
+#approval-msg {
   background: #fdfdfd;
   border: 2px solid $color-orange;
   color: $color-dark-orange;
@@ -187,4 +190,18 @@ div#header {
 }
 [ data-site-message ] div#header {
   border-bottom: 0;
+}
+
+
+#alert-message.default {
+  border-color: red;
+  color: red;
+}
+#user-message.defalt.info {
+  border-color: green;
+  color: green;
+}
+
+[ data-alert = '1' ] #site-message {
+  display: none;
 }
