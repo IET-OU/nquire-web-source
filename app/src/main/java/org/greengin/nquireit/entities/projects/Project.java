@@ -43,6 +43,11 @@ public class Project extends CommentThreadEntity {
     @Basic
     @Getter
     @Setter
+    String filters;
+
+    @Basic
+    @Getter
+    @Setter
     Date lastActivity = null;
 
 

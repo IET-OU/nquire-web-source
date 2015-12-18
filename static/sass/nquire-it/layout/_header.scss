@@ -113,26 +113,34 @@ div#header {
   //margin: 5px 0;
 
   select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //appearance: none;
 
     font-size: 1.05em;
     min-width: 7em;
     border: 1px solid $color-header-search-box;
-    border-radius: 0;
+    //border-radius: 0;
     background: #fff;
-    padding: 3px 16px;
-    text-align: center;
+    color: #666;
+    padding: 2px 16px;
+    //text-align: center;
     cursor: pointer;
 
     position: relative;
     top: -8px;
+    height: $dim-header-search-box-height + 1px;
     margin-left: 16px;
 
     option {
       //font-size: 1.5em;
       //padding: 3px 10px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $color-header-search-focus;
+      color: #222;
     }
   }
 
@@ -164,14 +172,17 @@ div#header {
 
 
 // Site/ approval/ test server message [Bug: #5][Bug: #9]
-#site-message,
-#approval-msg {
+#alert-message, #site-message {
   text-align: center;
+  font-size: 1.1em;
+}
+#alert-message.default,
+#site-message.default,
+#approval-msg {
   background: #fdfdfd;
   border: 2px solid $color-orange;
   color: $color-dark-orange;
   padding: 3px;
-  font-size: 1.13em;
 
   p {
     margin: .4em 0;
@@ -179,4 +190,18 @@ div#header {
 }
 [ data-site-message ] div#header {
   border-bottom: 0;
+}
+
+
+#alert-message.default {
+  border-color: red;
+  color: red;
+}
+#user-message.defalt.info {
+  border-color: green;
+  color: green;
+}
+
+[ data-alert = '1' ] #site-message {
+  display: none;
 }

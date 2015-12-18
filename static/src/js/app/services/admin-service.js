@@ -6,13 +6,21 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     this.data = {};
   };
 
-  var thenPutPost = function (data) {
-    if ("true" === data) {
-      $log.info("Success. ", [ data ]);
-    } else {
-      $log.error("Failure - not logged in? ", [ data ]);
+  function arrayToObject(data, callbackEach) {
+    var it, item, key, items = {};
+    for (it in data) {
+    //for (it = 0; it < data.length; it++) {
+      item = data[ it ];
+      key = "_idx_" + item.id;
+
+      items[ key ] = item;
+      items[ key ]._idx = key;
+
+      callbackEach && callbackEach(items, key);
     }
+    return items;
   };
+  AdminManager.prototype.arrayToObject = arrayToObject;
 
 
   AdminManager.prototype.getUsers = function () {
@@ -31,12 +39,16 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
 
   AdminManager.prototype.setFilter = function (label, query, id) {
     id = id || null;
-    RestService.put('api/admin/filter', {
+    var promise = RestService.put('api/admin/filter', {
       label: label,
       query: query,
       id: id
-    })
-    .then(thenPutPost);
+    });
+    return promise;
+  };
+
+  AdminManager.prototype.deleteFilter = function (filterId) {
+    return RestService.delete('api/admin/filter/' + parseInt(filterId));
   };
 
   AdminManager.prototype.setAdmin = function (userId, isAdmin) {
@@ -49,7 +61,7 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
   AdminManager.prototype.getProjects = function () {
     var self = this;
     RestService.get('api/admin/projects').then(function (data) {
-      self.data.projects = data;
+      self.data.projects = arrayToObject(data);
     });
   };
 
@@ -74,11 +86,17 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     return this._reportedContentRequest('post', 'api/admin/reported/' + id + '/approve');
   };
 
-
   AdminManager.prototype.setFeatured = function (projectId, isFeatured) {
     var self = this;
     RestService.put('api/admin/project/' + projectId + '/featured', {featured: isFeatured}).then(function (data) {
-      self.data.projects = data;
+      self.data.projects = arrayToObject(data);
+    });
+  };
+
+  AdminManager.prototype.setProjectFilter = function (projectId, filters) {
+    var self = this;
+    RestService.put('api/admin/project/' + projectId + '/filters', {filters: filters}).then(function (data) {
+      self.data.projects = arrayToObject(data);
     });
   };
 

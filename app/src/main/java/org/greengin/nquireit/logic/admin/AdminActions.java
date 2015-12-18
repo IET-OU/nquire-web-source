@@ -48,6 +48,12 @@ public class AdminActions extends AbstractContentManager {
         }
     }
 
+    public void setProjectFilters(Long projectId, ProjectFiltersRequest data) {
+        if (isAdmin) {
+            context.getProjectDao().setFilters(projectId, data.getFilters());
+        }
+    }
+
     public Boolean updateModel() {
         if (isAdmin) {
             context.getProjectDao().updateDataModel();
@@ -69,11 +75,17 @@ public class AdminActions extends AbstractContentManager {
         if (isAdmin) {
             return context.getFilterDao().setFilter(label, query, id);
         }
-
         return false;
 
     }
 
+    public Boolean deleteFilter(Long filterId) {
+        if (isAdmin) {
+            return context.getFilterDao().deleteFilter(filterId);
+        }
+        return false;
+
+    }
 
     public HashMap<String, List<ReportedContent>> getReportedContent() {
         if (isAdmin) {

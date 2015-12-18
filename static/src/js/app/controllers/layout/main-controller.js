@@ -1,14 +1,18 @@
-angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, $location, $timeout, $log) {
+angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, FilterTagService, AlertService, $location) {
     OpenIdService.registerWatcher($scope);
 
-    initDebug($scope, $location, $log);
-    initApprovalServer($scope, $location);
+    $scope.alert = AlertService;
+
+    initDebug($scope, $location);
 
     initTranslation($scope, $location, gettextCatalog);
 
+    FilterTagService.get($scope);
+    $scope.tags.getList();
+
     $("html").attr({
-      "data-debug": $scope.debug,
-      "data-approval": $scope.approval,
+      "data-debug": $scope.alert.isDebug(),
+      "data-approval": $scope.alert.isApproval(),
       "data-lang_switch": $scope.cfg.lang_switch,
       "data-lang_ui": $scope.activeLang
     });
@@ -31,24 +35,6 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         translateSwitchApiTexts($scope, $location);
     });
 
-
-    RestService.get('api/filter').then(function (data) {
-        // Enable editing via the admin UI.
-        var it, item, key
-          , filters = {};
-        for (it in data) {
-            item = data[ it ];
-            key = "_idx_" + item.id;
-            filters[ key ]= item;
-            filters[ key ]._idx = key;
-            filters[ key ].active = ! item.label.match(/DISABLE/)
-        }
-        $scope.filters = filters;
-
-        $scope.log("Filters: ", $scope.filters);
-    });
-
-
     // I18n / translation [Bug: #3]
     function initTranslation($scope, $location, gettextCatalog) {
         //http://nquire/el#/home?kw=climate&debug=1
@@ -62,7 +48,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         }
 
         // navigator.languages?
-        $scope.log("Lang:", $scope.cfg, m_lang, $location.absUrl(), angular.version);
+        $scope.alert.debug("Lang:", $scope.cfg, m_lang, $location.absUrl(), angular.version);
     }
 
 
@@ -89,24 +75,14 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
             }
         }
 
-        $scope.log("i18n: texts:", lang_regex, $scope.txt);
+        $scope.alert.debug("i18n: texts:", lang_regex, $scope.txt);
     }
 
-
-    // Approval/ test server [Bug: #5]
-    function initApprovalServer($scope, $location) {
-        var m_approval = $location.absUrl().match(/\/(approval|localhost|nquire\/|pegasos\.)/);
-
-        $scope.approval = m_approval && 1;
-    }
-
-
-    function initDebug($scope, $location, $log) {
+    function initDebug($scope, $location) {
         // Was: location.href.match(/[\?&\/]debug=1/);
         var m_debug = $location.absUrl().match(/[\?&\/]debug=(\d)/);
 
-        $scope.debug = m_debug && m_debug[ 1 ];
-        $scope.log = $scope.debug ? $log.info : function () {};
+        $scope.log = $scope.alert.debug;
     }
 
 });

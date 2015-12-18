@@ -37,7 +37,7 @@
 
             <span id="lang" class="lang-switch" data-ng-if="cfg.lang_switch === 'top'">
               <select aria-label="{{'Choose language' | translate}}" ng-XX-change="switchLanguage(lang)">
-                <option value="{{lang}}" ng-repeat="(lang, label) in cfg.langs" ng-selected="lang === activeLang">{{label | translate}}</option>
+                <option value="{{lang}}" ng-repeat="(lang, label) in cfg.langs" ng-selected="lang === activeLang">{{label}}</option>
               </select>
             </span>
         </div>

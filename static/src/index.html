@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title translate>nQuire-it — join missions to explore your world</title>
 
     <!--[if lte IE 8]>
@@ -52,6 +55,7 @@
     <script src="js/app/translations.js"></script>
 
     <script src="js/app/services/services-module.js"></script>
+    <script src="js/app/services/alert-service.js"></script><!-- After 'services-module'; before 'rest-service' ? -->
     <script src="js/app/services/rest-service.js"></script>
     <script src="js/app/services/openid-service.js"></script>
     <script src="js/app/services/project-service.js"></script>
@@ -70,6 +74,8 @@
     <script src="js/app/services/sorted-data-service.js"></script>
     <script src="js/app/services/tracking-service.js"></script>
     <script src="js/app/services/users-service.js"></script>
+
+    <script src="js/app/services/filter-tag-service.js"></script>
 
 
     <script src="js/app/directives/input-enter.js"></script>
@@ -166,6 +172,7 @@
     <script src="js/app/controllers/admin/admin-controller.js"></script>
     <script src="js/app/controllers/admin/admin-users-controller.js"></script>
     <script src="js/app/controllers/admin/admin-projects-controller.js"></script>
+    <script src="js/app/controllers/admin/admin-projects-item-controller.js"></script>
     <script src="js/app/controllers/admin/admin-filters-controller.js"></script>
     <script src="js/app/controllers/admin/admin-texts-controller.js"></script>
     <script src="js/app/controllers/admin/admin-texts-item-controller.js"></script>
@@ -196,7 +203,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="main" data-ng-controller="MainCtrl">
         <div id="header" data-ng-include="'partials/layout/header.html'" role="banner"></div>
 
-        <div id="site-message" role="note"
+        <div id="alert-message" role="alert"
+             data-ng-show="alert.getText()" data-ng-bind-html="alert.getText()" data-ng-class="alert.ngClass()">
+        </div>
+        <div id="site-message" role="note" data-ng-class="( cfg.site_message_class || 'default' )"
              data-ng-if="txt.siteMessage" data-ng-bind-html="txt.siteMessage">
         </div>
 

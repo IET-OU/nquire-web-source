@@ -8,24 +8,38 @@
 
 angular.module('senseItWeb').constant('senseItConfig', {
 
-  // REMOVE ME - just for translation purposes!
-  langs_translate: [
-    "{{ 'English' | translate }}",
-    "{{ 'Greek' | translate }}",
-    "{{ 'Spanish' | translate }}",
-    "{{ 'French' | translate }}",
+  // LEAVE me in the '.DIST.html' file - just for translation purposes!
+  texts_translate: [
+    "{{ 'The site will be undergoing routine maintenance today, {{DATE}}.' | translate }}",
+    "{{ 'The site will be undergoing routine maintenance tomorrow, {{DATE}}.' | translate }}",
+    "{{ 'Updates via <a href=\"https://twitter.com/nQuireit\">@nQuireit on Twitter</a>.' | translate }}",
+    "{{ '{{MISSION}} missions' | translate }}",
+    "{{ 'Weather-it missions' | translate }}",
     "{{ 'Greek schools missions' | translate }}"
   ],
   // The list to appear in the language switcher.
   langs: {
-    en: "English",
-    el: "Greek"
+    en: "English (en)",
+    el: "Ελληνικά (el)"  //Greek
+/*
+    af: "Afrikaans (af)",
+    de: "Deutsch (de)",
+    es: "Español (es)",
+    fr: "Français (fr)",
+    zh_cn: "简体中文 (zh-cn)",
+    zh_tw: "正體中文 (zh-tw)"
+*/
   },
   lang_url_regex: /(\/approval)?\/(el|en)/,
   // Position of switcher: false, "top" or "bottom".
-  lang_switch: "bottom",
+  lang_switch: "top",
+  // Scratchpad/notepad on test site only.
+  admin_texts_notepad: false,
+
+  site_message_class: "alert alert-warning",
+
   base_url: "/",
-  // Show custom filters? Set false for now.
-  custom_filters: false
+  // Show custom filter-tags? (true, false)
+  custom_filters: true
 
 });

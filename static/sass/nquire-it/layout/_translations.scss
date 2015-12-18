@@ -1,0 +1,39 @@
+/*!
+  Language-switcher & language-specific adjustments.
+*/
+
+
+// GREEK language-specific adjustments.
+[ data-lang_ui = el ] {
+
+  .project-item .project-item-text-container {
+    min-height: 228px;
+    height: auto;
+    //Was: height: 190px;
+  }
+
+  .project-item .project-item-text-container .project-item-author {
+    line-height: 1.18em;
+  }
+
+  #header,
+  .sidebar-right,
+  .project-item .project-item-text-container .project-item-author {
+    letter-spacing: -0.02em;
+    word-spacing: -0.017em;
+  }
+
+  #header #header-content #logo-container p {
+    letter-spacing: -0.025em;
+    font-size: 21px;
+    margin-top: 4px;
+  }
+
+  #header #header-content #header-right-panel #header-top-box-container #header-menu a {
+    margin-right: 17px;
+    //was: margin-right: 20px;
+  }
+}
+
+
+//End.

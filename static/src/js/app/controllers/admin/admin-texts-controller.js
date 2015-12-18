@@ -18,35 +18,47 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
     ];
 
 
+    // Scratchpad/notepad on test site only.
+    if ($scope.cfg.admin_texts_notepad) {
+        $scope.itemList.push({ id: 'notepad', label: 'Notepad', format: true });
+    }
+
+
     translateExtendItemList($scope);
 
 
     function translateExtendItemList($scope) {
-      var idx = 0
+      var it
         , item
         , lang
         , id
         , label
+        , orig_label = ' <b>(original English)</b>'
         , $the_langs = $scope.cfg.langs
-        , length = $scope.itemList.length;
+        , new_list = [];
 
       if (! $scope.activeLang) {
           return;
       }
 
-      for (idx = 0; idx < length; idx++) {
-          item = $scope.itemList[ idx ];
-          ///
+      for (it in $scope.itemList) {
+          item = $scope.itemList[ it ];
+
           for (lang in $the_langs) {
-              if ("en" === lang) continue;
 
-              id = item.id + "_" + lang;
-              label = item.label + " (" + $the_langs[ lang ] + ")";
-
-              $scope.itemList.push({ id: id, label: label, format: item.format, lang: lang });
+              if ("en" === lang) {
+                  id = item.id;
+                  label = item.label + orig_label;
+              } else {
+                  id = item.id + "_" + lang;
+                  label = item.label + " <b>(" + $the_langs[ lang ] + ")</b>";
+              }
+              new_list.push({ id: id, label: label, format: item.format, lang: lang });
           }
       }
+      $scope.itemList = new_list;
+
+      $scope.log("i18n: itemList: ", $scope.itemList);
     }
 
-    $scope.log("i18n: itemList: ", $scope.itemList);
 });

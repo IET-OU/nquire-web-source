@@ -49,47 +49,47 @@ msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</"
-"a> για να σχολιάσω αυτή τη σειρά δεδομένων."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</a>"
+" για να σχολιάσω αυτή τη σειρά δεδομένων."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</"
-"a> για να σχολιάσω αυτή την αποστολή."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</a>"
+" για να σχολιάσω αυτή την αποστολή."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</"
-"a> για να σχολιάσω αυτή τη φωτογραφία."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</a>"
+" για να σχολιάσω αυτή τη φωτογραφία."
 
 #: static/src/partials/forum/forum-node-list.html:8
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</"
-"a> για να δημοσιεύσω νέα υποενότητα."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</a>"
+" για να δημοσιεύσω νέα υποενότητα."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</"
-"a> για να δημοσιεύσω απαντήσεις σε αυτή την υποενότητα."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Συνδέομαι</a>"
+" για να δημοσιεύσω απαντήσεις σε αυτή την υποενότητα."
 
 #: static/src/partials/forum/forum-node-list.html:1
 msgid ""
 "<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 msgstr ""
-"<a href=\"\" data-ui-sref=\"forum.list\">χώρος συζητήσεων</a> ▸ {{forum.node."
-"title}}"
+"<a href=\"\" data-ui-sref=\"forum.list\">χώρος συζητήσεων</a> ▸ "
+"{{forum.node.title}}"
 
 #: static/src/partials/project/comments/posting-disabled.html:2
 msgid ""
@@ -140,8 +140,8 @@ msgid ""
 "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
 "span> said:"
 msgstr ""
-"O/H <span class=\"comment-author-username\" siw-user-link=\"comment.author"
-"\"></span> είπε:"
+"O/H <span class=\"comment-author-username\" siw-user-link=\"comment.author\""
+"></span> είπε:"
 
 #: static/src/partials/project/blocks/project-metadata.html:6
 #: static/src/partials/project/blocks/project-title-edit.html:25
@@ -156,11 +156,11 @@ msgstr ""
 msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
 msgstr "<span class=\"sidebar-type-senseit\">Sense-it</span> αποστολές"
 
-#: static/src/partials/projects/projects-sidebar.html:41
+#: static/src/partials/projects/projects-sidebar.html:36
 msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
 msgstr "<span class=\"sidebar-type-spotit\">Spot-it</span> αποστολές"
 
-#: static/src/partials/projects/projects-sidebar.html:45
+#: static/src/partials/projects/projects-sidebar.html:40
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
 msgstr "<span class=\"sidebar-type-winit\">Win-it</span> αποστολές"
 
@@ -323,16 +323,6 @@ msgstr "Πρόκληση"
 msgid "Change password"
 msgstr "Αλλάζω τον κωδικό"
 
-#: static/src/partials/layout/header.html:39
-#, fuzzy
-msgid "Choose language"
-msgstr "Αλλάζω σε γλώσσα:"
-
-#: static/src/partials/layout/footer.html:6
-#, fuzzy
-msgid "Choose language:"
-msgstr "Αλλάζω σε γλώσσα:"
-
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:42
 msgid ""
 "Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
@@ -436,6 +426,7 @@ msgid "Delete project"
 msgstr "Διαγράφω το πρότζεκτ"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
+#, fuzzy
 msgid ""
 "Delete sensor\n"
 "            input"
@@ -559,10 +550,6 @@ msgstr "Χώρος συζήτησης"
 msgid "Forums"
 msgstr "Χώροι συζήτησης"
 
-#: static/src/js/app/config.js.DIST.html:16
-msgid "French"
-msgstr ""
-
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
 msgid "Geolocated data:"
 msgstr "Δεδομένα γεωτοποθέτησης:"
@@ -646,17 +633,13 @@ msgstr "Γίνομαι μέλος στην αποστολή"
 msgid "Joined"
 msgstr "Έγινα μέλος"
 
-#: static/src/partials/projects/projects-sidebar.html:58
+#: static/src/partials/projects/projects-sidebar.html:53
 msgid "Joined missions"
 msgstr "Αποστολές στις οποίες έγινα μέλος"
 
 #: static/src/partials/profile/profile-logged-in.html:293
 msgid "Joined projects:"
 msgstr "Πρότζεκτς στα οποία έγινα μέλος:"
-
-#: static/src/partials/admin/admin-filters.html:7
-msgid "Label"
-msgstr ""
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:2
 msgid "Last picture"
@@ -746,8 +729,8 @@ msgid ""
 "Mission created by <span siw-user-link=\"projectData.project.author\"></"
 "span>."
 msgstr ""
-"Μια αποστολή που δημιουργήθηκε από τον/την <span siw-user-link=\"projectData."
-"project.author\"></span>."
+"Μια αποστολή που δημιουργήθηκε από τον/την <span siw-user-link=\""
+"projectData.project.author\"></span>."
 
 #: static/src/partials/project/edit/project-edit-details-page.html:8
 #: static/src/partials/project/view/home/project-view-details-page.html:14
@@ -986,10 +969,6 @@ msgstr "Πρότζεκτς στα οποία έγινε μέλος ο/η {{profi
 msgid "Proposal stage"
 msgstr "Στάδιο υποβολής προτάσεων"
 
-#: static/src/partials/admin/admin-filters.html:8
-msgid "Query or URL"
-msgstr ""
-
 #: static/src/partials/projects/projects-sidebar-feeds.html:12
 msgid "Recent forum posts"
 msgstr "Πρόσφατες δημοσιεύσεις"
@@ -1190,18 +1169,6 @@ msgstr "Εμφανίζω την αξία:"
 msgid "Sign in"
 msgstr "Συνδέομαι"
 
-#: static/src/partials/profile/profile-logged-out.html:54
-msgid "Sign in with Facebook"
-msgstr ""
-
-#: static/src/partials/profile/profile-logged-out.html:52
-msgid "Sign in with Google"
-msgstr ""
-
-#: static/src/partials/profile/profile-logged-out.html:56
-msgid "Sign in with Twitter"
-msgstr ""
-
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
 msgstr "Συνδέομαι με το όνομα χρήστη και τον κωδικό:"
@@ -1252,8 +1219,6 @@ msgstr ""
 #: static/src/partials/social/social-post-dialog.html:29
 #, fuzzy
 msgid "Sorry, there was a problem with the API with {{data.provider.name}}."
-msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με το API με {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:25
 #, fuzzy
@@ -1268,15 +1233,15 @@ msgstr ""
 msgid ""
 "Sorry, there was a problem with the connection with {{data.provider.name}}."
 msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τη σύνδεση με τον/την {{data.provider."
-"name}}."
+"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τη σύνδεση με τον/την "
+"{{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:23
 msgid ""
 "Sorry, there was a problem with the permissions with {{data.provider.name}}."
 msgstr ""
-"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τις άδειες με τον/την {{data.provider."
-"name}}."
+"Συγγνώμη, προέκυψε κάποιο πρόβλημα με τις άδειες με τον/την "
+"{{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:27
 #, fuzzy
@@ -1293,7 +1258,7 @@ msgstr ""
 "Συγγνώμη, ήδη δημοσίευσες το ίδιο περιεχόμενο! Ίσως χρειάζεται να το "
 "επεξεργαστείς πριν να το δημοσιεύσεις."
 
-#: static/src/partials/admin/admin.html:14
+#: static/src/partials/admin/admin.html:13
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Συγγνώμη, μόνο ο διαχειριστής μπορεί να δει αυτή τη σελίδα."
 
@@ -1319,7 +1284,7 @@ msgid "Starter"
 msgstr "Εισηγητής"
 
 #: static/src/partials/project/admin/project-admin-users.html:15
-#: static/src/partials/projects/projects-sidebar.html:50
+#: static/src/partials/projects/projects-sidebar.html:45
 msgid "Status"
 msgstr "Καθεστώς"
 
@@ -1346,6 +1311,10 @@ msgstr "Υποβάλλω"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:29
 msgid "Submitted"
 msgstr "Υποβλήθηκε"
+
+#: static/src/partials/layout/header.html:57
+msgid "Switch to language:"
+msgstr "Αλλάζω σε γλώσσα:"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:47
 msgid "Text:"
@@ -1595,32 +1564,32 @@ msgid ""
 "You need to <a data-ng-click=\"openIdService.loginAndComeBack()\">sign in</"
 "a> to vote for ideas."
 msgstr ""
-"Χρειάζεται να <a data-ng-click=\"openIdService.loginAndComeBack()\">συνδεθώ</"
-"a> για να ψηφίσω ιδέες."
+"Χρειάζεται να <a data-ng-click=\"openIdService.loginAndComeBack()\""
+">συνδεθώ</a> για να ψηφίσω ιδέες."
 
 #: static/src/partials/social/social-post-dialog.html:2
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"close(data.provider.login)\">sign "
 "in</a> before posting on {{data.provider.name}}."
 msgstr ""
-"Χρειάζεται να <a href=\"\" data-ng-click=\"close(data.provider."
-"login)\">συνδεθώ</a> πριν να δημοσιεύσω στο {{data.provider.name}}."
+"Χρειάζεται να <a href=\"\" data-ng-click=\"close(data.provider.login)\""
+">συνδεθώ</a> πριν να δημοσιεύσω στο {{data.provider.name}}."
 
 #: static/src/partials/project/view/home/project-view-home-page.html:13
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> before you can participate in projects."
 msgstr ""
-"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
-"()\">συνδεθώ</a> πριν να συμμετάσχω σε πρότζεκτς."
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">συνδεθώ</a> πριν να συμμετάσχω σε πρότζεκτς."
 
 #: static/src/partials/projects/create.html:127
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> in order to create your own projects."
 msgstr ""
-"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
-"()\">συνδεθώ</a> για να δημιουργήσω τα δικά μου πρότζεκτς."
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">συνδεθώ</a> για να δημιουργήσω τα δικά μου πρότζεκτς."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:29
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:17
@@ -1628,16 +1597,16 @@ msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> to post ideas."
 msgstr ""
-"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
-"()\">συνδεθώ</a> για να δημοσιεύσω ιδέες."
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">συνδεθώ</a> για να δημοσιεύσω ιδέες."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:13
 msgid ""
 "You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
 "()\">sign in</a> to upload images to this mission."
 msgstr ""
-"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
-"()\">συνδεθώ</a> για να ανεβάσω εικόνες σε αυτή την αποστολή."
+"Χρειάζεται να <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\""
+">συνδεθώ</a> για να ανεβάσω εικόνες σε αυτή την αποστολή."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:18
 msgid ""

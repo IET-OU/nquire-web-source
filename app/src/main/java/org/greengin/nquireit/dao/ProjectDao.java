@@ -41,7 +41,7 @@ public class ProjectDao {
     private static final String MY_PROJECTS_QUERY = "SELECT r, e FROM Role r INNER JOIN r.context e WHERE r.user = :user";
 
     private static final String FIND_PROJECT_QUERY = "SELECT p FROM Project p WHERE p.activity = :activity ORDER BY p.lastActivity DESC";
-
+    private static final String PROJECTS_FILTER_QUERY = "SELECT DISTINCT p FROM Project p WHERE p.filters LIKE :filter ORDER BY p.lastActivity DESC";
 
     @PersistenceContext
     EntityManager em;
@@ -124,10 +124,13 @@ public class ProjectDao {
         return query.getResultList();
     }
 
-    public List<Project> getProjects(ProjectType type, boolean featured) {
+    public List<Project> getProjects(ProjectType type, boolean featured, String filter) {
         TypedQuery<Project> query;
 
-        if (type != null) {
+        if (!"".equals(filter) && !"all".equals(filter)) {
+            query = em.createQuery(PROJECTS_FILTER_QUERY, Project.class);
+            query.setParameter("filter", "%" + filter + "%");
+        } else if (type != null) {
             query = em.createQuery(featured ? PROJECTS_TYPE_FEATURED_QUERY : PROJECTS_TYPE_QUERY, Project.class);
             query.setParameter("type", type);
         } else {
@@ -199,6 +202,12 @@ public class ProjectDao {
     public void setFeatured(Long projectId, boolean featured) {
         Project p = em.find(Project.class, projectId);
         p.setFeatured(featured);
+    }
+
+    @Transactional
+    public void setFilters(Long projectId, String filters) {
+        Project p = em.find(Project.class, projectId);
+        p.setFilters(filters);
     }
 
     @Transactional

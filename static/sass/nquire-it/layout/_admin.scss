@@ -2,8 +2,19 @@
 @import "../variables/dimensions";
 @import "../variables/colors";
 
+
+input:invalid, input.ng-invalid {
+  //border-color: orange;
+}
+
+
 .admin-page {
   padding: 0 $dim-common-margin;
+
+  .btn-xs {
+    padding: 2px 6px;
+    //Was: padding: 1px 5px;
+  }
 
   .admin-header {
     @include basic-header;
@@ -39,9 +50,19 @@
       float: right;
     }
 
+    tbody th {
+      font-weight: normal;
+
+      b {
+        font-size: .85em;
+        display: block;
+        line-height: 1.28em;
+      }
+    }
+
     tr.row-add-form,
     tr.row-lang-el {
-      //&[ data-row-lang != '' ] {
+      //&[ data-row-lang != 'en' ] {
       display: none;
     }
 
@@ -52,39 +73,75 @@
         td {
           padding: 0 6px 0 0;
         }
-
-        .key,
-        .btn {
-          width: 70px;
-
-          input {
-            padding: 6px 1px;
-            font-size: .94em;
-          }
-        }
-        .value {
-          width: 87%;
-        }
       }
+    }
+
+    .key,
+    .col-btn {
+      width: 70px;
+
+      input {
+        padding: 6px 1px;
+        font-size: .94em;
+      }
+    }
+    .value {
+      width: 87%;
     }
   }
 
-  .admin-page-filters tr.row-add-form {
-    display: table-row;
+  .admin-page-filters table {
+    tr.row-add-form {
+      display: table-row;
+    }
 
+    td {
+      vertical-align: top;
+
+      [ ng-if *= error ],
+      [ ng-if *= invalid ],
+      [ ng-switch *= formError ] p {
+        color: darken( $color-dark-orange, 4% );
+        margin: 5px 2px;
+      }
+    }
+
+    button[ ng-click *= delete ] {
+      color: $color-dark-orange;
+    }
+
+    .col-btn {
+      width: 1px;
+    }
     .key {
-      width: 248px;
+      width: 41%;
+      //Was: width: 248px;
     }
     .value {
-      width: 72%;
+      width: 40%
+      //width: 72%;
+    }
+  }
+
+
+  .admin-page-projects {
+
+    .col-filters {
+      min-width: 12em;
+    }
+
+    input.filters {
+      padding: 6px 1px;
+      font-size: .94em;
+    }
+
+    input, button {
+      margin-top: 4px;
     }
   }
 
 
   &.error-unauthorized {
     text-align: center;
-    margin: 1.2em 0;
-    //Or, font-size: 1.6rem;
-    font-size: 1.15em;
   }
 }
