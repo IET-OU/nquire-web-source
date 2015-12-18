@@ -1,0 +1,1628 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:14
+msgid ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
+"\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:5
+msgid ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
+"\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
+msgid "(Ideas are always visible during voting and outcome.)"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:41
+msgid "(Multiple-line formatted text)"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:40
+msgid "(Multiple-line plain text)"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
+msgid "(Single-line text)"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
+msgid ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
+"to comment on this data series."
+msgstr ""
+
+#: static/src/partials/project/comments/posting-disabled.html:1
+msgid ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
+"to comment on this mission."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
+msgid ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
+"to comment on this picture."
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:8
+msgid ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
+"to post new threads."
+msgstr ""
+
+#: static/src/partials/forum/forum-thread.html:44
+msgid ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
+"to post replies in this thread."
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:1
+msgid ""
+"<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
+msgstr ""
+
+#: static/src/partials/project/comments/posting-disabled.html:2
+msgid ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
+"discuss about it."
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-posting-disabled.html:2
+msgid ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
+"discuss about this data series."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-posting-disabled.html:2
+msgid ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
+"discuss about this picture."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
+msgid "<b>Explanation:</b> {{outcome.explanation}}"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:10
+msgid "<b>Sense-it</b> mission"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:11
+msgid "<b>Spot-it</b> mission"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:12
+msgid "<b>Win-it</b> mission"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-project-data.html:7
+msgid "<b>{{projectData.data.data}}</b> series"
+msgstr ""
+
+#: static/src/partials/comments.html:41
+msgid ""
+"<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
+"span> said:"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-metadata.html:6
+#: static/src/partials/project/blocks/project-title-edit.html:25
+msgid ""
+"<span class=\"project-section-description-text-mission\">Mission:</span> "
+"{{projectData.project.title}}"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:37
+msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:41
+msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:45
+msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:53
+msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:54
+msgid "A <span class=\"project-item-banner-type\">Spot-it</span> mission"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:55
+msgid "A <span class=\"project-item-banner-type\">Win-it</span> mission"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:44
+msgid ""
+"A mission created by <span data-siw-user-link=\"projectData.project.author"
+"\"></span>."
+msgstr ""
+
+#: static/src/partials/layout/about.html:5
+#: static/src/partials/layout/header.html:17
+msgid "About"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
+msgid "Accelerometer"
+msgstr ""
+
+#: static/src/partials/admin/admin-reported.html:19
+msgid "Actions"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:76
+#: static/src/partials/admin/admin-texts.html:23
+msgid "Add"
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-details-page.html:62
+msgid "Add block"
+msgstr ""
+
+#: static/src/partials/forum/forum-list-category.html:14
+msgid "Add category"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:33
+msgid "Add field"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
+msgid "Add sensor input"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:50
+msgid "Add transformation"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:4
+msgid "Admin"
+msgstr ""
+
+#: static/src/partials/admin/admin.html:2
+msgid "Admin menu"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:7
+#: static/src/partials/layout/header.html:19
+msgid "Administrator"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:5
+msgid "All answers"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-outcome.html:4
+msgid "All ideas"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:14
+#: static/src/partials/projects/projects-sidebar.html:54
+msgid "All missions"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:16
+msgid "Ambient temperature"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:33
+msgid "Any type"
+msgstr ""
+
+#: static/src/partials/admin/admin-reported.html:30
+msgid "Approve"
+msgstr ""
+
+#: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1
+msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:12
+#: static/src/partials/admin/admin-reported.html:16
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:24
+#: static/src/partials/project/view/senseit/data-table-senseit.html:5
+#: static/src/partials/project/view/senseit/senseit-data-map.html:5
+msgid "Author"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:16
+msgid "Awaiting response from {{data.provider.name}}…"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:47
+#: static/src/partials/admin/admin-projects.html:42
+#: static/src/partials/admin/admin-texts.html:49
+#: static/src/partials/comments.html:19
+#: static/src/partials/forum/forum-list-category.html:35
+#: static/src/partials/forum/forum-list-forum.html:24
+#: static/src/partials/forum/forum-node-new-thread.html:16
+#: static/src/partials/forum/forum-thread.html:19
+#: static/src/partials/forum/forum-thread.html:61
+#: static/src/partials/profile/profile-logged-in.html:134
+#: static/src/partials/profile/profile-logged-in.html:212
+#: static/src/partials/profile/profile-logged-in.html:267
+#: static/src/partials/profile/profile-logged-in.html:303
+#: static/src/partials/profile/profile-logged-in.html:32
+#: static/src/partials/profile/profile-logged-in.html:60
+#: static/src/partials/profile/profile-logged-in.html:82
+#: static/src/partials/project/blocks/project-title-edit.html:19
+#: static/src/partials/project/blocks/project-title-edit.html:51
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:27
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:33
+#: static/src/partials/project/edit/project-edit-details-page.html:55
+#: static/src/partials/project/edit/project-edit-outline-page.html:28
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:62
+#: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:16
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:29
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:24
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:23
+#: static/src/partials/project/view/senseit/data-table-senseit.html:33
+#: static/src/partials/project/view/spotit/data-item-spotit.html:42
+#: static/src/partials/projects/create.html:122
+#: static/src/partials/projects/create.html:130
+#: static/src/partials/widgets/modal-template.html:10
+msgid "Cancel"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:57
+msgid "Caption"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:3
+msgid "Challenge"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:132
+#: static/src/partials/profile/profile-logged-in.html:95
+msgid "Change password"
+msgstr ""
+
+#: static/src/partials/layout/header.html:39
+msgid "Choose language"
+msgstr ""
+
+#: static/src/partials/layout/footer.html:6
+msgid "Choose language:"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:42
+msgid ""
+"Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
+"for your favourite!"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:20
+#: static/src/partials/project/edit/project-edit-open-page.html:17
+msgid "Close project"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:39
+msgid "Comma separated tags"
+msgstr ""
+
+#: static/src/partials/forum/forum-thread.html:56
+msgid "Comment"
+msgstr ""
+
+#: static/src/partials/comments.html:14
+#: static/src/partials/forum/forum-thread.html:55
+msgid "Comment:"
+msgstr ""
+
+#: static/src/partials/admin/admin-texts.html:10
+msgid "Content"
+msgstr ""
+
+#: static/src/partials/admin/admin-reported.html:17
+msgid "Content id"
+msgstr ""
+
+#: static/src/partials/layout/header.html:18
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
+#: static/src/partials/projects/create.html:118
+#: static/src/partials/projects/create.html:121
+msgid "Create"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:66
+msgid "Create new idea"
+msgstr ""
+
+#: static/src/partials/projects/create.html:11
+msgid "Create your own <b>Sense-it</b> mission"
+msgstr ""
+
+#: static/src/partials/projects/create.html:30
+msgid "Create your own <b>Spot-it</b> mission"
+msgstr ""
+
+#: static/src/partials/projects/create.html:51
+msgid "Create your own <b>Win-it</b> mission"
+msgstr ""
+
+#: static/src/partials/widgets/file-select-widget.html:1
+msgid "Current file: {{original}}"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:103
+msgid "Current password:"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:3
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:3
+msgid "Data"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:10
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:4
+msgid "Data collection"
+msgstr ""
+
+#: static/src/partials/project/view/data/project-view-data-table.html:5
+msgid "Data list"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:7
+msgid "Data processing"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/data-table-senseit.html:6
+#: static/src/partials/project/view/senseit/senseit-data-map.html:6
+msgid "Date"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:46
+#: static/src/partials/admin/admin-reported.html:29
+#: static/src/partials/comments.html:48
+#: static/src/partials/forum/forum-list-category.html:8
+#: static/src/partials/forum/forum-list-forum.html:8
+#: static/src/partials/forum/forum-thread.html:15
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
+msgid "Delete"
+msgstr ""
+
+#: static/src/partials/widgets/file-select-widget.html:10
+msgid "Delete file"
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-outline-page.html:39
+msgid "Delete project"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
+msgid ""
+"Delete sensor\n"
+"            input"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/data-table-senseit.html:23
+msgid "Delete series"
+msgstr ""
+
+#: static/src/partials/forum/forum-list-forum.html:20
+msgid "Description"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:255
+msgid "Description of myself:"
+msgstr ""
+
+#: static/src/partials/forum/forum-list-category.html:29
+#: static/src/partials/forum/forum-list-forum.html:19
+#: static/src/partials/profile/profile-logged-in.html:232
+#: static/src/partials/profile/profile-view.html:60
+msgid "Description:"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:3
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:3
+#: static/src/partials/project/edit/spotit/spotit-edit-menu.html:3
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:2
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:2
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:2
+msgid "Details"
+msgstr ""
+
+#: static/src/partials/project/view/data/project-view-data-table.html:9
+msgid "Download CSV"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:42
+#: static/src/partials/admin/admin-texts.html:45
+#: static/src/partials/forum/forum-list-category.html:7
+#: static/src/partials/forum/forum-list-forum.html:7
+#: static/src/partials/forum/forum-thread.html:14
+#: static/src/partials/profile/profile-logged-in.html:141
+#: static/src/partials/profile/profile-logged-in.html:219
+#: static/src/partials/profile/profile-logged-in.html:274
+#: static/src/partials/profile/profile-logged-in.html:49
+#: static/src/partials/profile/profile-logged-in.html:70
+#: static/src/partials/project/blocks/project-menu.html:5
+#: static/src/partials/project/blocks/project-title-edit.html:33
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:45
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:39
+#: static/src/partials/project/edit/project-edit-details-page.html:18
+#: static/src/partials/project/edit/project-edit-outline-page.html:16
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:67
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:54
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:35
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:31
+msgid "Edit"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:34
+msgid "Edit tags"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/data-table-senseit.html:22
+#: static/src/partials/project/view/spotit/data-item-spotit.html:21
+msgid "Edit title"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:62
+msgid "Email"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:140
+msgid "Email notifications"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:68
+#: static/src/partials/profile/profile-logged-in.html:77
+#: static/src/partials/profile/profile-logged-out.html:141
+#: static/src/partials/profile/profile-logged-out.html:80
+msgid "Email:"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-project-data.html:7
+#: static/src/partials/projects/projects.html:39
+msgid "Ended"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:15
+msgid "Explanation:"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:18
+msgid "Featured missions"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:14
+msgid "Featured?"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:7
+msgid "Field label:"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
+msgid "Field type:"
+msgstr ""
+
+#: static/src/partials/forum/forum-list.html:7
+#: static/src/partials/forum/forum-thread.html:2
+msgid "Forum"
+msgstr ""
+
+#: static/src/partials/forum/forum-list.html:1
+#: static/src/partials/layout/header.html:16
+msgid "Forums"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
+msgid "Geolocated data:"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
+msgid "Go back to the list"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:22
+msgid "Grant permission"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:18
+msgid "Greek schools missions"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:12
+msgid "Gyroscope"
+msgstr ""
+
+#: static/src/partials/layout/header.html:49
+msgid ""
+"Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
+"<br>you are signed in."
+msgstr ""
+
+#: static/src/partials/layout/header.html:15
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
+msgid "Home"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:42
+msgid "I forgot my password"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:137
+msgid "I forgot my password:"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:10
+#: static/src/partials/admin/admin-users.html:4
+msgid "Id"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/challenge-admin-menu.html:4
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:3
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:2
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-vote.html:1
+msgid "Ideas"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:21
+msgid "Ideas visibility"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:17
+#: static/src/partials/project/edit/project-edit-open-page.html:14
+msgid ""
+"If you need to edit this project, click on “Close project” to enable editing."
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:236
+#: static/src/partials/profile/profile-view.html:64
+msgid "Interests:"
+msgstr ""
+
+#: static/src/partials/project/view/home/project-view-home-page.html:18
+msgid "Join mission"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:15
+msgid "Joined"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:58
+msgid "Joined missions"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:293
+msgid "Joined projects:"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:9
+msgid "Label"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-view-outline.html:2
+msgid "Last picture"
+msgstr ""
+
+#: static/src/partials/forum/forum-list.html:8
+#: static/src/partials/forum/forum-node-list.html:16
+msgid "Last post"
+msgstr ""
+
+#: static/src/partials/project/view/home/project-view-home-page.html:19
+msgid "Leave mission"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:15
+msgid "Light"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:51
+msgid "Link"
+msgstr ""
+
+#: static/src/partials/profile/profile-provider-item.html:14
+msgid "Link with {{providerName}}"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:308
+msgid "Linked accounts"
+msgstr ""
+
+#: static/src/partials/layout/header.html:58
+#: static/src/partials/project/project.html:27
+msgid "Loading…"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:228
+#: static/src/partials/profile/profile-logged-in.html:250
+#: static/src/partials/profile/profile-view.html:56
+msgid "Location:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:43
+#: static/src/partials/profile/profile-view.html:40
+msgid "Login information"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:3
+msgid "Logout"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:11
+msgid "Magnetic field"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:4
+msgid "Map"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:38
+msgid ""
+"Max answers per participant: {{projectData.project.activity.maxAnswers}}"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:28
+msgid "Maximum answers per participant."
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-users.html:27
+msgid "Member"
+msgstr ""
+
+#: static/src/partials/forum/forum-node-new-thread.html:10
+msgid "Message:"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:12
+#: static/src/partials/project/edit/project-edit-open-page.html:10
+#: static/src/partials/project/edit/project-edit-outline-page.html:33
+msgid "Mission administration"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-metadata.html:18
+msgid ""
+"Mission created by <span siw-user-link=\"projectData.project.author\"></"
+"span>."
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-details-page.html:8
+#: static/src/partials/project/view/home/project-view-details-page.html:14
+msgid "Mission details"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-title-edit.html:28
+#: static/src/partials/project/blocks/project-title-edit.html:45
+msgid "Mission list teaser:"
+msgstr ""
+
+#: static/src/partials/project/view/home/project-view-home-page.html:25
+msgid "Mission outline"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:29
+msgid "Mission type"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:66
+msgid "Missions created by me"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:18
+msgid "Multiple-line formatted text"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:17
+msgid "Multiple-line plain text"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:282
+msgid ""
+"My <a data-ui-sref=\"profile-view({uid: status.profile.id})\">public "
+"profile</a>."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:3
+msgid "My ideas"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:260
+msgid "My interests:"
+msgstr ""
+
+#: static/src/partials/profile/profile-project-list.html:3
+msgid "My projects:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:224
+#: static/src/partials/profile/profile-logged-in.html:245
+#: static/src/partials/profile/profile-view.html:52
+msgid "Name:"
+msgstr ""
+
+#: static/src/partials/comments.html:9
+msgid "New comment"
+msgstr ""
+
+#: static/src/partials/forum/forum-list-forum.html:6
+msgid "New forum"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:113
+msgid "New password:"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:21
+#: static/src/partials/profile/profile-logged-in.html:153
+#: static/src/partials/profile/profile-logged-in.html:160
+#: static/src/partials/profile/profile-logged-in.html:167
+#: static/src/partials/profile/profile-logged-in.html:174
+#: static/src/partials/profile/profile-logged-in.html:181
+#: static/src/partials/profile/profile-logged-in.html:94
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:26
+msgid "No"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:9
+msgid "No answer has been selected yet."
+msgstr ""
+
+#: static/src/partials/projects/projects.html:4
+msgid "No missions available at the moment."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-table-spotit.html:12
+msgid "No title"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:62
+msgid "Not joined missions"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
+msgid "Only by others"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:6
+msgid "Only mine"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/data-table-senseit.html:42
+msgid "Open map"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:27
+#: static/src/partials/project/edit/project-edit-outline-page.html:38
+msgid "Open project"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:13
+msgid "Open?"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:13
+msgid "Orientation"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:278
+msgid "Other users can see about me:"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:18
+msgid "Outcome stage"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:2
+#: static/src/partials/project/edit/senseit/senseit-edit-menu.html:2
+#: static/src/partials/project/edit/spotit/spotit-edit-menu.html:2
+#: static/src/partials/project/view/challenge/challenge-view-menu.html:1
+#: static/src/partials/project/view/senseit/senseit-view-menu.html:1
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:1
+msgid "Outline"
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-outline-page.html:23
+msgid "Outline:"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-menu.html:3
+msgid "Participant"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-users.html:3
+msgid "Participants administration"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:12
+msgid "Password reminder"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:91
+msgid "Password set:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:33
+#: static/src/partials/profile/profile-logged-out.html:91
+msgid "Password:"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:30
+#: static/src/partials/project/edit/project-edit-outline-page.html:42
+msgid "Please note that you cannot edit the project while it is open."
+msgstr ""
+
+#: static/src/partials/forum/forum-node-new-thread.html:15
+#: static/src/partials/forum/forum-thread.html:60
+msgid "Post"
+msgstr ""
+
+#: static/src/partials/forum/forum-thread.html:49
+msgid "Post comment"
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:5
+msgid "Post new thread"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:37
+msgid ""
+"Post successful: <a href=\"{{data.result.url}}\" target=\"_blank\">{{data."
+"result.url}}</a>"
+msgstr ""
+
+#: static/src/partials/forum/forum-list.html:10
+msgid "Posts"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:14
+msgid "Pressure"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:24
+msgid "Profile image:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:218
+#: static/src/partials/profile/profile-view.html:50
+msgid "Profile information"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:289
+msgid "Profile information:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:273
+msgid "Profile visibility"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-title-edit.html:11
+msgid "Project image:"
+msgstr ""
+
+#: static/src/partials/admin/admin.html:4
+msgid "Projects"
+msgstr ""
+
+#: static/src/partials/profile/profile-project-list.html:14
+msgid "Projects Iʼve joined:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:297
+msgid "Projects created by me:"
+msgstr ""
+
+#: static/src/partials/profile/profile-view.html:14
+msgid "Projects created by {{profile.username}}:"
+msgstr ""
+
+#: static/src/partials/profile/profile-view.html:25
+msgid "Projects joined by {{profile.username}}"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:16
+msgid "Proposal stage"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:12
+msgid "Recent forum posts"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:3
+msgid "Recent mission comments"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:7
+msgid "Register"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:127
+msgid "Register new account"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:65
+msgid "Register new account:"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:17
+msgid "Relative humidity"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:18
+msgid "Remove permission"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:122
+#: static/src/partials/profile/profile-logged-out.html:101
+msgid "Repeat password:"
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:17
+msgid "Replies"
+msgstr ""
+
+#: static/src/partials/admin/admin.html:7
+msgid "Reported content"
+msgstr ""
+
+#: static/src/partials/admin/admin-reported.html:18
+msgid "Reports"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:128
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
+msgid "Reset"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:21
+msgid "Samples / second"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-projects.html:41
+#: static/src/partials/admin/admin-texts.html:48
+#: static/src/partials/forum/forum-list-category.html:34
+#: static/src/partials/forum/forum-list-forum.html:23
+#: static/src/partials/forum/forum-thread.html:18
+#: static/src/partials/profile/profile-logged-in.html:211
+#: static/src/partials/profile/profile-logged-in.html:266
+#: static/src/partials/profile/profile-logged-in.html:302
+#: static/src/partials/profile/profile-logged-in.html:31
+#: static/src/partials/profile/profile-logged-in.html:59
+#: static/src/partials/profile/profile-logged-in.html:81
+#: static/src/partials/project/blocks/project-title-edit.html:18
+#: static/src/partials/project/blocks/project-title-edit.html:50
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:32
+#: static/src/partials/project/edit/project-edit-details-page.html:54
+#: static/src/partials/project/edit/project-edit-outline-page.html:27
+#: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:61
+#: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:14
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:27
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:22
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:20
+#: static/src/partials/project/view/senseit/data-table-senseit.html:32
+#: static/src/partials/project/view/spotit/data-item-spotit.html:41
+msgid "Save"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:23
+msgid "Save and continue"
+msgstr ""
+
+#: static/src/partials/layout/header.html:29
+msgid "Search"
+msgstr ""
+
+#: static/src/partials/layout/header.html:25
+#: static/src/partials/layout/header.html:26
+msgid "Search missions"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:64
+msgid "See <a href=\"\" data-ui-sref=\"project.view.challenge\">all ideas</a>"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-view-outline.html:4
+msgid "See all"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:6
+msgid "See and edit your ideas for this mission here."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-vote.html:3
+msgid "See and vote all ideas submitted for this mission here."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-outcome.html:6
+msgid "See the outcome of this mission here."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:40
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:48
+msgid "Select"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-title-edit.html:5
+msgid "Select image"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:285
+msgid "Select what information other users can see about you:"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:22
+msgid "Select whether ideas are visible during the proposal stage."
+msgstr ""
+
+#: static/src/partials/widgets/file-select-widget.html:18
+msgid "Selected file: {{selectedFile.name}}"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:145
+msgid ""
+"Send a notification to the above email address whenever the following events "
+"occur:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:161
+msgid "Send a reminder"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-project-data.html:5
+msgid "Send your idea"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:37
+msgid "Send your ideas"
+msgstr ""
+
+#: static/src/partials/projects/create.html:6
+#: static/src/partials/projects/projects.html:26
+msgid "Sense-it"
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:12
+msgid ""
+"Sense-it projects define a data logging profile that can be used to record "
+"data using the <a href=\"https://play.google.com/store/apps/details?id=org."
+"greengin.sciencetoolkit\" target=\"_blank\">Sense-it</a> Android app."
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:7
+msgid "Sensor:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:133
+#: static/src/partials/profile/profile-logged-in.html:96
+msgid "Set password"
+msgstr ""
+
+#: static/src/partials/social/social.html:2
+msgid "Share this"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-data-map.html:15
+msgid "Show value:"
+msgstr ""
+
+#: static/src/partials/layout/header.html:55
+#: static/src/partials/profile/profile-logged-out.html:162
+#: static/src/partials/profile/profile-logged-out.html:3
+#: static/src/partials/profile/profile-logged-out.html:41
+msgid "Sign in"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:54
+msgid "Sign in with Facebook"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:52
+msgid "Sign in with Google"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:56
+msgid "Sign in with Twitter"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:21
+msgid "Sign in with your username and password:"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:10
+msgid "Sign in with {{data.provider.name}}"
+msgstr ""
+
+#: static/src/partials/layout/header.html:50
+msgid "Sign out"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:16
+msgid "Single-line text"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:172
+#: static/src/partials/profile/profile-logged-in.html:202
+msgid "Someone comments on a forum thread that I created:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:179
+#: static/src/partials/profile/profile-logged-in.html:206
+msgid "Someone comments on a forum thread that I have commented on:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:158
+#: static/src/partials/profile/profile-logged-in.html:194
+msgid "Someone comments on a mission that I created:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:165
+#: static/src/partials/profile/profile-logged-in.html:198
+msgid "Someone comments on a mission that I have commented on:"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:151
+#: static/src/partials/profile/profile-logged-in.html:190
+msgid "Someone posts to a mission that I created:"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:32
+#: static/src/partials/admin/admin-filters.html:68
+msgid "Sorry! I can't add a duplicate tag:"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:34
+#: static/src/partials/admin/admin-filters.html:70
+msgid "Sorry! This tag term is empty."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:33
+#: static/src/partials/admin/admin-filters.html:69
+msgid "Sorry! This tag term is invalid — spaces?"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:33
+msgid "Sorry, there was a problem when trying to post your comment."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:29
+msgid "Sorry, there was a problem with the API with {{data.provider.name}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:25
+msgid ""
+"Sorry, there was a problem with the authorisation with {{data.provider."
+"name}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:31
+msgid ""
+"Sorry, there was a problem with the connection with {{data.provider.name}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:23
+msgid ""
+"Sorry, there was a problem with the permissions with {{data.provider.name}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:27
+msgid "Sorry, there was a problem with the rate with {{data.provider.name}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:21
+msgid ""
+"Sorry, you have posted already the same content! You may need to edit it "
+"before posting."
+msgstr ""
+
+#: static/src/partials/admin/admin.html:14
+msgid "Sorry, you need administrator access to view this page."
+msgstr ""
+
+#: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:10
+msgid "Sound"
+msgstr ""
+
+#: static/src/partials/projects/create.html:19
+#: static/src/partials/projects/projects.html:27
+msgid "Spot-it"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:13
+msgid "Stage selection"
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:15
+msgid "Starter"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-users.html:15
+#: static/src/partials/projects/projects-sidebar.html:50
+msgid "Status"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-answers-page.html:10
+msgid "Submission administration"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:9
+msgid "Submission composition"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:23
+msgid "Submission limit"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/challenge-edit-menu.html:4
+msgid "Submissions"
+msgstr ""
+
+#: static/src/partials/comments.html:18
+msgid "Submit"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:29
+msgid "Submitted"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:10
+msgid "Tag-term"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:15
+#: static/src/partials/admin/admin.html:5
+msgid "Tags"
+msgstr ""
+
+#: static/src/partials/project/blocks/project-metadata.html:8
+msgid "Tags:"
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-details-page.html:47
+msgid "Text:"
+msgstr ""
+
+#: static/src/partials/admin/admin-texts.html:9
+#: static/src/partials/admin/admin.html:6
+msgid "Texts"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:13
+msgid "The site will be undergoing routine maintenance today, {{DATE}}."
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:14
+msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:36
+#: static/src/partials/admin/admin-filters.html:73
+msgid "The tag term is not currently valid — spaces?"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:55
+msgid ""
+"This mission has now a winner! See <a href=\"\" data-ui-sref=\"project.view."
+"challenge\">all ideas</a>."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:33
+msgid "This mission is now voting the submitted ideas!"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:62
+msgid "This mission is waiting for the winner decision!"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:24
+msgid ""
+"This project is currently <b>closed</b>.  Therefore, you can <a href=\"\" "
+"data-ui-sref=\"project.edit.home\">edit it</a>, but participants cannot "
+"access it.  Click on “Open project” to make the project public."
+msgstr ""
+
+#: static/src/partials/project/edit/project-edit-outline-page.html:35
+msgid ""
+"This project is currently <b>closed</b>. Therefore, you can edit it, but "
+"participants cannot access it.  Click on “Open project” to make the project "
+"public."
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:15
+#: static/src/partials/project/edit/project-edit-open-page.html:12
+msgid ""
+"This project is currently <b>open</b>. Therefore, participants can join and "
+"browse it.  However, you cannot edit it."
+msgstr ""
+
+#: static/src/partials/project/view/home/project-view-details-page.html:6
+#: static/src/partials/project/view/home/project-view-home-page.html:6
+msgid "This project is still being edited by its author."
+msgstr ""
+
+#: static/src/partials/forum/forum-node-list.html:14
+msgid "Thread"
+msgstr ""
+
+#: static/src/partials/forum/forum-list.html:9
+msgid "Threads"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:11
+#: static/src/partials/project/view/senseit/data-table-senseit.html:4
+#: static/src/partials/project/view/senseit/senseit-data-map.html:4
+msgid "Title"
+msgstr ""
+
+#: static/src/partials/forum/forum-list-category.html:25
+#: static/src/partials/forum/forum-list-forum.html:15
+#: static/src/partials/forum/forum-node-new-thread.html:6
+#: static/src/partials/project/blocks/project-title-edit.html:40
+#: static/src/partials/project/edit/project-edit-details-page.html:42
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:24
+#: static/src/partials/projects/create.html:117
+msgid "Title:"
+msgstr ""
+
+#: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:11
+msgid ""
+"To configure this Win-it mission, you need to configure the fields that will "
+"be used by participants to create their answers."
+msgstr ""
+
+#: static/src/partials/project/view/senseit/data-table-senseit.html:40
+msgid "Toggle plot"
+msgstr ""
+
+#: static/src/partials/projects/projects.html:6
+msgid ""
+"Try <a href=\"\" data-ui-sref=\"home({filter: 'all'})\">selecting all "
+"missions</a>."
+msgstr ""
+
+#: static/src/partials/projects/projects.html:7
+msgid ""
+"Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
+"null})\">without search conditions</a>."
+msgstr ""
+
+#: static/src/partials/profile/profile-provider-item.html:8
+msgid "Unlink {{providerName}} account"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:15
+msgid ""
+"Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
+"Twitter</a>."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:4
+msgid "Upload"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:17
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:41
+msgid "Upload image"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:16
+msgid "Upload new image"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:10
+msgid "Upload picture"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:42
+msgid "Uploading…"
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-users.html:9
+msgid "User"
+msgstr ""
+
+#: static/src/partials/profile/profile-view.html:2
+msgid "User profile: {{profile.username}}"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:5
+msgid "Username"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:47
+#: static/src/partials/profile/profile-logged-in.html:55
+#: static/src/partials/profile/profile-logged-out.html:25
+#: static/src/partials/profile/profile-logged-out.html:69
+#: static/src/partials/profile/profile-view.html:44
+msgid "Username:"
+msgstr ""
+
+#: static/src/partials/admin/admin.html:3
+msgid "Users"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:20
+msgid "Users logged in"
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-out.html:112
+#: static/src/partials/profile/profile-logged-out.html:150
+msgid "Verify yourself:"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar.html:9
+msgid "View"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:26
+#: static/src/partials/project/view/senseit/data-table-senseit.html:10
+#: static/src/partials/project/view/senseit/senseit-data-map.html:10
+msgid "Votes"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-project-data.html:6
+#: static/src/partials/projects/projects.html:38
+msgid "Voting"
+msgstr ""
+
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:17
+msgid "Voting stage"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:17
+msgid "Weather-it missions"
+msgstr ""
+
+#: static/src/partials/projects/create.html:39
+#: static/src/partials/projects/projects.html:28
+msgid "Win-it"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:3
+msgid "Winner"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:17
+#: static/src/partials/profile/profile-logged-in.html:152
+#: static/src/partials/profile/profile-logged-in.html:159
+#: static/src/partials/profile/profile-logged-in.html:166
+#: static/src/partials/profile/profile-logged-in.html:173
+#: static/src/partials/profile/profile-logged-in.html:180
+#: static/src/partials/profile/profile-logged-in.html:93
+#: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:27
+msgid "Yes"
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:65
+msgid "You can create up to {{projectData.project.activity.maxAnswers}} ideas."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:62
+msgid ""
+"You have created the maximum number of allowed ideas: {{projectData.project."
+"activity.maxAnswers}}."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:7
+msgid "You have not linked a {{data.provider.name}} account yet."
+msgstr ""
+
+#: static/src/partials/profile/profile-project-list.html:15
+msgid ""
+"You havenʼt joined a project yet.  You can browse <a href=\"\" data-ui-sref="
+"\"home\">existing projects</a> to find interesting ones, or <a href=\"\" "
+"data-ui-sref=\"create\">create</a> your own."
+msgstr ""
+
+#: static/src/partials/project/admin/project-admin-home-page.html:5
+msgid "You need administrator rights to access this page."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:48
+msgid ""
+"You need to <a data-ng-click=\"openIdService.loginAndComeBack()\">sign in</"
+"a> to vote for ideas."
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:2
+msgid ""
+"You need to <a href=\"\" data-ng-click=\"close(data.provider.login)\">sign "
+"in</a> before posting on {{data.provider.name}}."
+msgstr ""
+
+#: static/src/partials/project/view/home/project-view-home-page.html:13
+msgid ""
+"You need to <a href=\"\" data-ng-click=\"openIdService."
+"loginAndComeBack()\">sign in</a> before you can participate in projects."
+msgstr ""
+
+#: static/src/partials/projects/create.html:127
+msgid ""
+"You need to <a href=\"\" data-ng-click=\"openIdService."
+"loginAndComeBack()\">sign in</a> in order to create your own projects."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:29
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:17
+msgid ""
+"You need to <a href=\"\" data-ng-click=\"openIdService."
+"loginAndComeBack()\">sign in</a> to post ideas."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:13
+msgid ""
+"You need to <a href=\"\" data-ng-click=\"openIdService."
+"loginAndComeBack()\">sign in</a> to upload images to this mission."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/project-view-spotit-upload.html:18
+msgid ""
+"You need to <a href=\"\" data-ui-sref=\"project.view.home\">join this "
+"mission</a> to upload images."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:25
+#: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:13
+msgid "You need to join this project to post ideas."
+msgstr ""
+
+#: static/src/partials/project/view/challenge/challenge-view-outline.html:45
+msgid "You need to join this project to vote for ideas."
+msgstr ""
+
+#: static/src/partials/profile/profile-logged-in.html:2
+msgid "Your profile page"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:6
+msgid "email"
+msgstr ""
+
+#: static/src/partials/layout/header.html:5
+msgid "nQuire-it home page"
+msgstr ""
+
+#: static/src/index.html:8
+msgid "nQuire-it — join missions to explore your world"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:16
+msgid "{{MISSION}} missions"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:26
+msgid "{{feed.count}} user is online"
+msgid_plural "{{feed.count}} users are online"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/forum/forum-node-new-thread.html:1
+msgid "{{forum.node.title}}: New thread"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:3
+msgid "{{projectData.data.data}} image"
+msgid_plural "{{projectData.data.data}} images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:2
+msgid "{{projectData.data.members}} member"
+msgid_plural "{{projectData.data.members}} members"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/profile/profile-logged-out.html:48
+msgid "…or sign in using one of the following identity providers:"
+msgstr ""
