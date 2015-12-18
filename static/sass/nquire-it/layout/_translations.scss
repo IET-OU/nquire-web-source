@@ -20,12 +20,13 @@
   .sidebar-right,
   .project-item .project-item-text-container .project-item-author {
     letter-spacing: -0.02em;
-    word-spacing: -0.015em;
+    word-spacing: -0.017em;
   }
 
-  #header #logo-container {
-    letter-spacing: 0;
-    word-spacing: 0;
+  #header #header-content #logo-container p {
+    letter-spacing: -0.025em;
+    font-size: 21px;
+    margin-top: 4px;
   }
 
   #header #header-content #header-right-panel #header-top-box-container #header-menu a {
