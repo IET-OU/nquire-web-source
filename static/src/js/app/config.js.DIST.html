@@ -1,0 +1,31 @@
+'use strict';
+
+/*!
+  Application configuration - copy & rename me to "config.js"
+
+  <SCRIPT> (please leave me!)
+*/
+
+angular.module('senseItWeb').constant('senseItConfig', {
+
+  // REMOVE ME - just for translation purposes!
+  langs_translate: [
+    "{{ 'English' | translate }}",
+    "{{ 'Greek' | translate }}",
+    "{{ 'Spanish' | translate }}",
+    "{{ 'French' | translate }}",
+    "{{ 'Greek schools missions' | translate }}"
+  ],
+  // The list to appear in the language switcher.
+  langs: {
+    en: "English",
+    el: "Greek"
+  },
+  lang_url_regex: /(\/approval)?\/(el|en)/,
+  // Position of switcher: false, "top" or "bottom".
+  lang_switch: "bottom",
+  base_url: "/",
+  // Show custom filters? Set false for now.
+  custom_filters: false
+
+});

@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,19 +9,19 @@
     <![endif]-->
 
 
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic,500italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/font-awesome.css" type='text/css'>
-    <link rel="stylesheet" href="css/textAngular.min.css" type='text/css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic,500italic'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/textAngular.min.css">
 
     <!--[if gt IE 9]><!-->
-    <link rel="stylesheet" href="css/nquire-it-bootstrap.css" type='text/css'>
+    <link rel="stylesheet" href="css/nquire-it-bootstrap.css">
     <!--<![endif]-->
     <!--[if lt IE 10]>
-    <link rel="stylesheet" href="css/nquire-it-bootstrap-ie9.css" type='text/css'>
+    <link rel="stylesheet" href="css/nquire-it-bootstrap-ie9.css">
     <![endif]-->
 
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization&amp;sensor=true"></script>
 
     <script src="js/libs/jquery-2.1.0.min.js"></script>
     <script src="js/libs/bootstrap.js"></script>
@@ -49,11 +48,8 @@
     <script src="js/helpers/maprenderer.js"></script>
 
     <script src="js/app/app.js"></script>
+    <script src="js/app/config.js"></script>
     <script src="js/app/translations.js"></script>
-
-    <script>
-
-    </script>
 
     <script src="js/app/services/services-module.js"></script>
     <script src="js/app/services/rest-service.js"></script>
@@ -170,10 +166,10 @@
     <script src="js/app/controllers/admin/admin-controller.js"></script>
     <script src="js/app/controllers/admin/admin-users-controller.js"></script>
     <script src="js/app/controllers/admin/admin-projects-controller.js"></script>
+    <script src="js/app/controllers/admin/admin-filters-controller.js"></script>
     <script src="js/app/controllers/admin/admin-texts-controller.js"></script>
     <script src="js/app/controllers/admin/admin-texts-item-controller.js"></script>
     <script src="js/app/controllers/admin/admin-reported-controller.js"></script>
-
 
 
 </head>
@@ -200,8 +196,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="main" data-ng-controller="MainCtrl">
         <div id="header" data-ng-include="'partials/layout/header.html'" role="banner"></div>
 
-        <div id="site-message" role="note" data-ng-if="txt.siteMessage">
-          <div data-ng-bind-html="txt.siteMessage"></div>
+        <div id="site-message" role="note"
+             data-ng-if="txt.siteMessage" data-ng-bind-html="txt.siteMessage">
         </div>
 
         <div class="main-content-section" role="main">

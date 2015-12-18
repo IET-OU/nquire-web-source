@@ -9,6 +9,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     $("html").attr({
       "data-debug": $scope.debug,
       "data-approval": $scope.approval,
+      "data-lang_switch": $scope.cfg.lang_switch,
       "data-lang_ui": $scope.activeLang
     });
 
@@ -31,11 +32,28 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     });
 
 
+    RestService.get('api/filter').then(function (data) {
+        // Enable editing via the admin UI.
+        var it, item, key
+          , filters = {};
+        for (it in data) {
+            item = data[ it ];
+            key = "_idx_" + item.id;
+            filters[ key ]= item;
+            filters[ key ]._idx = key;
+            filters[ key ].active = ! item.label.match(/DISABLE/)
+        }
+        $scope.filters = filters;
+
+        $scope.log("Filters: ", $scope.filters);
+    });
+
+
     // I18n / translation [Bug: #3]
     function initTranslation($scope, $location, gettextCatalog) {
         //http://nquire/el#/home?kw=climate&debug=1
         //Was: location.pathname.match(/^(\/approval)?\/(el|en)/)
-        var m_lang = $location.absUrl().match($scope.lang_url_regex);
+        var m_lang = $location.absUrl().match($scope.cfg.lang_url_regex);
 
         $scope.activeLang = m_lang ? m_lang[ 2 ] : 'en';
 
@@ -44,7 +62,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         }
 
         // navigator.languages?
-        $scope.log("Lang:", m_lang, $location.absUrl(), angular.version);
+        $scope.log("Lang:", $scope.cfg, m_lang, $location.absUrl(), angular.version);
     }
 
 

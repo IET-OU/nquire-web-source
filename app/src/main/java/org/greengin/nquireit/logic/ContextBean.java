@@ -89,6 +89,9 @@ public class ContextBean implements InitializingBean {
     @Getter
     RoleDao roleDao;
 
+    @Autowired
+    @Getter
+    FilterDao filterDao;
 
     @Override
     public void afterPropertiesSet() throws Exception {

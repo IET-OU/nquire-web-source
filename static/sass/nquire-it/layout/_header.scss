@@ -83,6 +83,12 @@ div#header {
     }
   }
 }
+[ data-lang_switch = top ] #header {
+  // Above -- height: 145px;
+  //Was: height: 170px;
+}
+
+
 
 // Accessibility fixes [Bug: #1]
 ::-webkit-input-placeholder {
@@ -101,9 +107,34 @@ div#header {
 
 
 // Internationalization/ localization/ I18n / translation [Bug: #3]
-#footer #lang,
-#header-lang {
-  margin: 5px 0;
+#footer .lang-switch,
+#header .lang-switch {
+  clear: both;
+  //margin: 5px 0;
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-size: 1.05em;
+    min-width: 7em;
+    border: 1px solid $color-header-search-box;
+    border-radius: 0;
+    background: #fff;
+    padding: 3px 16px;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+    top: -8px;
+    margin-left: 16px;
+
+    option {
+      //font-size: 1.5em;
+      //padding: 3px 10px;
+    }
+  }
 
   a {
     display: inline-block;
@@ -119,8 +150,16 @@ div#header {
     }
   }
 }
-#footer #lang {
-  //text-align: right;
+#XX-header .lang-switch {
+  position: absolute;
+  right: -10px;
+  // Space for the "logged in" block!
+  top: 128px;
+  //Was: top: 90px;
+
+  @media (max-width: 605px) {
+    //Was: top: 108px;
+  }
 }
 
 
@@ -138,7 +177,6 @@ div#header {
     margin: .4em 0;
   }
 }
-[ data-site-message ] div#header,
-[ data-approval ] div#header {
+[ data-site-message ] div#header {
   border-bottom: 0;
 }

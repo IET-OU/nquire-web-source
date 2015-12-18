@@ -10,6 +10,7 @@ import org.greengin.nquireit.logic.admin.ProjectFeaturedRequest;
 import org.greengin.nquireit.logic.admin.ReportedContent;
 import org.greengin.nquireit.logic.admin.UserAdminRequest;
 import org.greengin.nquireit.logic.base.TextRequest;
+import org.greengin.nquireit.logic.base.FilterRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -88,10 +89,19 @@ public class AdminController {
     @RequestMapping(value = "/text", method = RequestMethod.PUT)
     @ResponseBody
     @ResponseView(value = Views.UserProfileData.class)
-    public Boolean setFeatured(@RequestBody TextRequest data, HttpServletRequest request) {
+    public Boolean setText(@RequestBody TextRequest data, HttpServletRequest request) {
         AdminActions manager = createAdminManager(request);
         return manager.setText(data.getKey(), data.getContent());
     }
+
+    @RequestMapping(value = "/filter", method = RequestMethod.PUT)
+    @ResponseBody
+    @ResponseView(value = Views.UserProfileData.class)
+    public Boolean setFilter(@RequestBody FilterRequest data, HttpServletRequest request) {
+        AdminActions manager = createAdminManager(request);
+        return manager.setFilter(data.getLabel(), data.getQuery(), data.getId());
+    }
+
 
     @RequestMapping(value = "/model/update", method = RequestMethod.POST)
     @ResponseBody

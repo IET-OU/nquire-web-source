@@ -33,6 +33,7 @@
 
 
   // Translate help/about pages [Bug: #6]
+  .admin-page-filters,
   .admin-page-texts {
     & > button {
       float: right;
@@ -66,5 +67,24 @@
         }
       }
     }
+  }
+
+  .admin-page-filters tr.row-add-form {
+    display: table-row;
+
+    .key {
+      width: 248px;
+    }
+    .value {
+      width: 72%;
+    }
+  }
+
+
+  &.error-unauthorized {
+    text-align: center;
+    margin: 1.2em 0;
+    //Or, font-size: 1.6rem;
+    font-size: 1.15em;
   }
 }
