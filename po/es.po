@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2015-12-20 16:13+0000\n"
+"Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.2\n"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:14
 msgid ""
@@ -42,79 +44,99 @@ msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
+" para agregar comentarios a esta serie de datos."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
+" para comentar sobre esta misión."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
+" para comentar sobre esta imagen."
 
 #: static/src/partials/forum/forum-node-list.html:8
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
+" para agregar nuevos temas de discusión."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
+" para responder mensajes sobre este tema."
 
 #: static/src/partials/forum/forum-node-list.html:1
 msgid ""
 "<a href=\"\" data-ui-sref=\"forum.list\">Forum</a> ▸ {{forum.node.title}}"
 msgstr ""
+"<a href=\"\" data-ui-sref=\"forum.list\">Foro</a> ▸ {{forum.node.title}}"
 
 #: static/src/partials/project/comments/posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about it."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Unirse</a> a esta misión "
+"para discutir sobre ella."
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this data series."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Unirse</a> a esta misión "
+"para discutir sobre esta serie de datos."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:2
 msgid ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to "
 "discuss about this picture."
 msgstr ""
+"<a href=\"\" data-ui-sref=\"project.view.home\">Unirse</a> a esta misión "
+"para discutir sobre esta imagen."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
 msgid "<b>Explanation:</b> {{outcome.explanation}}"
-msgstr ""
+msgstr "<b>Explicación:</b> {{outcome.explanation}}"
 
 #: static/src/partials/project/blocks/project-menu.html:10
 msgid "<b>Sense-it</b> mission"
-msgstr ""
+msgstr "Misión <b>Sense-it</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:11
 msgid "<b>Spot-it</b> mission"
-msgstr ""
+msgstr "Misión <b>Spot-it</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:12
 msgid "<b>Win-it</b> mission"
-msgstr ""
+msgstr "Misión <b>Win-it</b>"
 
 #: static/src/partials/project/view/senseit/senseit-project-data.html:7
+#, fuzzy
 msgid "<b>{{projectData.data.data}}</b> series"
-msgstr ""
+msgstr "<b>{{projectData.data.data}}</b> series"
 
 #: static/src/partials/comments.html:41
 msgid ""
 "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
 "span> said:"
 msgstr ""
+"<span class=\"comment-author-username\" siw-user-link=\"comment.author\""
+"></span> dijo:"
 
 #: static/src/partials/project/blocks/project-metadata.html:6
 #: static/src/partials/project/blocks/project-title-edit.html:25
@@ -122,116 +144,121 @@ msgid ""
 "<span class=\"project-section-description-text-mission\">Mission:</span> "
 "{{projectData.project.title}}"
 msgstr ""
+"<span class=\"project-section-description-text-mission\">Misión:</span> "
+"{{projectData.project.title}}"
 
 #: static/src/partials/projects/projects-sidebar.html:37
 msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
-msgstr ""
+msgstr "Misiones <span class=\"sidebar-type-senseit\">Sense-it</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:41
 msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
-msgstr ""
+msgstr "Misiones <span class=\"sidebar-type-spotit\">Spot-it</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:45
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
-msgstr ""
+msgstr "Misiones <span class=\"sidebar-type-winit\">Win-it</span>"
 
 #: static/src/partials/projects/projects.html:53
 msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
-msgstr ""
+msgstr "Una misión <span class=\"project-item-banner-type\">Sense-it</span>"
 
 #: static/src/partials/projects/projects.html:54
 msgid "A <span class=\"project-item-banner-type\">Spot-it</span> mission"
-msgstr ""
+msgstr "Una misión <span class=\"project-item-banner-type\">Spot-it</span>"
 
 #: static/src/partials/projects/projects.html:55
 msgid "A <span class=\"project-item-banner-type\">Win-it</span> mission"
-msgstr ""
+msgstr "Una misión <span class=\"project-item-banner-type\">Win-it</span>"
 
 #: static/src/partials/projects/projects.html:44
 msgid ""
 "A mission created by <span data-siw-user-link=\"projectData.project.author"
 "\"></span>."
 msgstr ""
+"Una misión creada por <span data-siw-user-link=\"projectData.project.author\""
+"></span>."
 
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:9
 msgid "Accelerometer"
-msgstr ""
+msgstr "Acelerómetro"
 
 #: static/src/partials/admin/admin-reported.html:19
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: static/src/partials/admin/admin-filters.html:76
 #: static/src/partials/admin/admin-texts.html:23
 msgid "Add"
-msgstr ""
+msgstr "Agregar"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:62
 msgid "Add block"
-msgstr ""
+msgstr "Agregar bloque"
 
 #: static/src/partials/forum/forum-list-category.html:14
 msgid "Add category"
-msgstr ""
+msgstr "Agregar categoría"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:33
 msgid "Add field"
-msgstr ""
+msgstr "Agregar campo"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
 msgid "Add sensor input"
-msgstr ""
+msgstr "Agregar lectura de sensor"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:50
 msgid "Add transformation"
-msgstr ""
+msgstr "Agregar transformación"
 
 #: static/src/partials/project/blocks/project-menu.html:4
 msgid "Admin"
-msgstr ""
+msgstr "Administración"
 
 #: static/src/partials/admin/admin.html:2
 msgid "Admin menu"
-msgstr ""
+msgstr "Menú administración"
 
 #: static/src/partials/admin/admin-users.html:7
 #: static/src/partials/layout/header.html:19
 msgid "Administrator"
-msgstr ""
+msgstr "Administrador"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:5
 msgid "All answers"
-msgstr ""
+msgstr "Todas las respuestas"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-outcome.html:4
 msgid "All ideas"
-msgstr ""
+msgstr "Todas las ideas"
 
 #: static/src/partials/projects/projects-sidebar.html:14
 #: static/src/partials/projects/projects-sidebar.html:54
 msgid "All missions"
-msgstr ""
+msgstr "Todas las misiones"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:16
 msgid "Ambient temperature"
-msgstr ""
+msgstr "Temperatura ambiente"
 
 #: static/src/partials/projects/projects-sidebar.html:33
 msgid "Any type"
-msgstr ""
+msgstr "Cualquier tipo"
 
 #: static/src/partials/admin/admin-reported.html:30
 msgid "Approve"
-msgstr ""
+msgstr "Aprobar"
 
 #: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1
+#, fuzzy
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
-msgstr ""
+msgstr "¿Seguro quiere eliminar estos datos de <b>{{data.item.title}}</b>?"
 
 #: static/src/partials/admin/admin-projects.html:12
 #: static/src/partials/admin/admin-reported.html:16
@@ -239,11 +266,11 @@ msgstr ""
 #: static/src/partials/project/view/senseit/data-table-senseit.html:5
 #: static/src/partials/project/view/senseit/senseit-data-map.html:5
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: static/src/partials/social/social-post-dialog.html:16
 msgid "Awaiting response from {{data.provider.name}}…"
-msgstr ""
+msgstr "Esperando respuesta de {{data.provider.name}}…"
 
 #: static/src/partials/admin/admin-filters.html:47
 #: static/src/partials/admin/admin-projects.html:42
@@ -278,114 +305,119 @@ msgstr ""
 #: static/src/partials/projects/create.html:130
 #: static/src/partials/widgets/modal-template.html:10
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: static/src/partials/social/social-post-dialog.html:57
+#, fuzzy
 msgid "Caption"
-msgstr ""
+msgstr "Mensaje"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:3
 msgid "Challenge"
-msgstr ""
+msgstr "Desafío"
 
 #: static/src/partials/profile/profile-logged-in.html:132
 #: static/src/partials/profile/profile-logged-in.html:95
 msgid "Change password"
-msgstr ""
+msgstr "Cambiar contraseña"
 
 #: static/src/partials/layout/header.html:39
 msgid "Choose language"
-msgstr ""
+msgstr "Elegir idioma"
 
 #: static/src/partials/layout/footer.html:6
 msgid "Choose language:"
-msgstr ""
+msgstr "Elegir idioma:"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:42
 msgid ""
 "Click <a href=\"\" data-ui-sref=\"project.view.challenge\">here</a> to vote "
 "for your favourite!"
 msgstr ""
+"Clic <a href=\"\" data-ui-sref=\"project.view.challenge\">acá</a> para votar "
+"el favorito!"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
 msgid "Close project"
-msgstr ""
+msgstr "Cerrar proyecto"
 
 #: static/src/partials/admin/admin-projects.html:39
+#, fuzzy
 msgid "Comma separated tags"
-msgstr ""
+msgstr "Etiquetas separadas por comas"
 
 #: static/src/partials/forum/forum-thread.html:56
+#, fuzzy
 msgid "Comment"
-msgstr ""
+msgstr "Comentario"
 
 #: static/src/partials/comments.html:14
 #: static/src/partials/forum/forum-thread.html:55
 msgid "Comment:"
-msgstr ""
+msgstr "Comentario:"
 
 #: static/src/partials/admin/admin-texts.html:10
 msgid "Content"
-msgstr ""
+msgstr "Contenido"
 
 #: static/src/partials/admin/admin-reported.html:17
 msgid "Content id"
-msgstr ""
+msgstr "id de contenido"
 
 #: static/src/partials/layout/header.html:18
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
 #: static/src/partials/projects/create.html:118
 #: static/src/partials/projects/create.html:121
 msgid "Create"
-msgstr ""
+msgstr "Crear"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:66
 msgid "Create new idea"
-msgstr ""
+msgstr "Crear nueva idea"
 
 #: static/src/partials/projects/create.html:11
 msgid "Create your own <b>Sense-it</b> mission"
-msgstr ""
+msgstr "Crear una misión <b>Sense-it</b> propia"
 
 #: static/src/partials/projects/create.html:30
 msgid "Create your own <b>Spot-it</b> mission"
-msgstr ""
+msgstr "Crear una misión <b>Spot-it</b> propia"
 
 #: static/src/partials/projects/create.html:51
 msgid "Create your own <b>Win-it</b> mission"
-msgstr ""
+msgstr "Crear una misión <b>Win-it</b> propia"
 
 #: static/src/partials/widgets/file-select-widget.html:1
 msgid "Current file: {{original}}"
-msgstr ""
+msgstr "Archivo actual: {{original}}"
 
 #: static/src/partials/profile/profile-logged-in.html:103
 msgid "Current password:"
-msgstr ""
+msgstr "Contraseña actual:"
 
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:3
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:3
 msgid "Data"
-msgstr ""
+msgstr "Datos"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:10
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:4
 msgid "Data collection"
-msgstr ""
+msgstr "Recolección de datos"
 
 #: static/src/partials/project/view/data/project-view-data-table.html:5
 msgid "Data list"
-msgstr ""
+msgstr "Lista de datos"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:7
 msgid "Data processing"
-msgstr ""
+msgstr "Procesamiento de datos"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:6
 #: static/src/partials/project/view/senseit/senseit-data-map.html:6
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: static/src/partials/admin/admin-filters.html:46
 #: static/src/partials/admin/admin-reported.html:29
@@ -396,40 +428,42 @@ msgstr ""
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: static/src/partials/widgets/file-select-widget.html:10
 msgid "Delete file"
-msgstr ""
+msgstr "Eliminar archivo"
 
 #: static/src/partials/project/edit/project-edit-outline-page.html:39
 msgid "Delete project"
-msgstr ""
+msgstr "Eliminar proyecto"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
 msgid ""
 "Delete sensor\n"
 "            input"
 msgstr ""
+"Eliminar lectura\n"
+"            sensor"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:23
 msgid "Delete series"
-msgstr ""
+msgstr "Eliminar series"
 
 #: static/src/partials/forum/forum-list-forum.html:20
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: static/src/partials/profile/profile-logged-in.html:255
 msgid "Description of myself:"
-msgstr ""
+msgstr "Descripción mía:"
 
 #: static/src/partials/forum/forum-list-category.html:29
 #: static/src/partials/forum/forum-list-forum.html:19
 #: static/src/partials/profile/profile-logged-in.html:232
 #: static/src/partials/profile/profile-view.html:60
 msgid "Description:"
-msgstr ""
+msgstr "Descripción:"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:3
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:3
@@ -438,11 +472,11 @@ msgstr ""
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:2
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:2
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #: static/src/partials/project/view/data/project-view-data-table.html:9
 msgid "Download CSV"
-msgstr ""
+msgstr "Descargar CSV"
 
 #: static/src/partials/admin/admin-filters.html:42
 #: static/src/partials/admin/admin-texts.html:45
@@ -465,243 +499,265 @@ msgstr ""
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:35
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:31
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: static/src/partials/admin/admin-projects.html:34
 msgid "Edit tags"
-msgstr ""
+msgstr "Editar etiquetas"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:22
 #: static/src/partials/project/view/spotit/data-item-spotit.html:21
 msgid "Edit title"
-msgstr ""
+msgstr "Editar título"
 
 #: static/src/partials/social/social-post-dialog.html:62
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: static/src/partials/profile/profile-logged-in.html:140
 msgid "Email notifications"
-msgstr ""
+msgstr "Notificaciones por email"
 
 #: static/src/partials/profile/profile-logged-in.html:68
 #: static/src/partials/profile/profile-logged-in.html:77
 #: static/src/partials/profile/profile-logged-out.html:141
 #: static/src/partials/profile/profile-logged-out.html:80
 msgid "Email:"
-msgstr ""
+msgstr "Email:"
 
 #: static/src/partials/project/view/challenge/challenge-project-data.html:7
 #: static/src/partials/projects/projects.html:39
 msgid "Ended"
-msgstr ""
+msgstr "Finalizado"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:15
 msgid "Explanation:"
-msgstr ""
+msgstr "Explicación:"
 
 #: static/src/partials/projects/projects-sidebar.html:18
 msgid "Featured missions"
-msgstr ""
+msgstr "Misiones destacadas"
 
 #: static/src/partials/admin/admin-projects.html:14
 msgid "Featured?"
-msgstr ""
+msgstr "¿Destacada?"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:7
+#, fuzzy
 msgid "Field label:"
-msgstr ""
+msgstr "Etiqueta de campo:"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
+#, fuzzy
 msgid "Field type:"
-msgstr ""
+msgstr "Tipo de campo:"
 
 #: static/src/partials/forum/forum-list.html:7
 #: static/src/partials/forum/forum-thread.html:2
 msgid "Forum"
-msgstr ""
+msgstr "Foro"
 
 #: static/src/partials/forum/forum-list.html:1
 #: static/src/partials/layout/header.html:16
 msgid "Forums"
-msgstr ""
+msgstr "Foros"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
 msgid "Geolocated data:"
-msgstr ""
+msgstr "Datos geolocalizados:"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
 msgid "Go back to the list"
-msgstr ""
+msgstr "Volver a la lista"
 
 #: static/src/partials/admin/admin-users.html:22
+#, fuzzy
 msgid "Grant permission"
-msgstr ""
+msgstr "Otorgar permiso"
 
 #: static/src/js/app/config.js.DIST.html:18
 msgid "Greek schools missions"
-msgstr ""
+msgstr "Misiones de escuelas griegas"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:12
 msgid "Gyroscope"
-msgstr ""
+msgstr "Giróscopo"
 
 #: static/src/partials/layout/header.html:49
+#, fuzzy
 msgid ""
 "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
 "<br>you are signed in."
 msgstr ""
+"Hola, <a href=\"\" data-ui-sref=\"profile\""
+">{{status.profile.username}}</a>,<br>estás logueado."
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
+#, fuzzy
 msgid "Home"
-msgstr ""
+msgstr "Principal"
 
 #: static/src/partials/profile/profile-logged-out.html:42
 msgid "I forgot my password"
-msgstr ""
+msgstr "Olvidé mi contraseña"
 
 #: static/src/partials/profile/profile-logged-out.html:137
 msgid "I forgot my password:"
-msgstr ""
+msgstr "Olvidé mi contraseña:"
 
 #: static/src/partials/admin/admin-projects.html:10
 #: static/src/partials/admin/admin-users.html:4
 msgid "Id"
-msgstr ""
+msgstr "Id"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:4
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:3
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:2
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-vote.html:1
 msgid "Ideas"
-msgstr ""
+msgstr "Ideas"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:21
+#, fuzzy
 msgid "Ideas visibility"
-msgstr ""
+msgstr "Visibilidad de ideas"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:17
 #: static/src/partials/project/edit/project-edit-open-page.html:14
 msgid ""
 "If you need to edit this project, click on “Close project” to enable editing."
 msgstr ""
+"Para editar este proyecto, hacer clic en “Cerrar proyecto” para habilitar la "
+"edición."
 
 #: static/src/partials/profile/profile-logged-in.html:236
 #: static/src/partials/profile/profile-view.html:64
 msgid "Interests:"
-msgstr ""
+msgstr "Intereses:"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:18
 msgid "Join mission"
-msgstr ""
+msgstr "Unirse a esta misión"
 
 #: static/src/partials/project/blocks/project-menu.html:15
+#, fuzzy
 msgid "Joined"
-msgstr ""
+msgstr "Unido"
 
 #: static/src/partials/projects/projects-sidebar.html:58
+#, fuzzy
 msgid "Joined missions"
-msgstr ""
+msgstr "Misiones a las que se ha unido"
 
 #: static/src/partials/profile/profile-logged-in.html:293
+#, fuzzy
 msgid "Joined projects:"
-msgstr ""
+msgstr "Proyectos a los que se ha unido:"
 
 #: static/src/partials/admin/admin-filters.html:9
+#, fuzzy
 msgid "Label"
-msgstr ""
+msgstr "Rótulo"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:2
 msgid "Last picture"
-msgstr ""
+msgstr "Última imagen"
 
 #: static/src/partials/forum/forum-list.html:8
 #: static/src/partials/forum/forum-node-list.html:16
 msgid "Last post"
-msgstr ""
+msgstr "Último post"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:19
+#, fuzzy
 msgid "Leave mission"
-msgstr ""
+msgstr "Salir de la misión"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:15
 msgid "Light"
-msgstr ""
+msgstr "Luz"
 
 #: static/src/partials/social/social-post-dialog.html:51
 msgid "Link"
-msgstr ""
+msgstr "Enlace"
 
 #: static/src/partials/profile/profile-provider-item.html:14
+#, fuzzy
 msgid "Link with {{providerName}}"
-msgstr ""
+msgstr "Vincular con {{providerName}}"
 
 #: static/src/partials/profile/profile-logged-in.html:308
 msgid "Linked accounts"
-msgstr ""
+msgstr "Cuentas vinculadas"
 
 #: static/src/partials/layout/header.html:58
 #: static/src/partials/project/project.html:27
 msgid "Loading…"
-msgstr ""
+msgstr "Cargando…"
 
 #: static/src/partials/profile/profile-logged-in.html:228
 #: static/src/partials/profile/profile-logged-in.html:250
 #: static/src/partials/profile/profile-view.html:56
 msgid "Location:"
-msgstr ""
+msgstr "Ubicación:"
 
 #: static/src/partials/profile/profile-logged-in.html:43
 #: static/src/partials/profile/profile-view.html:40
+#, fuzzy
 msgid "Login information"
-msgstr ""
+msgstr "Información de logueo"
 
 #: static/src/partials/profile/profile-logged-in.html:3
+#, fuzzy
 msgid "Logout"
-msgstr ""
+msgstr "Desloguearse"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:11
 msgid "Magnetic field"
-msgstr ""
+msgstr "Campo magnético"
 
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:4
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:38
 msgid ""
 "Max answers per participant: {{projectData.project.activity.maxAnswers}}"
 msgstr ""
+"Cant máxima respuestas por participante: "
+"{{projectData.project.activity.maxAnswers}}"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:28
 msgid "Maximum answers per participant."
-msgstr ""
+msgstr "Máximo de respuestas por participante."
 
 #: static/src/partials/project/admin/project-admin-users.html:27
 msgid "Member"
-msgstr ""
+msgstr "Miembro"
 
 #: static/src/partials/forum/forum-node-new-thread.html:10
 msgid "Message:"
-msgstr ""
+msgstr "Mensaje:"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:12
 #: static/src/partials/project/edit/project-edit-open-page.html:10
 #: static/src/partials/project/edit/project-edit-outline-page.html:33
+#, fuzzy
 msgid "Mission administration"
-msgstr ""
+msgstr "Administrar misión"
 
 #: static/src/partials/project/blocks/project-metadata.html:18
 msgid ""
 "Mission created by <span siw-user-link=\"projectData.project.author\"></"
 "span>."
 msgstr ""
+"Misión creada por <span siw-user-link=\"projectData.project.author\"></span>."
 
 #: static/src/partials/project/edit/project-edit-details-page.html:8
 #: static/src/partials/project/view/home/project-view-details-page.html:14
 msgid "Mission details"
-msgstr ""
+msgstr "Detalles de la misión"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -709,60 +765,63 @@ msgid "Mission list teaser:"
 msgstr ""
 
 #: static/src/partials/project/view/home/project-view-home-page.html:25
+#, fuzzy
 msgid "Mission outline"
-msgstr ""
+msgstr "Descripción de la misión"
 
 #: static/src/partials/projects/projects-sidebar.html:29
 msgid "Mission type"
-msgstr ""
+msgstr "Tipo de misión"
 
 #: static/src/partials/projects/projects-sidebar.html:66
 msgid "Missions created by me"
-msgstr ""
+msgstr "Misiones creadas por mí"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:18
 msgid "Multiple-line formatted text"
-msgstr ""
+msgstr "Texto multi-línea"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:17
 msgid "Multiple-line plain text"
-msgstr ""
+msgstr "Texto plano multi-línea"
 
 #: static/src/partials/profile/profile-logged-in.html:282
 msgid ""
 "My <a data-ui-sref=\"profile-view({uid: status.profile.id})\">public "
 "profile</a>."
 msgstr ""
+"Mi <a data-ui-sref=\"profile-view({uid: status.profile.id})\">perfil "
+"público</a>."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:3
 msgid "My ideas"
-msgstr ""
+msgstr "Mis ideas"
 
 #: static/src/partials/profile/profile-logged-in.html:260
 msgid "My interests:"
-msgstr ""
+msgstr "Mis intereses:"
 
 #: static/src/partials/profile/profile-project-list.html:3
 msgid "My projects:"
-msgstr ""
+msgstr "Mis proyectos:"
 
 #: static/src/partials/profile/profile-logged-in.html:224
 #: static/src/partials/profile/profile-logged-in.html:245
 #: static/src/partials/profile/profile-view.html:52
 msgid "Name:"
-msgstr ""
+msgstr "Nombre:"
 
 #: static/src/partials/comments.html:9
 msgid "New comment"
-msgstr ""
+msgstr "Nuevo comentario"
 
 #: static/src/partials/forum/forum-list-forum.html:6
 msgid "New forum"
-msgstr ""
+msgstr "Nuevo foro"
 
 #: static/src/partials/profile/profile-logged-in.html:113
 msgid "New password:"
-msgstr ""
+msgstr "Nueva contraseña:"
 
 #: static/src/partials/admin/admin-users.html:21
 #: static/src/partials/profile/profile-logged-in.html:153
@@ -773,56 +832,60 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:94
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:26
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:9
 msgid "No answer has been selected yet."
-msgstr ""
+msgstr "Todavía no se seleccionó ninguna respuesta."
 
 #: static/src/partials/projects/projects.html:4
 msgid "No missions available at the moment."
-msgstr ""
+msgstr "No hay misiones disponibles al momento."
 
 #: static/src/partials/project/view/spotit/data-table-spotit.html:12
 msgid "No title"
-msgstr ""
+msgstr "Sin título"
 
 #: static/src/partials/projects/projects-sidebar.html:62
 msgid "Not joined missions"
-msgstr ""
+msgstr "Misiones a las que no se ha unido"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
 msgid "Only by others"
-msgstr ""
+msgstr "Sólo de otros"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:6
 msgid "Only mine"
-msgstr ""
+msgstr "Sólo mías"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:42
+#, fuzzy
 msgid "Open map"
-msgstr ""
+msgstr "Abrir mapa"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:27
 #: static/src/partials/project/edit/project-edit-outline-page.html:38
+#, fuzzy
 msgid "Open project"
-msgstr ""
+msgstr "Abrir proyecto"
 
 #: static/src/partials/admin/admin-projects.html:13
+#, fuzzy
 msgid "Open?"
-msgstr ""
+msgstr "¿Abrir?"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:13
 msgid "Orientation"
-msgstr ""
+msgstr "Orientación"
 
 #: static/src/partials/profile/profile-logged-in.html:278
 msgid "Other users can see about me:"
-msgstr ""
+msgstr "Lo que otros usuarios pueden ver de mí:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:18
+#, fuzzy
 msgid "Outcome stage"
-msgstr ""
+msgstr "Etapa de resultados"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:2
 #: static/src/partials/project/edit/senseit/senseit-edit-menu.html:2
@@ -830,24 +893,25 @@ msgstr ""
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:1
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:1
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:1
+#, fuzzy
 msgid "Outline"
-msgstr ""
+msgstr "Descripción"
 
 #: static/src/partials/project/edit/project-edit-outline-page.html:23
 msgid "Outline:"
-msgstr ""
+msgstr "Descripción:"
 
 #: static/src/partials/project/blocks/project-menu.html:3
 msgid "Participant"
-msgstr ""
+msgstr "Participante"
 
 #: static/src/partials/project/admin/project-admin-users.html:3
 msgid "Participants administration"
-msgstr ""
+msgstr "Administración de participantes"
 
 #: static/src/partials/profile/profile-logged-out.html:12
 msgid "Password reminder"
-msgstr ""
+msgstr "Recordatorio de contraseña"
 
 #: static/src/partials/profile/profile-logged-in.html:91
 msgid "Password set:"
