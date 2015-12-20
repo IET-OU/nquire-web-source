@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-20 16:13+0000\n"
+"PO-Revision-Date: 2015-12-20 19:41+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -920,80 +920,85 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-out.html:33
 #: static/src/partials/profile/profile-logged-out.html:91
 msgid "Password:"
-msgstr ""
+msgstr "Contraseña:"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:30
 #: static/src/partials/project/edit/project-edit-outline-page.html:42
 msgid "Please note that you cannot edit the project while it is open."
-msgstr ""
+msgstr "No es posible editar un proyecto mientras está abierto."
 
 #: static/src/partials/forum/forum-node-new-thread.html:15
 #: static/src/partials/forum/forum-thread.html:60
 msgid "Post"
-msgstr ""
+msgstr "Post"
 
 #: static/src/partials/forum/forum-thread.html:49
 msgid "Post comment"
-msgstr ""
+msgstr "Agregar comentario"
 
 #: static/src/partials/forum/forum-node-list.html:5
+#, fuzzy
 msgid "Post new thread"
-msgstr ""
+msgstr "Publicar nuevo tópico"
 
 #: static/src/partials/social/social-post-dialog.html:37
+#, fuzzy
 msgid ""
 "Post successful: <a href=\"{{data.result.url}}\" target=\"_blank\">{{data."
 "result.url}}</a>"
 msgstr ""
+"Post exitoso: <a href=\"{{data.result.url}}\" target=\"_blank\""
+">{{data.result.url}}</a>"
 
 #: static/src/partials/forum/forum-list.html:10
 msgid "Posts"
-msgstr ""
+msgstr "Posts"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:14
 msgid "Pressure"
-msgstr ""
+msgstr "Presión"
 
 #: static/src/partials/profile/profile-logged-in.html:24
 msgid "Profile image:"
-msgstr ""
+msgstr "Imagen del perfil:"
 
 #: static/src/partials/profile/profile-logged-in.html:218
 #: static/src/partials/profile/profile-view.html:50
 msgid "Profile information"
-msgstr ""
+msgstr "Información del perfil"
 
 #: static/src/partials/profile/profile-logged-in.html:289
 msgid "Profile information:"
-msgstr ""
+msgstr "Información del perfil:"
 
 #: static/src/partials/profile/profile-logged-in.html:273
 msgid "Profile visibility"
-msgstr ""
+msgstr "Visbilidad del perfil"
 
 #: static/src/partials/project/blocks/project-title-edit.html:11
 msgid "Project image:"
-msgstr ""
+msgstr "Imagen del proyecto:"
 
 #: static/src/partials/admin/admin.html:4
 msgid "Projects"
-msgstr ""
+msgstr "Proyectos"
 
 #: static/src/partials/profile/profile-project-list.html:14
 msgid "Projects Iʼve joined:"
-msgstr ""
+msgstr "Proyectos a los cuales me uní:"
 
 #: static/src/partials/profile/profile-logged-in.html:297
 msgid "Projects created by me:"
-msgstr ""
+msgstr "Proyectos creados por mí:"
 
 #: static/src/partials/profile/profile-view.html:14
 msgid "Projects created by {{profile.username}}:"
-msgstr ""
+msgstr "Proyectos creados por {{profile.username}}:"
 
 #: static/src/partials/profile/profile-view.html:25
+#, fuzzy
 msgid "Projects joined by {{profile.username}}"
-msgstr ""
+msgstr "Proyectos a los que se unión {{profile.username}}"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:16
 msgid "Proposal stage"
@@ -1001,57 +1006,57 @@ msgstr ""
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:12
 msgid "Recent forum posts"
-msgstr ""
+msgstr "Posts de foros recientes"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:3
 msgid "Recent mission comments"
-msgstr ""
+msgstr "Comentarios recientes"
 
 #: static/src/partials/profile/profile-logged-out.html:7
 msgid "Register"
-msgstr ""
+msgstr "Registrarse"
 
 #: static/src/partials/profile/profile-logged-out.html:127
 msgid "Register new account"
-msgstr ""
+msgstr "Registrar una nueva cuenta"
 
 #: static/src/partials/profile/profile-logged-out.html:65
 msgid "Register new account:"
-msgstr ""
+msgstr "Registrar una nueva cuenta:"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:17
 msgid "Relative humidity"
-msgstr ""
+msgstr "Humedad relativa"
 
 #: static/src/partials/admin/admin-users.html:18
 msgid "Remove permission"
-msgstr ""
+msgstr "Quitar permiso"
 
 #: static/src/partials/profile/profile-logged-in.html:122
 #: static/src/partials/profile/profile-logged-out.html:101
 msgid "Repeat password:"
-msgstr ""
+msgstr "Repetir contraseña:"
 
 #: static/src/partials/forum/forum-node-list.html:17
 msgid "Replies"
-msgstr ""
+msgstr "Respuestas"
 
 #: static/src/partials/admin/admin.html:7
 msgid "Reported content"
-msgstr ""
+msgstr "Contenido reportado"
 
 #: static/src/partials/admin/admin-reported.html:18
 msgid "Reports"
-msgstr ""
+msgstr "Reportes"
 
 #: static/src/partials/profile/profile-logged-out.html:128
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
 msgid "Reset"
-msgstr ""
+msgstr "Resetear"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:21
 msgid "Samples / second"
-msgstr ""
+msgstr "Muestras / segundo"
 
 #: static/src/partials/admin/admin-filters.html:45
 #: static/src/partials/admin/admin-projects.html:41
@@ -1078,28 +1083,31 @@ msgstr ""
 #: static/src/partials/project/view/senseit/data-table-senseit.html:32
 #: static/src/partials/project/view/spotit/data-item-spotit.html:41
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:23
 msgid "Save and continue"
-msgstr ""
+msgstr "Guardar y continuar"
 
 #: static/src/partials/layout/header.html:29
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: static/src/partials/layout/header.html:25
 #: static/src/partials/layout/header.html:26
 msgid "Search missions"
-msgstr ""
+msgstr "Buscar misiones"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:64
+#, fuzzy
 msgid "See <a href=\"\" data-ui-sref=\"project.view.challenge\">all ideas</a>"
 msgstr ""
+"Ver todas las ideas de <a href=\"\" data-ui-sref=\"project.view.challenge\""
+"></a>"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:4
 msgid "See all"
-msgstr ""
+msgstr "Ver todas"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:6
 msgid "See and edit your ideas for this mission here."
