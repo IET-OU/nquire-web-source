@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-20 19:41+0000\n"
+"PO-Revision-Date: 2015-12-21 16:56+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -1111,59 +1111,62 @@ msgstr "Ver todas"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:6
 msgid "See and edit your ideas for this mission here."
-msgstr ""
+msgstr "Ver y editar sus ideas para esta misión acá."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-vote.html:3
 msgid "See and vote all ideas submitted for this mission here."
-msgstr ""
+msgstr "Ver y votar todas las ideas enviadas a esta misión acá."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-outcome.html:6
 msgid "See the outcome of this mission here."
-msgstr ""
+msgstr "Ver acá el resultado de esta misión."
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:48
 msgid "Select"
-msgstr ""
+msgstr "Seleccionar"
 
 #: static/src/partials/project/blocks/project-title-edit.html:5
 msgid "Select image"
-msgstr ""
+msgstr "Elegir imagen"
 
 #: static/src/partials/profile/profile-logged-in.html:285
 msgid "Select what information other users can see about you:"
-msgstr ""
+msgstr "Elegir qué información quiero que los demás usuarios vean de mí:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:22
+#, fuzzy
 msgid "Select whether ideas are visible during the proposal stage."
-msgstr ""
+msgstr "Elegir su las ideas son visibles o no durante la etapa de propuesta."
 
 #: static/src/partials/widgets/file-select-widget.html:18
 msgid "Selected file: {{selectedFile.name}}"
-msgstr ""
+msgstr "Archivo seleccionado: {{selectedFile.name}}"
 
 #: static/src/partials/profile/profile-logged-in.html:145
 msgid ""
 "Send a notification to the above email address whenever the following events "
 "occur:"
 msgstr ""
+"Enviar una notificación a la dirección de correo electrónico de arriba "
+"cuando ocurran los siguientes eventos:"
 
 #: static/src/partials/profile/profile-logged-out.html:161
 msgid "Send a reminder"
-msgstr ""
+msgstr "Enviar un recordatorio"
 
 #: static/src/partials/project/view/challenge/challenge-project-data.html:5
 msgid "Send your idea"
-msgstr ""
+msgstr "Enviar su idea"
 
 #: static/src/partials/projects/projects.html:37
 msgid "Send your ideas"
-msgstr ""
+msgstr "Enviar sus ideas"
 
 #: static/src/partials/projects/create.html:6
 #: static/src/partials/projects/projects.html:26
 msgid "Sense-it"
-msgstr ""
+msgstr "Sense-it"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:12
 msgid ""
