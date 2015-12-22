@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-21 16:56+0000\n"
+"PO-Revision-Date: 2015-12-22 16:08+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -16,28 +16,32 @@ msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" en <a data-ui-sref="
+"\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:5
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
 "\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
+"\"<span class=\"feed-comment\">{{item.comment}}</span>\" en <a data-ui-sref="
+"\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
 msgid "(Ideas are always visible during voting and outcome.)"
-msgstr ""
+msgstr "(Las ideas están siempre visibles durante la votación y el resultado.)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:41
 msgid "(Multiple-line formatted text)"
-msgstr ""
+msgstr "(Texto formateado multi-línea)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:40
 msgid "(Multiple-line plain text)"
-msgstr ""
+msgstr "(Texto plano multi-línea)"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
 msgid "(Single-line text)"
-msgstr ""
+msgstr "(texto de una sola línea)"
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
@@ -548,7 +552,6 @@ msgid "Field label:"
 msgstr "Etiqueta de campo:"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
-#, fuzzy
 msgid "Field type:"
 msgstr "Tipo de campo:"
 
@@ -571,7 +574,6 @@ msgid "Go back to the list"
 msgstr "Volver a la lista"
 
 #: static/src/partials/admin/admin-users.html:22
-#, fuzzy
 msgid "Grant permission"
 msgstr "Otorgar permiso"
 
@@ -584,7 +586,6 @@ msgid "Gyroscope"
 msgstr "Giróscopo"
 
 #: static/src/partials/layout/header.html:49
-#, fuzzy
 msgid ""
 "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
 "<br>you are signed in."
@@ -594,7 +595,6 @@ msgstr ""
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
-#, fuzzy
 msgid "Home"
 msgstr "Principal"
 
@@ -619,7 +619,6 @@ msgid "Ideas"
 msgstr "Ideas"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:21
-#, fuzzy
 msgid "Ideas visibility"
 msgstr "Visibilidad de ideas"
 
@@ -641,22 +640,18 @@ msgid "Join mission"
 msgstr "Unirse a esta misión"
 
 #: static/src/partials/project/blocks/project-menu.html:15
-#, fuzzy
 msgid "Joined"
 msgstr "Unido"
 
 #: static/src/partials/projects/projects-sidebar.html:58
-#, fuzzy
 msgid "Joined missions"
 msgstr "Misiones a las que se ha unido"
 
 #: static/src/partials/profile/profile-logged-in.html:293
-#, fuzzy
 msgid "Joined projects:"
 msgstr "Proyectos a los que se ha unido:"
 
 #: static/src/partials/admin/admin-filters.html:9
-#, fuzzy
 msgid "Label"
 msgstr "Rótulo"
 
@@ -670,7 +665,6 @@ msgid "Last post"
 msgstr "Último post"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:19
-#, fuzzy
 msgid "Leave mission"
 msgstr "Salir de la misión"
 
@@ -683,7 +677,6 @@ msgid "Link"
 msgstr "Enlace"
 
 #: static/src/partials/profile/profile-provider-item.html:14
-#, fuzzy
 msgid "Link with {{providerName}}"
 msgstr "Vincular con {{providerName}}"
 
@@ -704,12 +697,10 @@ msgstr "Ubicación:"
 
 #: static/src/partials/profile/profile-logged-in.html:43
 #: static/src/partials/profile/profile-view.html:40
-#, fuzzy
 msgid "Login information"
 msgstr "Información de logueo"
 
 #: static/src/partials/profile/profile-logged-in.html:3
-#, fuzzy
 msgid "Logout"
 msgstr "Desloguearse"
 
@@ -743,7 +734,6 @@ msgstr "Mensaje:"
 #: static/src/partials/project/admin/project-admin-home-page.html:12
 #: static/src/partials/project/edit/project-edit-open-page.html:10
 #: static/src/partials/project/edit/project-edit-outline-page.html:33
-#, fuzzy
 msgid "Mission administration"
 msgstr "Administrar misión"
 
@@ -765,7 +755,6 @@ msgid "Mission list teaser:"
 msgstr ""
 
 #: static/src/partials/project/view/home/project-view-home-page.html:25
-#, fuzzy
 msgid "Mission outline"
 msgstr "Descripción de la misión"
 
@@ -859,18 +848,15 @@ msgid "Only mine"
 msgstr "Sólo mías"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:42
-#, fuzzy
 msgid "Open map"
 msgstr "Abrir mapa"
 
 #: static/src/partials/project/admin/project-admin-home-page.html:27
 #: static/src/partials/project/edit/project-edit-outline-page.html:38
-#, fuzzy
 msgid "Open project"
 msgstr "Abrir proyecto"
 
 #: static/src/partials/admin/admin-projects.html:13
-#, fuzzy
 msgid "Open?"
 msgstr "¿Abrir?"
 
@@ -883,7 +869,6 @@ msgid "Other users can see about me:"
 msgstr "Lo que otros usuarios pueden ver de mí:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:18
-#, fuzzy
 msgid "Outcome stage"
 msgstr "Etapa de resultados"
 
@@ -893,7 +878,6 @@ msgstr "Etapa de resultados"
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:1
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:1
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:1
-#, fuzzy
 msgid "Outline"
 msgstr "Descripción"
 
@@ -937,12 +921,10 @@ msgid "Post comment"
 msgstr "Agregar comentario"
 
 #: static/src/partials/forum/forum-node-list.html:5
-#, fuzzy
 msgid "Post new thread"
 msgstr "Publicar nuevo tópico"
 
 #: static/src/partials/social/social-post-dialog.html:37
-#, fuzzy
 msgid ""
 "Post successful: <a href=\"{{data.result.url}}\" target=\"_blank\">{{data."
 "result.url}}</a>"
@@ -996,7 +978,6 @@ msgid "Projects created by {{profile.username}}:"
 msgstr "Proyectos creados por {{profile.username}}:"
 
 #: static/src/partials/profile/profile-view.html:25
-#, fuzzy
 msgid "Projects joined by {{profile.username}}"
 msgstr "Proyectos a los que se unión {{profile.username}}"
 
@@ -1099,7 +1080,6 @@ msgid "Search missions"
 msgstr "Buscar misiones"
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:64
-#, fuzzy
 msgid "See <a href=\"\" data-ui-sref=\"project.view.challenge\">all ideas</a>"
 msgstr ""
 "Ver todas las ideas de <a href=\"\" data-ui-sref=\"project.view.challenge\""
@@ -1135,7 +1115,6 @@ msgid "Select what information other users can see about you:"
 msgstr "Elegir qué información quiero que los demás usuarios vean de mí:"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:22
-#, fuzzy
 msgid "Select whether ideas are visible during the proposal stage."
 msgstr "Elegir su las ideas son visibles o no durante la etapa de propuesta."
 
@@ -1174,46 +1153,50 @@ msgid ""
 "data using the <a href=\"https://play.google.com/store/apps/details?id=org."
 "greengin.sciencetoolkit\" target=\"_blank\">Sense-it</a> Android app."
 msgstr ""
+"Los proyectos de Sense-it definen un perfil que puede ser utilizado para "
+"registrar datos utilizando la aplicación <a href=\""
+"https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit\" "
+"target=\"_blank\">Sense-it</a> para Android."
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:7
 msgid "Sensor:"
-msgstr ""
+msgstr "Sensor:"
 
 #: static/src/partials/profile/profile-logged-in.html:133
 #: static/src/partials/profile/profile-logged-in.html:96
 msgid "Set password"
-msgstr ""
+msgstr "Establecer contraseña"
 
 #: static/src/partials/social/social.html:2
 msgid "Share this"
-msgstr ""
+msgstr "Compartir esto"
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:15
 msgid "Show value:"
-msgstr ""
+msgstr "Mostrar valor:"
 
 #: static/src/partials/layout/header.html:55
 #: static/src/partials/profile/profile-logged-out.html:162
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
-msgstr ""
+msgstr "Loguearse"
 
 #: static/src/partials/profile/profile-logged-out.html:54
 msgid "Sign in with Facebook"
-msgstr ""
+msgstr "Loguearse con Facebook"
 
 #: static/src/partials/profile/profile-logged-out.html:52
 msgid "Sign in with Google"
-msgstr ""
+msgstr "Loguearse con Google"
 
 #: static/src/partials/profile/profile-logged-out.html:56
 msgid "Sign in with Twitter"
-msgstr ""
+msgstr "Loguearse con Twitter"
 
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
-msgstr ""
+msgstr "Loguearse con su usuario y contraseña:"
 
 #: static/src/partials/social/social-post-dialog.html:10
 msgid "Sign in with {{data.provider.name}}"
@@ -1701,3 +1684,4 @@ msgstr[1] ""
 #: static/src/partials/profile/profile-logged-out.html:48
 msgid "…or sign in using one of the following identity providers:"
 msgstr ""
+"...o loguearse utilizando uno de los siguientes proveedores de identidad:"
