@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-22 16:08+0000\n"
+"PO-Revision-Date: 2015-12-22 18:20+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -1200,102 +1200,105 @@ msgstr "Loguearse con su usuario y contraseña:"
 
 #: static/src/partials/social/social-post-dialog.html:10
 msgid "Sign in with {{data.provider.name}}"
-msgstr ""
+msgstr "Loguearse con {{data.provider.name}}"
 
 #: static/src/partials/layout/header.html:50
 msgid "Sign out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:16
 msgid "Single-line text"
-msgstr ""
+msgstr "Texto de una sola línea"
 
 #: static/src/partials/profile/profile-logged-in.html:172
 #: static/src/partials/profile/profile-logged-in.html:202
 msgid "Someone comments on a forum thread that I created:"
-msgstr ""
+msgstr "Alguien ha comentado en un tópico de un foro creado por mí:"
 
 #: static/src/partials/profile/profile-logged-in.html:179
 #: static/src/partials/profile/profile-logged-in.html:206
 msgid "Someone comments on a forum thread that I have commented on:"
-msgstr ""
+msgstr "Alguien comentó en un tópico de un foro que yo he comentado:"
 
 #: static/src/partials/profile/profile-logged-in.html:158
 #: static/src/partials/profile/profile-logged-in.html:194
 msgid "Someone comments on a mission that I created:"
-msgstr ""
+msgstr "Alguien comentó en una misión que yo he creado:"
 
 #: static/src/partials/profile/profile-logged-in.html:165
 #: static/src/partials/profile/profile-logged-in.html:198
 msgid "Someone comments on a mission that I have commented on:"
-msgstr ""
+msgstr "Alguien comentó en una misión en la que yo he comentado:"
 
 #: static/src/partials/profile/profile-logged-in.html:151
 #: static/src/partials/profile/profile-logged-in.html:190
 msgid "Someone posts to a mission that I created:"
-msgstr ""
+msgstr "Alguien posteó un mensaje en una misión que yo creé:"
 
 #: static/src/partials/admin/admin-filters.html:32
 #: static/src/partials/admin/admin-filters.html:68
 msgid "Sorry! I can't add a duplicate tag:"
-msgstr ""
+msgstr "Disculpas! No se puede agregar una etiqueta duplicada:"
 
 #: static/src/partials/admin/admin-filters.html:34
 #: static/src/partials/admin/admin-filters.html:70
 msgid "Sorry! This tag term is empty."
-msgstr ""
+msgstr "Perdón! Esta etiqueta está vacía."
 
 #: static/src/partials/admin/admin-filters.html:33
 #: static/src/partials/admin/admin-filters.html:69
 msgid "Sorry! This tag term is invalid — spaces?"
-msgstr ""
+msgstr "Perdón! Este término para la etiqueta es inválido - espacios?"
 
 #: static/src/partials/social/social-post-dialog.html:33
 msgid "Sorry, there was a problem when trying to post your comment."
-msgstr ""
+msgstr "Ha habido un problema al tratar de postear su comentario."
 
 #: static/src/partials/social/social-post-dialog.html:29
 msgid "Sorry, there was a problem with the API with {{data.provider.name}}."
-msgstr ""
+msgstr "Perdón, hubo un problema con la API con {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:25
 msgid ""
 "Sorry, there was a problem with the authorisation with {{data.provider."
 "name}}."
 msgstr ""
+"Perdón, hubo un problema con la autorización con {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:31
 msgid ""
 "Sorry, there was a problem with the connection with {{data.provider.name}}."
-msgstr ""
+msgstr "Perdón, hubo un problema con la conexión con {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:23
 msgid ""
 "Sorry, there was a problem with the permissions with {{data.provider.name}}."
-msgstr ""
+msgstr "Perdón, hubo un problema con los permisos con {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:27
 msgid "Sorry, there was a problem with the rate with {{data.provider.name}}."
-msgstr ""
+msgstr "Perdón, hubo un problema con la tasa con {{data.provider.name}}."
 
 #: static/src/partials/social/social-post-dialog.html:21
 msgid ""
 "Sorry, you have posted already the same content! You may need to edit it "
 "before posting."
 msgstr ""
+"Perdón, ya ha posteado el mismo contenido! Necesita editarlo antes de "
+"postearlo."
 
 #: static/src/partials/admin/admin.html:14
 msgid "Sorry, you need administrator access to view this page."
-msgstr ""
+msgstr "Perdón, se necesita acceso de administrador para ver esta página."
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:10
 msgid "Sound"
-msgstr ""
+msgstr "Sonido"
 
 #: static/src/partials/projects/create.html:19
 #: static/src/partials/projects/projects.html:27
 msgid "Spot-it"
-msgstr ""
+msgstr "Spot-it"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:13
 msgid "Stage selection"
@@ -1308,19 +1311,19 @@ msgstr ""
 #: static/src/partials/project/admin/project-admin-users.html:15
 #: static/src/partials/projects/projects-sidebar.html:50
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-answers-page.html:10
 msgid "Submission administration"
-msgstr ""
+msgstr "Administración del envío"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:9
 msgid "Submission composition"
-msgstr ""
+msgstr "Composición del envío"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:23
 msgid "Submission limit"
-msgstr ""
+msgstr "Límite del envío"
 
 #: static/src/partials/project/edit/challenge/challenge-edit-menu.html:4
 msgid "Submissions"
