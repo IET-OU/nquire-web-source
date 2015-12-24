@@ -44,11 +44,23 @@ input:invalid, input.ng-invalid {
 
 
   // Translate help/about pages [Bug: #6]
-  .admin-page-filters,
   .admin-page-texts {
+
     & > button {
       float: right;
     }
+
+    tr.row-add-form,
+    tr.row-translate {
+      //tr.row-lang-el {
+      //&[ data-row-lang != 'en' ] {
+      display: none;
+    }
+  }
+
+
+  .admin-page-filters,
+  .admin-page-texts {
 
     tbody th {
       font-weight: normal;
@@ -58,12 +70,6 @@ input:invalid, input.ng-invalid {
         display: block;
         line-height: 1.28em;
       }
-    }
-
-    tr.row-add-form,
-    tr.row-lang-el {
-      //&[ data-row-lang != 'en' ] {
-      display: none;
     }
 
     .row-add-form {

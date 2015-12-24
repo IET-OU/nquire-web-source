@@ -16,6 +16,7 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
     , in_banner  = cfg && cfg.alert_banner  || true
     , is_debug = $location.absUrl().match(/[\?&\/]debug=(\d)/)
     , is_approval = $location.absUrl().match(/\/(approval|localhost|nquire\/|pegasos\.)/)
+    , _debug = is_debug ? $log.warn : function () {}
     , queue = []
     , currentMessage = null
     , currentType = null
@@ -40,10 +41,6 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
       currentMessage = queue.shift() || false;
       $("html").attr("data-alert", currentMessage ? 1 : 0);
     }, 0);
-  }
-
-  function _debug(obj, extra) {
-    is_debug && $log.warn("Debug (alert).", obj, extra);
   }
 
 
