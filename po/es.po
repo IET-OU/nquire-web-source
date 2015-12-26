@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-26 03:03+0000\n"
+"PO-Revision-Date: 2015-12-26 03:24+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -1139,7 +1139,7 @@ msgstr "Enviar sus ideas"
 #: static/src/partials/projects/create.html:6
 #: static/src/partials/projects/projects.html:26
 msgid "Sense-it"
-msgstr ""
+msgstr "Sense-it"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-page.html:12
 msgid ""
@@ -1154,7 +1154,7 @@ msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:7
 msgid "Sensor:"
-msgstr ""
+msgstr "Sensor:"
 
 #: static/src/partials/profile/profile-logged-in.html:133
 #: static/src/partials/profile/profile-logged-in.html:96
@@ -1292,7 +1292,7 @@ msgstr "Sonido"
 #: static/src/partials/projects/create.html:19
 #: static/src/partials/projects/projects.html:27
 msgid "Spot-it"
-msgstr ""
+msgstr "Spot-it"
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:13
 msgid "Stage selection"
@@ -1562,7 +1562,7 @@ msgstr "Misiones Weather-it"
 #: static/src/partials/projects/create.html:39
 #: static/src/partials/projects/projects.html:28
 msgid "Win-it"
-msgstr ""
+msgstr "Win-it"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:3
 msgid "Winner"
@@ -1682,7 +1682,7 @@ msgstr "La página de su perfil"
 
 #: static/src/partials/admin/admin-users.html:6
 msgid "email"
-msgstr ""
+msgstr "email"
 
 #: static/src/partials/layout/header.html:5
 msgid "nQuire-it home page"
