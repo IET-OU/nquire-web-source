@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-26 02:44+0000\n"
+"PO-Revision-Date: 2015-12-26 03:03+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -746,7 +746,7 @@ msgstr "Detalles de la misión"
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
 msgid "Mission list teaser:"
-msgstr ""
+msgstr "Adivinanza lista de misión:"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:25
 msgid "Mission outline"
@@ -1174,27 +1174,27 @@ msgstr "Mostrar valor:"
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
-msgstr "Loguearse"
+msgstr "Iniciar sesión"
 
 #: static/src/partials/profile/profile-logged-out.html:54
 msgid "Sign in with Facebook"
-msgstr "Loguearse con Facebook"
+msgstr "Iniciar sesión con Facebook"
 
 #: static/src/partials/profile/profile-logged-out.html:52
 msgid "Sign in with Google"
-msgstr "Loguearse con Google"
+msgstr "Iniciar sesión con Google"
 
 #: static/src/partials/profile/profile-logged-out.html:56
 msgid "Sign in with Twitter"
-msgstr "Loguearse con Twitter"
+msgstr "Iniciar sesión con Twitter"
 
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
-msgstr "Loguearse con su usuario y contraseña:"
+msgstr "Iniciar sesión con su usuario y contraseña:"
 
 #: static/src/partials/social/social-post-dialog.html:10
 msgid "Sign in with {{data.provider.name}}"
-msgstr "Loguearse con {{data.provider.name}}"
+msgstr "Iniciar sesión con {{data.provider.name}}"
 
 #: static/src/partials/layout/header.html:50
 msgid "Sign out"
@@ -1333,7 +1333,7 @@ msgstr "Enviados"
 
 #: static/src/partials/admin/admin-filters.html:10
 msgid "Tag-term"
-msgstr ""
+msgstr "Término-etiqueta"
 
 #: static/src/partials/admin/admin-projects.html:15
 #: static/src/partials/admin/admin.html:5
