@@ -34,7 +34,7 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
         , id
         , label
         , orig_label = ' <b>(original English)</b>'
-        , $the_langs = $scope.cfg.langs
+        , $the_langs = $scope.cfg.lang_admin_texts
         , new_list = [];
 
       if (! $scope.activeLang) {

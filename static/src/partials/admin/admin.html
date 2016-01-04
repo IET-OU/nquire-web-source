@@ -2,7 +2,8 @@
     <div class="admin-header" role="navigation" aria-label="{{'Admin menu' | translate}}">
         <span data-siw-menu-item data-menu-linked-state="'admin.users'" data-menu-label="{{'Users'|translate}}"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.projects'" data-menu-label="{{'Projects'|translate}}"></span>
-        <span data-siw-menu-item data-menu-linked-state="'admin.filters'" data-menu-label="{{'Tags'|translate}}" title="Tag-based filters"></span>
+        <span data-siw-menu-item data-menu-linked-state="'admin.filters'" data-menu-label="{{'Tags'|translate}}"
+            title="{{'Tag-based filters' | translate}}" data-ng-if="cfg.custom_filters_admin"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.texts'" data-menu-label="{{'Texts'|translate}}"></span>
         <span data-siw-menu-item data-menu-linked-state="'admin.reported'" data-menu-label="{{'Reported content'|translate}}"></span>
     </div>

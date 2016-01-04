@@ -30,6 +30,11 @@ angular.module('senseItWeb').constant('senseItConfig', {
     zh_tw: "正體中文 (zh-tw)"
 */
   },
+  lang_admin_texts: {
+    en: "English",
+    el: "Greek",
+    es: "Spanish"
+  },
   lang_url_regex: /(\.org\/approval)\/(el|es|en)/,
   //LIVE: lang_url_regex: /(\/approval)?\/(el|en)/,
   // Position of switcher: false, "top" or "bottom".
@@ -41,6 +46,8 @@ angular.module('senseItWeb').constant('senseItConfig', {
 
   base_url: "/",
   // Show custom filter-tags? (true, false)
-  custom_filters: true
+  custom_filters: true,
+
+  custom_filters_admin: true
 
 });
