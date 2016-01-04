@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2015-12-26 03:24+0000\n"
+"PO-Revision-Date: 2016-01-04 23:21+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -585,7 +585,7 @@ msgid ""
 "<br>you are signed in."
 msgstr ""
 "Hola, <a href=\"\" data-ui-sref=\"profile\""
-">{{status.profile.username}}</a>,<br>estás logueado."
+">{{status.profile.username}}</a>,<br>haz iniciado la sesión."
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
