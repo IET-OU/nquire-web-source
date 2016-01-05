@@ -39,7 +39,8 @@ module.exports = function(grunt) {
 				options: {
 					// I18n / translation - list available languages, except 'en' [Bug: #3]
 					'locales': [
-						'el'
+						'el',
+						'es'
 					],
 					poFilesPath: 'po/<%= locale %>.po'
 				}
