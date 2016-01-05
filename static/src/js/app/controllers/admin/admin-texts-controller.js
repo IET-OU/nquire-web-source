@@ -41,6 +41,11 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
           return;
       }
 
+      if (! $the_langs) {
+          $scope.log("i18n: itemList - translation disabled.");
+          return;
+      }
+
       for (it in $scope.itemList) {
           item = $scope.itemList[ it ];
 

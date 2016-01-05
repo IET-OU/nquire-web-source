@@ -1,7 +1,10 @@
 
 <div ng-controller="AdminTextItemCtrl" class="admin-page-texts">
 
-<button ng-click="toggleTranslations()" translate>Show/hide translations</button>
+<button ng-click="toggleTranslations()" ng-if="cfg.lang_admin_texts" translate>Show/hide translations</button>
+
+<div ng-if="cfg.admin_texts_help" ng-bind-html="cfg.admin_texts_help"></div>
+
 
 <table class="table table-striped">
     <thead>
@@ -12,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr class="row-add-form">
+    <tr class="row-add-form" ng-if="cfg.lang_admin_texts">
       <td colspan="3">
       <form ng-submit="submit()" name="addForm">
         <table><tr>
@@ -25,7 +28,8 @@
       </form>
       </td>
     </tr>
-    <tr data-ng-repeat="item in itemList" data-ng-controller="AdminTextItemCtrl" data-row-lang="{{item.lang}}" ng-class="item.lang == 'en' ? 'row-orig' : 'row-translate'">
+    <tr data-ng-repeat="item in itemList" data-ng-controller="AdminTextItemCtrl" data-row-lang="{{item.lang}}"
+      ng-class="(item.lang == 'en' || ! cfg.lang_admin_texts) ? 'row-orig' : 'row-translate'">
         <th data-id="{{item.id}}" data-ng-bind-html="item.label"></th>
         <td>
             <div data-ng-if="!form.isOpen()" data-ng-bind-html="txt[item.id]"></div>
@@ -55,6 +59,6 @@
 
 </table>
 
-<button ng-click="toggleTranslations()" translate>Show/hide translations</button>
+<button ng-click="toggleTranslations()" ng-if="cfg.lang_admin_texts" translate>Show/hide translations</button>
 
 </div>
