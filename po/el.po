@@ -198,7 +198,7 @@ msgid "Actions"
 msgstr "Δράσεις"
 
 #: static/src/partials/admin/admin-filters.html:76
-#: static/src/partials/admin/admin-texts.html:23
+#: static/src/partials/admin/admin-texts.html:26
 msgid "Add"
 msgstr ""
 
@@ -282,7 +282,7 @@ msgstr "Αναμονή απάντησης από τον/την {{data.provider.n
 
 #: static/src/partials/admin/admin-filters.html:47
 #: static/src/partials/admin/admin-projects.html:42
-#: static/src/partials/admin/admin-texts.html:49
+#: static/src/partials/admin/admin-texts.html:53
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
 #: static/src/partials/forum/forum-list-forum.html:24
@@ -364,7 +364,7 @@ msgstr "Σχολιάζω"
 msgid "Comment:"
 msgstr "Σχολιάζω:"
 
-#: static/src/partials/admin/admin-texts.html:10
+#: static/src/partials/admin/admin-texts.html:13
 msgid "Content"
 msgstr "Περιεχόμενο"
 
@@ -484,7 +484,7 @@ msgid "Download CSV"
 msgstr "Κατεβάζω το CSV"
 
 #: static/src/partials/admin/admin-filters.html:42
-#: static/src/partials/admin/admin-texts.html:45
+#: static/src/partials/admin/admin-texts.html:49
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
 #: static/src/partials/forum/forum-thread.html:14
@@ -753,6 +753,11 @@ msgstr ""
 #: static/src/partials/project/view/home/project-view-details-page.html:14
 msgid "Mission details"
 msgstr "Λεπτομέρειες αποστολής"
+
+#: static/src/partials/comments.html:5
+#, fuzzy
+msgid "Mission discussion"
+msgstr "Διαχείριση αποστολής"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -1027,7 +1032,7 @@ msgstr "Επαναλαμβάνω τον κωδικό:"
 msgid "Replies"
 msgstr "Απαντήσεις"
 
-#: static/src/partials/admin/admin.html:7
+#: static/src/partials/admin/admin.html:8
 msgid "Reported content"
 msgstr "Περιεχόμενο που αναφέρθηκε"
 
@@ -1046,7 +1051,7 @@ msgstr "Δείγματα / δευτερόλεπτο"
 
 #: static/src/partials/admin/admin-filters.html:45
 #: static/src/partials/admin/admin-projects.html:41
-#: static/src/partials/admin/admin-texts.html:48
+#: static/src/partials/admin/admin-texts.html:52
 #: static/src/partials/forum/forum-list-category.html:34
 #: static/src/partials/forum/forum-list-forum.html:23
 #: static/src/partials/forum/forum-thread.html:18
@@ -1184,6 +1189,12 @@ msgstr "Το μοιράζομαι"
 msgid "Show value:"
 msgstr "Εμφανίζω την αξία:"
 
+#: static/src/partials/admin/admin-texts.html:4
+#: static/src/partials/admin/admin-texts.html:62
+#, fuzzy
+msgid "Show/hide translations"
+msgstr "Προσθέτω μετασχηματισμό"
+
 #: static/src/partials/layout/header.html:55
 #: static/src/partials/profile/profile-logged-out.html:162
 #: static/src/partials/profile/profile-logged-out.html:3
@@ -1307,7 +1318,7 @@ msgstr ""
 "Συγγνώμη, ήδη δημοσίευσες το ίδιο περιεχόμενο! Ίσως χρειάζεται να το "
 "επεξεργαστείς πριν να το δημοσιεύσεις."
 
-#: static/src/partials/admin/admin.html:14
+#: static/src/partials/admin/admin.html:15
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Συγγνώμη, μόνο ο διαχειριστής μπορεί να δει αυτή τη σελίδα."
 
@@ -1357,6 +1368,10 @@ msgstr "Υποβάλλω"
 msgid "Submitted"
 msgstr "Υποβλήθηκε"
 
+#: static/src/partials/admin/admin.html:6
+msgid "Tag-based filters"
+msgstr ""
+
 #: static/src/partials/admin/admin-filters.html:10
 msgid "Tag-term"
 msgstr ""
@@ -1374,8 +1389,8 @@ msgstr ""
 msgid "Text:"
 msgstr "Κείμενο:"
 
-#: static/src/partials/admin/admin-texts.html:9
-#: static/src/partials/admin/admin.html:6
+#: static/src/partials/admin/admin-texts.html:12
+#: static/src/partials/admin/admin.html:7
 msgid "Texts"
 msgstr "Κείμενα"
 

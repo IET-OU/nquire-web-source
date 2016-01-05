@@ -48,40 +48,40 @@ msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
-" para agregar comentarios a esta serie de datos."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
+"a> para agregar comentarios a esta serie de datos."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
-" para comentar sobre esta misión."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
+"a> para comentar sobre esta misión."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
-" para comentar sobre esta imagen."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
+"a> para comentar sobre esta imagen."
 
 #: static/src/partials/forum/forum-node-list.html:8
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
-" para agregar nuevos temas de discusión."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
+"a> para agregar nuevos temas de discusión."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</a>"
-" para responder mensajes sobre este tema."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
+"a> para responder mensajes sobre este tema."
 
 #: static/src/partials/forum/forum-node-list.html:1
 msgid ""
@@ -138,8 +138,8 @@ msgid ""
 "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
 "span> said:"
 msgstr ""
-"<span class=\"comment-author-username\" siw-user-link=\"comment.author\""
-"></span> dijo:"
+"<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></"
+"span> dijo:"
 
 #: static/src/partials/project/blocks/project-metadata.html:6
 #: static/src/partials/project/blocks/project-title-edit.html:25
@@ -179,8 +179,8 @@ msgid ""
 "A mission created by <span data-siw-user-link=\"projectData.project.author"
 "\"></span>."
 msgstr ""
-"Una misión creada por <span data-siw-user-link=\"projectData.project.author\""
-"></span>."
+"Una misión creada por <span data-siw-user-link=\"projectData.project.author"
+"\"></span>."
 
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
@@ -196,7 +196,7 @@ msgid "Actions"
 msgstr "Acciones"
 
 #: static/src/partials/admin/admin-filters.html:76
-#: static/src/partials/admin/admin-texts.html:23
+#: static/src/partials/admin/admin-texts.html:26
 msgid "Add"
 msgstr "Agregar"
 
@@ -276,7 +276,7 @@ msgstr "Esperando respuesta de {{data.provider.name}}…"
 
 #: static/src/partials/admin/admin-filters.html:47
 #: static/src/partials/admin/admin-projects.html:42
-#: static/src/partials/admin/admin-texts.html:49
+#: static/src/partials/admin/admin-texts.html:53
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
 #: static/src/partials/forum/forum-list-forum.html:24
@@ -356,7 +356,7 @@ msgstr "Comentario"
 msgid "Comment:"
 msgstr "Comentario:"
 
-#: static/src/partials/admin/admin-texts.html:10
+#: static/src/partials/admin/admin-texts.html:13
 msgid "Content"
 msgstr "Contenido"
 
@@ -478,7 +478,7 @@ msgid "Download CSV"
 msgstr "Descargar CSV"
 
 #: static/src/partials/admin/admin-filters.html:42
-#: static/src/partials/admin/admin-texts.html:45
+#: static/src/partials/admin/admin-texts.html:49
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
 #: static/src/partials/forum/forum-thread.html:14
@@ -584,8 +584,8 @@ msgid ""
 "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
 "<br>you are signed in."
 msgstr ""
-"Hola, <a href=\"\" data-ui-sref=\"profile\""
-">{{status.profile.username}}</a>,<br>haz iniciado la sesión."
+"Hola, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
+"<br>haz iniciado la sesión."
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
@@ -710,8 +710,8 @@ msgstr "Mapa"
 msgid ""
 "Max answers per participant: {{projectData.project.activity.maxAnswers}}"
 msgstr ""
-"Cant máxima respuestas por participante: "
-"{{projectData.project.activity.maxAnswers}}"
+"Cant máxima respuestas por participante: {{projectData.project.activity."
+"maxAnswers}}"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:28
 msgid "Maximum answers per participant."
@@ -742,6 +742,11 @@ msgstr ""
 #: static/src/partials/project/view/home/project-view-details-page.html:14
 msgid "Mission details"
 msgstr "Detalles de la misión"
+
+#: static/src/partials/comments.html:5
+#, fuzzy
+msgid "Mission discussion"
+msgstr "Administrar misión"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -923,8 +928,8 @@ msgid ""
 "Post successful: <a href=\"{{data.result.url}}\" target=\"_blank\">{{data."
 "result.url}}</a>"
 msgstr ""
-"Post exitoso: <a href=\"{{data.result.url}}\" target=\"_blank\""
-">{{data.result.url}}</a>"
+"Post exitoso: <a href=\"{{data.result.url}}\" target=\"_blank\">{{data."
+"result.url}}</a>"
 
 #: static/src/partials/forum/forum-list.html:10
 msgid "Posts"
@@ -1016,7 +1021,7 @@ msgstr "Repetir contraseña:"
 msgid "Replies"
 msgstr "Respuestas"
 
-#: static/src/partials/admin/admin.html:7
+#: static/src/partials/admin/admin.html:8
 msgid "Reported content"
 msgstr "Contenido reportado"
 
@@ -1035,7 +1040,7 @@ msgstr "Muestras / segundo"
 
 #: static/src/partials/admin/admin-filters.html:45
 #: static/src/partials/admin/admin-projects.html:41
-#: static/src/partials/admin/admin-texts.html:48
+#: static/src/partials/admin/admin-texts.html:52
 #: static/src/partials/forum/forum-list-category.html:34
 #: static/src/partials/forum/forum-list-forum.html:23
 #: static/src/partials/forum/forum-thread.html:18
@@ -1076,8 +1081,8 @@ msgstr "Buscar misiones"
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:64
 msgid "See <a href=\"\" data-ui-sref=\"project.view.challenge\">all ideas</a>"
 msgstr ""
-"Ver todas las ideas de <a href=\"\" data-ui-sref=\"project.view.challenge\""
-"></a>"
+"Ver todas las ideas de <a href=\"\" data-ui-sref=\"project.view.challenge"
+"\"></a>"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:4
 msgid "See all"
@@ -1148,9 +1153,9 @@ msgid ""
 "greengin.sciencetoolkit\" target=\"_blank\">Sense-it</a> Android app."
 msgstr ""
 "Los proyectos de Sense-it definen un perfil que puede ser utilizado para "
-"registrar datos utilizando la aplicación <a href=\""
-"https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit\" "
-"target=\"_blank\">Sense-it</a> para Android."
+"registrar datos utilizando la aplicación <a href=\"https://play.google.com/"
+"store/apps/details?id=org.greengin.sciencetoolkit\" target=\"_blank\">Sense-"
+"it</a> para Android."
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:7
 msgid "Sensor:"
@@ -1168,6 +1173,12 @@ msgstr "Compartir esto"
 #: static/src/partials/project/view/senseit/senseit-data-map.html:15
 msgid "Show value:"
 msgstr "Mostrar valor:"
+
+#: static/src/partials/admin/admin-texts.html:4
+#: static/src/partials/admin/admin-texts.html:62
+#, fuzzy
+msgid "Show/hide translations"
+msgstr "Agregar transformación"
 
 #: static/src/partials/layout/header.html:55
 #: static/src/partials/profile/profile-logged-out.html:162
@@ -1281,7 +1292,7 @@ msgstr ""
 "Perdón, ya ha posteado el mismo contenido! Necesita editarlo antes de "
 "postearlo."
 
-#: static/src/partials/admin/admin.html:14
+#: static/src/partials/admin/admin.html:15
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Perdón, se necesita acceso de administrador para ver esta página."
 
@@ -1331,6 +1342,10 @@ msgstr "Enviar"
 msgid "Submitted"
 msgstr "Enviados"
 
+#: static/src/partials/admin/admin.html:6
+msgid "Tag-based filters"
+msgstr ""
+
 #: static/src/partials/admin/admin-filters.html:10
 msgid "Tag-term"
 msgstr "Término-etiqueta"
@@ -1348,8 +1363,8 @@ msgstr "Etiquetas:"
 msgid "Text:"
 msgstr "Texto:"
 
-#: static/src/partials/admin/admin-texts.html:9
-#: static/src/partials/admin/admin.html:6
+#: static/src/partials/admin/admin-texts.html:12
+#: static/src/partials/admin/admin.html:7
 msgid "Texts"
 msgstr "Textos"
 
@@ -1467,8 +1482,8 @@ msgid ""
 "Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
 "null})\">without search conditions</a>."
 msgstr ""
-"Probar <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: null})"
-"\">sin condiciones de búsqueda</a>."
+"Probar <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
+"null})\">sin condiciones de búsqueda</a>."
 
 #: static/src/partials/profile/profile-provider-item.html:8
 msgid "Unlink {{providerName}} account"
@@ -1589,8 +1604,8 @@ msgid ""
 "You have created the maximum number of allowed ideas: {{projectData.project."
 "activity.maxAnswers}}."
 msgstr ""
-"Se han creado la cantidad máxima de ideas permitidas: "
-"{{projectData.project.activity.maxAnswers}}."
+"Se han creado la cantidad máxima de ideas permitidas: {{projectData.project."
+"activity.maxAnswers}}."
 
 #: static/src/partials/social/social-post-dialog.html:7
 msgid "You have not linked a {{data.provider.name}} account yet."
@@ -1602,8 +1617,8 @@ msgid ""
 "\"home\">existing projects</a> to find interesting ones, or <a href=\"\" "
 "data-ui-sref=\"create\">create</a> your own."
 msgstr ""
-"Todavía no se ha unido a ningún proyecto.  Se pueden explorar los <a href=\""
-"\" data-ui-sref=\"home\">proyectos existentes</a> para buscar alguno "
+"Todavía no se ha unido a ningún proyecto.  Se pueden explorar los <a href="
+"\"\" data-ui-sref=\"home\">proyectos existentes</a> para buscar alguno "
 "interesante, o <a href=\"\" data-ui-sref=\"create\">crear</a> uno propio."
 
 #: static/src/partials/project/admin/project-admin-home-page.html:5
@@ -1623,41 +1638,41 @@ msgid ""
 "You need to <a href=\"\" data-ng-click=\"close(data.provider.login)\">sign "
 "in</a> before posting on {{data.provider.name}}."
 msgstr ""
-"Es necesario <a href=\"\" data-ng-click=\"close(data.provider.login)\">"
-"iniciar sesión</a> antes de postear en {{data.provider.name}}."
+"Es necesario <a href=\"\" data-ng-click=\"close(data.provider."
+"login)\">iniciar sesión</a> antes de postear en {{data.provider.name}}."
 
 #: static/src/partials/project/view/home/project-view-home-page.html:13
 msgid ""
-"You need to <a href=\"\" data-ng-click=\"openIdService."
-"loginAndComeBack()\">sign in</a> before you can participate in projects."
+"You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">sign in</a> before you can participate in projects."
 msgstr ""
-"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">"
-"iniciar sesión</a> antes de participar en los proyectos."
+"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">iniciar sesión</a> antes de participar en los proyectos."
 
 #: static/src/partials/projects/create.html:127
 msgid ""
-"You need to <a href=\"\" data-ng-click=\"openIdService."
-"loginAndComeBack()\">sign in</a> in order to create your own projects."
+"You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">sign in</a> in order to create your own projects."
 msgstr ""
-"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">"
-"iniciar sesión</a> para poder crear proyectos propios."
+"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">iniciar sesión</a> para poder crear proyectos propios."
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:29
 #: static/src/partials/project/view/challenge/project-view-challenge-stage-proposal.html:17
 msgid ""
-"You need to <a href=\"\" data-ng-click=\"openIdService."
-"loginAndComeBack()\">sign in</a> to post ideas."
+"You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">sign in</a> to post ideas."
 msgstr ""
-"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">"
-"iniciar sesión</a> para postear ideas."
+"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">iniciar sesión</a> para postear ideas."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:13
 msgid ""
-"You need to <a href=\"\" data-ng-click=\"openIdService."
-"loginAndComeBack()\">sign in</a> to upload images to this mission."
+"You need to <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">sign in</a> to upload images to this mission."
 msgstr ""
-"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">"
-"iniciar sesión</a> para subir imágenes a esta sesión."
+"Es necesario <a href=\"\" data-ng-click=\"openIdService.loginAndComeBack"
+"()\">iniciar sesión</a> para subir imágenes a esta sesión."
 
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:18
 msgid ""
