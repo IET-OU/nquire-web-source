@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-01-04 23:21+0000\n"
+"PO-Revision-Date: 2016-01-06 17:04+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -744,9 +744,8 @@ msgid "Mission details"
 msgstr "Detalles de la misión"
 
 #: static/src/partials/comments.html:5
-#, fuzzy
 msgid "Mission discussion"
-msgstr "Administrar misión"
+msgstr "Discusión sobre misión"
 
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
@@ -1176,9 +1175,8 @@ msgstr "Mostrar valor:"
 
 #: static/src/partials/admin/admin-texts.html:4
 #: static/src/partials/admin/admin-texts.html:62
-#, fuzzy
 msgid "Show/hide translations"
-msgstr "Agregar transformación"
+msgstr "Mostrar/ocultar traducciones"
 
 #: static/src/partials/layout/header.html:55
 #: static/src/partials/profile/profile-logged-out.html:162
@@ -1344,7 +1342,7 @@ msgstr "Enviados"
 
 #: static/src/partials/admin/admin.html:6
 msgid "Tag-based filters"
-msgstr ""
+msgstr "Filtros por etiqueta"
 
 #: static/src/partials/admin/admin-filters.html:10
 msgid "Tag-term"
