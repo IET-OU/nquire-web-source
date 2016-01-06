@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-01-06 17:04+0000\n"
+"PO-Revision-Date: 2016-01-06 17:11+0000\n"
 "Last-Translator: Cristián Rizzi <crizzi@arnet.com.ar>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -48,40 +48,40 @@ msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this data series."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
-"a> para agregar comentarios a esta serie de datos."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Iniciar "
+"sesión</a> para agregar comentarios a esta serie de datos."
 
 #: static/src/partials/project/comments/posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this mission."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
-"a> para comentar sobre esta misión."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Iniciar "
+"sesión</a> para comentar sobre esta misión."
 
 #: static/src/partials/project/view/spotit/spotit-posting-disabled.html:1
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to comment on this picture."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
-"a> para comentar sobre esta imagen."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Iniciar "
+"sesión</a> para comentar sobre esta imagen."
 
 #: static/src/partials/forum/forum-node-list.html:8
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post new threads."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
-"a> para agregar nuevos temas de discusión."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Iniciar "
+"sesión</a> para agregar nuevos temas de discusión."
 
 #: static/src/partials/forum/forum-thread.html:44
 msgid ""
 "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> "
 "to post replies in this thread."
 msgstr ""
-"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Loguearse</"
-"a> para responder mensajes sobre este tema."
+"<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Iniciar "
+"sesión</a> para responder mensajes sobre este tema."
 
 #: static/src/partials/forum/forum-node-list.html:1
 msgid ""
@@ -584,8 +584,8 @@ msgid ""
 "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
 "<br>you are signed in."
 msgstr ""
-"Hola, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
-"<br>haz iniciado la sesión."
+"Hola, <a href=\"\" data-ui-sref=\"profile\""
+">{{status.profile.username}}</a>,<br>ha iniciado la sesión."
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
@@ -750,7 +750,7 @@ msgstr "Discusión sobre misión"
 #: static/src/partials/project/blocks/project-title-edit.html:28
 #: static/src/partials/project/blocks/project-title-edit.html:45
 msgid "Mission list teaser:"
-msgstr "Adivinanza lista de misión:"
+msgstr "Consigna de misión:"
 
 #: static/src/partials/project/view/home/project-view-home-page.html:25
 msgid "Mission outline"
