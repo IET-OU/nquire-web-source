@@ -1,8 +1,13 @@
-angular.module('senseItWeb').directive('siwSidebarToggle', function () {
+angular.module('senseItWeb').directive('siwSidebarToggle', function ($window) {
     return {
-        link: function (scope, element) {
-            var sidebar = $(element);
-            var button = $('<div></div>').addClass('sidebar-toggle');
+        link: function (scope, element, attrs) {
+            var label = attrs.siwSidebarLabel
+              , sidebar = angular.element(element)  //$window.$(element)
+              , button = angular.element('<div></div>').addClass('sidebar-toggle').attr({
+                role: 'button',
+                tabindex: 0,
+                'aria-label': label
+            });
             button.append('<i class="fa fa-angle-right"></i>');
             button.append('<i class="fa fa-angle-left"></i>');
             sidebar.append(button);
