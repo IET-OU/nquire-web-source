@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function ($scope) {
+angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function ($scope, $window, ModalService) {
 
     $scope.submit = function () {
         //var promise = $scope.tags.adminAddFilter($scope.new_filter);
@@ -30,7 +30,19 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
         // ng-repeat context.
         $scope.deleteFilter = function (idx) {
             var filters = $scope.tags.data.filters
-              , query = filters[ idx ].query;
+              , query = filters[ idx ].query
+              , $button = angular.element("[ ng-click *= deleteFilter ]:first")  //Was: $window.$()..
+              ;
+
+            /*if (! $window.confirm(confirm_text)) {
+                $scope.alert.debug("Cancel delete filter.");
+                return false;
+            }*/
+
+            ModalService.open({
+                title: $button.data("confirm_title"),
+                body: "<p>" + $button.data("confirm").replace("%s", query) + "</p>",
+                ok: function () {
 
             $scope.admin.deleteFilter(filters[ idx ].id).then(function () {
                 $scope.tags.getList();
@@ -38,6 +50,9 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
             })
             .catch(function (resp) {
                 $scope.alert.error("Sorry! Unknown error: " + query, resp);
+            });
+                    return true;
+                }
             });
         }
 
