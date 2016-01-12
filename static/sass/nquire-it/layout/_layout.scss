@@ -8,6 +8,9 @@ html {
   overflow-y: scroll;
 }
 
+.ng-show { display: block !important; }
+table tr.ng-show { display: table-row !important; }
+
 
 #main {
   position: relative;

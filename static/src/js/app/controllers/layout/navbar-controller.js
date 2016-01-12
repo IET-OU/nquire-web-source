@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('NavBarCtrl', function ($scope, $state, $stateParams, $window) {
+angular.module('senseItWeb', null, null).controller('NavBarCtrl', function ($scope, $state, $stateParams, $window, $location) {
 
     $scope.params = $stateParams;
 
@@ -29,13 +29,13 @@ angular.module('senseItWeb', null, null).controller('NavBarCtrl', function ($sco
         $scope.log("Switch lang: ", lang);
     };*/
 
-    $("body").on("change", "#lang select", function () {
-        var $select = $("#lang select");
+    angular.element("body").on("change", "#lang select", function () {  //Was: $window.$()..
+        var $select = angular.element("#lang select");
 
         $scope.log("Switch lang 2: ", $select.val());
 
         // We need low level '$window.location' for a full page reload!
-        $window.location.href = $scope.cfg.base_url + $select.val();
+        $window.location.href = $scope.cfg.base_url + $select.val() + "#" + $location.url();
     });
 
 });

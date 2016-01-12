@@ -28,7 +28,7 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
   promise_int = $interval(function () {
 
     currentMessage = queue.shift() || false;
-    $("html").attr("data-alert", currentMessage ? 1 : 0);
+    angular.element("html").attr("data-alert", currentMessage ? 1 : 0);  //Was: $window.$()..
 
   }, timeout_ms);
 
@@ -39,7 +39,7 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
 
     promise_tm = $timeout(function () {
       currentMessage = queue.shift() || false;
-      $("html").attr("data-alert", currentMessage ? 1 : 0);
+      angular.element("html").attr("data-alert", currentMessage ? 1 : 0);
     }, 0);
   }
 

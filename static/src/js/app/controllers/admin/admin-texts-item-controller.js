@@ -3,8 +3,8 @@ angular.module('senseItWeb', null, null).controller('AdminTextItemCtrl', functio
     // Translate help/about pages [Bug: #6]
     $scope.toggleTranslations = function () {
         // Not the angular way - refactor?
-        $(".admin-page-texts > table > tbody > tr.row-translate, .admin-page-texts .row-add-form")
-            .toggle("slow");
+        angular.element(".admin-page-texts > table > tbody > tr.row-translate, .admin-page-texts .row-add-form")
+            .toggleClass("ng-show");  //Was: $window.$(..).toggle("slow");
 
         $scope.alert.debug("toggleTranslations");
     }

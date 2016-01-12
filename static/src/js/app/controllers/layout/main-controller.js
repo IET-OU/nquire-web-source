@@ -10,12 +10,12 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
     FilterTagService.get($scope);
     $scope.tags.getList();
 
-    $("html").attr({
+    angular.element("html").attr({
       "data-debug": $scope.alert.isDebug(),
       "data-approval": $scope.alert.isApproval(),
       "data-lang_switch": $scope.cfg.lang_switch,
       "data-lang_ui": $scope.activeLang
-    });
+    });  //Was: $window.$()..
 
     RestService.get('api/text').then(function(data) {
         var it;
@@ -29,7 +29,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
 
         // Site/ approval/ test server message [Bug: #5][Bug: #9]
         if ($scope.txt.siteMessage) {
-          $("html").attr("data-site-message", 1);
+          angular.element("html").attr("data-site-message", 1);
         }
 
         translateSwitchApiTexts($scope, $location);
