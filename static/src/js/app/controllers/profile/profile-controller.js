@@ -158,7 +158,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
   };
 
   $scope.register = {
-    recaptcha: {siteKey: "6Ld4FAYTAAAAAGPfId4I1ecr8fgTRTWTcAxBeTpA"},
+    recaptcha: {siteKey: $scope.cfg.recaptcha.siteKey},
     editing: {username: '', password: '', repeatPassword: '', email: ''},
     error: {username: false, password: false, repeatPassword: false, email: false, recaptcha: false},
     clearPassword: function () {
@@ -224,7 +224,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 
 
   $scope.reminder = {
-    recaptcha: {siteKey: "6Ld4FAYTAAAAAGPfId4I1ecr8fgTRTWTcAxBeTpA"},
+    recaptcha: {siteKey: $scope.cfg.recaptcha.siteKey},
     editing: {email: ''},
     error: {email: false},
     reset: function () {

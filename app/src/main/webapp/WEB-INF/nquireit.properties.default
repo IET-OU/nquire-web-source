@@ -21,6 +21,6 @@ google.consumerSecret=secret
 twitter.consumerKey=key
 twitter.consumerSecret=secret
 
-# The siteKey is hard-coded into profile-controller.js - TODO use this config file
+# reCaptcha site key - see: 'static/src/js/app/config.js'
 recaptcha.siteKey=key
 recaptcha.secretKey=secret
