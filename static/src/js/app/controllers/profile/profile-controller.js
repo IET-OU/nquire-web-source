@@ -1,6 +1,7 @@
 angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($scope, OpenIdService, $state, fileReader) {
 
-	var _ = $scope._;
+	var _ = $scope._
+	  , password_min = 6;
 
 
 	$scope.noyes = [
@@ -190,8 +191,8 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         ok = false;
       }
 
-      if (this.editing.password.length < 6) {
-        this.error.password = _('Password must have at least 6 characters.');
+      if (this.editing.password.length < password_min) {
+        this.error.password = _('Password must have at least {{n}} characters.', { 'n': password_min });
         ok = false;
       }
 
@@ -292,8 +293,8 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
     save: function () {
 
       var ok = true;
-      if (this.editing.newPassword.length < 6) {
-        this.error.password = _('Password must have at least 6 characters.');
+      if (this.editing.newPassword.length < password_min) {
+        this.error.password = _('Password must have at least {{n}} characters.', { 'n': password_min });
         ok = false;
       }
 

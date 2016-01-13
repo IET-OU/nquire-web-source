@@ -121,7 +121,7 @@ msgstr ""
 msgid "A mission created by <span data-siw-user-link=\"projectData.project.author\"></span>."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:265
+#: static/src/js/app/controllers/profile/profile-controller.js:266
 msgid "A password reminder has been sent."
 msgstr ""
 
@@ -201,8 +201,8 @@ msgstr ""
 msgid "Approve"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:204
-#: static/src/js/app/controllers/profile/profile-controller.js:249
+#: static/src/js/app/controllers/profile/profile-controller.js:205
+#: static/src/js/app/controllers/profile/profile-controller.js:250
 msgid "Are you are human being or a robot?"
 msgstr ""
 
@@ -261,8 +261,8 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:219
-#: static/src/js/app/controllers/profile/profile-controller.js:262
+#: static/src/js/app/controllers/profile/profile-controller.js:220
+#: static/src/js/app/controllers/profile/profile-controller.js:263
 msgid "Captcha failed. Try again."
 msgstr ""
 
@@ -468,13 +468,13 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:216
+#: static/src/js/app/controllers/profile/profile-controller.js:217
 msgid "Email already associated with a different account."
 msgstr ""
 
 #: static/src/js/app/controllers/layout/main-controller.js:11
-#: static/src/js/app/controllers/profile/profile-controller.js:189
-#: static/src/js/app/controllers/profile/profile-controller.js:244
+#: static/src/js/app/controllers/profile/profile-controller.js:190
+#: static/src/js/app/controllers/profile/profile-controller.js:245
 msgid "Email cannot be empty."
 msgstr ""
 
@@ -769,7 +769,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:259
+#: static/src/js/app/controllers/profile/profile-controller.js:260
 msgid "No account found with that email or username."
 msgstr ""
 
@@ -843,13 +843,13 @@ msgstr ""
 msgid "Participants administration"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:149
+#: static/src/js/app/controllers/profile/profile-controller.js:150
 msgid "Password cannot be empty."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:194
-#: static/src/js/app/controllers/profile/profile-controller.js:296
-msgid "Password must have at least 6 characters."
+#: static/src/js/app/controllers/profile/profile-controller.js:195
+#: static/src/js/app/controllers/profile/profile-controller.js:297
+msgid "Password must have at least {{n}} characters."
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-out.html:12
@@ -865,8 +865,8 @@ msgstr ""
 msgid "Password:"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:199
-#: static/src/js/app/controllers/profile/profile-controller.js:301
+#: static/src/js/app/controllers/profile/profile-controller.js:200
+#: static/src/js/app/controllers/profile/profile-controller.js:302
 msgid "Passwords do not match."
 msgstr ""
 
@@ -1448,16 +1448,16 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:157
+#: static/src/js/app/controllers/profile/profile-controller.js:158
 msgid "Username & password do not match."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:145
-#: static/src/js/app/controllers/profile/profile-controller.js:185
+#: static/src/js/app/controllers/profile/profile-controller.js:146
+#: static/src/js/app/controllers/profile/profile-controller.js:186
 msgid "Username cannot be empty."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:213
+#: static/src/js/app/controllers/profile/profile-controller.js:214
 msgid "Username not available."
 msgstr ""
 
