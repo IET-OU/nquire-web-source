@@ -14,6 +14,10 @@ module.exports = function(grunt) {
 
 		nggettext_extract: {
 			pot: {
+				// Translate strings in Javascript [Bug: #23]
+				options: {
+					markerNames: [ '_' ]
+				},
 				files: {
 					'po/template.pot': [
 						'static/**/*.html',

@@ -7,6 +7,9 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
 
     initTranslation($scope, $location, gettextCatalog);
 
+    var _ = $scope._
+      , trans_test = _('Email cannot be empty.');
+
     FilterTagService.get($scope);
     $scope.tags.getList();
 
@@ -16,6 +19,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
       "data-lang_switch": $scope.cfg.lang_switch,
       "data-lang_ui": $scope.activeLang
     });  //Was: $window.$()..
+
 
     RestService.get('api/text').then(function(data) {
         var it;
@@ -42,9 +46,13 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         var m_lang = $location.absUrl().match($scope.cfg.lang_url_regex);
 
         $scope.activeLang = m_lang ? m_lang[ 2 ] : 'en';
+        $scope.gettext = gettextCatalog;
+        $scope._ = function (str, scope, ctx) {
+            return gettextCatalog.getString(str, scope, ctx);
+        }
 
         if (m_lang) {
-            gettextCatalog.setCurrentLanguage($scope.activeLang);
+            $scope.gettext.setCurrentLanguage($scope.activeLang);
         }
 
         // navigator.languages?

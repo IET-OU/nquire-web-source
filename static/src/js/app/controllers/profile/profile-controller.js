@@ -1,5 +1,8 @@
 angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($scope, OpenIdService, $state, fileReader) {
 
+	var _ = $scope._;
+
+
 	$scope.noyes = [
 		{value: '0', label: 'no'},
 		{value: '1', label: 'yes'}
@@ -139,11 +142,11 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       this.editing.username = this.editing.username.trim();
 
       if (this.editing.username.length == 0) {
-        this.error.username = 'Username cannot be empty.';
+        this.error.username = _('Username cannot be empty.');
         ok = false;
       }
       if (this.editing.password.length == 0) {
-        this.error.password = 'Password cannot be empty.';
+        this.error.password = _('Password cannot be empty.');
         ok = false;
       }
 
@@ -151,7 +154,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         var error = this.error;
         error.username = null;
         OpenIdService.login(this.editing.username, this.clearPassword(), function (data) {
-          error.password = data == 'false' ? 'Username & password do not match.' : null;
+          error.password = data === 'false' ? _('Username & password do not match.') : null;
         });
       }
     }
@@ -175,30 +178,30 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 
       this.editing.username = this.editing.username.trim();
       this.editing.email = this.editing.email.trim();
-      this.editing.recaptcha = document.getElementById("g-recaptcha-response").value;
+      this.editing.recaptcha = angular.element("#g-recaptcha-response").val();
       this.error = {username: false, password: false, repeatPassword: false, email: false, recaptcha: false};
 
       if (this.editing.username.length == 0) {
-        this.error.username = 'Username cannot be empty.';
+        this.error.username = _('Username cannot be empty.');
         ok = false;
       }
       if (this.editing.email.length == 0) {
-        this.error.email = 'Email cannot be empty.';
+        this.error.email = _('Email cannot be empty.');
         ok = false;
       }
 
       if (this.editing.password.length < 6) {
-        this.error.password = 'Password must have at least 6 characters.';
+        this.error.password = _('Password must have at least 6 characters.');
         ok = false;
       }
 
       if (this.editing.password !== this.editing.repeatPassword) {
-        this.error.repeatPassword = 'Passwords do not match.';
+        this.error.repeatPassword = _('Passwords do not match.');
         ok = false;
       }
 
       if (this.editing.recaptcha === '') {
-        this.error.recaptcha = 'Are you are human being or a robot?';
+        this.error.recaptcha = _('Are you are human being or a robot?');
         ok = false;
       }
 
@@ -207,13 +210,13 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
         OpenIdService.register(this.editing.username, this.clearPassword(), this.editing.email, this.editing.recaptcha).then(function (data) {
           switch (data.responses.registration) {
             case 'username_exists':
-              error.username = 'Username not available.';
+              error.username = _('Username not available.');
               break;
             case 'email_exists':
-              error.email = 'eMail already associated with a different account.';
+              error.email = _('Email already associated with a different account.');
               break;
             case 'bad_recaptcha':
-              error.recaptcha = 'Captcha failed.  Try again.';
+              error.recaptcha = _('Captcha failed. Try again.');
               grecaptcha.reset();
               break;
           }
@@ -235,15 +238,15 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       var ok = true;
 
       this.editing.email = this.editing.email.trim();
-      this.editing.recaptcha = document.getElementById("g-recaptcha-response").value;
+      this.editing.recaptcha = angular.element("#g-recaptcha-response").val();
 
       if (this.editing.email.length == 0) {
-        this.error.email = 'Email cannot be empty.';
+        this.error.email = _('Email cannot be empty.');
         ok = false;
       }
 
       if (this.editing.recaptcha === '') {
-        this.error.recaptcha = 'Are you are human being or a robot?';
+        this.error.recaptcha = _('Are you are human being or a robot?');
         ok = false;
       }
 
@@ -253,13 +256,13 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 	        grecaptcha.reset();
           switch (data.responses.reminder) {
             case 'email_not_exists':
-              error.email = 'No account found with that email or username.';
+              error.email = _('No account found with that email or username.');
               break;
             case 'bad_recaptcha':
-              error.recaptcha = 'Captcha failed.  Try again.';
+              error.recaptcha = _('Captcha failed. Try again.');
               break;
             case 'reminder_sent':
-              error.email = 'A password reminder has been sent.';
+              error.email = _('A password reminder has been sent.');
               break;
           }
         });
@@ -290,12 +293,12 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 
       var ok = true;
       if (this.editing.newPassword.length < 6) {
-        this.error.password = 'Password must have at least 6 characters.';
+        this.error.password = _('Password must have at least 6 characters.');
         ok = false;
       }
 
       if (this.editing.newPassword !== this.editing.repeatPassword) {
-        this.error.repeatPassword = 'Passwords do not match.';
+        this.error.repeatPassword = _('Passwords do not match.');
         ok = false;
       }
 
