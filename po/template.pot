@@ -203,7 +203,7 @@ msgstr ""
 
 #: static/src/js/app/controllers/profile/profile-controller.js:205
 #: static/src/js/app/controllers/profile/profile-controller.js:250
-msgid "Are you are human being or a robot?"
+msgid "Are you a human being or a robot?"
 msgstr ""
 
 #: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1

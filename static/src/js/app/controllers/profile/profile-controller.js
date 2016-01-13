@@ -202,7 +202,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       }
 
       if (this.editing.recaptcha === '') {
-        this.error.recaptcha = _('Are you are human being or a robot?');
+        this.error.recaptcha = _('Are you a human being or a robot?');
         ok = false;
       }
 
@@ -247,7 +247,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       }
 
       if (this.editing.recaptcha === '') {
-        this.error.recaptcha = _('Are you are human being or a robot?');
+        this.error.recaptcha = _('Are you a human being or a robot?');
         ok = false;
       }
 
