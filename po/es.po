@@ -182,6 +182,11 @@ msgstr ""
 "Una misión creada por <span data-siw-user-link=\"projectData.project.author"
 "\"></span>."
 
+#: static/src/js/app/controllers/profile/profile-controller.js:266
+#, fuzzy
+msgid "A password reminder has been sent."
+msgstr "Recordatorio de contraseña"
+
 #: static/src/partials/layout/about.html:5
 #: static/src/partials/layout/header.html:17
 msgid "About"
@@ -195,7 +200,7 @@ msgstr "Acelerómetro"
 msgid "Actions"
 msgstr "Acciones"
 
-#: static/src/partials/admin/admin-filters.html:76
+#: static/src/partials/admin/admin-filters.html:79
 #: static/src/partials/admin/admin-texts.html:26
 msgid "Add"
 msgstr "Agregar"
@@ -258,8 +263,18 @@ msgstr "Cualquier tipo"
 msgid "Approve"
 msgstr "Aprobar"
 
+#: static/src/js/app/controllers/profile/profile-controller.js:205
+#: static/src/js/app/controllers/profile/profile-controller.js:250
+msgid "Are you a human being or a robot?"
+msgstr ""
+
 #: static/src/partials/project/view/data/project-view-data-delete-dlg.html:1
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
+msgstr "¿Seguro quiere eliminar estos datos de <b>{{data.item.title}}</b>?"
+
+#: static/src/partials/admin/admin-filters.html:45
+#, fuzzy
+msgid "Are you sure you want to delete the <i>%s</i> tag?"
 msgstr "¿Seguro quiere eliminar estos datos de <b>{{data.item.title}}</b>?"
 
 #: static/src/partials/admin/admin-projects.html:12
@@ -274,7 +289,7 @@ msgstr "Autor"
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr "Esperando respuesta de {{data.provider.name}}…"
 
-#: static/src/partials/admin/admin-filters.html:47
+#: static/src/partials/admin/admin-filters.html:50
 #: static/src/partials/admin/admin-projects.html:42
 #: static/src/partials/admin/admin-texts.html:53
 #: static/src/partials/comments.html:19
@@ -308,6 +323,11 @@ msgstr "Esperando respuesta de {{data.provider.name}}…"
 #: static/src/partials/widgets/modal-template.html:10
 msgid "Cancel"
 msgstr "Cancelar"
+
+#: static/src/js/app/controllers/profile/profile-controller.js:220
+#: static/src/js/app/controllers/profile/profile-controller.js:263
+msgid "Captcha failed. Try again."
+msgstr ""
 
 #: static/src/partials/social/social-post-dialog.html:57
 msgid "Caption"
@@ -418,7 +438,7 @@ msgstr "Procesamiento de datos"
 msgid "Date"
 msgstr "Fecha"
 
-#: static/src/partials/admin/admin-filters.html:46
+#: static/src/partials/admin/admin-filters.html:44
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
@@ -449,6 +469,11 @@ msgstr ""
 msgid "Delete series"
 msgstr "Eliminar series"
 
+#: static/src/partials/admin/admin-filters.html:46
+#, fuzzy
+msgid "Delete tag?"
+msgstr "Eliminar"
+
 #: static/src/partials/forum/forum-list-forum.html:20
 msgid "Description"
 msgstr "Descripción"
@@ -477,7 +502,7 @@ msgstr "Detalles"
 msgid "Download CSV"
 msgstr "Descargar CSV"
 
-#: static/src/partials/admin/admin-filters.html:42
+#: static/src/partials/admin/admin-filters.html:43
 #: static/src/partials/admin/admin-texts.html:49
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
@@ -513,13 +538,23 @@ msgstr "Editar título"
 msgid "Email"
 msgstr "Email"
 
+#: static/src/js/app/controllers/profile/profile-controller.js:217
+msgid "Email already associated with a different account."
+msgstr ""
+
+#: static/src/js/app/controllers/layout/main-controller.js:11
+#: static/src/js/app/controllers/profile/profile-controller.js:190
+#: static/src/js/app/controllers/profile/profile-controller.js:245
+msgid "Email cannot be empty."
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:140
 msgid "Email notifications"
 msgstr "Notificaciones por email"
 
 #: static/src/partials/profile/profile-logged-in.html:68
 #: static/src/partials/profile/profile-logged-in.html:77
-#: static/src/partials/profile/profile-logged-out.html:141
+#: static/src/partials/profile/profile-logged-out.html:143
 #: static/src/partials/profile/profile-logged-out.html:80
 msgid "Email:"
 msgstr "Email:"
@@ -571,7 +606,7 @@ msgstr "Volver a la lista"
 msgid "Grant permission"
 msgstr "Otorgar permiso"
 
-#: static/src/js/app/config.js.DIST.html:18
+#: static/src/js/app/config.js.DIST.html:22
 msgid "Greek schools missions"
 msgstr "Misiones de escuelas griegas"
 
@@ -584,8 +619,8 @@ msgid ""
 "Hi, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
 "<br>you are signed in."
 msgstr ""
-"Hola, <a href=\"\" data-ui-sref=\"profile\""
-">{{status.profile.username}}</a>,<br>ha iniciado la sesión."
+"Hola, <a href=\"\" data-ui-sref=\"profile\">{{status.profile.username}}</a>,"
+"<br>ha iniciado la sesión."
 
 #: static/src/partials/layout/header.html:15
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:2
@@ -596,7 +631,7 @@ msgstr "Principal"
 msgid "I forgot my password"
 msgstr "Olvidé mi contraseña"
 
-#: static/src/partials/profile/profile-logged-out.html:137
+#: static/src/partials/profile/profile-logged-out.html:139
 msgid "I forgot my password:"
 msgstr "Olvidé mi contraseña:"
 
@@ -821,6 +856,10 @@ msgstr "Nueva contraseña:"
 msgid "No"
 msgstr "No"
 
+#: static/src/js/app/controllers/profile/profile-controller.js:260
+msgid "No account found with that email or username."
+msgstr ""
+
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:9
 msgid "No answer has been selected yet."
 msgstr "Todavía no se seleccionó ninguna respuesta."
@@ -891,6 +930,15 @@ msgstr "Participante"
 msgid "Participants administration"
 msgstr "Administración de participantes"
 
+#: static/src/js/app/controllers/profile/profile-controller.js:150
+msgid "Password cannot be empty."
+msgstr ""
+
+#: static/src/js/app/controllers/profile/profile-controller.js:195
+#: static/src/js/app/controllers/profile/profile-controller.js:297
+msgid "Password must have at least {{n}} characters."
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-out.html:12
 msgid "Password reminder"
 msgstr "Recordatorio de contraseña"
@@ -903,6 +951,11 @@ msgstr "Contraseña establecida:"
 #: static/src/partials/profile/profile-logged-out.html:91
 msgid "Password:"
 msgstr "Contraseña:"
+
+#: static/src/js/app/controllers/profile/profile-controller.js:200
+#: static/src/js/app/controllers/profile/profile-controller.js:302
+msgid "Passwords do not match."
+msgstr ""
 
 #: static/src/partials/project/admin/project-admin-home-page.html:30
 #: static/src/partials/project/edit/project-edit-outline-page.html:42
@@ -959,6 +1012,11 @@ msgstr "Visbilidad del perfil"
 msgid "Project image:"
 msgstr "Imagen del proyecto:"
 
+#: static/src/partials/projects/projects.html:66
+#, fuzzy
+msgid "Project sidebar"
+msgstr "Proyectos"
+
 #: static/src/partials/admin/admin.html:4
 msgid "Projects"
 msgstr "Proyectos"
@@ -995,7 +1053,7 @@ msgstr "Comentarios recientes"
 msgid "Register"
 msgstr "Registrarse"
 
-#: static/src/partials/profile/profile-logged-out.html:127
+#: static/src/partials/profile/profile-logged-out.html:129
 msgid "Register new account"
 msgstr "Registrar una nueva cuenta"
 
@@ -1028,7 +1086,7 @@ msgstr "Contenido reportado"
 msgid "Reports"
 msgstr "Reportes"
 
-#: static/src/partials/profile/profile-logged-out.html:128
+#: static/src/partials/profile/profile-logged-out.html:130
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
 msgid "Reset"
 msgstr "Resetear"
@@ -1037,7 +1095,7 @@ msgstr "Resetear"
 msgid "Samples / second"
 msgstr "Muestras / segundo"
 
-#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-filters.html:49
 #: static/src/partials/admin/admin-projects.html:41
 #: static/src/partials/admin/admin-texts.html:52
 #: static/src/partials/forum/forum-list-category.html:34
@@ -1128,7 +1186,7 @@ msgstr ""
 "Enviar una notificación a la dirección de correo electrónico de arriba "
 "cuando ocurran los siguientes eventos:"
 
-#: static/src/partials/profile/profile-logged-out.html:161
+#: static/src/partials/profile/profile-logged-out.html:163
 msgid "Send a reminder"
 msgstr "Enviar un recordatorio"
 
@@ -1179,7 +1237,7 @@ msgid "Show/hide translations"
 msgstr "Mostrar/ocultar traducciones"
 
 #: static/src/partials/layout/header.html:55
-#: static/src/partials/profile/profile-logged-out.html:162
+#: static/src/partials/profile/profile-logged-out.html:164
 #: static/src/partials/profile/profile-logged-out.html:3
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
@@ -1238,18 +1296,18 @@ msgstr "Alguien comentó en una misión en la que yo he comentado:"
 msgid "Someone posts to a mission that I created:"
 msgstr "Alguien posteó un mensaje en una misión que yo creé:"
 
-#: static/src/partials/admin/admin-filters.html:32
-#: static/src/partials/admin/admin-filters.html:68
+#: static/src/partials/admin/admin-filters.html:33
+#: static/src/partials/admin/admin-filters.html:71
 msgid "Sorry! I can't add a duplicate tag:"
 msgstr "Disculpas! No se puede agregar una etiqueta duplicada:"
 
-#: static/src/partials/admin/admin-filters.html:34
-#: static/src/partials/admin/admin-filters.html:70
+#: static/src/partials/admin/admin-filters.html:35
+#: static/src/partials/admin/admin-filters.html:73
 msgid "Sorry! This tag term is empty."
 msgstr "Perdón! Esta etiqueta está vacía."
 
-#: static/src/partials/admin/admin-filters.html:33
-#: static/src/partials/admin/admin-filters.html:69
+#: static/src/partials/admin/admin-filters.html:34
+#: static/src/partials/admin/admin-filters.html:72
 msgid "Sorry! This tag term is invalid — spaces?"
 msgstr "Perdón! Este término para la etiqueta es inválido - espacios?"
 
@@ -1348,6 +1406,17 @@ msgstr "Filtros por etiqueta"
 msgid "Tag-term"
 msgstr "Término-etiqueta"
 
+#: static/src/partials/admin/admin-filters.html:28
+#: static/src/partials/admin/admin-filters.html:66
+msgid "Tag-term format: letters, numbers, dashes, no spaces."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:28
+#: static/src/partials/admin/admin-filters.html:66
+#, fuzzy
+msgid "Tag-term, eg."
+msgstr "Término-etiqueta"
+
 #: static/src/partials/admin/admin-projects.html:15
 #: static/src/partials/admin/admin.html:5
 msgid "Tags"
@@ -1366,16 +1435,16 @@ msgstr "Texto:"
 msgid "Texts"
 msgstr "Textos"
 
-#: static/src/js/app/config.js.DIST.html:13
+#: static/src/js/app/config.js.DIST.html:17
 msgid "The site will be undergoing routine maintenance today, {{DATE}}."
 msgstr "El sitio está bajo tareas de mantenimiento hoy, {{DATE}}."
 
-#: static/src/js/app/config.js.DIST.html:14
+#: static/src/js/app/config.js.DIST.html:18
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr "El sitio estará bajo tareas de mantenimiento mañana, {{DATE}}."
 
-#: static/src/partials/admin/admin-filters.html:36
-#: static/src/partials/admin/admin-filters.html:73
+#: static/src/partials/admin/admin-filters.html:37
+#: static/src/partials/admin/admin-filters.html:76
 msgid "The tag term is not currently valid — spaces?"
 msgstr "El término para la etiqueta no es válido - ¿espacios?"
 
@@ -1467,6 +1536,10 @@ msgstr ""
 msgid "Toggle plot"
 msgstr "Ver/Ocultar gráfico"
 
+#: static/src/partials/projects/projects.html:65
+msgid "Toggle sidebar"
+msgstr ""
+
 #: static/src/partials/projects/projects.html:6
 msgid ""
 "Try <a href=\"\" data-ui-sref=\"home({filter: 'all'})\">selecting all "
@@ -1487,7 +1560,7 @@ msgstr ""
 msgid "Unlink {{providerName}} account"
 msgstr "Desenlazar cuenta de {{providerName}}"
 
-#: static/src/js/app/config.js.DIST.html:15
+#: static/src/js/app/config.js.DIST.html:19
 msgid ""
 "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
 "Twitter</a>."
@@ -1528,6 +1601,19 @@ msgstr "Perfil de usuario: {{profile.username}}"
 msgid "Username"
 msgstr "Nombre de usuario"
 
+#: static/src/js/app/controllers/profile/profile-controller.js:158
+msgid "Username & password do not match."
+msgstr ""
+
+#: static/src/js/app/controllers/profile/profile-controller.js:146
+#: static/src/js/app/controllers/profile/profile-controller.js:186
+msgid "Username cannot be empty."
+msgstr ""
+
+#: static/src/js/app/controllers/profile/profile-controller.js:214
+msgid "Username not available."
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:47
 #: static/src/partials/profile/profile-logged-in.html:55
 #: static/src/partials/profile/profile-logged-out.html:25
@@ -1545,7 +1631,7 @@ msgid "Users logged in"
 msgstr "Usuarios que han iniciado sesión"
 
 #: static/src/partials/profile/profile-logged-out.html:112
-#: static/src/partials/profile/profile-logged-out.html:150
+#: static/src/partials/profile/profile-logged-out.html:152
 msgid "Verify yourself:"
 msgstr "Verificar su perfil:"
 
@@ -1568,7 +1654,7 @@ msgstr "Votación"
 msgid "Voting stage"
 msgstr "Etapa de la votación"
 
-#: static/src/js/app/config.js.DIST.html:17
+#: static/src/js/app/config.js.DIST.html:21
 msgid "Weather-it missions"
 msgstr "Misiones Weather-it"
 
@@ -1705,7 +1791,7 @@ msgstr "Página principal de nQuire-it"
 msgid "nQuire-it — join missions to explore your world"
 msgstr "nQuire-it — unirse a misiones para explorar el mundo"
 
-#: static/src/js/app/config.js.DIST.html:16
+#: static/src/js/app/config.js.DIST.html:20
 msgid "{{MISSION}} missions"
 msgstr "misiones {{MISSION}}"
 
