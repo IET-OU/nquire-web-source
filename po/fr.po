@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-01-26 15:20+0000\n"
+"PO-Revision-Date: 2016-01-27 09:33+0000\n"
 "Last-Translator: Maxime Lasserre <maxime.lasserre@telecom-bretagne.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -143,7 +143,7 @@ msgstr "Actions"
 
 #: static/src/partials/project/edit/project-edit-details-page.html:62
 msgid "Add block"
-msgstr ""
+msgstr "Ajouter une section"
 
 #: static/src/partials/forum/forum-list-category.html:14
 msgid "Add category"
@@ -791,12 +791,10 @@ msgstr "Période de résultat"
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:1
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:1
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:1
-#, fuzzy
 msgid "Outline"
 msgstr "Aperçu"
 
 #: static/src/partials/project/edit/project-edit-outline-page.html:23
-#, fuzzy
 msgid "Outline:"
 msgstr "Aperçu :"
 
