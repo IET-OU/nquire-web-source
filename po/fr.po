@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-01-27 09:33+0000\n"
+"PO-Revision-Date: 2016-01-27 14:52+0000\n"
 "Last-Translator: Maxime Lasserre <maxime.lasserre@telecom-bretagne.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -155,14 +155,12 @@ msgid "Add field"
 msgstr "Ajouter un champ"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:37
-#, fuzzy
 msgid "Add sensor input"
-msgstr "Ajouter un type de données"
+msgstr "Ajouter un capteur source"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:50
-#, fuzzy
 msgid "Add transformation"
-msgstr "Ajouter une transformation"
+msgstr "Ajouter un traitement"
 
 #: static/src/partials/admin/admin-users.html:7
 #: static/src/partials/layout/header.html:19
@@ -170,7 +168,6 @@ msgid "Administrator"
 msgstr "Administrateur"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:5
-#, fuzzy
 msgid "All answers"
 msgstr "Toutes les réponses"
 
@@ -188,9 +185,8 @@ msgid "Ambient temperature"
 msgstr "Température ambiante"
 
 #: static/src/partials/projects/projects-sidebar.html:28
-#, fuzzy
 msgid "Any type"
-msgstr "N'importe quel type"
+msgstr "Tout type"
 
 #: static/src/partials/admin/admin-reported.html:30
 msgid "Approve"
@@ -252,8 +248,9 @@ msgid "Caption"
 msgstr "Légende"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:3
+#, fuzzy
 msgid "Challenge"
-msgstr ""
+msgstr "Défi"
 
 #: static/src/partials/profile/profile-logged-in.html:132
 #: static/src/partials/profile/profile-logged-in.html:95
@@ -266,12 +263,10 @@ msgstr "Cliquer <a href=\"\" data-ui-sref=\"project.view.challenge\">ici</a> pou
 
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
-#, fuzzy
 msgid "Close project"
 msgstr "Fermer le project"
 
 #: static/src/partials/forum/forum-thread.html:56
-#, fuzzy
 msgid "Comment"
 msgstr "Commentaire"
 
@@ -281,25 +276,23 @@ msgid "Comment:"
 msgstr "Commentaire :"
 
 #: static/src/partials/admin/admin-texts.html:5
-#, fuzzy
 msgid "Content"
 msgstr "Contenu"
 
 #: static/src/partials/admin/admin-reported.html:17
 msgid "Content id"
-msgstr ""
+msgstr "Identifiant"
 
 #: static/src/partials/layout/header.html:18
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
 #: static/src/partials/projects/create.html:118
 #: static/src/partials/projects/create.html:121
-#, fuzzy
 msgid "Create"
 msgstr "Créer"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:66
 msgid "Create new idea"
-msgstr ""
+msgstr "Soumettre une nouvelle idée"
 
 #: static/src/partials/projects/create.html:11
 #, fuzzy
@@ -324,7 +317,6 @@ msgstr "Mot de passe actuel :"
 
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:3
 #: static/src/partials/project/view/spotit/spotit-view-menu.html:3
-#, fuzzy
 msgid "Data"
 msgstr "Données"
 
@@ -340,7 +332,7 @@ msgstr "Liste des données"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:7
 msgid "Data processing"
-msgstr ""
+msgstr "Traitement des données"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:6
 #: static/src/partials/project/view/senseit/senseit-data-map.html:6
@@ -369,7 +361,7 @@ msgstr "Supprimer le projet"
 msgid ""
 "Delete sensor\n"
 "            input"
-msgstr ""
+msgstr "Supprimer le capteur"
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:23
 #, fuzzy
@@ -460,24 +452,20 @@ msgid "Explanation:"
 msgstr "Explication :"
 
 #: static/src/partials/projects/projects-sidebar.html:14
-#, fuzzy
 msgid "Featured missions"
 msgstr "Missions promues"
 
 #: static/src/partials/admin/admin-projects.html:8
-#, fuzzy
 msgid "Featured?"
 msgstr "Promouvoir ?"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:7
-#, fuzzy
 msgid "Field label:"
 msgstr "Nom du champ :"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
-#, fuzzy
 msgid "Field type:"
-msgstr "Type du champ :"
+msgstr "Type de champ :"
 
 #: static/src/partials/forum/forum-list.html:7
 #: static/src/partials/forum/forum-thread.html:2
@@ -490,7 +478,6 @@ msgid "Forums"
 msgstr "Forums"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-profile.html:8
-#, fuzzy
 msgid "Geolocated data:"
 msgstr "Données géolocalisées :"
 
@@ -530,7 +517,7 @@ msgstr "J'ai oublié mon mot de passe :"
 #: static/src/partials/admin/admin-projects.html:4
 #: static/src/partials/admin/admin-users.html:4
 msgid "Id"
-msgstr ""
+msgstr "Identifiant"
 
 #: static/src/partials/project/admin/challenge/challenge-admin-menu.html:4
 #: static/src/partials/project/view/challenge/challenge-view-menu.html:3
@@ -937,11 +924,11 @@ msgstr "Réponses"
 
 #: static/src/partials/admin/admin.html:6
 msgid "Reported content"
-msgstr ""
+msgstr "Signaler"
 
 #: static/src/partials/admin/admin-reported.html:18
 msgid "Reports"
-msgstr ""
+msgstr "Signalements"
 
 #: static/src/partials/profile/profile-logged-out.html:125
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
