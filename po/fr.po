@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-01-27 14:52+0000\n"
+"PO-Revision-Date: 2016-01-28 15:45+0000\n"
 "Last-Translator: Maxime Lasserre <maxime.lasserre@telecom-bretagne.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -77,15 +77,15 @@ msgstr "<b>Explication :</b> {{outcome.explanation}}"
 
 #: static/src/partials/project/blocks/project-menu.html:10
 msgid "<b>Sense-it</b> mission"
-msgstr "Mission <b>Sense-it</b>"
+msgstr "Mission <b>Capte-le</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:11
 msgid "<b>Spot-it</b> mission"
-msgstr "Mission <b>Spot-it</b>"
+msgstr "Mission <b>Montre-le</b>"
 
 #: static/src/partials/project/blocks/project-menu.html:12
 msgid "<b>Win-it</b> mission"
-msgstr "Mission <b>Win-it</b>"
+msgstr "Mission <b>Gagne-le</b>"
 
 #: static/src/partials/project/view/senseit/senseit-project-data.html:7
 msgid "<b>{{projectData.data.data}}</b> series"
@@ -102,27 +102,27 @@ msgstr "<span class=\"project-section-description-text-mission\">Mission :</span
 
 #: static/src/partials/projects/projects-sidebar.html:32
 msgid "<span class=\"sidebar-type-senseit\">Sense-it</span> missions"
-msgstr "Missions <span class=\"sidebar-type-senseit\">Sense-it</span>"
+msgstr "Missions <span class=\"sidebar-type-sensei\">Capte-le</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:36
 msgid "<span class=\"sidebar-type-spotit\">Spot-it</span> missions"
-msgstr "Missions <span class=\"sidebar-type-spotit\">Spot-it</span>"
+msgstr "Missions <span class=\"sidebar-type-spotlit\">Montre-le</span>"
 
 #: static/src/partials/projects/projects-sidebar.html:40
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
-msgstr "Missions <span class=\"sidebar-type-winit\">Win-it</span>"
+msgstr "Missions <span class=\"sidebar-type-kinit\">Gagne-le</span>"
 
 #: static/src/partials/projects/projects.html:53
 msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
-msgstr "Une mission <span class=\"project-item-banner-type\">Sense-it</span>"
+msgstr "Une mission <span class=\"project-item-banner-type\">Capte-le</span>"
 
 #: static/src/partials/projects/projects.html:54
 msgid "A <span class=\"project-item-banner-type\">Spot-it</span> mission"
-msgstr "Une mission <span class=\"project-item-banner-type\">Spot-it</span>"
+msgstr "Une mission <span class=\"project-item-banner-type\">Montre-le</span>"
 
 #: static/src/partials/projects/projects.html:55
 msgid "A <span class=\"project-item-banner-type\">Win-it</span> mission"
-msgstr "Une mission <span class=\"project-item-banner-type\">Win-it</span>"
+msgstr "Une mission <span class=\"project-item-banner-type\">Gagne-le</span>"
 
 #: static/src/partials/projects/projects.html:44
 msgid "A mission created by <span data-siw-user-link=\"projectData.project.author\"></span>."
@@ -150,7 +150,6 @@ msgid "Add category"
 msgstr "Ajouter une catégorie"
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:33
-#, fuzzy
 msgid "Add field"
 msgstr "Ajouter un champ"
 
@@ -295,9 +294,8 @@ msgid "Create new idea"
 msgstr "Soumettre une nouvelle idée"
 
 #: static/src/partials/projects/create.html:11
-#, fuzzy
 msgid "Create your own <b>Sense-it</b> mission"
-msgstr "Créer votre propre mission <b>Sense-it</b>"
+msgstr "Créer votre propre mission <b>Capte-le</b>"
 
 #: static/src/partials/projects/create.html:30
 msgid "Create your own <b>Spot-it</b> mission"
