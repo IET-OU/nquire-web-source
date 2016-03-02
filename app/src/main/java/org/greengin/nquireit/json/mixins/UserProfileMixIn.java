@@ -22,6 +22,7 @@ public abstract class UserProfileMixIn {
     @JsonView(Views.UserProfileData.class) abstract String getEmail();
     @JsonIgnore boolean emailConfirmed;
 
+    @JsonView(Views.UserProfileData.class) abstract String getIsoDate();
     @JsonIgnore Date date;
     @JsonIgnore String status;
 

@@ -39,7 +39,7 @@ public class AdminController {
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     @ResponseBody
-    @ResponseView(value = Views.ForumList.class)
+    @ResponseView(value = Views.UserProfileData.class)
     public List<UserProfile> users(HttpServletRequest request) {
         return createAdminManager(request).getUsers();
     }

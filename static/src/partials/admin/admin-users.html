@@ -8,7 +8,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr data-ng-repeat="user in admin.data.users">
+    <tr data-ng-repeat="user in admin.data.users" title=
+"Is logged in? {{user.loggedIn}} &#13;Password is set? {{user.passwordSet}}
+Is admin? {{user.admin}} &#13;Date created: {{user.isoDate}}
+Name: {{user.metadata.name}} &#13;Location: {{user.metadata.location}}">
         <td>{{user.id}}</td>
         <td><span siw-user-link="user"></span></td>
         <td>{{user.email}}</td>

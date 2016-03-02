@@ -10,7 +10,11 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
@@ -150,6 +154,17 @@ public class UserProfile extends AbstractEntity implements UserDetails {
     @Override
     public boolean equals(Object obj) {
         return obj != null && obj instanceof UserProfile && getId().equals(((UserProfile) obj).getId());
+    }
+
+    // https://gist.github.com/kristopherjohnson/6124652
+    public String getIsoDate() {
+        String isodate = null;
+        if (date != null) {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
+            dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+            isodate = dateFormat.format(date);
+        }
+        return isodate;
     }
 
 }
