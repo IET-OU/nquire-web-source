@@ -11,6 +11,16 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		jshint: {
+			options: {
+				'-W097': true,  // Ignore position of 'use strict';
+				globals: {
+					angular: true
+				}
+			},
+			config: 'static/src/js/app/config.js',
+			src: 'static/src/js/app/controllers/**/*.js'
+		},
 
 		nggettext_extract: {
 			pot: {
@@ -54,6 +64,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-angular-gettext');
 	grunt.loadNpmTasks('grunt-msg-init-merge');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-sass');
 
 	grunt.registerTask('gettext', [
@@ -62,5 +73,5 @@ module.exports = function(grunt) {
 		'msgInitMerge'
 	]);
 
-	grunt.registerTask('default', [ 'gettext', 'sass' ]);
+	grunt.registerTask('default', [ 'gettext', 'sass', 'jshint:config' ]);
 };
