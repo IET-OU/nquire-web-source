@@ -1,4 +1,11 @@
-<table class="table table-striped">
+
+<p id="admin-users-count"><span translate>Logged in users: </span>
+  <i ng-bind="countClass('.is-logged-in')"></i>
+  <button ng-click="scrollTo('.is-logged-in')" title="{{ 'Scroll to the first &darr;' | translate }}" translate>Scroll &darr;</button>
+</p>
+
+
+<table class="table table-striped admin-users-table">
     <thead>
     <tr>
         <th translate>Id</th>
@@ -8,7 +15,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr data-ng-repeat="user in admin.data.users" title=
+    <tr data-ng-repeat="user in admin.data.users" ng-class="{ 'is-logged-in': user.loggedIn }" title=
 "Is logged in? {{user.loggedIn}} &#13;Password is set? {{user.passwordSet}}
 Is admin? {{user.admin}} &#13;Date created: {{user.isoDate}}
 Name: {{user.metadata.name}} &#13;Location: {{user.metadata.location}}">
