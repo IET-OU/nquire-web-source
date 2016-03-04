@@ -1,17 +1,32 @@
 {
   "name": "nQuire-it",
-  "description": "... © 2014-2015 The Open University (IET-OU)",
+  "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2016 The Open University (IET-OU)",
+  "keywords": [ "personal inquiry", "student", "sense-it", "OpenUniversity", "IET-OU" ],
   "version": "0.9.0",
+  "license": "GPL-3.0+",
   "private": true,
+  "homepage": "http://www.nquire-it.org/",
+  "author": "Eloy Villasclaras <eloy.villasclaras@gmail.com>",
+  "contributors": [
+    { "name": "Greg Roach / @fisharebest" },
+    { "name": "Nick Freear / @nfreear" },
+    { "name": "Rich Lovelock / @richlove1" }
+  ],
+  "files": [ "static/src/js/" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/IET-OU/nquire-web-source"
+  },
+  "bugs": {
+    "url": "https://github.com/IET-OU/nquire-web-source/issues"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-gettext": "^2.1.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-msg-init-merge": "0.0.5",
+    "grunt-nice-package": "^0.10.2",
     "grunt-sass": "^1.1.0"
-  }
+  },
+  "engines": { "node" : "> 0.10.0" }
 }
