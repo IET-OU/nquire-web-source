@@ -56,8 +56,25 @@ input:invalid, input.ng-invalid {
       //&[ data-row-lang != 'en' ] {
       display: none;
     }
-  }
 
+    table tr .flag-icon {
+      display: block;
+      width: 1.3333em;
+      margin: 0 auto;
+      cursor: help;
+    }
+
+    .flag-list {
+      display: inline-block;
+      margin: 0 6px;
+      float: right;
+
+      .flag-icon {
+        margin: 0 3px;
+        cursor: help;
+      }
+    }
+  }
 
   .admin-page-filters,
   .admin-page-texts {
@@ -152,6 +169,10 @@ input:invalid, input.ng-invalid {
     margin: 0 8px;
     font-style: normal;
     font-size: large;
+  }
+
+  button[ ng-click *= footer ] {
+    margin: 0 8px;
   }
 
   &.error-unauthorized {

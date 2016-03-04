@@ -33,7 +33,8 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
         , lang
         , id
         , label
-        , orig_label = ' <b>(original English)</b>'
+        , $flags = $scope.cfg.lang_flags
+        , orig_label = $flags ? ' <i class="flag-icon flag-icon-gb" title="original English"></i>' : ' <b>(original English)</b>'
         , $the_langs = $scope.cfg.lang_admin_texts
         , new_list = [];
 
@@ -50,13 +51,20 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
           item = $scope.itemList[ it ];
 
           for (lang in $the_langs) {
+              label = item.label;
 
               if ("en" === lang) {
                   id = item.id;
-                  label = item.label + orig_label;
+                  label += orig_label;
               } else {
                   id = item.id + "_" + lang;
-                  label = item.label + " <b>(" + $the_langs[ lang ] + ")</b>";
+                  if ($flags) {
+                      var cls = "flag-icon flag-icon-" + $flags[ lang ];
+                      label += " <i class='%c' title='%s'></i>".replace(/%c/, cls);
+                  } else {
+                      label += " <b>%s</b>";
+                  }
+                  label = label.replace(/%s/, $the_langs[ lang ]);
               }
               new_list.push({ id: id, label: label, format: item.format, lang: lang });
           }

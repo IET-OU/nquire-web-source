@@ -1,7 +1,14 @@
 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flag-icon-css/1.3.0/css/flag-icon.min.css">
+
+
 <div ng-controller="AdminTextItemCtrl" class="admin-page-texts">
 
 <button ng-click="toggleTranslations()" ng-if="cfg.lang_admin_texts" translate>Show/hide translations</button>
+
+<span ng-if="cfg.lang_flags" class="flag-list">
+    <i ng-repeat="(lang, name) in cfg.lang_admin_texts" class="flag-icon flag-icon-{{ cfg.lang_flags[lang] }}" title="{{ name }}"></i>
+</span>
 
 <div ng-if="cfg.admin_texts_help" ng-bind-html="cfg.admin_texts_help"></div>
 
