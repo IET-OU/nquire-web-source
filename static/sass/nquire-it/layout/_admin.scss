@@ -164,11 +164,19 @@ input:invalid, input.ng-invalid {
   }
 
 
-  #admin-users-count i {
+  #admin-users-count {
     display: inline-block;
-    margin: 0 8px;
-    font-style: normal;
-    font-size: large;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 5px 14px;
+    margin: 2px 0;
+
+    i {
+      display: inline-block;
+      margin: 0 8px;
+      font-style: normal;
+      font-size: large;
+    }
   }
 
   button[ ng-click *= footer ] {
