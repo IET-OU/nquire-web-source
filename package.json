@@ -30,6 +30,8 @@
   },
   "scripts": {
     "versions": "printf \"npm: \" && npm --version && echo \"\" && mvn --version",
+    "setup-config-js": "cp -n static/src/js/app/config.js.DIST.html static/src/js/app/config.js",
+    "setup-java": "cp -n app/pom.TEMPLATE.xml app/pom.xml",
     "compile-java": "cd ./app/ && mvn compile",
     "bugs": "ghi | more"
   },

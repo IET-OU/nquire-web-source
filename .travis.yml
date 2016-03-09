@@ -8,6 +8,9 @@ install:
   - npm install
 
 before_script:
+  - npm run setup-config-js
+  - npm run setup-java
+  - ls static/src/js/app/ && ls app/
   - npm run versions
 
 script:
