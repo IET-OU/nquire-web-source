@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('VoteService', ['RestService', function (RestService) {
+    'use strict';
 
     var service = {
         vote: function(path, vote) {

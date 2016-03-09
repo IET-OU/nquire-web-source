@@ -1,7 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('CommentService', ['RestService', function (RestService) {
-
+    'use strict';
 
     var CommentManager = function (commentThread) {
         this.path = 'api/' + commentThread.path + '/comments';

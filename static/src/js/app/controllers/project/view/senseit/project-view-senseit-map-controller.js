@@ -68,20 +68,20 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSenseItMapCtrl',
             return text.length > 10 ? text.substr(0, 10) : text;
         },
         infoWindow: function (item) {
-            var content = '';
+            var content = '', i, v;
             content += 'Title: ' + item.title + '<br/>';
             content += 'Author: ' + item.author.username + '<br/>';
             if (item.date) {
                 content += 'On ' + $filter('fuzzyDate')(item.date) + '<br/>';
             }
 
-            for (var i = 0; i < $scope.dataInfo.tableVariables.length; i++) {
-                var v = $scope.dataInfo.tableVariables[i];
+            for (i = 0; i < $scope.dataInfo.tableVariables.length; i++) {
+                v = $scope.dataInfo.tableVariables[i];
                 content += v.label() + ": " + item.varValue[v.id].v[0] + '<br/>';
             }
 
-            for (var i = 0; i < $scope.dataInfo.plotVariables.length; i++) {
-                var v = $scope.dataInfo.plotVariables[i];
+            for (i = 0; i < $scope.dataInfo.plotVariables.length; i++) {
+                v = $scope.dataInfo.plotVariables[i];
                 content += '<img src="api/project/' + $scope.projectData.project.id + '/senseit/data/' + item.id + '/' + v.id + '.png" /><br/>';
             }
 

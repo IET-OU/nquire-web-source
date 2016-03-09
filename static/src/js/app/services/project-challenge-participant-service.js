@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('ProjectChallengeParticipantService', ['OpenIdService', function (OpenIdService) {
+  'use strict';
 
   var ProjectChallengeParticipant = function (projectWatcher) {
     this._answersPath = 'challenge/answers';

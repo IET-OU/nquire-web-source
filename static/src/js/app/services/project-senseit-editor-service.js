@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('ProjectSenseItEditService', ['ProjectService', function () {
+    'use strict';
 
     var ProjectSenseItEditor = function(projectWatcher) {
         this.projectWatcher = projectWatcher;

@@ -206,7 +206,7 @@ var SiwSenseItSensorData = {
             return angular.isArray(u) ? u[index] : u;
         },
         unitsToStr: function (units) {
-            var output = '';
+            var output = '', n;
 
             var singleNegativeUnit = -1;
             for (var unit in units) {
@@ -216,7 +216,7 @@ var SiwSenseItSensorData = {
             }
 
             for (unit in units) {
-                var n = units[unit];
+                n = units[unit];
                 if (n !== 0 && unit !== singleNegativeUnit) {
                     if (output.length > 0) {
                         output += ' ';

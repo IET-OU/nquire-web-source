@@ -1,4 +1,5 @@
 angular.module('senseItWeb', null, null).controller('AdminTextItemCtrl', function ($scope) {
+    'use strict';
 
     // Translate help/about pages [Bug: #6]
     $scope.toggleTranslations = function () {
@@ -7,13 +8,13 @@ angular.module('senseItWeb', null, null).controller('AdminTextItemCtrl', functio
             .toggleClass("ng-show");  //Was: $window.$(..).toggle("slow");
 
         $scope.alert.debug("toggleTranslations");
-    }
+    };
 
     $scope.submit = function () {
         $scope.admin.setText($scope.text.key, $scope.text.value);
 
         $scope.log("Submitted: ", $scope.text);
-    }
+    };
 
 
     if ($scope.item) {

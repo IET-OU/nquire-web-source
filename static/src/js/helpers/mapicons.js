@@ -36,7 +36,7 @@ SiwMapIcons.prototype.update = function (max, min) {
     this.colors = [];
     this.positions = [];
     for (var i = 0; i < this.n; i++) {
-        this.colors.push(SiwColorGenerator.getColor(i, 1, .7));
+        this.colors.push(SiwColorGenerator.getColor(i, 1, 0.7));
         this.positions.push(SiwMapIconsConsts.ohMargin + SiwMapIconsConsts.hMargin + lineSpace * (i + 1));
     }
     this.lineWidth = Math.min(SiwMapIconsConsts.maxLineWidth, lineSpace);
@@ -47,28 +47,30 @@ SiwMapIcons.prototype.update = function (max, min) {
 };
 
 SiwMapIcons.prototype.getZeroLine = function () {
-    var dx = .5 * SiwMapIconsConsts.plotWidth;
-    var cx = .5 * this.iconWidth;
+    var dx = 0.5 * SiwMapIconsConsts.plotWidth;
+    var cx = 0.5 * this.iconWidth;
     var y = this.zeroH;
     var line = '<line x1="' + (cx - dx) + '" y1="' + y + '" x2="' + (cx + dx) + '" y2="' + y + '" style="stroke:black;stroke-width:1" />';
     return line;
 };
 
+/* jshint -W014 */
+
 SiwMapIcons.prototype.getBg = function (selected) {
-    var cx = .5 * this.iconWidth;
+    var cx = 0.5 * this.iconWidth;
     var hw = cx - SiwMapIconsConsts.ohMargin;
     var w = 2 * hw;
     var y0 = this.iconHeight - SiwMapIconsConsts.ovMargin;
-    var aw = .5 * SiwMapIconsConsts.arroWidth;
+    var aw = 0.5 * SiwMapIconsConsts.arroWidth;
     var sdx = hw - aw;
     var dy = SiwMapIconsConsts.plotHeight + 2 * SiwMapIconsConsts.vMargin;
+
 
     return '<path style="stroke:black;stroke-width:1; fill:' + (selected ? '#f39a19' : '#eee') + '" d="m' + cx + ',' + y0
         + ' a' + aw + "," + SiwMapIconsConsts.arrowHeight + ' 0 0,1 ' + aw + ',-' + SiwMapIconsConsts.arrowHeight
         + ' h' + sdx + ' v-' + dy + 'h-' + w + ' v' + dy + ' h' + sdx
         + ' a' + aw + "," + SiwMapIconsConsts.arrowHeight + ' 0 0,1 ' + aw + ',' + SiwMapIconsConsts.arrowHeight
         + '"/>';
-
 };
 
 SiwMapIcons.prototype.getIcon = function (value, mode) {
@@ -76,7 +78,7 @@ SiwMapIcons.prototype.getIcon = function (value, mode) {
         + (mode == 'selected' ? this.svgSelectedBg : this.svgBg);
 
     icon += '<text fill="black" font-family="sans-serif" font-size="10" style="text-anchor: middle;"' +
-        ' x="' + (.5 * this.iconWidth) + '" y="' + (.4 * this.iconHeight) + '">' + value + '</text>';
+        ' x="' + (0.5 * this.iconWidth) + '" y="' + (0.4 * this.iconHeight) + '">' + value + '</text>';
 
     /*    for (var i = 0; i < values.length; i++) {
      icon += '<line x1="' + this.positions[i] + '" y1="' + this.zeroH + '" x2="' + this.positions[i] + '" y2="' + (this.zeroH - this.scale * values[i])
@@ -89,4 +91,4 @@ SiwMapIcons.prototype.getIcon = function (value, mode) {
     return icon;
 };
 
-
+/* jshint +W014 */

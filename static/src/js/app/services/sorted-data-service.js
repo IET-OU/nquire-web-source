@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('SortedDataService', [function () {
+    'use strict';
 
     var SortedData = function (getDataFunction, sortFunctions, filterFunctions) {
         this.getDataFunction = getDataFunction;

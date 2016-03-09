@@ -17,7 +17,7 @@ var SiwSenseItVariable = function (options) {
 
 SiwSenseItVariable.prototype.label = function () {
     return this.raw ? this.name : this.tx.name;
-}
+};
 
 SiwSenseItVariable.prototype.outputLabel = function () {
     return this.output in SiwSenseItSensorData.dataTypes ? SiwSenseItSensorData.dataTypes[this.output] : '?';
@@ -63,7 +63,7 @@ SiwSenseItTransformations.prototype.inputVariables = function (variable) {
 };
 
 SiwSenseItTransformations.prototype.setTx = function (transformations) {
-    this.transformations = transformations != null ? transformations : [];
+    this.transformations = transformations !== null ? transformations : [];
     this._updateVariables();
 };
 
@@ -101,12 +101,12 @@ SiwSenseItTransformations.prototype.independent = function (variable, fromId) {
 SiwSenseItTransformations.prototype._updateVariables = function () {
     this.variables = [];
 
-    var outputSet = {};
+    var outputSet = {}, v, i, input;
 
-    for (var i = 0; i < this.sensorInputs.length; i++) {
-        var input = this.sensorInputs[i];
+    for (i = 0; i < this.sensorInputs.length; i++) {
+        input = this.sensorInputs[i];
         if (input.sensor && input.sensor.length > 0) {
-            var v = new SiwSenseItVariable({raw: true, input: input, weight: i - this.sensorInputs.length});
+            v = new SiwSenseItVariable({raw: true, input: input, weight: i - this.sensorInputs.length});
             this.variables.push(v);
             outputSet[v.id] = true;
         }
@@ -157,4 +157,3 @@ SiwSenseItTransformations.prototype.nonSequenceVariables = function () {
         return v && v.output && v.output.length > 0 && v.output[0] != '[';
     });
 };
-

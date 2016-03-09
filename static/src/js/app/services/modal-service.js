@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('ModalService', ['$modal', function ($modal) {
+    'use strict';
 
     return {
         open: function (data) {

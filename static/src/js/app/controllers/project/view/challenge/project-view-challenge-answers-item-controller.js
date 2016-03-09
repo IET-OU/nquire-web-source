@@ -34,7 +34,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
         $scope.save = function(continueEditing) {
             $scope.continueEditing = continueEditing;
             $scope.form.save();
-        }
+        };
     }
 
     if ($scope.itemView.isNew) {
@@ -74,4 +74,3 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
     };
 
 });
-

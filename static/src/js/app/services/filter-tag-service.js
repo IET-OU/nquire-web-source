@@ -4,10 +4,10 @@
   Created by nfreear on 10/12/15.
 */
 
-'use strict';
-
 angular.module('senseItServices', null, null).factory('FilterTagService', ['RestService', '$rootScope', '$log', '$timeout',
   function (RestService, $rootScope, $log, $timeout) {
+
+  'use strict';
 
   var tag_label_hide = ".HIDE.new"
     , label_hide_regex = /(DISABLE|HIDE|PRIVATE)/
@@ -29,7 +29,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
   FilterTagManager.prototype.pattern = function () {
     // ngPattern does not work in Angular ~1.2 :(.
     return valid_tag_regex;
-  }
+  };
 
 
   FilterTagManager.prototype.getList = function () {
@@ -119,9 +119,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
         label = tag.replace(/-/, ' ') + tag_label_hide;
 
         //TODO: "manager.getList" gives "TypeError: Cannot read property 'data' of undefined at filter-tag-service.js:43"
-        //setFilterCallback && setFilterCallback(label, tag, null, manager.getList);
-        setFilterCallback && setFilterCallback(label, tag);
-        //AdminService.setFilter(label, tag);
+        if (setFilterCallback) { setFilterCallback(label, tag); }
 
         $log.info("Tags.setMissingTags: ", [ tag, label ]);
       }
@@ -137,7 +135,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
       setFormError("invalid-tag", which);
     }
     return is_valid;
-  }
+  };
 
   FilterTagManager.prototype.catchDuplicateTag = function (resp, which) {
     var b_catch = resp.data && resp.data.message && resp.data.message.match(/javax.persistence.RollbackException/);
@@ -145,12 +143,12 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
       setFormError("duplicate-tag", which);
     }
     return b_catch;
-  }
+  };
 
   FilterTagManager.prototype.formError = function (which) {
     which = which || "default";
     return form_errors.which;
-  }
+  };
 
   function setFormError(error, which) {
     which = which || "default";

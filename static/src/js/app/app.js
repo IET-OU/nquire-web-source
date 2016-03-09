@@ -1,6 +1,9 @@
-'use strict';
+/*!
+  Angular app module for nQuire-it web site front-end.
 
-/* App Module */
+  License:  GPLv3
+  © 2014-2016 The Open University. (IET-OU)
+*/
 
 angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.bootstrap', 'senseItServices', 'gettext'], null).config([
   '$provide',
@@ -8,6 +11,8 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
   '$urlRouterProvider',
   'senseItConfig',
   function ($provide, $stateProvider, $urlRouterProvider, senseItConfig) {
+
+    'use strict';
 
     $stateProvider
       .state('home', {

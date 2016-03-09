@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('AdminService', ['RestService', '$log', function (RestService, $log) {
+  'use strict';
 
   var AdminManager = function () {
     this.data = {};
@@ -16,10 +16,10 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
       items[ key ] = item;
       items[ key ]._idx = key;
 
-      callbackEach && callbackEach(items, key);
+      if (callbackEach) { callbackEach(items, key); }
     }
     return items;
-  };
+  }
   AdminManager.prototype.arrayToObject = arrayToObject;
 
 

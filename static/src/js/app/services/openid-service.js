@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('OpenIdService', ['RestService', '$state', '$location', '$window', function (RestService, $state, $location, $window) {
+  'use strict';
 
   var service = {
     status: {

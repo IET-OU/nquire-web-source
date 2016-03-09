@@ -1,10 +1,9 @@
 /** source:
  * http://odetocode.com/blogs/scott/archive/2013/07/03/building-a-filereader-service-for-angularjs-the-service.aspx
  */
-'use strict';
-
 
 angular.module('senseItServices', null, null).factory('fileReader', ["$q", function ($q) {
+    'use strict';
 
     var onLoad = function (reader, deferred, scope) {
         return function () {

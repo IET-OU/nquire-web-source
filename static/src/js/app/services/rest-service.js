@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('RestService', ['$http', function ($http) {
+  'use strict';
 
   var service = {
     errorListeners: [],
@@ -39,9 +39,9 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', f
       }));
     },
     _createUploadPromise: function (method, path, data, files, convertToMultipart) {
-      var hasFiles = false;
+      var hasFiles = false, fileId;
       if (files) {
-        for (var fileId in files) {
+        for (fileId in files) {
           if (files.hasOwnProperty(fileId)) {
             hasFiles = true;
             break;

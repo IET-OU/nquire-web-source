@@ -75,5 +75,5 @@ angular.module('senseItWeb', null, null).controller('ProjectEditSenseItAnalysisC
             tx.inputs[index] = vId;
             this.updateFormValue();
         }
-    }
+    };
 });

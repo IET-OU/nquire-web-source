@@ -1,4 +1,5 @@
 angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function ($scope, $window, ModalService) {
+    'use strict';
 
     $scope.submit = function () {
         //var promise = $scope.tags.adminAddFilter($scope.new_filter);
@@ -21,7 +22,7 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
         } else {
             $scope.alert.error("Invalid tag-term – empty or with spaces? " + query);
         }
-    }
+    };
 
 
 
@@ -54,7 +55,7 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
                     return true;
                 }
             });
-        }
+        };
 
         $scope.form = new SiwFormManager($scope.tags.data.filters, [ $scope.item._idx ], function saveCallback() {
             var idx = $scope.item._idx

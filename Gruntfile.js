@@ -1,4 +1,6 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+	'use strict';
+
 	grunt.initConfig({
 		sass: {
 			options: {
@@ -13,13 +15,20 @@ module.exports = function(grunt) {
 		},
 		jshint: {
 			options: {
-				'-W097': true,  // Ignore position of 'use strict';
+				laxcomma: true,
+				//'-W097': true,  // Ignore position of 'use strict';
+				//'-W100': true,  // ??
+				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
 					angular: true
 				}
 			},
 			config: 'static/src/js/app/config.js',
-			src: 'static/src/js/app/controllers/**/*.js'
+			app:    'static/src/js/app/*.js',
+			ctrl:   'static/src/js/app/controllers/**/*.js',
+			serv:   'static/src/js/app/services/*.js',
+			helper: 'static/src/js/helpers/*.js',
+			grunt:  'Gruntfile.js'
 		},
 
 		nggettext_extract: {
@@ -75,5 +84,7 @@ module.exports = function(grunt) {
 		'msgInitMerge'
 	]);
 
-	grunt.registerTask('default', [ 'gettext', 'sass', 'jshint:config', 'nice-package' ]);
+	grunt.registerTask('default', [
+		'gettext', 'sass', 'jshint:app', 'jshint:helper', 'jshint:serv', 'jshint:grunt', 'nice-package'
+	]);
 };

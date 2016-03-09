@@ -1,6 +1,6 @@
-'use strict';
 
 angular.module('senseItServices', null, null).factory('ForumService', ['RestService', function (RestService) {
+  'use strict';
 
   var ForumManager = function () {
     this.data = {};

@@ -6,10 +6,10 @@
   http://fdietz.github.io/recipes-with-angular-js/common-user-interface-patterns/displaying-a-flash-notice-failure-message.html
 */
 
-'use strict';
-
 angular.module('senseItServices', null, null).factory('AlertService', ['$rootScope', '$location', '$log', '$interval', '$timeout',
   function ($rootScope, $location, $log, $interval, $timeout) {
+
+  'use strict';
 
   var cfg = $rootScope.cfg
     , timeout_ms = cfg && cfg.alert_timeout || 4000

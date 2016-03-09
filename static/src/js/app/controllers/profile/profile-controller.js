@@ -1,4 +1,5 @@
 angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($scope, OpenIdService, $state, fileReader) {
+  'use strict';
 
 	var _ = $scope._
 	  , password_min = 6;
@@ -142,11 +143,11 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
 
       this.editing.username = this.editing.username.trim();
 
-      if (this.editing.username.length == 0) {
+      if (this.editing.username.length === 0) {
         this.error.username = _('Username cannot be empty.');
         ok = false;
       }
-      if (this.editing.password.length == 0) {
+      if (this.editing.password.length === 0) {
         this.error.password = _('Password cannot be empty.');
         ok = false;
       }
@@ -182,11 +183,11 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       this.editing.recaptcha = angular.element("#g-recaptcha-response").val();
       this.error = {username: false, password: false, repeatPassword: false, email: false, recaptcha: false};
 
-      if (this.editing.username.length == 0) {
+      if (this.editing.username.length === 0) {
         this.error.username = _('Username cannot be empty.');
         ok = false;
       }
-      if (this.editing.email.length == 0) {
+      if (this.editing.email.length === 0) {
         this.error.email = _('Email cannot be empty.');
         ok = false;
       }
@@ -241,7 +242,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       this.editing.email = this.editing.email.trim();
       this.editing.recaptcha = angular.element("#g-recaptcha-response").val();
 
-      if (this.editing.email.length == 0) {
+      if (this.editing.email.length === 0) {
         this.error.email = _('Email cannot be empty.');
         ok = false;
       }

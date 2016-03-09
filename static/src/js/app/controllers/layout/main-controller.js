@@ -1,4 +1,6 @@
 angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, FilterTagService, AlertService, $location) {
+    'use strict';
+
     OpenIdService.registerWatcher($scope);
 
     $scope.alert = AlertService;
@@ -49,7 +51,7 @@ angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope
         $scope.gettext = gettextCatalog;
         $scope._ = function (str, scope, ctx) {
             return gettextCatalog.getString(str, scope, ctx);
-        }
+        };
 
         if (m_lang) {
             $scope.gettext.setCurrentLanguage($scope.activeLang);

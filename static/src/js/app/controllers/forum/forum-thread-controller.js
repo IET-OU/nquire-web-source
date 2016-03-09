@@ -24,7 +24,7 @@ angular.module('senseItWeb', null, null).controller('ForumThreadCtrl', function 
   });
 
   $scope.okDisabled = function () {
-    return $scope.form.values.comment.replace(/<[^>]+>/gm, '').trim().length == 0;
+    return $scope.form.values.comment.replace(/<[^>]+>/gm, '').trim().length === 0;
   };
 
   $scope.canEdit = function (comment) {
