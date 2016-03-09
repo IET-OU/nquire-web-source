@@ -28,5 +28,10 @@
     "grunt-nice-package": "^0.10.2",
     "grunt-sass": "^1.1.0"
   },
+  "scripts": {
+    "versions": "printf \"npm: \" && npm --version && echo \"\" && mvn --version",
+    "compile-java": "cd ./app/ && mvn compile",
+    "bugs": "ghi | more"
+  },
   "engines": { "node" : "> 0.10.0" }
 }
