@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 import java.util.Map;
+import java.util.Date;
 
 /**
  * Created by nfreear on 29/11/15.
@@ -20,7 +21,7 @@ import java.util.Map;
  */
 public class FilterDao {
     static final String FILTER_ID_QUERY = "SELECT f FROM Filter f WHERE f.id=:id"; //f.ENTITY_ID=:id
-    static final String FILTER_QUERY = "SELECT f FROM Filter f";
+    static final String FILTER_QUERY = "SELECT f FROM Filter f ORDER BY f.date DESC";
     static final String FILTER_DELETE = "DELETE FROM Filter f WHERE f.id=:id";
 
 
@@ -36,11 +37,13 @@ public class FilterDao {
             Filter filter = new Filter();
             filter.setLabel(label);
             filter.setQuery(filter_query);
+            filter.setDate(new Date());
             em.persist(filter);
         } else {
             Filter filter = filters.get(0);
             filter.setLabel(label);
             filter.setQuery(filter_query);
+            filter.setDate(new Date());
 
             for (int i = 1; i < filters.size(); i++) {
                 em.remove(filters.get(i));
@@ -68,6 +71,7 @@ public class FilterDao {
             fr.setId(item.getId());
             fr.setLabel(item.getLabel());
             fr.setQuery(item.getQuery());
+            fr.setIsoDate(item.getIsoDate());
             response.add(fr);
         }
         return response;

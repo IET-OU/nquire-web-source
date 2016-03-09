@@ -19,4 +19,7 @@ public class FilterResponse {
     @Setter
     String query;
 
+    @Getter
+    @Setter
+    String isoDate;
 }
