@@ -69,7 +69,7 @@ public class ProjectActions extends AbstractContentManager {
     /**
      * any user actions *
      */
-    public ProjectListResponse getProjects(String typeStr, String status, String filter, String keyword) {
+    public ProjectListResponse getProjects(String typeStr, String status, String filter, String tag, String keyword) {
 
         List<ProjectResponse> filtered = new Vector<ProjectResponse>();
         HashMap<String, Integer> categories = new HashMap<String, Integer>();
@@ -95,6 +95,10 @@ public class ProjectActions extends AbstractContentManager {
             type = ProjectType.SPOTIT;
         } else if ("win-it".equals(typeStr)) {
             type = ProjectType.CHALLENGE;
+        }
+
+        if (filter.equals("")) {
+            filter = tag;
         }
 
         int allCount = 0;

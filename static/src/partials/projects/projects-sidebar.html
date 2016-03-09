@@ -11,16 +11,16 @@
 
         <ul>
             <li>
-                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: 'all'})"
+                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: 'all', tag: null})"
                    data-ng-class="menuItemClass('filter', 'all')" translate>All missions</a>
             </li>
             <li>
-                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null})"
+                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null, tag: null})"
                    data-ng-class="menuItemClass('filter', null)" translate>Featured missions</a>
             </li>
 
             <li data-ng-if="cfg.custom_filters && tag.active" data-ng-repeat="tag in tags.data.filters" class="custom">
-                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: tag.query})"
+                <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null, tag: tag.query})"
                    data-ng-class="menuItemClass('filter', tag.query)" data-ng-bind-html="tag.label"></a>
             </li>
         </ul>
@@ -30,11 +30,11 @@
     <div class="sidebar-menu">
         <ul>
             <li>
-                <a data-ui-sref="home({type: null, status: projectListFilter.status, filter: projectListFilter.filter})"
+                <a data-ui-sref="home({type: null, status: projectListFilter.status, filter: projectListFilter.filter, tag: null})"
                    data-ng-class="menuItemClass('type', null)" translate>Any type</a>
             </li>
             <li>
-                <a data-ui-sref="home({type: 'sense-it', status: projectListFilter.status, filter: projectListFilter.filter})"
+                <a data-ui-sref="home({type: 'sense-it', status: projectListFilter.status, filter: projectListFilter.filter, tag: null})"
                    data-ng-class="menuItemClass('type', 'sense-it')" translate><span class="sidebar-type-senseit">Sense-it</span> missions</a>
             </li>
             <li>

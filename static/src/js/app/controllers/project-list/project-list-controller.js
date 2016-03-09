@@ -9,9 +9,10 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
     $scope.projectListFilter = {
         type: $state.params.type,
         status: $state.params.status,
-        filter: $state.params.filter,
+        filter: $state.params.filter, //|| $state.params.tag,
+        tag:    $state.params.tag,
         kw: $state.params.kw,
-        onlyFeatured: $state.params.filter != 'all',
+        onlyFeatured: $state.params.filter != 'all' && ! $state.params.tag,
         hasConditions: $state.params.type || $state.params.status || $state.params.kw
     };
 
@@ -58,4 +59,3 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
 
 
 });
-
