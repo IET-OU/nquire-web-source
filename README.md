@@ -1,8 +1,11 @@
-nQuire-it
-=================
+
+[![Build status — Travis-CI][travis-icon]][travis] [![License][gpl-icon]][gpl.txt]
+
+
+# nQuire-it
 
 nQuire-it is a web application that allows users to create, manage and complete
-scientific projects of their own interest. It is linked with Sense-it, an Android
+scientific projects based on their interests. It is linked with Sense-it, an Android
 app to collect data from Android device sensors.
 
 * <http://www.nquire-it.org>
@@ -28,14 +31,14 @@ npm install grunt-angular-gettext --save-dev
 To add a new user-interface language, ensure that it is listed in:
 
 * [`Gruntfile.js`][]
-* [`static/src/js/app/app.js`][]
+* [`static/src/js/app/config.js`][]
 
 It will then need to be added to our Weblate translation server.
 
 Licence
 -------
 
-nQuire-it is released under the GPLV3 licence. See the file 'gpl.txt' for more details.
+nQuire-it is released under the GPLv3 licence. See [gpl.txt][] for more details.
 
 Releases
 --------
@@ -47,5 +50,29 @@ Added support for:
  - custom fields in data table.
 
 
-[`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/Gruntfile.js#L40-L42
-[`static/src/js/app/app.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/static/src/js/app/app.js#L219-L223
+## Acknowledgements
+
+* Original developer: [Eloy Villasclaras / @evilfer][eloy]
+* Research [funding][]
+
+
+---
+[nQuire-it][]: © 2014-2016 [The Open University][ou]. ([Institute of Educational Technology][iet])
+
+
+[`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/Gruntfile.js#L55-L59
+[`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/static/src/js/app/config.js.DIST.html#L25-L49
+[nQuire-it]: https://github.com/IET-OU/nquire-web-source
+[eloy]: https://github.com/evilfer
+[iet]: http://iet.open.ac.uk/
+[ou]: http://www.open.ac.uk/
+[funding]: http://www.nquire-it.org/#/about "Research funding: Nominet Trust"
+[gpl]: https://gnu.org/licenses/gpl.html
+[gpl.txt]: https://github.com/IET-OU/nquire-web-source/blob/master/gpl.txt
+    "GNU General Public License 3.0 onwards [GPL-3.0+]"
+[gpl-icon]: https://img.shields.io/badge/license-GLP--3.0%2B-blue.svg
+[travis]:  https://travis-ci.org/IET-OU/nquire-web-source
+[travis-icon]: https://api.travis-ci.org/IET-OU/nquire-web-source.svg
+    "Build status – Travis-CI (Node/Npm + Java/Maven)"
+
+[End]: //end.
