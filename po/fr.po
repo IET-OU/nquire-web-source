@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2016-02-22 16:39+0000\n"
+"PO-Revision-Date: 2016-03-09 10:37+0000\n"
 "Last-Translator: Maxime Lasserre <maxime.lasserre@telecom-bretagne.eu>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -260,7 +260,7 @@ msgstr "Cliquer <a href=\"\" data-ui-sref=\"project.view.challenge\">ici</a> pou
 #: static/src/partials/project/admin/project-admin-home-page.html:20
 #: static/src/partials/project/edit/project-edit-open-page.html:17
 msgid "Close project"
-msgstr "Fermer le project"
+msgstr "Fermer le projet"
 
 #: static/src/partials/forum/forum-thread.html:56
 msgid "Comment"
