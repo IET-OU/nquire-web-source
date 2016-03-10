@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "0.11"
-#  - "0.10"
+  #- "0.10"
 
 install:
   - npm install -g grunt-cli
@@ -10,11 +10,15 @@ install:
 before_script:
   - npm run setup-config-js
   - npm run setup-java
-  - ls static/src/js/app/ && ls app/
+  #- ls static/src/js/app/ && ls app/
   - npm run versions
 
 script:
   - grunt
-  - npm run compile-java
+  # Compile Java, while filtering the 100s of 'Downloading ..' lines ...
+  - "cd app/ && mvn compile | tee mvn.log | egrep '(ERROR|WARN|INFO)'"
+  # .. Then, ensure compile errors are caught!
+  - "! cat app/mvn.log | grep ERROR; echo Exit code: $?"
 
-#after_script:
+
+#End.

@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 import java.util.List;
 
+// A test syntax error [Bug: #29]
+X
 
 /**
  * Created by evilfer on 8/11/14.
