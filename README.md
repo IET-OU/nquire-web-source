@@ -1,5 +1,6 @@
 
 [![Build status — Travis-CI][travis-icon]][travis] [![License][gpl-icon]][gpl.txt]
+[![Translation status][weblate-icon]][weblate]
 
 
 # nQuire-it
@@ -74,5 +75,7 @@ Added support for:
 [travis]:  https://travis-ci.org/IET-OU/nquire-web-source
 [travis-icon]: https://api.travis-ci.org/IET-OU/nquire-web-source.svg
     "Build status – Travis-CI (Node/Npm + Java/Maven)"
+[weblate]: http://weblate.iet.open.ac.uk/projects/nquire-it?utm_source=widget "Translation status"
+[weblate-icon]: http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg
 
 [End]: //end.
