@@ -18,7 +18,7 @@ script:
   # Compile Java, removing 100s of 'Downloading ..' lines in log output ...
   - "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'"
   # .. Then, ensure compile errors are caught!
-  - "! cat app/mvn.log | grep ERROR; echo Exit code: $?"
+  - bash bin/travis-exit-java.sh
 
 
 #End.
