@@ -52,6 +52,7 @@
     "setup-java": "cp -n app/pom.TEMPLATE.xml app/pom.xml",
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
-    "versions": "@ mvn --version; echo''; php --version; echo''; composer --version"
+    "versions": "mvn --version",
+    "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }
