@@ -1,0 +1,9 @@
+
+# Pretend that generated files are binary.
+
+static/src/css/*  -diff
+static/src/js/app/translations.js  -diff
+po/*.po -diff
+##po/*.pot -diff
+
+#End

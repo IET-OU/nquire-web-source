@@ -11,10 +11,9 @@ node_modules
 
 *.sass-cache
 
-po/el.po~
 static/src/js/app/min/
 
 *BAK*
 *copy*
 
-*.po~
+po/*.po~

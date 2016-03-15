@@ -1,0 +1,7 @@
+# Robots exclusion
+
+User-agent: *
+Disallow: /approval/
+Disallow: /approval
+
+#End.
