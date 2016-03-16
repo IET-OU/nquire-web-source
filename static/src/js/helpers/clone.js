@@ -1,5 +1,5 @@
 function SiwClone(obj) {
-    var temp = [], len = obj.length;
+    var temp = [], len = obj && obj.length;
     if (obj === null) {
         return null;
     } else if (Object.prototype.toString.call(obj) === '[object Array]') {
