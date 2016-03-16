@@ -75,7 +75,7 @@ SiwMapIcons.prototype.getBg = function (selected) {
 
 SiwMapIcons.prototype.getIcon = function (value, mode) {
     var icon = 'data:image/svg+xml,<svg width="' + this.iconWidth + '" height="' + this.iconHeight + '" xmlns="http://www.w3.org/2000/svg"><g>'
-        + (mode == 'selected' ? this.svgSelectedBg : this.svgBg);
+        + (mode === 'selected' ? this.svgSelectedBg : this.svgBg);
 
     icon += '<text fill="black" font-family="sans-serif" font-size="10" style="text-anchor: middle;"' +
         ' x="' + (0.5 * this.iconWidth) + '" y="' + (0.4 * this.iconHeight) + '">' + value + '</text>';

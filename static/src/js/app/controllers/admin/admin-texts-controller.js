@@ -13,7 +13,7 @@ angular.module('senseItWeb', null, null).controller('AdminTextsCtrl', function (
         {id: 'createWinItHelp', label: 'Create: Win It help', format: true},
 
         // Site/ approval/ test server message [Bug: #9]
-        {id: 'siteMessage', label: 'Site message', format: true},
+        {id: 'siteMessage', label: 'Site message', format: true}
         //Was: {id: 'siteMessageTpl', label: '(Site message template)', format: true}
     ];
 

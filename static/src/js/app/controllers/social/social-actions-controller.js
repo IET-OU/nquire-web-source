@@ -45,10 +45,10 @@ angular.module('senseItWeb', null, null).controller('SocialActionsCtrl', functio
         },
         posting: posting,
         okLabel: function () {
-          return $scope.result.state == 'completed' ? 'Close' : 'Post';
+          return $scope.result.state === 'completed' ? 'Close' : 'Post';
         },
         ok: function () {
-          if ($scope.result.state == 'idle') {
+          if ($scope.result.state === 'idle') {
             $scope.result.state = 'posting';
             var content = $.extend({path: $location.path()}, posting.content);
             RestService.post('api/social/' + provider + '/post', content).then(function (response) {
@@ -63,16 +63,16 @@ angular.module('senseItWeb', null, null).controller('SocialActionsCtrl', functio
               }
             });
             return false;
-          } else if ($scope.result.state == 'completed') {
+          } else if ($scope.result.state === 'completed') {
             return true;
           }
           return false;
         },
         okDisabled: function () {
-          return !($scope.status.logged && $scope.status.connections[provider]) || $scope.result.state == 'posting';
+          return !($scope.status.logged && $scope.status.connections[provider]) || $scope.result.state === 'posting';
         },
         editDisabled: function () {
-          return $scope.result.state != 'idle';
+          return $scope.result.state !== 'idle';
         }
       });
     }

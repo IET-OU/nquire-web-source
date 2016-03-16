@@ -54,7 +54,7 @@ SiwFormManager.prototype.open = function (mode) {
  * @returns {boolean}
  */
 SiwFormManager.prototype.isOpen = function (mode) {
-    return typeof mode != 'undefined' ? this._isOpen === mode : this._isOpen !== false;
+    return typeof mode !== 'undefined' ? this._isOpen === mode : this._isOpen !== false;
 };
 
 SiwFormManager.prototype.getMode = function () {
@@ -84,4 +84,3 @@ SiwFormManager.prototype.save = function () {
         this._close();
     }
 };
-

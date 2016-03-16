@@ -5,7 +5,7 @@ angular.module('senseItWeb', null, null).controller('AdminReportedCtrl', functio
   $scope.blocks = [];
 
   $scope.categoryMenuItemClass = function (cat) {
-    return cat == $scope.category ? 'selected' : '';
+    return cat === $scope.category ? 'selected' : '';
   };
 
   var _selectContent = function () {
@@ -20,7 +20,7 @@ angular.module('senseItWeb', null, null).controller('AdminReportedCtrl', functio
   };
 
   $scope.selectCategory = function (cat) {
-    if (cat != $scope.category) {
+    if (cat !== $scope.category) {
       $scope.category = cat;
       _selectContent();
     }

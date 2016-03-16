@@ -21,7 +21,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
         },
         openById: function (answerId) {
             for (var i = 0; i < $scope.answerData.answers.length; i++) {
-                if ($scope.answerData.answers[i].id == answerId) {
+                if ($scope.answerData.answers[i].id === answerId) {
                     this.open($scope.answerData.answers[i]);
                     break;
                 }

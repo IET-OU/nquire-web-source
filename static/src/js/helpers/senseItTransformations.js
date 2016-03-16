@@ -35,7 +35,7 @@ var SiwSenseItTransformations = function (sensorInputs, transformations) {
 
 SiwSenseItTransformations.prototype._variableById = function (vid) {
     for (var i = 0; i < this.variables.length; i++) {
-        if (this.variables[i].id == vid) {
+        if (this.variables[i].id === vid) {
             return this.variables[i];
         }
     }
@@ -82,7 +82,7 @@ SiwSenseItTransformations.prototype.availableInputVariables = function (variable
 };
 
 SiwSenseItTransformations.prototype.independent = function (variable, fromId) {
-    if (variable.id == fromId) {
+    if (variable.id === fromId) {
         return false;
     } else if (variable.raw) {
         return true;
@@ -123,7 +123,7 @@ SiwSenseItTransformations.prototype._updateVariables = function () {
         for (i = 0; i < this.transformations.length; i++) {
             var tx = this.transformations[i];
             if (!outputSet[tx.id]) {
-                var inputsReady = tx.inputs.length == 1;
+                var inputsReady = tx.inputs.length === 1;
                 if (inputsReady) {
                     for (var j = 0; j < 1; j++) {
                         if (!outputSet[tx.inputs[j]]) {
@@ -148,12 +148,12 @@ SiwSenseItTransformations.prototype._updateVariables = function () {
 
 SiwSenseItTransformations.prototype.sequenceVariables = function () {
     return this.variables.filter(function (v) {
-        return v && v.output && v.output.length > 0 && v.output[0] == '[';
+        return v && v.output && v.output.length > 0 && v.output[0] === '[';
     });
 };
 
 SiwSenseItTransformations.prototype.nonSequenceVariables = function () {
     return this.variables.filter(function (v) {
-        return v && v.output && v.output.length > 0 && v.output[0] != '[';
+        return v && v.output && v.output.length > 0 && v.output[0] !== '[';
     });
 };

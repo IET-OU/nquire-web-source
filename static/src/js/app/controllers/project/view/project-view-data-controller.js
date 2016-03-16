@@ -64,7 +64,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewDataCtrl', funct
         return $scope.dataService.updateData(itemId, data).then(function (updatedData) {
             if (updatedData) {
                 for (var index = 0; index < $scope.dataList.items.length; index++) {
-                    if ($scope.dataList.items[index].id == updatedData.id) {
+                    if ($scope.dataList.items[index].id === updatedData.id) {
                         $scope.dataList.items[index] = updatedData;
                         break;
                     }
@@ -96,7 +96,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewDataCtrl', funct
                 $scope.dataService.deleteData(data.id).then(function (deletedDataId) {
                     if (deletedDataId) {
                         for (var index = 0; index < $scope.dataList.items.length; index++) {
-                            if ($scope.dataList.items[index].id == deletedDataId) {
+                            if ($scope.dataList.items[index].id === deletedDataId) {
                                 $scope.dataList.items.splice(index, 1);
                                 break;
                             }

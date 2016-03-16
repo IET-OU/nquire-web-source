@@ -12,7 +12,7 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
         filter: $state.params.filter, //|| $state.params.tag,
         tag:    $state.params.tag,
         kw: $state.params.kw,
-        onlyFeatured: $state.params.filter != 'all' && ! $state.params.tag,
+        onlyFeatured: $state.params.filter !== 'all' && ! $state.params.tag,
         hasConditions: $state.params.type || $state.params.status || $state.params.kw
     };
 
@@ -47,7 +47,7 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
         if ($scope.filter) {
             var filtered = [];
             for (var i = 0; i < $scope.projectList.projects.length; i++) {
-                if ($scope.projectList.projects[i].project.type == $scope.filter) {
+                if ($scope.projectList.projects[i].project.type === $scope.filter) {
                     filtered.push($scope.projectList.projects[i]);
                 }
             }

@@ -11,7 +11,7 @@ angular.module('senseItWeb', null, null).controller('CreateCtrl', function ($sco
     };
 
     $scope.typeClass = function (type) {
-        return $scope.type && $scope.type != type ? 'project-create-type-hidden' : '';
+        return $scope.type && $scope.type !== type ? 'project-create-type-hidden' : '';
     };
 
     $scope.cancel = function() {
@@ -27,4 +27,3 @@ angular.module('senseItWeb', null, null).controller('CreateCtrl', function ($sco
     };
 
 });
-

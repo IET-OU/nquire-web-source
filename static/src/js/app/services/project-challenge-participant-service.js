@@ -22,7 +22,7 @@ angular.module('senseItServices', null, null).factory('ProjectChallengeParticipa
       userIdeasCount: function (userId) {
         var count = 0;
         for (var i = 0; i < this.answers.length; i++) {
-          if (this.answers[i].author.id == userId) {
+          if (this.answers[i].author.id === userId) {
             count++;
           }
         }

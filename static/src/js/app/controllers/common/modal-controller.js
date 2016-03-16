@@ -23,7 +23,7 @@ angular.module('senseItWeb', null, null).controller('ModalCtrl', function ($scop
     $scope.close = function (callback) {
         $modalInstance.dismiss('cancel');
         if (callback) {
-            callback();
+            return callback();
         }
     };
 

@@ -76,21 +76,21 @@ angular.module('senseItWeb', null, null).controller('ProjectAdminChallengeCtrl',
 
 
   $scope.stageButtonClass = function (stage) {
-    return stage == $scope.projectData.project.activity.stage ? 'btn-primary active' : 'btn-default';
+    return stage === $scope.projectData.project.activity.stage ? 'btn-primary active' : 'btn-default';
   };
 
   $scope.setStage = function (stage) {
-    if (stage != $scope.projectData.project.activity.stage) {
+    if (stage !== $scope.projectData.project.activity.stage) {
       $scope.challengeAdmin.setStage(stage);
     }
   };
 
   $scope.visibilityClass = function (value) {
-    return !value == !$scope.projectData.project.activity.answersAlwaysVisible ? 'btn-primary active' : 'btn-default';
+    return !value === !$scope.projectData.project.activity.answersAlwaysVisible ? 'btn-primary active' : 'btn-default';
   };
 
   $scope.setVisibility = function (value) {
-    if (!value != !$scope.projectData.project.activity.answersAlwaysVisible) {
+    if (!value !== !$scope.projectData.project.activity.answersAlwaysVisible) {
       $scope.challengeAdmin.setAnswerVisibility(value);
     }
   };
@@ -102,4 +102,3 @@ angular.module('senseItWeb', null, null).controller('ProjectAdminChallengeCtrl',
   });
 
 });
-

@@ -4,10 +4,10 @@ angular.module('senseItWeb', null, null).filter('fuzzyDate', function ($filter) 
         var date = new Date(input);
 
         var format = 'd/M/yy h:mm a';
-        if (now.getFullYear() == date.getFullYear() && now.getMonth() == date.getMonth()) {
-            if (now.getDate() == date.getDate()) {
+        if (now.getFullYear() === date.getFullYear() && now.getMonth() === date.getMonth()) {
+            if (now.getDate() === date.getDate()) {
                 format = "'Today' h:mm a";
-            } else if (now.getDate() == date.getDate() + 1) {
+            } else if (now.getDate() === date.getDate() + 1) {
                 format = "'Yesterday' h:mm a";
             }
         }

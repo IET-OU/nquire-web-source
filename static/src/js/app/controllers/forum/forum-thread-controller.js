@@ -28,7 +28,7 @@ angular.module('senseItWeb', null, null).controller('ForumThreadCtrl', function 
   };
 
   $scope.canEdit = function (comment) {
-    return comment && $scope.status && $scope.status.logged && ($scope.status.profile.id == comment.author.id);
+    return comment && $scope.status && $scope.status.logged && ($scope.status.profile.id === comment.author.id);
   };
 
   $scope.deleteComment = function (comment) {

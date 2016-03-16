@@ -4,7 +4,7 @@ angular.module('senseItWeb', null, null).controller('CommentsCtrl', function ($s
 
     $scope.commentById = function (id) {
         for (var i = 0; i < $scope.comments.list.length; i++) {
-            if ($scope.comments.list[i].id == id) {
+            if ($scope.comments.list[i].id === id) {
                 return $scope.comments.list[i];
             }
         }
@@ -14,7 +14,7 @@ angular.module('senseItWeb', null, null).controller('CommentsCtrl', function ($s
 
     $scope.canDelete = function (id) {
         var comment = $scope.commentById(id);
-        return comment && $scope.status && $scope.status.logged && ($scope.status.profile.id == comment.author.id);
+        return comment && $scope.status && $scope.status.logged && ($scope.status.profile.id === comment.author.id);
     };
 
 

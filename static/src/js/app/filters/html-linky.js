@@ -27,13 +27,13 @@ angular.module('senseItWeb', null, null).filter('htmlLinky', function () {
       closingA = match[8];
       i = match.index;
       end = i + match[0].length;
-      alreadyA = (typeof openingTag != 'undefined' && openingTag.length > 0) || (typeof closingA != 'undefined' && closingA.length > 0);
+      alreadyA = (typeof openingTag !== 'undefined' && openingTag.length > 0) || (typeof closingA !== 'undefined' && closingA.length > 0);
 
       if (alreadyA) {
         addText(raw.substr(0, end));
         raw = raw.substr(end);
       } else {
-        if (typeof www != 'undefined') {
+        if (typeof www !== 'undefined') {
           mt = 'http://' + href;
         }
 

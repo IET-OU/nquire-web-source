@@ -31,7 +31,7 @@ SiwMapRenderer.prototype._updateSelectedIndex = function () {
 
 SiwMapRenderer.prototype._indexById = function (id) {
     for (var i = 0; i < this.dataList.data.length; i++) {
-        if (this.dataList.data[i].id == id) {
+        if (this.dataList.data[i].id === id) {
             return i;
         }
     }
@@ -61,7 +61,7 @@ SiwMapRenderer.prototype.getIcon = function (i, mode) {
 
 SiwMapRenderer.prototype.getLatLngById = function (id) {
     for (var i = 0; i < this.dataList.data.length; i++) {
-        if (this.dataList.data[i].id == id) {
+        if (this.dataList.data[i].id === id) {
             return this.getLatLng(i);
         }
     }
@@ -192,7 +192,7 @@ SiwMapRenderer.prototype.update = function () {
         var pos = this.getLatLng(i);
         if (pos) {
             heatData.push({location: pos, weight: this.mapData.getItemHeat(item)});
-            var isSelected = i == this.mapData.selectedIndex;
+            var isSelected = i === this.mapData.selectedIndex;
 
             var marker = new google.maps.Marker({
                 position: pos,

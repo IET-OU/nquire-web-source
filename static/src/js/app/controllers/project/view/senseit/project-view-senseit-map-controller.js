@@ -46,7 +46,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSenseItMapCtrl',
                         var format = 'd/M/yy';
                         var now = new Date();
                         var date = new Date(item.date);
-                        if (now.getFullYear() == date.getFullYear() && now.getMonth() == date.getMonth() && now.getDate() == date.getDate()) {
+                        if (now.getFullYear() === date.getFullYear() && now.getMonth() === date.getMonth() && now.getDate() === date.getDate()) {
                             format = 'H:mm';
                         }
                         text = $filter('date')(item.date, format);

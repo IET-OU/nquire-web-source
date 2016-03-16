@@ -32,9 +32,9 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
                         return false;
                     }
                 } else {
-                    return $scope.filter.params.type != 'mine';
+                    return $scope.filter.params.type !== 'mine';
                 }
-                
+
                 return true;
             }, function (a) {
                 return !$scope.filter.params.search || $scope.answerTeaser(a).indexOf($scope.filter.params.search) >= 0;
@@ -49,7 +49,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
         $scope.maxAnswersReached = function () {
             var count = 0;
             for (var i = 0; i < $scope.answerData.answers.length; i++) {
-                if ($scope.answerData.answers[i].author.id == $scope.status.profile.id) {
+                if ($scope.answerData.answers[i].author.id === $scope.status.profile.id) {
                     count ++;
                 }
             }
@@ -79,4 +79,3 @@ angular.module('senseItWeb', null, null).controller('ProjectViewChallengeAnswers
         return $scope.answerData.answers;
     }, sort, $scope.filter.filters, $scope, 'answerData.answers', 'filter.params');
 });
-

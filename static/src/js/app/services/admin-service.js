@@ -48,7 +48,7 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
   };
 
   AdminManager.prototype.deleteFilter = function (filterId) {
-    return RestService.delete('api/admin/filter/' + parseInt(filterId));
+    return RestService.delete('api/admin/filter/' + parseInt(filterId, 10));
   };
 
   AdminManager.prototype.setAdmin = function (userId, isAdmin) {

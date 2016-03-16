@@ -122,7 +122,7 @@ angular.module('senseItWeb', null, null).controller('ProfileCtrl', function ($sc
       this.mode = mode;
     },
     is: function (mode) {
-      return this.mode == mode;
+      return this.mode === mode;
     }
   };
 

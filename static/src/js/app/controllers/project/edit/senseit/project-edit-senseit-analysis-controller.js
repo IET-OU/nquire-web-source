@@ -62,7 +62,7 @@ angular.module('senseItWeb', null, null).controller('ProjectEditSenseItAnalysisC
         indexOf: function (variable) {
             var tx = this.tx();
             for (var i = 0; i < tx.length; i++) {
-                if (tx[i].id == variable.tx.id) {
+                if (tx[i].id === variable.tx.id) {
                     return i;
                 }
             }

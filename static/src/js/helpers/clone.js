@@ -6,10 +6,10 @@ function SiwClone(obj) {
         for (var i = 0; i < len; i++) {
             temp[i] = SiwClone(obj[i]);
         }
-    } else if (typeof (obj) == 'object') {
+    } else if (typeof (obj) === 'object') {
         temp = obj.constructor();
         for (var key in obj) {
-            if (obj.hasOwnProperty(key) && key != "$$hashKey") {
+            if (obj.hasOwnProperty(key) && key !== "$$hashKey") {
                 temp[key] = SiwClone(obj[key]);
             }
         }

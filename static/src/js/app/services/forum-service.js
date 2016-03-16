@@ -17,7 +17,7 @@ angular.module('senseItServices', null, null).factory('ForumService', ['RestServ
 
   ForumManager.prototype.getNode = function (nodeId) {
     var self = this;
-    if (self.node && self.node.id != nodeId) {
+    if (self.node && self.node.id !== nodeId) {
       self.node = null;
     }
     RestService.get('api/forum/' + nodeId).then(function (data) {
@@ -28,7 +28,7 @@ angular.module('senseItServices', null, null).factory('ForumService', ['RestServ
 
   ForumManager.prototype.getThread = function (threadId) {
     var self = this;
-    if (self.thread && self.thread.id != threadId) {
+    if (self.thread && self.thread.id !== threadId) {
       self.thread = null;
     }
     RestService.get('api/forum/thread/' + threadId).then(function (data) {
