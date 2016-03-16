@@ -1,0 +1,39 @@
+# Code Climate Platform: https://codeclimate.com/github/IET-OU/nquire-web-source
+---
+engines:
+  csslint:
+    enabled: true
+  scss-lint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+      - php
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+  rubocop:
+    enabled: false
+ratings:
+  paths:
+  - "**.scss"
+  - "**.css"
+  - "**.js"
+  - "**.php"
+exclude_paths:
+  - "app/*"
+  - "bin/*"
+  - "node_modules/*"
+  - "po/*"
+  - "res/*"
+  - "static/sass/bootstrap-*"
+  - "static/src/css/*"
+  - "static/src/fonts/*"
+  - "static/src/js/libs/*"
+  - "static/src/js/app/translations.js"
+  - "static/src/media/*"
+
+#End.

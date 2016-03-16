@@ -39,7 +39,8 @@ angular.module('senseItWeb').constant('senseItConfig', {
   lang_admin_texts: {
     en: "English",
     el: "Greek",
-    es: "Spanish"
+    es: "Spanish",
+    fr: "French"
   },
   // Flags - only for admin UI.
   lang_flags: {
@@ -48,8 +49,9 @@ angular.module('senseItWeb').constant('senseItConfig', {
     es: "es",
     fr: "fr"
   },
-  lang_url_regex: /(\.org\/approval)\/(el|es|en)/,
-  //LIVE: lang_url_regex: /(\/approval)?\/(el|en)/,
+  lang_url_regex: /\/\/(www\.nquire-it\.org|nquire|approval)\/(el|en|es|fr)/,
+  //LIVE: lang_url_regex: /\/\/(www\.nquire-it\.org)\/(el|en|es|fr)/,
+
   // Position of switcher: false, "top" or "bottom".
   lang_switch: "top",
   // Help text on the approval/ test site only.
