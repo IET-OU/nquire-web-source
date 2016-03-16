@@ -11,9 +11,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
   var tag_label_hide = ".HIDE.new"
     , label_hide_regex = /(DISABLE|HIDE|PRIVATE)/
-    , valid_tag_regex = /^[a-z0-9\-]+$/   //Was: /^[a-z\-]+$/ or /^[\w\-]+$/
-    // http://stackoverflow.com/questions/10858090/javascript-regex-for-comma-delimited-string
-    //Was: , valid_multi_tag_regex = /(,|^)[a-z0-9\-]+($|,)/  //Was: (,[ ]?|^)
+    , valid_tag_regex = /^[a-z0-9\-]+$/
     // http://stackoverflow.com/questions/18745643/how-to-write-regex-to-verify-a-comma-delimited-list-of-values
     , valid_multi_tag_regex = /^[a-z0-9\-]+(?:, ?[a-z0-9\-]*)*$/
     , error_timeout = 3000
@@ -120,6 +118,9 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
     for (it in filter_r) {
       tag = filter_r[ it ].trim();
+      if ('' === tag) {
+        continue;
+      }
 
       if (! (tag in query_list) ) {
         // Looks like a new tag - hide it initially!
