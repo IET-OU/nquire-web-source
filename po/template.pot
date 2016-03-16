@@ -42,7 +42,7 @@ msgstr[1] ""
 msgid "{{forum.node.title}}: New thread"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:24
 msgid "{{MISSION}} missions"
 msgstr ""
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:79
+#: static/src/partials/admin/admin-filters.html:87
 #: static/src/partials/admin/admin-texts.html:33
 msgid "Add"
 msgstr ""
@@ -240,7 +240,7 @@ msgstr ""
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-filters.html:49
 msgid "Are you sure you want to delete the <i>%s</i> tag?"
 msgstr ""
 
@@ -256,8 +256,8 @@ msgstr ""
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:50
-#: static/src/partials/admin/admin-projects.html:42
+#: static/src/partials/admin/admin-filters.html:54
+#: static/src/partials/admin/admin-projects.html:48
 #: static/src/partials/admin/admin-texts.html:60
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
@@ -326,8 +326,8 @@ msgstr ""
 msgid "Close project"
 msgstr ""
 
-#: static/src/partials/admin/admin-projects.html:39
-msgid "Comma separated tags"
+#: static/src/partials/admin/admin-projects.html:43
+msgid "Comma separated tags (no accents)"
 msgstr ""
 
 #: static/src/partials/forum/forum-thread.html:56
@@ -401,7 +401,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:44
+#: static/src/partials/admin/admin-filters.html:48
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
@@ -430,7 +430,7 @@ msgstr ""
 msgid "Delete series"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:46
+#: static/src/partials/admin/admin-filters.html:50
 msgid "Delete tag?"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr ""
 msgid "Download CSV"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:43
+#: static/src/partials/admin/admin-filters.html:47
 #: static/src/partials/admin/admin-texts.html:56
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
@@ -485,7 +485,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: static/src/partials/admin/admin-projects.html:34
+#: static/src/partials/admin/admin-projects.html:37
 msgid "Edit tags"
 msgstr ""
 
@@ -532,6 +532,10 @@ msgstr ""
 msgid "Explanation:"
 msgstr ""
 
+#: static/src/js/app/config.js.DIST.html:22
+msgid "Feature project"
+msgstr ""
+
 #: static/src/partials/projects/projects-sidebar.html:18
 msgid "Featured missions"
 msgstr ""
@@ -546,6 +550,10 @@ msgstr ""
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
 msgid "Field type:"
+msgstr ""
+
+#: static/src/partials/admin/admin-projects.html:44
+msgid "Format: letters, numbers, dashes, commas, no accents."
 msgstr ""
 
 #: static/src/partials/forum/forum-list.html:7
@@ -578,7 +586,7 @@ msgstr ""
 msgid "Grant permission"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:26
 msgid "Greek schools missions"
 msgstr ""
 
@@ -1057,8 +1065,8 @@ msgstr ""
 msgid "Samples / second"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:49
-#: static/src/partials/admin/admin-projects.html:41
+#: static/src/partials/admin/admin-filters.html:53
+#: static/src/partials/admin/admin-projects.html:46
 #: static/src/partials/admin/admin-texts.html:59
 #: static/src/partials/forum/forum-list-category.html:34
 #: static/src/partials/forum/forum-list-forum.html:23
@@ -1281,19 +1289,19 @@ msgstr ""
 msgid "Sorry, you need administrator access to view this page."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:33
-#: static/src/partials/admin/admin-filters.html:71
+#: static/src/partials/admin/admin-filters.html:36
+#: static/src/partials/admin/admin-filters.html:78
 msgid "Sorry! I can't add a duplicate tag:"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:35
-#: static/src/partials/admin/admin-filters.html:73
-msgid "Sorry! This tag term is empty."
+#: static/src/partials/admin/admin-filters.html:37
+#: static/src/partials/admin/admin-filters.html:79
+msgid "Sorry! The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:34
-#: static/src/partials/admin/admin-filters.html:72
-msgid "Sorry! This tag term is invalid — spaces?"
+#: static/src/partials/admin/admin-filters.html:38
+#: static/src/partials/admin/admin-filters.html:80
+msgid "Sorry! This tag term is empty."
 msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:10
@@ -1350,14 +1358,14 @@ msgstr ""
 msgid "Tag-term"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:28
-#: static/src/partials/admin/admin-filters.html:66
-msgid "Tag-term format: letters, numbers, dashes, no spaces."
+#: static/src/partials/admin/admin-filters.html:31
+#: static/src/partials/admin/admin-filters.html:73
+msgid "Tag-term format: letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:28
-#: static/src/partials/admin/admin-filters.html:66
-msgid "Tag-term, eg."
+#: static/src/partials/admin/admin-filters.html:30
+#: static/src/partials/admin/admin-filters.html:72
+msgid "Tag-term, eg. greek-schools (no accents)"
 msgstr ""
 
 #: static/src/partials/admin/admin-projects.html:15
@@ -1378,6 +1386,11 @@ msgstr ""
 msgid "Texts"
 msgstr ""
 
+#: static/src/partials/admin/admin-filters.html:23
+#: static/src/partials/admin/admin-filters.html:69
+msgid "The label is required."
+msgstr ""
+
 #: static/src/js/app/config.js.DIST.html:19
 msgid "The site will be undergoing routine maintenance today, {{DATE}}."
 msgstr ""
@@ -1386,9 +1399,10 @@ msgstr ""
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:37
-#: static/src/partials/admin/admin-filters.html:76
-msgid "The tag term is not currently valid — spaces?"
+#: static/src/partials/admin/admin-filters.html:40
+#: static/src/partials/admin/admin-filters.html:83
+#: static/src/partials/admin/admin-projects.html:50
+msgid "The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:55
@@ -1463,6 +1477,10 @@ msgstr ""
 
 #: static/src/partials/projects/projects.html:7
 msgid "Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: null})\">without search conditions</a>."
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:23
+msgid "Unfeature"
 msgstr ""
 
 #: static/src/partials/profile/profile-provider-item.html:8
@@ -1559,7 +1577,7 @@ msgstr ""
 msgid "Voting stage"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:23
+#: static/src/js/app/config.js.DIST.html:25
 msgid "Weather-it missions"
 msgstr ""
 

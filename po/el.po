@@ -9,6 +9,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.2\n"
 
+#: static/src/partials/profile/profile-logged-out.html:48
+msgid "…or sign in using one of the following identity providers:"
+msgstr ""
+"…ή συνδέομαι χρησιμοποιώντας έναν από τους ακόλουθους παροχείς ταυτότητας:"
+
 #: static/src/partials/projects/projects-sidebar-feeds.html:14
 msgid ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref="
@@ -43,6 +48,32 @@ msgstr "(Απλό κείμενο πολλαπλών γραμμών)"
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
 msgid "(Single-line text)"
 msgstr "(Κείμενο μονής γραμμής)"
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:26
+msgid "{{feed.count}} user is online"
+msgid_plural "{{feed.count}} users are online"
+msgstr[0] "{{feed.count}} ο χρήστης είναι συνδεδεμένος"
+msgstr[1] "{{feed.count}} οι χρήστες είναι συνδεδεμένοι"
+
+#: static/src/partials/forum/forum-node-new-thread.html:1
+msgid "{{forum.node.title}}: New thread"
+msgstr "{{forum.node.title}}: Νέα υποενότητα"
+
+#: static/src/js/app/config.js.DIST.html:24
+msgid "{{MISSION}} missions"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:3
+msgid "{{projectData.data.data}} image"
+msgid_plural "{{projectData.data.data}} images"
+msgstr[0] "{{projectData.data.data}} εικόνα"
+msgstr[1] "{{projectData.data.data}} εικόνες"
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:2
+msgid "{{projectData.data.members}} member"
+msgid_plural "{{projectData.data.members}} members"
+msgstr[0] "{{projectData.data.members}} χρήστης"
+msgstr[1] "{{projectData.data.members}} χρήστες"
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
@@ -115,6 +146,10 @@ msgstr ""
 "<a href=\"\" data-ui-sref=\"project.view.home\">Γίνομαι μέλος</a> σε αυτή "
 "την αποστολή για να συζητήσω για αυτή τη φωτογραφία."
 
+#: static/src/partials/project/view/senseit/senseit-project-data.html:7
+msgid "<b>{{projectData.data.data}}</b> series"
+msgstr "<b>{{projectData.data.data}}</b> σειρές"
+
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
 msgid "<b>Explanation:</b> {{outcome.explanation}}"
 msgstr "<b>Επεξήγηση:</b> {{outcome.explanation}}"
@@ -130,10 +165,6 @@ msgstr "<b>Spot-it</b> αποστολή"
 #: static/src/partials/project/blocks/project-menu.html:12
 msgid "<b>Win-it</b> mission"
 msgstr "<b>Win-it</b> αποστολή"
-
-#: static/src/partials/project/view/senseit/senseit-project-data.html:7
-msgid "<b>{{projectData.data.data}}</b> series"
-msgstr "<b>{{projectData.data.data}}</b> σειρές"
 
 #: static/src/partials/comments.html:41
 msgid ""
@@ -184,7 +215,7 @@ msgstr ""
 "Μια αποστολή που δημιουργήθηκε από τον/την <span data-siw-user-link="
 "\"projectData.project.author\"></span>."
 
-#: static/src/js/app/controllers/profile/profile-controller.js:266
+#: static/src/js/app/controllers/profile/profile-controller.js:267
 #, fuzzy
 msgid "A password reminder has been sent."
 msgstr "Υπενθύμιση κωδικού"
@@ -202,8 +233,8 @@ msgstr "Επιταχυνσιόμετρο"
 msgid "Actions"
 msgstr "Δράσεις"
 
-#: static/src/partials/admin/admin-filters.html:79
-#: static/src/partials/admin/admin-texts.html:26
+#: static/src/partials/admin/admin-filters.html:87
+#: static/src/partials/admin/admin-texts.html:33
 msgid "Add"
 msgstr ""
 
@@ -237,7 +268,7 @@ msgstr ""
 msgid "Admin menu"
 msgstr ""
 
-#: static/src/partials/admin/admin-users.html:7
+#: static/src/partials/admin/admin-users.html:15
 #: static/src/partials/layout/header.html:19
 msgid "Administrator"
 msgstr "Διαχειριστής"
@@ -267,8 +298,8 @@ msgstr "Οποιοδήποτε είδος"
 msgid "Approve"
 msgstr "Εγκρίνω"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:205
-#: static/src/js/app/controllers/profile/profile-controller.js:250
+#: static/src/js/app/controllers/profile/profile-controller.js:206
+#: static/src/js/app/controllers/profile/profile-controller.js:251
 msgid "Are you a human being or a robot?"
 msgstr ""
 
@@ -278,7 +309,7 @@ msgstr ""
 "Είσαι σίγουρος/η ότι θες να διαγράψεις τα δεδομένα <b>{{data.item.title}}</"
 "b>;"
 
-#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-filters.html:49
 #, fuzzy
 msgid "Are you sure you want to delete the <i>%s</i> tag?"
 msgstr ""
@@ -297,9 +328,9 @@ msgstr "Συγγραφέας"
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr "Αναμονή απάντησης από τον/την {{data.provider.name}}…"
 
-#: static/src/partials/admin/admin-filters.html:50
-#: static/src/partials/admin/admin-projects.html:42
-#: static/src/partials/admin/admin-texts.html:53
+#: static/src/partials/admin/admin-filters.html:54
+#: static/src/partials/admin/admin-projects.html:48
+#: static/src/partials/admin/admin-texts.html:60
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
 #: static/src/partials/forum/forum-list-forum.html:24
@@ -332,8 +363,8 @@ msgstr "Αναμονή απάντησης από τον/την {{data.provider.n
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:220
-#: static/src/js/app/controllers/profile/profile-controller.js:263
+#: static/src/js/app/controllers/profile/profile-controller.js:221
+#: static/src/js/app/controllers/profile/profile-controller.js:264
 msgid "Captcha failed. Try again."
 msgstr ""
 
@@ -373,8 +404,8 @@ msgstr ""
 msgid "Close project"
 msgstr "Κλείνω το πρότζεκτ"
 
-#: static/src/partials/admin/admin-projects.html:39
-msgid "Comma separated tags"
+#: static/src/partials/admin/admin-projects.html:43
+msgid "Comma separated tags (no accents)"
 msgstr ""
 
 #: static/src/partials/forum/forum-thread.html:56
@@ -386,7 +417,7 @@ msgstr "Σχολιάζω"
 msgid "Comment:"
 msgstr "Σχολιάζω:"
 
-#: static/src/partials/admin/admin-texts.html:13
+#: static/src/partials/admin/admin-texts.html:20
 msgid "Content"
 msgstr "Περιεχόμενο"
 
@@ -448,7 +479,7 @@ msgstr "Επεξεργασία δεδομένων"
 msgid "Date"
 msgstr "Ημερομηνία"
 
-#: static/src/partials/admin/admin-filters.html:44
+#: static/src/partials/admin/admin-filters.html:48
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
@@ -477,7 +508,7 @@ msgstr ""
 msgid "Delete series"
 msgstr "Διαγράφω τη σειρά"
 
-#: static/src/partials/admin/admin-filters.html:46
+#: static/src/partials/admin/admin-filters.html:50
 #, fuzzy
 msgid "Delete tag?"
 msgstr "Διαγράφω"
@@ -510,8 +541,8 @@ msgstr "Λεπτομέρειες"
 msgid "Download CSV"
 msgstr "Κατεβάζω το CSV"
 
-#: static/src/partials/admin/admin-filters.html:43
-#: static/src/partials/admin/admin-texts.html:49
+#: static/src/partials/admin/admin-filters.html:47
+#: static/src/partials/admin/admin-texts.html:56
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
 #: static/src/partials/forum/forum-thread.html:14
@@ -533,7 +564,7 @@ msgstr "Κατεβάζω το CSV"
 msgid "Edit"
 msgstr "Επεξεργάζομαι"
 
-#: static/src/partials/admin/admin-projects.html:34
+#: static/src/partials/admin/admin-projects.html:37
 #, fuzzy
 msgid "Edit tags"
 msgstr "Επεξεργάζομαι τον τίτλο"
@@ -543,17 +574,21 @@ msgstr "Επεξεργάζομαι τον τίτλο"
 msgid "Edit title"
 msgstr "Επεξεργάζομαι τον τίτλο"
 
+#: static/src/partials/admin/admin-users.html:14
+msgid "email"
+msgstr "ηλεκτρονικό ταχυδρομείο"
+
 #: static/src/partials/social/social-post-dialog.html:62
 msgid "Email"
 msgstr "Ηλεκτρονικό ταχυδρομείο"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:217
+#: static/src/js/app/controllers/profile/profile-controller.js:218
 msgid "Email already associated with a different account."
 msgstr ""
 
-#: static/src/js/app/controllers/layout/main-controller.js:11
-#: static/src/js/app/controllers/profile/profile-controller.js:190
-#: static/src/js/app/controllers/profile/profile-controller.js:245
+#: static/src/js/app/controllers/layout/main-controller.js:13
+#: static/src/js/app/controllers/profile/profile-controller.js:191
+#: static/src/js/app/controllers/profile/profile-controller.js:246
 msgid "Email cannot be empty."
 msgstr ""
 
@@ -577,6 +612,11 @@ msgstr "Ολοκληρώθηκε"
 msgid "Explanation:"
 msgstr "Επεξήγηση:"
 
+#: static/src/js/app/config.js.DIST.html:22
+#, fuzzy
+msgid "Feature project"
+msgstr "Διαγράφω το πρότζεκτ"
+
 #: static/src/partials/projects/projects-sidebar.html:18
 msgid "Featured missions"
 msgstr "Προτεινόμενες αποστολές"
@@ -593,6 +633,10 @@ msgstr "Ονομασία πεδίου:"
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:14
 msgid "Field type:"
 msgstr "Είδος πεδίου:"
+
+#: static/src/partials/admin/admin-projects.html:44
+msgid "Format: letters, numbers, dashes, commas, no accents."
+msgstr ""
 
 #: static/src/partials/forum/forum-list.html:7
 #: static/src/partials/forum/forum-thread.html:2
@@ -612,11 +656,19 @@ msgstr "Δεδομένα γεωτοποθέτησης:"
 msgid "Go back to the list"
 msgstr "Πηγαίνω πίσω στη λίστα"
 
-#: static/src/partials/admin/admin-users.html:22
+#: static/src/partials/admin/admin-users.html:5
+msgid "Goto last user &darr;"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:4
+msgid "Goto logged in user &darr;"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:33
 msgid "Grant permission"
 msgstr "Παραχωρώ άδεια"
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:26
 #, fuzzy
 msgid "Greek schools missions"
 msgstr "Αναζητώ αποστολές"
@@ -647,7 +699,7 @@ msgid "I forgot my password:"
 msgstr "Ξέχασα τον κωδικό μου:"
 
 #: static/src/partials/admin/admin-projects.html:10
-#: static/src/partials/admin/admin-users.html:4
+#: static/src/partials/admin/admin-users.html:12
 msgid "Id"
 msgstr "Ταυτότητα"
 
@@ -735,6 +787,10 @@ msgstr "Φορτίζει…"
 #: static/src/partials/profile/profile-view.html:56
 msgid "Location:"
 msgstr "Τοποθεσία:"
+
+#: static/src/partials/admin/admin-users.html:2
+msgid "Logged in users:"
+msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:43
 #: static/src/partials/profile/profile-view.html:40
@@ -859,7 +915,7 @@ msgstr "Νέος χώρος συζήτησης"
 msgid "New password:"
 msgstr "Νέος κωδικός:"
 
-#: static/src/partials/admin/admin-users.html:21
+#: static/src/partials/admin/admin-users.html:32
 #: static/src/partials/profile/profile-logged-in.html:153
 #: static/src/partials/profile/profile-logged-in.html:160
 #: static/src/partials/profile/profile-logged-in.html:167
@@ -870,7 +926,7 @@ msgstr "Νέος κωδικός:"
 msgid "No"
 msgstr "Όχι"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:260
+#: static/src/js/app/controllers/profile/profile-controller.js:261
 msgid "No account found with that email or username."
 msgstr ""
 
@@ -889,6 +945,14 @@ msgstr "Χωρίς τίτλο"
 #: static/src/partials/projects/projects-sidebar.html:62
 msgid "Not joined missions"
 msgstr "Αποστολές στις οποίες δεν έγινα μέλος"
+
+#: static/src/index.html:8
+msgid "nQuire-it — join missions to explore your world"
+msgstr "nQuire-it — γίνομαι μέλος σε αποστολές για να εξερευνήσω τον κόσμο μου"
+
+#: static/src/partials/layout/header.html:5
+msgid "nQuire-it home page"
+msgstr "nQuire-it αρχική σελίδα"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
 msgid "Only by others"
@@ -944,12 +1008,12 @@ msgstr ""
 msgid "Participants administration"
 msgstr "Διαχείριση συμμετέχοντων"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:150
+#: static/src/js/app/controllers/profile/profile-controller.js:151
 msgid "Password cannot be empty."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:195
-#: static/src/js/app/controllers/profile/profile-controller.js:297
+#: static/src/js/app/controllers/profile/profile-controller.js:196
+#: static/src/js/app/controllers/profile/profile-controller.js:298
 msgid "Password must have at least {{n}} characters."
 msgstr ""
 
@@ -966,8 +1030,8 @@ msgstr "Ορίζω τον κωδικό:"
 msgid "Password:"
 msgstr "Κωδικός:"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:200
-#: static/src/js/app/controllers/profile/profile-controller.js:302
+#: static/src/js/app/controllers/profile/profile-controller.js:201
+#: static/src/js/app/controllers/profile/profile-controller.js:303
 msgid "Passwords do not match."
 msgstr ""
 
@@ -1035,17 +1099,17 @@ msgstr "Πρότζεκτς"
 msgid "Projects"
 msgstr "Πρότζεκτς"
 
-#: static/src/partials/profile/profile-project-list.html:14
-msgid "Projects Iʼve joined:"
-msgstr "Πρότζεκτς στα οποία έγινα μέλος:"
+#: static/src/partials/profile/profile-view.html:14
+msgid "Projects created by {{profile.username}}:"
+msgstr "Πρότζεκτς τα οποία δημιούργησε ο/η {{profile.username}}:"
 
 #: static/src/partials/profile/profile-logged-in.html:297
 msgid "Projects created by me:"
 msgstr "Πρότζεκτς τα οποία δημιούργησα εγώ:"
 
-#: static/src/partials/profile/profile-view.html:14
-msgid "Projects created by {{profile.username}}:"
-msgstr "Πρότζεκτς τα οποία δημιούργησε ο/η {{profile.username}}:"
+#: static/src/partials/profile/profile-project-list.html:14
+msgid "Projects Iʼve joined:"
+msgstr "Πρότζεκτς στα οποία έγινα μέλος:"
 
 #: static/src/partials/profile/profile-view.html:25
 msgid "Projects joined by {{profile.username}}"
@@ -1079,7 +1143,7 @@ msgstr "Δημιουργώ νέο λογαριασμό:"
 msgid "Relative humidity"
 msgstr "Σχετική υγρασία"
 
-#: static/src/partials/admin/admin-users.html:18
+#: static/src/partials/admin/admin-users.html:29
 msgid "Remove permission"
 msgstr "Αφαιρώ την άδεια"
 
@@ -1109,9 +1173,9 @@ msgstr "Επαναφέρω"
 msgid "Samples / second"
 msgstr "Δείγματα / δευτερόλεπτο"
 
-#: static/src/partials/admin/admin-filters.html:49
-#: static/src/partials/admin/admin-projects.html:41
-#: static/src/partials/admin/admin-texts.html:52
+#: static/src/partials/admin/admin-filters.html:53
+#: static/src/partials/admin/admin-projects.html:46
+#: static/src/partials/admin/admin-texts.html:59
 #: static/src/partials/forum/forum-list-category.html:34
 #: static/src/partials/forum/forum-list-forum.html:23
 #: static/src/partials/forum/forum-thread.html:18
@@ -1139,6 +1203,10 @@ msgstr "Αποθηκεύω"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:23
 msgid "Save and continue"
 msgstr "Αποθηκεύω και συνεχίζω"
+
+#: static/src/partials/admin/admin-users.html:4
+msgid "Scroll to the first logged in user &darr;"
+msgstr ""
 
 #: static/src/partials/layout/header.html:29
 msgid "Search"
@@ -1249,8 +1317,8 @@ msgstr "Το μοιράζομαι"
 msgid "Show value:"
 msgstr "Εμφανίζω την αξία:"
 
-#: static/src/partials/admin/admin-texts.html:4
-#: static/src/partials/admin/admin-texts.html:62
+#: static/src/partials/admin/admin-texts.html:69
+#: static/src/partials/admin/admin-texts.html:7
 #, fuzzy
 msgid "Show/hide translations"
 msgstr "Προσθέτω μετασχηματισμό"
@@ -1261,6 +1329,10 @@ msgstr "Προσθέτω μετασχηματισμό"
 #: static/src/partials/profile/profile-logged-out.html:41
 msgid "Sign in"
 msgstr "Συνδέομαι"
+
+#: static/src/partials/social/social-post-dialog.html:10
+msgid "Sign in with {{data.provider.name}}"
+msgstr "Συνδέομαι με {{data.provider.name}}"
 
 #: static/src/partials/profile/profile-logged-out.html:54
 msgid "Sign in with Facebook"
@@ -1277,10 +1349,6 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
 msgstr "Συνδέομαι με το όνομα χρήστη και τον κωδικό:"
-
-#: static/src/partials/social/social-post-dialog.html:10
-msgid "Sign in with {{data.provider.name}}"
-msgstr "Συνδέομαι με {{data.provider.name}}"
 
 #: static/src/partials/layout/header.html:50
 msgid "Sign out"
@@ -1314,21 +1382,6 @@ msgstr "Κάποιος σχολιάζει σε μια αποστολή στην 
 #: static/src/partials/profile/profile-logged-in.html:190
 msgid "Someone posts to a mission that I created:"
 msgstr "Κάποιος δημοσιεύει σε μια αποστολή την οποία δημιούργησα εγώ:"
-
-#: static/src/partials/admin/admin-filters.html:33
-#: static/src/partials/admin/admin-filters.html:71
-msgid "Sorry! I can't add a duplicate tag:"
-msgstr ""
-
-#: static/src/partials/admin/admin-filters.html:35
-#: static/src/partials/admin/admin-filters.html:73
-msgid "Sorry! This tag term is empty."
-msgstr ""
-
-#: static/src/partials/admin/admin-filters.html:34
-#: static/src/partials/admin/admin-filters.html:72
-msgid "Sorry! This tag term is invalid — spaces?"
-msgstr ""
 
 #: static/src/partials/social/social-post-dialog.html:33
 msgid "Sorry, there was a problem when trying to post your comment."
@@ -1381,6 +1434,21 @@ msgstr ""
 #: static/src/partials/admin/admin.html:15
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Συγγνώμη, μόνο ο διαχειριστής μπορεί να δει αυτή τη σελίδα."
+
+#: static/src/partials/admin/admin-filters.html:36
+#: static/src/partials/admin/admin-filters.html:78
+msgid "Sorry! I can't add a duplicate tag:"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:37
+#: static/src/partials/admin/admin-filters.html:79
+msgid "Sorry! The tag term is not valid — no spaces or accents allowed."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:38
+#: static/src/partials/admin/admin-filters.html:80
+msgid "Sorry! This tag term is empty."
+msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:10
 msgid "Sound"
@@ -1436,14 +1504,14 @@ msgstr ""
 msgid "Tag-term"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:28
-#: static/src/partials/admin/admin-filters.html:66
-msgid "Tag-term format: letters, numbers, dashes, no spaces."
+#: static/src/partials/admin/admin-filters.html:31
+#: static/src/partials/admin/admin-filters.html:73
+msgid "Tag-term format: letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:28
-#: static/src/partials/admin/admin-filters.html:66
-msgid "Tag-term, eg."
+#: static/src/partials/admin/admin-filters.html:30
+#: static/src/partials/admin/admin-filters.html:72
+msgid "Tag-term, eg. greek-schools (no accents)"
 msgstr ""
 
 #: static/src/partials/admin/admin-projects.html:15
@@ -1459,22 +1527,28 @@ msgstr ""
 msgid "Text:"
 msgstr "Κείμενο:"
 
-#: static/src/partials/admin/admin-texts.html:12
+#: static/src/partials/admin/admin-texts.html:19
 #: static/src/partials/admin/admin.html:7
 msgid "Texts"
 msgstr "Κείμενα"
 
-#: static/src/js/app/config.js.DIST.html:17
+#: static/src/partials/admin/admin-filters.html:23
+#: static/src/partials/admin/admin-filters.html:69
+msgid "The label is required."
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:19
 msgid "The site will be undergoing routine maintenance today, {{DATE}}."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:18
+#: static/src/js/app/config.js.DIST.html:20
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:37
-#: static/src/partials/admin/admin-filters.html:76
-msgid "The tag term is not currently valid — spaces?"
+#: static/src/partials/admin/admin-filters.html:40
+#: static/src/partials/admin/admin-filters.html:83
+#: static/src/partials/admin/admin-projects.html:50
+msgid "The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:55
@@ -1587,11 +1661,16 @@ msgstr ""
 "Προσπάθησε χωρίς τους <a href=\"\" data-ui-sref=\"home({kw: null, status: "
 "null, type: null})\">όρους αναζήτησης</a>."
 
+#: static/src/js/app/config.js.DIST.html:23
+#, fuzzy
+msgid "Unfeature"
+msgstr "Προτεινόμενο;"
+
 #: static/src/partials/profile/profile-provider-item.html:8
 msgid "Unlink {{providerName}} account"
 msgstr "Αποσυνδέω {{providerName}} το λογαριασμό"
 
-#: static/src/js/app/config.js.DIST.html:19
+#: static/src/js/app/config.js.DIST.html:21
 msgid ""
 "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
 "Twitter</a>."
@@ -1626,20 +1705,20 @@ msgstr "Χρήστης"
 msgid "User profile: {{profile.username}}"
 msgstr "Προφίλ χρήστη: {{profile.username}}"
 
-#: static/src/partials/admin/admin-users.html:5
+#: static/src/partials/admin/admin-users.html:13
 msgid "Username"
 msgstr "Όνομα χρήστη"
 
-#: static/src/js/app/controllers/profile/profile-controller.js:158
+#: static/src/js/app/controllers/profile/profile-controller.js:159
 msgid "Username & password do not match."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:146
-#: static/src/js/app/controllers/profile/profile-controller.js:186
+#: static/src/js/app/controllers/profile/profile-controller.js:147
+#: static/src/js/app/controllers/profile/profile-controller.js:187
 msgid "Username cannot be empty."
 msgstr ""
 
-#: static/src/js/app/controllers/profile/profile-controller.js:214
+#: static/src/js/app/controllers/profile/profile-controller.js:215
 msgid "Username not available."
 msgstr ""
 
@@ -1683,7 +1762,7 @@ msgstr "Ψηφοφορία"
 msgid "Voting stage"
 msgstr "Στάδιο ψηφοφορίας"
 
-#: static/src/js/app/config.js.DIST.html:21
+#: static/src/js/app/config.js.DIST.html:25
 #, fuzzy
 msgid "Weather-it missions"
 msgstr "Προτεινόμενες αποστολές"
@@ -1697,7 +1776,7 @@ msgstr "Win-it"
 msgid "Winner"
 msgstr "Νικητής"
 
-#: static/src/partials/admin/admin-users.html:17
+#: static/src/partials/admin/admin-users.html:28
 #: static/src/partials/profile/profile-logged-in.html:152
 #: static/src/partials/profile/profile-logged-in.html:159
 #: static/src/partials/profile/profile-logged-in.html:166
@@ -1811,49 +1890,6 @@ msgstr "Χρειάζεται να γίνω μέλος σε αυτό το πρό�
 #: static/src/partials/profile/profile-logged-in.html:2
 msgid "Your profile page"
 msgstr "Το προφίλ μου"
-
-#: static/src/partials/admin/admin-users.html:6
-msgid "email"
-msgstr "ηλεκτρονικό ταχυδρομείο"
-
-#: static/src/partials/layout/header.html:5
-msgid "nQuire-it home page"
-msgstr "nQuire-it αρχική σελίδα"
-
-#: static/src/index.html:8
-msgid "nQuire-it — join missions to explore your world"
-msgstr "nQuire-it — γίνομαι μέλος σε αποστολές για να εξερευνήσω τον κόσμο μου"
-
-#: static/src/js/app/config.js.DIST.html:20
-msgid "{{MISSION}} missions"
-msgstr ""
-
-#: static/src/partials/projects/projects-sidebar-feeds.html:26
-msgid "{{feed.count}} user is online"
-msgid_plural "{{feed.count}} users are online"
-msgstr[0] "{{feed.count}} ο χρήστης είναι συνδεδεμένος"
-msgstr[1] "{{feed.count}} οι χρήστες είναι συνδεδεμένοι"
-
-#: static/src/partials/forum/forum-node-new-thread.html:1
-msgid "{{forum.node.title}}: New thread"
-msgstr "{{forum.node.title}}: Νέα υποενότητα"
-
-#: static/src/partials/project/view/spotit/spotit-project-data.html:3
-msgid "{{projectData.data.data}} image"
-msgid_plural "{{projectData.data.data}} images"
-msgstr[0] "{{projectData.data.data}} εικόνα"
-msgstr[1] "{{projectData.data.data}} εικόνες"
-
-#: static/src/partials/project/view/spotit/spotit-project-data.html:2
-msgid "{{projectData.data.members}} member"
-msgid_plural "{{projectData.data.members}} members"
-msgstr[0] "{{projectData.data.members}} χρήστης"
-msgstr[1] "{{projectData.data.members}} χρήστες"
-
-#: static/src/partials/profile/profile-logged-out.html:48
-msgid "…or sign in using one of the following identity providers:"
-msgstr ""
-"…ή συνδέομαι χρησιμοποιώντας έναν από τους ακόλουθους παροχείς ταυτότητας:"
 
 #~ msgid "English"
 #~ msgstr "English – Αγγλικά"
