@@ -13,27 +13,27 @@
       </thead>
       <tbody>
       <tr class="XX-WAS-row-add-form"> </tr>
-      <tr data-ng-repeat="(idx, item) in tags.data.filters" data-ng-controller="AdminFiltersCtrl">
-          <td title="ID: {{item.id}}">
+      <tr data-ng-repeat="item in tags.data.filters" data-X-ng-init="idx = item._idx" data-ng-controller="AdminFiltersCtrl">
+          <td title="ID: {{item.id}} &#13;Date: {{item.isoDate}}">
               <div data-ng-if="!form.isOpen()" data-ng-bind-html="item.label"></div>
               <div data-ng-if="form.isOpen()">
-                  <input class="form-control" name="label" data-ng-model="form.values[idx].label" data-ng-required="1"
+                  <input class="form-control" name="label" data-ng-model="form.values.label" data-ng-required="1"
                          placeholder="Label, eg. Greek Schools missions" />
 
                   <p role="alert" ng-if="editForm.label.$error.required" translate>The label is required.</p>
               </div>
           </td>
           <td>
-              <div data-ng-if="!form.isOpen()">{{item.query}}</div>
+              <div data-ng-if="!form.isOpen()" data-ng-bind="item.query"></div>
               <div data-ng-if="form.isOpen()">
-                  <input class="form-control" name="tag" data-ng-model="form.values[idx].query"
+                  <input class="form-control" name="tag" data-ng-model="form.values.query"
                          placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate}}"
                          title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
                          data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"
                          translate-comment="Note that the term, eg. greek-schools should not be translated."/>
                   <div role="alert">
                     <div ng-switch="tags.formError('edit')">
-                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{form.values[idx].query}}</tt></p>
+                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{form.values.query}}</tt></p>
                       <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
                       <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
                     </div>
@@ -45,7 +45,7 @@
           <td>
               <div class="btn-group" data-ng-if="!form.isOpen()">
                   <button class="btn btn-default btn-sm" ng-click="form.open()" translate>Edit</button>
-                  <button class="btn btn-default btn-sm" ng-click="deleteFilter(idx)"
+                  <button class="btn btn-default btn-sm" ng-click="deleteFilter(item.id, item.query)"
                       data-confirm="{{'Are you sure you want to delete the <i>%s</i> tag?' | translate}}"
                       data-confirm_title="{{'Delete tag?' | translate}}" translate>Delete</button>
               </div>

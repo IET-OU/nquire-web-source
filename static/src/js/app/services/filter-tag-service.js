@@ -43,7 +43,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
     RestService.get('api/filter').then(function (data) {
       // Enable editing via the admin UI.
       var it, item, key, is_valid
-        , filters = {}
+        , filters = []  //Was: {}
         , query_list = {};
 
       for (it in data) {
@@ -51,9 +51,11 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
         key = "_idx_" + item.id;
         is_valid = item.query && item.query.match(valid_tag_regex);
 
-        filters[ key ]= item;
-        filters[ key ]._idx = key;
-        filters[ key ].active = item.label && ! item.label.match(label_hide_regex) && is_valid;
+        item._idx = key;
+        item.active = item.label && ! item.label.match(label_hide_regex) && is_valid;
+
+        filters.push(item);
+        //Was: filters[ key ] = item;
 
         query_list[ item.query ] = item.label;
 
@@ -64,9 +66,24 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
       self.data.filters = filters;
       self.query_list = query_list;
 
-      $log.info("Tags.getList: ", filters, query_list);
+      $log.info("Tags.getList: ", self.data.filters, query_list);
     });
   };
+
+  // http://stackoverflow.com/questions/18977881/can-i-loop-through-a-javascript-object-in-reverse-order
+  function ReverseObject(Obj){
+      var TempArr = [];
+      var NewObj = {};
+      for (var Key in Obj){
+          TempArr.push(Key);
+      }
+      for (var i = TempArr.length-1; i >= 0; i--) {
+          //console.log("Temp: ", TempArr[i]);
+          NewObj[TempArr[i]] = Obj[TempArr[i]];  //[];
+      }
+      return NewObj;
+  }
+
 
   // http://stackoverflow.com/questions/30506300/how-do-i-trim-a-string-in-angularjs
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim

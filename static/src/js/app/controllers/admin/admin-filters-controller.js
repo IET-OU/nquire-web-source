@@ -29,11 +29,8 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
 
     if ($scope.item) {
         // ng-repeat context.
-        $scope.deleteFilter = function (idx) {
-            var filters = $scope.tags.data.filters
-              , query = filters[ idx ].query
-              , $button = angular.element("[ ng-click *= deleteFilter ]:first")  //Was: $window.$()..
-              ;
+        $scope.deleteFilter = function (id, query) {
+            var $button = angular.element("[ ng-click *= deleteFilter ]:first");  //Was: $window.$()..
 
             /*if (! $window.confirm(confirm_text)) {
                 $scope.alert.debug("Cancel delete filter.");
@@ -45,7 +42,7 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
                 body: "<p>" + $button.data("confirm").replace("%s", query) + "</p>",
                 ok: function () {
 
-            $scope.admin.deleteFilter(filters[ idx ].id).then(function () {
+            $scope.admin.deleteFilter(id).then(function () {
                 $scope.tags.getList();
                 $scope.alert.success("Tag successfully deleted: " + query);
             })
@@ -57,20 +54,25 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
             });
         };
 
-        $scope.form = new SiwFormManager($scope.tags.data.filters, [ $scope.item._idx ], function saveCallback() {
+        //Was: $scope.tags.data.filters ( $scope.itom )
+        $scope.form = new SiwFormManager($scope.item, [ 'label', 'query', '_idx', 'id' ], function saveCallback() {
             var idx = $scope.item._idx
               , filters = $scope.tags.data.filters
-              , query = filters[ idx ].query;
+              , item = $scope.item;
 
-            if ($scope.tags.validTag(query, "edit")) {
-                $scope.admin.setFilter(filters[ idx ].label, query, filters[ idx ].id).then(function () {
-                    $scope.alert.success("Tag updated: " + query);
+            if ($scope.tags.validTag(item.query, "edit")) {
+                $scope.admin.setFilter(item.label, item.query, item.id).then(function () {
+                    $scope.alert.success("Tag updated: " + item.query);
+
+                    if ($scope.cfg.admin_refresh_lists) {
+                        $scope.tags.getList();
+                    }
                 })
                 .catch(function (resp) {
                     if ($scope.tags.catchDuplicateTag(resp, "edit")) {
-                        $scope.alert.error("Sorry! I can't add a duplicate tag: " + query);
+                        $scope.alert.error("Sorry! I can't add a duplicate tag: " + item.query);
                     } else {
-                        $scope.alert.error("Sorry! Unknown error: " + query, resp);
+                        $scope.alert.error("Sorry! Unknown error: " + item.query, resp);
                     }
                 });
             } else {
