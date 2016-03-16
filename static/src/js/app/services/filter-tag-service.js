@@ -12,6 +12,10 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
   var tag_label_hide = ".HIDE.new"
     , label_hide_regex = /(DISABLE|HIDE|PRIVATE)/
     , valid_tag_regex = /^[a-z0-9\-]+$/   //Was: /^[a-z\-]+$/ or /^[\w\-]+$/
+    // http://stackoverflow.com/questions/10858090/javascript-regex-for-comma-delimited-string
+    //Was: , valid_multi_tag_regex = /(,|^)[a-z0-9\-]+($|,)/  //Was: (,[ ]?|^)
+    // http://stackoverflow.com/questions/18745643/how-to-write-regex-to-verify-a-comma-delimited-list-of-values
+    , valid_multi_tag_regex = /^[a-z0-9\-]+(?:, ?[a-z0-9\-]*)*$/
     , error_timeout = 3000
     , form_errors = {}
     , manager;
@@ -31,6 +35,9 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
     return valid_tag_regex;
   };
 
+  FilterTagManager.prototype.patternMulti = function () {
+    return valid_multi_tag_regex;
+  };
 
   FilterTagManager.prototype.getList = function () {
     var self = this;
@@ -53,7 +60,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
         query_list[ item.query ] = item.label;
 
         if (! is_valid) {
-          $log.warn("Error, invalid filter-tag (spaces?) ", item);
+          $log.warn("Error, invalid filter-tag (spaces or accents?) ", item);
         }
       }
       self.data.filters = filters;
@@ -146,13 +153,13 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
   };
 
   FilterTagManager.prototype.formError = function (which) {
-    which = which || "default";
+    form_errors.which = which || "default";
     return form_errors.which;
   };
 
   function setFormError(error, which) {
-    which = which || "default";
-    form_errors.which = error;
+    form_errors.which = which || "default";
+    form_errors.error = error;
 
     $timeout(function () {
       form_errors.which = null;

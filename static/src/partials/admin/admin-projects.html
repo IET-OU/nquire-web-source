@@ -1,7 +1,7 @@
-<div class="admin-page-projects">
+<form name="editForm" class="admin-page-projects">
 
 <datalist id="filter-list">
-    <option data-ng-repeat="f in filters" value="{{f.query}}">{{f.label}}</option>
+    <option data-ng-repeat="(idx, tag) in tags.data.filters" value="{{tag.query}}">{{tag.label}}</option>
 </datalist>
 
 <table class="table table-striped">
@@ -17,6 +17,9 @@
     </thead>
     <tbody>
     <tr data-ng-repeat="(idx, project) in admin.data.projects" data-ng-controller="AdminProjectsItemCtrl" data-idx="{{idx}}">
+      <!--{ http://stackoverflow.com/questions/14378401/dynamic-validation-and-name-in-a-form-with-angularjs }-->
+      <ng-form name="innerForm">
+
         <td>{{project.id}}</td>
         <td>{{project.title}}</td>
         <td>{{project.author.username}}</td>
@@ -34,18 +37,25 @@
             <button class="btn btn-default btn-xs" data-ng-click="form.open()" data-ng-XX-click="actions.filters(project)" translate>Edit tags</button>
           </div>
           <div data-ng-if="form.isOpen()">
-            <input class="form-control filters" data-ng-XX-model="form.values[idx].filters" data-ng-model="project.filters"
-                   list="filter-list" data-ng-required="1" pattern="[\w\-,]+"
-                   placeholder="{{'Comma separated tags' | translate}}" title="Format: letters, numbers, dashes, commas."/>
+            <input name="tag" class="form-control filters" ng-XX-model="form.values[idx].filters" ng-model="project.filters"
+                   list="filter-list" ng-XX-required="1" ng-pattern="tags.patternMulti()"
+                   pattern="^[a-z0-9\-]+(?:, ?[a-z0-9\-]*)*$" data-X-pattern="(,|^)[a-z0-9\-]+($|,)" maxlength="128"
+                   placeholder="{{'Comma separated tags (no accents)' | translate}}"
+                   title="{{'Format: letters, numbers, dashes, commas, no accents.' | translate}}"/>
 
-            <button class="btn btn-default btn-sm" data-ng-click="form.save()" translate>Save</button>
+            <button class="btn btn-default btn-sm" data-ng-click="form.save()" type="submit"
+                   ng-disabled="(editForm.tag.$invalid || editForm.tag.$error.required)" translate>Save</button>
             <button class="btn btn-default btn-sm" data-ng-click="form.cancel()" translate>Cancel</button>
+
+            <p ng-if="(editForm.tag.$invalid || editForm.tag.$error.required)"
+                translate>The tag term is not valid — no spaces or accents allowed.</p>
           </div>
         </td>
+
+      </ng-form>
     </tr>
 
     </tbody>
-
 </table>
 
-</div>
+</form>

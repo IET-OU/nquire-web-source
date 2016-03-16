@@ -120,13 +120,6 @@ input:invalid, input.ng-invalid {
 
     td {
       vertical-align: top;
-
-      [ ng-if *= error ],
-      [ ng-if *= invalid ],
-      [ ng-switch *= formError ] p {
-        color: darken( $color-dark-orange, 4% );
-        margin: 5px 2px;
-      }
     }
 
     button[ ng-click *= delete ] {
@@ -146,6 +139,18 @@ input:invalid, input.ng-invalid {
     }
   }
 
+  .admin-page-filters,
+  .admin-page-projects {
+
+    [ ng-if *= error ],
+    [ ng-if *= invalid ],
+    [ ng-switch *= formError ] p {
+      color: $color-form-error;
+      margin: 5px 2px;
+      line-height: 1.25;
+      font-size: .98em;
+    }
+  }
 
   .admin-page-projects {
 
