@@ -1,9 +1,10 @@
-@import "basic-header";
-@import "../variables/dimensions";
-@import "../variables/colors";
+@import '../variables/dimensions';
+@import '../variables/colors';
+@import '../layout/basic-header';
 
 
-input:invalid, input.ng-invalid {
+input:invalid,
+input.ng-invalid {
   //border-color: orange;
 }
 
@@ -50,8 +51,8 @@ input:invalid, input.ng-invalid {
       float: right;
     }
 
-    tr.row-add-form,
-    tr.row-translate {
+    .row-add-form,
+    .row-translate {
       //tr.row-lang-el {
       //&[ data-row-lang != 'en' ] {
       display: none;
@@ -114,7 +115,7 @@ input:invalid, input.ng-invalid {
   }
 
   .admin-page-filters table {
-    tr.row-add-form {
+    .row-add-form {
       display: table-row;
     }
 
@@ -122,13 +123,15 @@ input:invalid, input.ng-invalid {
       vertical-align: top;
     }
 
-    button[ ng-click *= delete ] {
+    //Was: button[ ng-click *= delete ] (scss-lint)
+    [ ng-click *= delete ] {
       color: $color-dark-orange;
     }
 
     .col-btn {
       width: 1px;
     }
+
     .key {
       width: 41%;
       //Was: width: 248px;
@@ -171,7 +174,7 @@ input:invalid, input.ng-invalid {
 
   #admin-users-count {
     display: inline-block;
-    border: 1px solid #aaa;
+    border: 1px solid $color-border;
     border-radius: 3px;
     padding: 5px 14px;
     margin: 2px 0;
@@ -184,7 +187,8 @@ input:invalid, input.ng-invalid {
     }
   }
 
-  button[ ng-click *= footer ] {
+  //Was: button[ ng-click *= footer ]
+  [ ng-click *= footer ] {
     margin: 0 8px;
   }
 

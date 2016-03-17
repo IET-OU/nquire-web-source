@@ -1,6 +1,6 @@
-@import "../variables/dimensions";
-@import "../variables/colors";
-@import "../text/text-styles";
+@import '../variables/dimensions';
+@import '../variables/colors';
+@import '../text/text-styles';
 
 
 .profile-logged-icon-on {
@@ -13,24 +13,25 @@
   height: $dim-profile-image-size;
   border-radius: $dim-profile-image-size / 2;
   border: solid $dim-profile-circle-border-width $color-orange;
-  background: white;
+  background: $color-lighter-background;
   display: inline-block;
 }
 
 .profile-header {
   height: $dim-profile-header-height;
   line-height: $dim-profile-header-height;
-  color: white;
+  color: $color-light-text;
   background: $color-dark-grey;
   padding-left: $dim-common-small-margin;
 
   span {
     margin-right: $dim-common-margin;
+
     a {
       color: $color-dark-background-link;
 
       &.active {
-        color: white;
+        color: $color-light-text;
         font-weight: bold;
       }
     }
@@ -44,7 +45,7 @@
 
 .profile-page {
   @extend .row;
-  margin: 0px;
+  margin: 0;
 
   background: $color-light-background;
 

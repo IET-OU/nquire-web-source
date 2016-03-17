@@ -1,17 +1,17 @@
-@import "../variables/dimensions";
-@import "../variables/colors";
-@import "../text/text-styles";
-@import "../ext/browser-support";
+@import '../variables/dimensions';
+@import '../variables/colors';
+@import '../text/text-styles';
+@import '../ext/browser-support';
 
 @mixin basic-header {
   height: $dim-common-banner;
   line-height: $dim-common-banner;
-  color: white;
+  color: $color-light-text;
   background: $color-dark-grey;
   padding-left: $dim-common-small-margin;
 
   .arrow {
-    color: #aaaaaa;
+    color: #aaa;
   }
 
   a {
@@ -34,5 +34,3 @@
     }
   }
 }
-
-

@@ -1,6 +1,8 @@
-@import "../variables/dimensions";
+@import '../variables/dimensions';
 
-html, body, #main {
+html,
+body,
+#main {
   height: 100%;
 }
 
@@ -8,8 +10,12 @@ html {
   overflow-y: scroll;
 }
 
-.ng-show { display: block !important; }
-table tr.ng-show { display: table-row !important; }
+.ng-show {
+  display: block !important;
+}
+table tr.ng-show {
+  display: table-row !important;
+}
 
 
 #main {
@@ -18,7 +24,7 @@ table tr.ng-show { display: table-row !important; }
 
     .main-content {
       height: 100%;
-      background: white;
+      background: $color-lighter-background;
       @extend .container;
       padding: $dim-common-margin 0 0 0;
       position: relative;

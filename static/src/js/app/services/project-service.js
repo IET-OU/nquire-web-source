@@ -180,7 +180,7 @@ angular.module('senseItServices', null, null).factory('ProjectService', ['RestSe
                 self.data.data = null;
                 self.data.ready = true;
                 if (callback) {
-                    callback();
+                    callback();  // ESLint ignore? Do not return!
                 }
             }
             return deleted;

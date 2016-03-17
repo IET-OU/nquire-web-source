@@ -1,12 +1,12 @@
-@import "../variables/dimensions";
-@import "../variables/colors";
-@import "../text/text-styles";
+@import '../variables/dimensions';
+@import '../variables/colors';
+@import '../text/text-styles';
 
 div#header {
   padding: $dim-header-margin-top $dim-header-margin-left $dim-header-margin-bottom $dim-header-margin-right;
   height: $dim-header-height;
   border-bottom: solid $color-dark-grey $dim-header-border-bottom-width;
-  background: white;
+  background: $color-lighter-background;
 
   div#header-content {
     @extend .container;
@@ -83,11 +83,11 @@ div#header {
     }
   }
 }
+
 [ data-lang_switch = top ] #header {
   // Above -- height: 145px;
   //Was: height: 170px;
 }
-
 
 
 // Accessibility fixes [Bug: #1]
@@ -121,7 +121,7 @@ div#header {
     min-width: 7em;
     border: 1px solid $color-header-search-box;
     //border-radius: 0;
-    background: #fff;
+    background: $color-lighter-background;
     color: #666;
     padding: 2px 16px;
     //text-align: center;

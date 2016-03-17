@@ -1,4 +1,5 @@
 angular.module('senseItWeb', null, null).controller('ProjectEditSenseItAnalysisCtrl', function ($scope) {
+    'use strict';
 
     $scope.availableTransformations = {};
     for (var t in SiwSenseItSensorData.transformations) {
@@ -44,7 +45,7 @@ angular.module('senseItWeb', null, null).controller('ProjectEditSenseItAnalysisC
             var tx = this.tx();
             if (tx) {
                 for (var i = 0; i < tx.length; i++) {
-                    id = Math.max(id, 1 + parseInt(tx[i].id.substr(3)));
+                    id = Math.max(id, 1 + parseInt(tx[i].id.substr(3), 10));
                     weight = Math.max(weight, 1 + tx[i].weight);
                 }
             }

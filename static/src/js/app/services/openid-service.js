@@ -68,7 +68,7 @@ angular.module('senseItServices', null, null).factory('OpenIdService', ['RestSer
       password: password
     }).then(function (data) {
       service._update(true);
-      callback(data);
+      return callback(data);
     });
   };
 

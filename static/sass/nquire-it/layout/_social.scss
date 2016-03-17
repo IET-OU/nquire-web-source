@@ -1,4 +1,4 @@
-@import "../variables/dimensions";
+@import '../variables/dimensions';
 
 
 .social-posting {
@@ -9,7 +9,7 @@
 
     .social-posting-link {
       @extend .col-xs-4;
-      padding: 0px 0px $dim-common-margin 0px;
+      padding: 0 0 $dim-common-margin 0;
 
       img {
         width: 50%;

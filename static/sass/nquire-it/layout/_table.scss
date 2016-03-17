@@ -1,4 +1,4 @@
-@import "../variables/dimensions";
+@import '../variables/dimensions';
 
 .sortable-table {
 
@@ -16,6 +16,7 @@
 
 .sortable-menu {
   margin-top: $dim-common-small-margin;
+
   a {
     margin-left: $dim-common-margin;
 

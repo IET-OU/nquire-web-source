@@ -1,6 +1,6 @@
-@import "../variables/dimensions";
-@import "../variables/colors";
-@import "../layout/basic-header";
+@import '../variables/dimensions';
+@import '../variables/colors';
+@import '../layout/basic-header';
 
 .forum-container {
   margin: 0 $dim-common-margin $dim-common-margin;
@@ -41,14 +41,15 @@
         line-height: $dim-common-banner;
         padding: 0 $dim-common-small-margin;
         background: $color-medium-grey;
-        color: #ffffff;
+        color: $color-light-text;
 
         .username {
           display: inline-block;
           min-width: $dim-profile-image-outer-diameter;
           margin-right: $dim-common-small-margin;
+
           a {
-            color: #ffffff;
+            color: $color-light-text;
           }
         }
 
@@ -59,6 +60,7 @@
         .controls {
           float: right;
           white-space: nowrap;
+
           button {
             margin-top: -3px;
           }
@@ -80,11 +82,10 @@
       .forum-thread-text {
         margin-left: 2*$dim-common-small-margin + $dim-profile-image-outer-diameter;
         padding: $dim-common-small-margin 0;
-        min-height: $dim-common-margin + 2*$dim-common-small-margin + $dim-profile-image-outer-diameter;
+        min-height: $dim-common-margin + 2 * $dim-common-small-margin + $dim-profile-image-outer-diameter;
       }
     }
 
   }
 
 }
-
