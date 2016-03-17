@@ -1,30 +1,31 @@
 angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function ($scope, $window, ModalService) {
     'use strict';
 
+    var $alert = $scope.alert
+      , $tags = $scope.tags;
+
     $scope.submit = function () {
         //var promise = $scope.tags.adminAddFilter($scope.new_filter);
         var query = $scope.new_filter.query;
-        if ($scope.tags.validTag(query, "add")) {
+        if ($tags.validTag(query, "add")) {
             var promise = $scope.admin.setFilter($scope.new_filter.label, query).then(function () {
                 // Refresh, messages, ...
-                $scope.tags.getList();
-                $scope.alert.success("Tag successfully added: " + query);
+                $tags.getList();
+                $alert.success("Tag successfully added: " + query);
                 // ..And, clear!
                 $scope.new_filter = {};
             })
             .catch(function (resp) {
-                if ($scope.tags.catchDuplicateTag(resp, "add")) {
-                    $scope.alert.error("Sorry! I can't add a duplicate tag: " + query, resp);
+                if ($tags.catchDuplicateTag(resp, "add")) {
+                    $alert.error("Sorry! I can't add a duplicate tag: " + query, resp);
                 } else {
-                    $scope.alert.error("Sorry! Unknown error: " + query, resp);
+                    $alert.error("Sorry! Unknown error: " + query, resp);
                 }
             });
         } else {
-            $scope.alert.error("Invalid tag-term – empty or with spaces? " + query);
+            $alert.error("Invalid tag-term – empty or with spaces? " + query);
         }
     };
-
-
 
 
     if ($scope.item) {
@@ -42,13 +43,13 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
                 body: "<p>" + $button.data("confirm").replace("%s", query) + "</p>",
                 ok: function () {
 
-            $scope.admin.deleteFilter(id).then(function () {
-                $scope.tags.getList();
-                $scope.alert.success("Tag successfully deleted: " + query);
-            })
-            .catch(function (resp) {
-                $scope.alert.error("Sorry! Unknown error: " + query, resp);
-            });
+                    $scope.admin.deleteFilter(id).then(function () {
+                        $scope.tags.getList();
+                        $scope.alert.success("Tag successfully deleted: " + query);
+                    })
+                    .catch(function (resp) {
+                        $scope.alert.error("Sorry! Unknown error: " + query, resp);
+                    });
                     return true;
                 }
             });
@@ -60,29 +61,29 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
               , filters = $scope.tags.data.filters
               , item = $scope.item;
 
-            if ($scope.tags.validTag(item.query, "edit")) {
+            if ($tags.validTag(item.query, "edit")) {
                 $scope.admin.setFilter(item.label, item.query, item.id).then(function () {
-                    $scope.alert.success("Tag updated: " + item.query);
+                    $alert.success("Tag updated: " + item.query);
 
                     if ($scope.cfg.admin_refresh_lists) {
-                        $scope.tags.getList();
+                        $tags.getList();
                     }
                 })
                 .catch(function (resp) {
-                    if ($scope.tags.catchDuplicateTag(resp, "edit")) {
-                        $scope.alert.error("Sorry! I can't add a duplicate tag: " + item.query);
+                    if ($tags.catchDuplicateTag(resp, "edit")) {
+                        $alert.error("Sorry! I can't add a duplicate tag: " + item.query);
                     } else {
-                        $scope.alert.error("Sorry! Unknown error: " + item.query, resp);
+                        $alert.error("Sorry! Unknown error: " + item.query, resp);
                     }
                 });
             } else {
-                $scope.alert.error("Invalid tag-term – empty or with spaces? " + query);
+                $alert.error("Invalid tag-term – empty or with spaces? " + query);
             }
         });
 
-        $scope.alert.debug("$scope.form (f):", $scope.form, $scope.item);
+        $alert.debug("$scope.form (f):", $scope.form, $scope.item);
     }
 
 
-    $scope.alert.debug('AdminFiltersCtrl');
+    $alert.debug('AdminFiltersCtrl');
 });
