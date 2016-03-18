@@ -1,23 +1,62 @@
 
 <div ng-controller="AdminFiltersCtrl" class="admin-page-filters">
 
-<form name="editForm">
+<form name="editForm" ng-submit="submit()">
 
   <table class="table table-striped">
+      <colgroup>
+        <col width="40%" class="x-key">
+        <col width="35%" class="x-value">
+        <col width="15%" class="x-col-btn">
+      </colgroup>
       <thead>
       <tr>
-          <th class="key" translate>Label</th>
-          <th class="value" translate>Tag-term</th>
-          <th class="col-btn"></th>
+          <th translate>Label</th>
+          <th translate>Tag-term</th>
+          <th ></th>
       </tr>
       </thead>
       <tbody>
-      <tr class="XX-WAS-row-add-form"> </tr>
+
+
+      <tr class="row-add-form">
+        <!--<td colspan="3">
+        <form name="addForm" ng-submit="submit()">
+          <table>
+            <tr>-->
+          <td><input name="addLabel" class="form-control" data-ng-model="new_filter.label"
+              placeholder="Label, eg. Greek Schools missions" title="Label, eg. Greek Schools missions"
+              data-ng-required="1"/>
+            <p ng-if="editForm.addLabel.$error.required && editForm.addTag.$dirty" translate>The label is required.</p>
+          </td>
+          <td><input name="addTag" class="form-control" data-ng-model="new_filter.query"
+              placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate }}"
+              title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
+              data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"/>
+
+            <div role="alert">
+              <div ng-switch="tags.formError('add')">
+                <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{new_filter.query}}</tt></p>
+                <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
+                <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
+                <!--<p ng-switch-default translate>Sorry! Unknown error.</p>-->
+              </div>
+              <p ng-if="(editForm.addTag.$invalid || editForm.addTag.$error.required) && editForm.addTag.$dirty"
+                translate>The tag term is not valid — no spaces or accents allowed.</p>
+            </div>
+          </td>
+          <td><button class="btn btn-default" type="submit" ng-disabled="editForm.$invalid" translate>Add</button></td>
+          <!--</tr></table>
+        </form>
+      </td>-->
+      </tr>
+
+
       <tr data-ng-repeat="item in tags.data.filters" data-X-ng-init="idx = item._idx" data-ng-controller="AdminFiltersCtrl">
           <td title="ID: {{item.id}} &#13;Date: {{item.isoDate}}">
               <div data-ng-if="!form.isOpen()" data-ng-bind-html="item.label"></div>
               <div data-ng-if="form.isOpen()">
-                  <input class="form-control" name="label" data-ng-model="form.values.label" data-ng-required="1"
+                  <input name="label" class="form-control" data-ng-model="form.values.label" data-ng-required="1"
                          placeholder="Label, eg. Greek Schools missions" />
 
                   <p role="alert" ng-if="editForm.label.$error.required" translate>The label is required.</p>
@@ -26,7 +65,7 @@
           <td>
               <div data-ng-if="!form.isOpen()" data-ng-bind="item.query"></div>
               <div data-ng-if="form.isOpen()">
-                  <input class="form-control" name="tag" data-ng-model="form.values.query"
+                  <input name="tag" class="form-control" data-ng-model="form.values.query"
                          placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate}}"
                          title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
                          data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"
@@ -50,7 +89,8 @@
                       data-confirm_title="{{'Delete tag?' | translate}}" translate>Delete</button>
               </div>
               <div class="btn-group" data-ng-if="form.isOpen()">
-                  <button class="btn btn-default btn-sm" ng-click="form.save()" type="submit" ng-disabled="editForm.$invalid" translate>Save</button>
+                  <button class="btn btn-default btn-sm" ng-click="form.save()" type="submit" ng-disabled="editForm.tag.$invalid && editForm.label.$invalid"
+                      translate>Save</button>
                   <button class="btn btn-default btn-sm" ng-click="form.cancel()" translate>Cancel</button>
               </div>
           </td>
@@ -58,36 +98,5 @@
       </tbody>
   </table>
 </form>
-
-
-<div class="row-add-form">
-<form name="addForm" ng-submit="submit()">
-  <table><tr>
-  <td class="key"><input name="label" class="form-control" data-ng-model="new_filter.label"
-      placeholder="Label, eg. Greek Schools missions" title="Label, eg. Greek Schools missions"
-      data-ng-required="1"/>
-    <p ng-if="addForm.label.$error.required && addForm.tag.$dirty" translate>The label is required.</p>
-  </td>
-  <td class="value"><input class="form-control" name="tag" data-ng-model="new_filter.query"
-      placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate }}"
-      title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
-      data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"/>
-
-    <div role="alert">
-      <div ng-switch="tags.formError('add')">
-        <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{new_filter.query}}</tt></p>
-        <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
-        <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
-        <!--<p ng-switch-default translate>Sorry! Unknown error.</p>-->
-      </div>
-      <p ng-if="(addForm.tag.$invalid || addForm.tag.$error.required) && addForm.tag.$dirty"
-        translate>The tag term is not valid — no spaces or accents allowed.</p>
-    </div>
-  </td>
-  <td class="col-btn"><button class="btn btn-default" type="submit" ng-disabled="addForm.$invalid" translate>Add</button></td>
-  </tr></table>
-</form>
-</div>
-
 
 </div>
