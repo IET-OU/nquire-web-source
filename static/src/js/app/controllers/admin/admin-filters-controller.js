@@ -33,11 +33,6 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
         $scope.deleteFilter = function (id, query) {
             var $button = angular.element("[ ng-click *= deleteFilter ]:first");  //Was: $window.$()..
 
-            /*if (! $window.confirm(confirm_text)) {
-                $scope.alert.debug("Cancel delete filter.");
-                return false;
-            }*/
-
             ModalService.open({
                 title: $button.data("confirm_title"),
                 body: "<p>" + $button.data("confirm").replace("%s", query) + "</p>",

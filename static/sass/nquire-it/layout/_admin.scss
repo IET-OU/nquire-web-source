@@ -119,6 +119,14 @@ input.ng-invalid {
       display: table-row;
     }
 
+    tr[ data-ng-repeat ] td div {
+      padding: 0 4px;
+
+      &.btn-group {
+        padding: 0;
+      }
+    }
+
     td {
       vertical-align: top;
     }
@@ -127,23 +135,15 @@ input.ng-invalid {
     [ ng-click *= delete ] {
       color: $color-dark-orange;
     }
-
-    .col-btn {
-      width: 1px;
-    }
-
-    .key {
-      width: 41%;
-      //Was: width: 248px;
-    }
-    .value {
-      width: 40%
-      //width: 72%;
-    }
   }
 
   .admin-page-filters,
   .admin-page-projects {
+
+    input {
+      padding: 6px 4px;
+      font-size: .94em;
+    }
 
     [ ng-if *= error ],
     [ ng-if *= invalid ],
@@ -152,40 +152,18 @@ input.ng-invalid {
       margin: 5px 2px;
       line-height: 1.25;
       font-size: .98em;
+
+      max-width: 16em;
     }
   }
 
   .admin-page-projects {
-
-    .col-filters {
-      min-width: 12em;
-    }
-
-    input.filters {
-      padding: 6px 1px;
-      font-size: .94em;
-    }
 
     input, button {
       margin-top: 4px;
     }
   }
 
-
-  #admin-users-count {
-    display: inline-block;
-    border: 1px solid $color-border;
-    border-radius: 3px;
-    padding: 5px 14px;
-    margin: 2px 0;
-
-    i {
-      display: inline-block;
-      margin: 0 8px;
-      font-style: normal;
-      font-size: large;
-    }
-  }
 
   //Was: button[ ng-click *= footer ]
   [ ng-click *= footer ] {
@@ -194,5 +172,23 @@ input.ng-invalid {
 
   &.error-unauthorized {
     text-align: center;
+  }
+}
+
+
+.admin-count {
+  display: inline-block;
+  background: $color-light-background-b;
+  border: 1px solid $color-border;
+  border-radius: 3px;
+  padding: 5px 12px;
+  margin: 2px 0;
+
+  i {
+    display: inline-block;
+    margin: 0 8px 0 3px;
+    min-width: 1.7em;
+    font-style: normal;
+    font-size: 1.2em;
   }
 }

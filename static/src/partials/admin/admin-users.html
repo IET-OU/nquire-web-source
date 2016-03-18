@@ -1,5 +1,8 @@
 
-<p id="admin-users-count"><span translate>Logged in users: </span>
+<p class="admin-count" id="admin-count">
+    {{'Total users: %number' | translate | replace: '%number' :''}}
+    <i ng-bind="countClass('tbody tr')"></i>
+    {{'Logged in users: %number' | translate | replace: '%number' :''}}
     <i ng-bind="countClass('.is-logged-in')"></i>
     <button ng-click="scrollTo('.is-logged-in')" title="{{ 'Scroll to the first logged in user &darr;' | translate }}" translate>Goto logged in user &darr;</button>
     <button ng-click="scrollTo('#footer')" translate>Goto last user &darr;</button>

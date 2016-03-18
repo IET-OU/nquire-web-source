@@ -20,17 +20,14 @@
 
 
       <tr class="row-add-form">
-        <!--<td colspan="3">
-        <form name="addForm" ng-submit="submit()">
-          <table>
-            <tr>-->
           <td><input name="addLabel" class="form-control" data-ng-model="new_filter.label"
-              placeholder="Label, eg. Greek Schools missions" title="Label, eg. Greek Schools missions"
+              placeholder="{{'Label, eg. Greek Schools missions' | translate}}"
+              title="{{'Label, eg. Greek Schools missions' | translate}}"
               data-ng-required="1"/>
             <p ng-if="editForm.addLabel.$error.required && editForm.addTag.$dirty" translate>The label is required.</p>
           </td>
           <td><input name="addTag" class="form-control" data-ng-model="new_filter.query"
-              placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate }}"
+              placeholder="{{ 'Tag-term, eg. %term (no accents)' | translate | replace: '%term' : 'greek-schools' }}"
               title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
               data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"/>
 
@@ -46,9 +43,6 @@
             </div>
           </td>
           <td><button class="btn btn-default" type="submit" ng-disabled="editForm.$invalid" translate>Add</button></td>
-          <!--</tr></table>
-        </form>
-      </td>-->
       </tr>
 
 
@@ -57,7 +51,8 @@
               <div data-ng-if="!form.isOpen()" data-ng-bind-html="item.label"></div>
               <div data-ng-if="form.isOpen()">
                   <input name="label" class="form-control" data-ng-model="form.values.label" data-ng-required="1"
-                         placeholder="Label, eg. Greek Schools missions" />
+                         title="{{'Label, eg. Greek Schools missions' | translate}}"
+                         placeholder="{{'Label, eg. Greek Schools missions' | translate}}" />
 
                   <p role="alert" ng-if="editForm.label.$error.required" translate>The label is required.</p>
               </div>
@@ -66,7 +61,7 @@
               <div data-ng-if="!form.isOpen()" data-ng-bind="item.query"></div>
               <div data-ng-if="form.isOpen()">
                   <input name="tag" class="form-control" data-ng-model="form.values.query"
-                         placeholder="{{'Tag-term, eg. greek-schools (no accents)' | translate}}"
+                         placeholder="{{ 'Tag-term, eg. %term (no accents)' | translate | replace: '%term' : 'greek-schools' }}"
                          title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
                          data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"
                          translate-comment="Note that the term, eg. greek-schools should not be translated."/>

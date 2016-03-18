@@ -7,7 +7,7 @@
 # nQuire-it
 
 nQuire-it is a web application that allows users to create, manage and complete
-scientific projects based on their interests. It is linked with Sense-it, an Android
+scientific projects based on their interests. It is linked with [Sense-it][], an Android
 app to collect data from Android device sensors.
 
 * <http://www.nquire-it.org>
@@ -16,8 +16,8 @@ app to collect data from Android device sensors.
 Requirements
 ------------
 
-This app is build on Spring 4.0 and AngujarJS.
-Other dependencies are listed in the file app/pom.xml
+This Web app is build on [Spring 4.0][] and [AngularJS][].
+Other dependencies are listed in the file [`app/pom.xml`][].
 
 I18N
 ----
@@ -58,13 +58,19 @@ Added support for:
 * Research [funding][]
 
 
+<!-- [![Sense-it][sense-it-icon]][Sense-it] -->
+
+
 ---
 [nQuire-it][]: © 2014-2016 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
+[`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/greek/app/pom.TEMPLATE.xml
 [`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/Gruntfile.js#L55-L59
 [`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/static/src/js/app/config.js.DIST.html#L25-L49
 [nQuire-it]: https://github.com/IET-OU/nquire-web-source
+[Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Android app"
+[sense-it-icon]: https://lh5.ggpht.com/SN_LLof2UbhxolOJ6IwnjkOLYLVXTpY3CpIDHzEOBbqPH-xiECx26XftvRmlgqvRl2Q=w300-rw
 [eloy]: https://github.com/evilfer
 [iet]: http://iet.open.ac.uk/
 [ou]: http://www.open.ac.uk/
@@ -76,9 +82,15 @@ Added support for:
 [travis]:  https://travis-ci.org/IET-OU/nquire-web-source
 [travis-icon]: https://api.travis-ci.org/IET-OU/nquire-web-source.svg
     "Build status – Travis-CI (Node/Npm + Java/Maven)"
-[climate]: https://codeclimate.com/github/IET-OU/nquire-web-source "Code Climate score"
+[climate]: https://codeclimate.com/github/IET-OU/nquire-web-source
+    "Code Climate score [GPA, out of 4]"
 [climate-icon]: https://codeclimate.com/github/IET-OU/nquire-web-source/badges/gpa.svg
-[weblate]: http://weblate.iet.open.ac.uk/projects/nquire-it?utm_source=widget "Translation status"
+[weblate]: http://weblate.iet.open.ac.uk/projects/nquire-it?utm_source=widget
+    "Translation status [percent]"
 [weblate-icon]: http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg
+
+[Spring 4.0]: http://projects.spring.io/spring-framework "Spring Java framework"
+[AngularJS]: https://angularjs.org/
+
 
 [End]: //end.

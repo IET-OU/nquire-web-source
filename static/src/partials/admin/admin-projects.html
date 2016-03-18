@@ -1,5 +1,12 @@
 <form name="editForm" class="admin-page-projects">
 
+<p class="admin-count" id="admin-count">
+    {{'Count of projects: %number' | translate | replace : '%number' : ''}}
+    <i ng-bind="countClass('tbody tr')"></i>
+    <button ng-click="scrollTo('#footer')" translate>Goto last project &darr;</button>
+</p>
+
+
 <datalist id="filter-list">
     <option data-ng-repeat="(idx, tag) in tags.data.filters" value="{{tag.query}}">{{tag.label}}</option>
 </datalist>
