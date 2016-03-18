@@ -231,7 +231,7 @@ msgstr "Accéléromètre"
 msgid "Actions"
 msgstr "Actions"
 
-#: static/src/partials/admin/admin-filters.html:87
+#: static/src/partials/admin/admin-filters.html:45
 #: static/src/partials/admin/admin-texts.html:33
 msgid "Add"
 msgstr ""
@@ -264,7 +264,7 @@ msgstr ""
 msgid "Admin menu"
 msgstr ""
 
-#: static/src/partials/admin/admin-users.html:15
+#: static/src/partials/admin/admin-users.html:18
 #: static/src/partials/layout/header.html:19
 msgid "Administrator"
 msgstr "Administrateur"
@@ -304,13 +304,13 @@ msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
 msgstr ""
 "Êtes vous sûr de vouloir supprimer les données <b>{{data.item.title}}</b> ?"
 
-#: static/src/partials/admin/admin-filters.html:49
+#: static/src/partials/admin/admin-filters.html:83
 #, fuzzy
 msgid "Are you sure you want to delete the <i>%s</i> tag?"
 msgstr ""
 "Êtes vous sûr de vouloir supprimer les données <b>{{data.item.title}}</b> ?"
 
-#: static/src/partials/admin/admin-projects.html:12
+#: static/src/partials/admin/admin-projects.html:19
 #: static/src/partials/admin/admin-reported.html:16
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:24
 #: static/src/partials/project/view/senseit/data-table-senseit.html:5
@@ -322,8 +322,8 @@ msgstr "Auteur"
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr "En attente d'une réponse de la part de {{data.provider.name}}…"
 
-#: static/src/partials/admin/admin-filters.html:54
-#: static/src/partials/admin/admin-projects.html:48
+#: static/src/partials/admin/admin-filters.html:89
+#: static/src/partials/admin/admin-projects.html:55
 #: static/src/partials/admin/admin-texts.html:60
 #: static/src/partials/comments.html:19
 #: static/src/partials/forum/forum-list-category.html:35
@@ -398,7 +398,7 @@ msgstr ""
 msgid "Close project"
 msgstr "Fermer le projet"
 
-#: static/src/partials/admin/admin-projects.html:43
+#: static/src/partials/admin/admin-projects.html:50
 msgid "Comma separated tags (no accents)"
 msgstr ""
 
@@ -418,6 +418,10 @@ msgstr "Contenu"
 #: static/src/partials/admin/admin-reported.html:17
 msgid "Content id"
 msgstr "Identifiant"
+
+#: static/src/partials/admin/admin-projects.html:4
+msgid "Count of projects: %number"
+msgstr ""
 
 #: static/src/partials/layout/header.html:18
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:21
@@ -473,7 +477,7 @@ msgstr "Traitement des données"
 msgid "Date"
 msgstr "Date"
 
-#: static/src/partials/admin/admin-filters.html:48
+#: static/src/partials/admin/admin-filters.html:82
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
@@ -502,7 +506,7 @@ msgstr "Supprimer le capteur"
 msgid "Delete series"
 msgstr "Supprimer la série"
 
-#: static/src/partials/admin/admin-filters.html:50
+#: static/src/partials/admin/admin-filters.html:84
 #, fuzzy
 msgid "Delete tag?"
 msgstr "Supprimer"
@@ -535,7 +539,7 @@ msgstr "Détails"
 msgid "Download CSV"
 msgstr "Télécharger au format CSV"
 
-#: static/src/partials/admin/admin-filters.html:47
+#: static/src/partials/admin/admin-filters.html:81
 #: static/src/partials/admin/admin-texts.html:56
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
@@ -558,7 +562,7 @@ msgstr "Télécharger au format CSV"
 msgid "Edit"
 msgstr "Modifier"
 
-#: static/src/partials/admin/admin-projects.html:37
+#: static/src/partials/admin/admin-projects.html:44
 #, fuzzy
 msgid "Edit tags"
 msgstr "Modifier le titre"
@@ -568,7 +572,7 @@ msgstr "Modifier le titre"
 msgid "Edit title"
 msgstr "Modifier le titre"
 
-#: static/src/partials/admin/admin-users.html:14
+#: static/src/partials/admin/admin-users.html:17
 msgid "email"
 msgstr "email"
 
@@ -615,7 +619,7 @@ msgstr "Supprimer le projet"
 msgid "Featured missions"
 msgstr "Missions promues"
 
-#: static/src/partials/admin/admin-projects.html:14
+#: static/src/partials/admin/admin-projects.html:21
 msgid "Featured?"
 msgstr "Promouvoir ?"
 
@@ -627,7 +631,7 @@ msgstr "Nom du champ :"
 msgid "Field type:"
 msgstr "Type de champ :"
 
-#: static/src/partials/admin/admin-projects.html:44
+#: static/src/partials/admin/admin-projects.html:51
 msgid "Format: letters, numbers, dashes, commas, no accents."
 msgstr ""
 
@@ -649,15 +653,19 @@ msgstr "Données géolocalisées :"
 msgid "Go back to the list"
 msgstr "Retourner à la liste"
 
-#: static/src/partials/admin/admin-users.html:5
+#: static/src/partials/admin/admin-projects.html:6
+msgid "Goto last project &darr;"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:8
 msgid "Goto last user &darr;"
 msgstr ""
 
-#: static/src/partials/admin/admin-users.html:4
+#: static/src/partials/admin/admin-users.html:7
 msgid "Goto logged in user &darr;"
 msgstr ""
 
-#: static/src/partials/admin/admin-users.html:33
+#: static/src/partials/admin/admin-users.html:36
 msgid "Grant permission"
 msgstr "Autoriser"
 
@@ -691,8 +699,8 @@ msgstr "J'ai oublié mon mot de passe"
 msgid "I forgot my password:"
 msgstr "J'ai oublié mon mot de passe :"
 
-#: static/src/partials/admin/admin-projects.html:10
-#: static/src/partials/admin/admin-users.html:12
+#: static/src/partials/admin/admin-projects.html:17
+#: static/src/partials/admin/admin-users.html:15
 msgid "Id"
 msgstr "Identifiant"
 
@@ -736,9 +744,17 @@ msgstr "Missions suivies"
 msgid "Joined projects:"
 msgstr "Projets auxquels vous participez :"
 
-#: static/src/partials/admin/admin-filters.html:9
+#: static/src/partials/admin/admin-filters.html:14
 msgid "Label"
 msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:24
+#: static/src/partials/admin/admin-filters.html:25
+#: static/src/partials/admin/admin-filters.html:54
+#: static/src/partials/admin/admin-filters.html:55
+#, fuzzy
+msgid "Label, eg. Greek Schools missions"
+msgstr "Recherche de mission"
 
 #: static/src/partials/project/view/spotit/spotit-view-outline.html:2
 msgid "Last picture"
@@ -780,8 +796,8 @@ msgstr "Chargement…"
 msgid "Location:"
 msgstr "Position :"
 
-#: static/src/partials/admin/admin-users.html:2
-msgid "Logged in users:"
+#: static/src/partials/admin/admin-users.html:5
+msgid "Logged in users: %number"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:43
@@ -906,7 +922,7 @@ msgstr "Nouveau forum"
 msgid "New password:"
 msgstr "Nouveau mot de passe :"
 
-#: static/src/partials/admin/admin-users.html:32
+#: static/src/partials/admin/admin-users.html:35
 #: static/src/partials/profile/profile-logged-in.html:153
 #: static/src/partials/profile/profile-logged-in.html:160
 #: static/src/partials/profile/profile-logged-in.html:167
@@ -962,7 +978,7 @@ msgstr "Ouvrir la carte"
 msgid "Open project"
 msgstr "Ouvrir le projet"
 
-#: static/src/partials/admin/admin-projects.html:13
+#: static/src/partials/admin/admin-projects.html:20
 msgid "Open?"
 msgstr "Ouvrir ?"
 
@@ -1136,7 +1152,7 @@ msgstr "Créer un compte :"
 msgid "Relative humidity"
 msgstr "Humidité relative"
 
-#: static/src/partials/admin/admin-users.html:29
+#: static/src/partials/admin/admin-users.html:32
 msgid "Remove permission"
 msgstr "Retirer l'autorisation"
 
@@ -1166,8 +1182,8 @@ msgstr "Réinitialiser"
 msgid "Samples / second"
 msgstr "échantillons / seconde"
 
-#: static/src/partials/admin/admin-filters.html:53
-#: static/src/partials/admin/admin-projects.html:46
+#: static/src/partials/admin/admin-filters.html:87
+#: static/src/partials/admin/admin-projects.html:53
 #: static/src/partials/admin/admin-texts.html:59
 #: static/src/partials/forum/forum-list-category.html:34
 #: static/src/partials/forum/forum-list-forum.html:23
@@ -1197,7 +1213,7 @@ msgstr "Sauvegarder"
 msgid "Save and continue"
 msgstr "Sauvegarder et continuer"
 
-#: static/src/partials/admin/admin-users.html:4
+#: static/src/partials/admin/admin-users.html:7
 msgid "Scroll to the first logged in user &darr;"
 msgstr ""
 
@@ -1424,17 +1440,17 @@ msgstr ""
 "Désolé, il est nécessaire d'avoir un accès administrateur pour cette page."
 
 #: static/src/partials/admin/admin-filters.html:36
-#: static/src/partials/admin/admin-filters.html:78
+#: static/src/partials/admin/admin-filters.html:70
 msgid "Sorry! I can't add a duplicate tag:"
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:37
-#: static/src/partials/admin/admin-filters.html:79
+#: static/src/partials/admin/admin-filters.html:71
 msgid "Sorry! The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:38
-#: static/src/partials/admin/admin-filters.html:80
+#: static/src/partials/admin/admin-filters.html:72
 msgid "Sorry! This tag term is empty."
 msgstr ""
 
@@ -1488,21 +1504,21 @@ msgstr "Proposé"
 msgid "Tag-based filters"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:10
+#: static/src/partials/admin/admin-filters.html:15
 msgid "Tag-term"
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:31
-#: static/src/partials/admin/admin-filters.html:73
+#: static/src/partials/admin/admin-filters.html:65
 msgid "Tag-term format: letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:30
-#: static/src/partials/admin/admin-filters.html:72
-msgid "Tag-term, eg. greek-schools (no accents)"
+#: static/src/partials/admin/admin-filters.html:64
+msgid "Tag-term, eg. %term (no accents)"
 msgstr ""
 
-#: static/src/partials/admin/admin-projects.html:15
+#: static/src/partials/admin/admin-projects.html:22
 #: static/src/partials/admin/admin.html:5
 msgid "Tags"
 msgstr ""
@@ -1520,8 +1536,8 @@ msgstr "Texte :"
 msgid "Texts"
 msgstr "Textes"
 
-#: static/src/partials/admin/admin-filters.html:23
-#: static/src/partials/admin/admin-filters.html:69
+#: static/src/partials/admin/admin-filters.html:27
+#: static/src/partials/admin/admin-filters.html:57
 msgid "The label is required."
 msgstr ""
 
@@ -1533,9 +1549,9 @@ msgstr ""
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:40
-#: static/src/partials/admin/admin-filters.html:83
-#: static/src/partials/admin/admin-projects.html:50
+#: static/src/partials/admin/admin-filters.html:41
+#: static/src/partials/admin/admin-filters.html:74
+#: static/src/partials/admin/admin-projects.html:57
 msgid "The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
@@ -1598,7 +1614,7 @@ msgstr "Discussion"
 msgid "Threads"
 msgstr "Discussions"
 
-#: static/src/partials/admin/admin-projects.html:11
+#: static/src/partials/admin/admin-projects.html:18
 #: static/src/partials/project/view/senseit/data-table-senseit.html:4
 #: static/src/partials/project/view/senseit/senseit-data-map.html:4
 msgid "Title"
@@ -1628,6 +1644,10 @@ msgstr "Afficher/Masquer le graphe"
 
 #: static/src/partials/projects/projects.html:65
 msgid "Toggle sidebar"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:3
+msgid "Total users: %number"
 msgstr ""
 
 #: static/src/partials/projects/projects.html:6
@@ -1692,7 +1712,7 @@ msgstr "Utilisateur"
 msgid "User profile: {{profile.username}}"
 msgstr "Profil d'utilisateur : {{profile.username}}"
 
-#: static/src/partials/admin/admin-users.html:13
+#: static/src/partials/admin/admin-users.html:16
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
@@ -1763,7 +1783,7 @@ msgstr "Gagne-la"
 msgid "Winner"
 msgstr "Gagnant"
 
-#: static/src/partials/admin/admin-users.html:28
+#: static/src/partials/admin/admin-users.html:31
 #: static/src/partials/profile/profile-logged-in.html:152
 #: static/src/partials/profile/profile-logged-in.html:159
 #: static/src/partials/profile/profile-logged-in.html:166

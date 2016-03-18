@@ -152,8 +152,6 @@ input.ng-invalid {
       margin: 5px 2px;
       line-height: 1.25;
       font-size: .98em;
-
-      max-width: 16em;
     }
   }
 
@@ -161,6 +159,10 @@ input.ng-invalid {
 
     input, button {
       margin-top: 4px;
+    }
+
+    [ ng-if *= error ] {
+      max-width: 16em;
     }
   }
 
