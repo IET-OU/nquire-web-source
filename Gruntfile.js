@@ -134,7 +134,7 @@ module.exports = function (grunt) {
 				}
 			},
 			options: {
-				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss'). %>\n*/\n\n",
+				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n",
 				compress: true,
 				mangle: true,
 				preserveComments: 'some',
