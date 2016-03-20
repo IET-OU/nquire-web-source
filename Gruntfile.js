@@ -1,3 +1,7 @@
+/*!
+  nQuire-it | GPL | © The Open University.
+*/
+
 module.exports = function (grunt) {
 	'use strict';
 
@@ -93,28 +97,22 @@ module.exports = function (grunt) {
 						'<%= js.srv %>/openid-service.js',
 						'<%= js.srv %>/vote-service.js',
 						'<%= js.srv %>/comment-service.js',
-						'<%= js.srv %>/forum-service.js',
 						'<%= js.srv %>/admin-service.js',
 						'<%= js.srv %>/modal-service.js',
-						'<%= js.srv %>/file-reader-service.js',
 						'<%= js.srv %>/sorted-data-service.js',
 						'<%= js.srv %>/tracking-service.js',
 						'<%= js.srv %>/users-service.js',
-						'<%= js.srv %>/filter-tag-service.js',
+						'<%= js.srv %>/f**-service.js',   // 'file-reader', 'filter-tag', 'forum' (3)
 						'<%= js.srv %>/project-*.js'
-					],
-					'<%= js.out %>/project-services.min.js': '<%= js.srv %>/project-*.js'
+					]
 				},
 				options: {
-					mangle: false  // IMPORTANT - 'mangle' must be false for services!
+					mangle: false   // IMPORTANT - 'mangle' must be false for services!
 				}
 			},
 			helpers: {
 				files: {
 					'<%= js.out %>/helpers.min.js': 'static/src/js/helpers/*.js'
-				},
-				options: {
-					banner: '/*!\n  nQuire-it helpers.\n*/\n\n'
 				}
 			},
 			libs: {
@@ -124,26 +122,23 @@ module.exports = function (grunt) {
 						'<%= js.lib %>/jquery-2.1.0.min.js',
 						'<%= js.lib %>/bootstrap.js',
 						'<%= js.lib %>/angular.js',
-						'<%= js.lib %>/angular-gettext-2.1.0.min.js',
-						'<%= js.lib %>/angular-sanitize.js',
-						'<%= js.lib %>/angular-ui-router.js',
-						'<%= js.lib %>/textAngular.min.js',
-						'<%= js.lib %>/textAngular-sanitize.min.js',
+						'<%= js.lib %>/angular-**.js',    // '-gettext', '-sanitize', '-ui-router' (3)
+						'<%= js.lib %>/textAngular**.js', // + '-sanitize' (2)
 						'<%= js.lib %>/ui-bootstrap-tpls-0.11.0.min.js',
 						'<%= js.lib %>/markerclusterer_packed.js',
 						'<%= js.lib %>/oms.min.js'
 					]
 				},
 				options: {
-					banner: '/*!\n  All third-party libraries - strict order!\n*/\n',
-					sourceMap: true
+					banner: '/*!\n  All third-party libraries (nQuire-it).\n*/\n\n'
 				}
 			},
 			options: {
+				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss'). %>\n*/\n\n",
 				compress: true,
 				mangle: true,
-				//maxLineLen: 160,
-				preserveComments: 'some'
+				preserveComments: 'some',
+				sourceMap: true
 			}
 		}
 	});
@@ -151,7 +146,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-angular-gettext');
 	grunt.loadNpmTasks('grunt-msg-init-merge');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-nice-package');
 	grunt.loadNpmTasks('grunt-sass');
 
