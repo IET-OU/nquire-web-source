@@ -11,6 +11,7 @@ node_modules
 
 *.sass-cache
 
+static/src/js/dist/*
 static/src/js/app/min/
 
 *BAK*
