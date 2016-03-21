@@ -123,13 +123,12 @@ module.exports = function (grunt) {
 					'<%= js.out %>/helpers.min.js': 'static/src/js/helpers/*.js'
 				}
 			},
-			libs: {
+			libs: {  // 3rd party libraries - order is significant - up to 'angular.js'!
 				files: {
-					// 3rd party libraries - order is significant - up to 'angular.js'!
 					'<%= js.out %>/libs.min.js': [
-						'<%= js.lib %>/jquery-2.1.0.min.js',
+						'node_modules/jquery/dist/jquery.min.js', // v2.1.0 >> v2.1.4;
 						'<%= js.lib %>/bootstrap.js',     // v3.1.1.
-						'<%= js.lib %>/angular.js',       // v1.2.13.
+						'node_modules/angular/angular.min.js',    // v1.2.13 >> v1.2.27;
 						'<%= js.lib %>/angular-**.js',    // '-gettext', '-sanitize', '-ui-router' (3)
 						'<%= js.lib %>/textAngular**.js', // + '-sanitize' (2)
 						'<%= js.lib %>/ui-bootstrap-tpls-0.11.0.min.js',

@@ -17,6 +17,10 @@
       "name": "Rich Lovelock / @richlove1"
     }
   ],
+  "dependencies": {
+    "angular": "1.2.27",
+    "jquery": "2.1.4"
+  },
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-angular-gettext": "2.1.0",
