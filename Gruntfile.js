@@ -141,13 +141,19 @@ module.exports = function (grunt) {
 					banner: '/*!\n  All third-party libraries (nQuire-it).\n*/\n\n'
 				}
 			},
-			options: {
+			options: {  // Global options.
 				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n",
 				compress: true,
 				mangle: true,
 				preserveComments: 'some',
 				sourceMap: true
 			}
+		},
+
+		watch: {
+			app: { files: '<%= js.app %>/**/*.js', tasks: 'uglify:app' },
+			helpers: { files: 'static/src/js/helpers/*.js', tasks: 'uglify:helpers' },
+			sass: { files: 'static/sass/nquire-it/**/*', tasks: 'sass' }
 		}
 	});
 
@@ -155,6 +161,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-msg-init-merge');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-nice-package');
 	grunt.loadNpmTasks('grunt-sass');
 
