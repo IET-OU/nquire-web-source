@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 				//'-W100': true,  // ??
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
-					angular: false, SiwFormManager: false, SiwMapRenderer: false
+					angular: false //, SiwFormManager: false, SiwMapRenderer: false
 				}
 			},
 			config: 'static/src/js/app/config.js',
@@ -84,15 +84,19 @@ module.exports = function (grunt) {
 		*/
 		js: {
 			out: 'static/src/js/dist',
+			app: 'static/src/js/app',
 			lib: 'static/src/js/libs',
 			srv: 'static/src/js/app/services'
 		},
 		uglify: {
 			app: {
 				files: {
-					'<%= js.out %>/controllers.min.js': 'static/src/js/app/controllers/**/**/*.js',
-					'<%= js.out %>/directives.min.js': 'static/src/js/app/directives/*.js',
-					'<%= js.out %>/filters.min.js': 'static/src/js/app/filters/*.js',
+					'<%= js.out %>/app.min.js': [
+						'<%= js.app %>/app.js', '<%= js.app %>/translations.js'  // Not: 'config.js'
+					],
+					'<%= js.out %>/controllers.min.js': '<%= js.app %>/controllers/**/**/*.js',
+					'<%= js.out %>/directives.min.js': '<%= js.app %>/directives/*.js',
+					'<%= js.out %>/filters.min.js': '<%= js.app %>/filters/*.js',
 					// Services - order is significant - up to rest OR openid !
 					'<%= js.out %>/services.min.js': [
 						'<%= js.srv %>/services-module.js',
@@ -124,8 +128,8 @@ module.exports = function (grunt) {
 					// 3rd party libraries - order is significant - up to 'angular.js'!
 					'<%= js.out %>/libs.min.js': [
 						'<%= js.lib %>/jquery-2.1.0.min.js',
-						'<%= js.lib %>/bootstrap.js',
-						'<%= js.lib %>/angular.js',
+						'<%= js.lib %>/bootstrap.js',     // v3.1.1.
+						'<%= js.lib %>/angular.js',       // v1.2.13.
 						'<%= js.lib %>/angular-**.js',    // '-gettext', '-sanitize', '-ui-router' (3)
 						'<%= js.lib %>/textAngular**.js', // + '-sanitize' (2)
 						'<%= js.lib %>/ui-bootstrap-tpls-0.11.0.min.js',
@@ -161,7 +165,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('jshint-x', [
-		'jshint:app', 'jshint:directive', 'jshint:filter', 'jshint:serv', 'jshint:helper'
+		'jshint:app', 'jshint:directive', 'jshint:filter', 'jshint:serv', 'jshint:helper' // Not 'controllers' yet!
 	]);
 
 	grunt.registerTask('default', [
