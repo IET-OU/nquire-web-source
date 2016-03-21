@@ -1,6 +1,7 @@
 angular.module('senseItWeb').directive('siwProfileProviderItem', [function () {
-    return {
+	  'use strict';
 
+    return {
         templateUrl: 'partials/profile/profile-provider-item.html',
         scope: true,
         controller: function ($scope, $attrs, OpenIdService) {
@@ -10,7 +11,7 @@ angular.module('senseItWeb').directive('siwProfileProviderItem', [function () {
                 'twitter': 'Twitter'
             };
 
-            $scope.providerId = $attrs['provider'];
+            $scope.providerId = $attrs.provider;  //Was: ['provider']
 
             OpenIdService.registerWatcher($scope, function () {
                 $scope.connectionExists = $scope.status.connections[$scope.providerId] ? true : false;

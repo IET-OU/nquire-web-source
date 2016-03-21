@@ -20,16 +20,20 @@ module.exports = function (grunt) {
 		jshint: {
 			options: {
 				laxcomma: true,
+				//curly: true,
+				//undef: true,
 				//'-W097': true,  // Ignore position of 'use strict';
 				//'-W100': true,  // ??
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
-					angular: true
+					angular: false, SiwFormManager: false, SiwMapRenderer: false
 				}
 			},
 			config: 'static/src/js/app/config.js',
 			app:    'static/src/js/app/*.js',
 			ctrl:   'static/src/js/app/controllers/**/*.js',
+			directive: 'static/src/js/app/directives/*.js',
+			filter: 'static/src/js/app/filters/*.js',
 			serv:   'static/src/js/app/services/*.js',
 			helper: 'static/src/js/helpers/*.js',
 			grunt:  'Gruntfile.js'
@@ -156,7 +160,11 @@ module.exports = function (grunt) {
 		'msgInitMerge'
 	]);
 
+	grunt.registerTask('jshint-x', [
+		'jshint:app', 'jshint:directive', 'jshint:filter', 'jshint:serv', 'jshint:helper'
+	]);
+
 	grunt.registerTask('default', [
-		'gettext', 'sass', 'jshint:app', 'jshint:helper', 'jshint:serv', 'jshint:grunt', 'uglify', 'nice-package'
+		'gettext', 'sass', 'jshint-x', 'jshint:grunt', 'uglify', 'nice-package'
 	]);
 };

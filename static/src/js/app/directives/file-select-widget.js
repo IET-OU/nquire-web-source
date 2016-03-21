@@ -1,12 +1,14 @@
 angular.module('senseItWeb', null, null).directive('siwFileSelectWidget', function () {
+  	'use strict';
+
     return {
         templateUrl: 'partials/widgets/file-select-widget.html',
 
         link: function ($scope, element, params) {
-            $scope.originalPath = params['original'];
+            $scope.originalPath = params.original;  //Was: ['original']
             $scope.hasOriginal = !!$scope.originalPath;
             $scope.original = $scope.hasOriginal ? $scope.originalPath.substr(Math.max(0, $scope.originalPath.lastIndexOf('/') + 1)) : '';
-            $scope.filekey = params['filekey'];
+            $scope.filekey = params.filekey;  //Was: ['filekey']
             $scope.selectedFile = null;
 
             $scope.hasFile = $scope.hasOriginal;

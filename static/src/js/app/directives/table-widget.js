@@ -1,6 +1,8 @@
 /*global $*/
 
 angular.module('senseItWeb', null, null).directive('siwSortableTableWidget', function () {
+	  'use strict';
+
     return {
         link: function ($scope, element, params) {
             element.addClass('sortable-table');
@@ -26,9 +28,10 @@ angular.module('senseItWeb', null, null).directive('siwSortableTableWidget', fun
             };
 
             $scope.select = function (item, button, onlyOn) {
+                var notify;
                 if (item !== $scope[params.tableData].selected) {
-                    var notify = true;
-                } else if (!onlyOn) {
+                    notify = true;
+                } else if (! onlyOn) {
                     notify = true;
                     item = null;
                 }
