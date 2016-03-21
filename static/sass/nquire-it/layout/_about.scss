@@ -21,8 +21,22 @@
       margin-top: $dim-common-margin;
       text-align: center;
 
-      img {
+      a img {
         margin: 0 $dim-common-small-margin;
+        padding: 7px;
+        background: $color-lighter-background;
+        border: 2px solid transparent;
+        border-radius: 4px;
+
+        &[ src *= about_nt ] {
+          padding: 11px 7px;
+        }
+      }
+
+      a:focus img,
+      a:hover img {
+        border-color: $color-border;
+        transition: all 0.8s;
       }
     }
   }
