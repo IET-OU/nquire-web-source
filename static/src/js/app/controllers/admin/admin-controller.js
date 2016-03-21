@@ -16,8 +16,9 @@ angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scop
 
     $scope.scrollTo = function (selector) {
 
-      $('html, body').animate({
-          scrollTop: $(selector).offset().top
+      // Requires jQuery.
+      angular.element('html, body').animate({
+          scrollTop: angular.element(selector).offset().top
       }, 1000);
     };
 

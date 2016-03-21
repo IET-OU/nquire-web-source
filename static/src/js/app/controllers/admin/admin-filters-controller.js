@@ -72,7 +72,7 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
                     }
                 });
             } else {
-                $alert.error("Invalid tag-term – empty or with spaces? " + query);
+                $alert.error("Invalid tag-term – empty or with spaces? " + item.query);
             }
         });
 

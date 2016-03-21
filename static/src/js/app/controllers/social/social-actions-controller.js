@@ -7,7 +7,9 @@ angular.module('senseItWeb', null, null).controller('SocialActionsCtrl', functio
   };
 
   $scope.emailLink = function () {
+    /* jshint -W117 */ // Requires jQuery.
     return 'mailto:?' + jQuery.param($scope.socialPosting.content('email'));
+    /* jshint +W117 */
   };
 
 
@@ -50,7 +52,7 @@ angular.module('senseItWeb', null, null).controller('SocialActionsCtrl', functio
         ok: function () {
           if ($scope.result.state === 'idle') {
             $scope.result.state = 'posting';
-            var content = $.extend({path: $location.path()}, posting.content);
+            var content = angular.extend({path: $location.path()}, posting.content);
             RestService.post('api/social/' + provider + '/post', content).then(function (response) {
               if (response && response.url) {
                 $scope.result.state = 'completed';

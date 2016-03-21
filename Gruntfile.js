@@ -1,7 +1,5 @@
-/*!
-  nQuire-it | GPL | © The Open University.
+/*! nQuire-it | GPL | © The Open University.
 */
-
 module.exports = function (grunt) {
 	'use strict';
 
@@ -19,17 +17,21 @@ module.exports = function (grunt) {
 		},
 		jshint: {
 			options: {
+				curly: true,
+				eqeqeq: true,
 				laxcomma: true,
-				//curly: true,
-				//undef: true,
+				undef: true,
+				'-W018': true,    // Ignore confusing use of 'a';
+				'-W069': true,    // Ignore ['a'] is better written in dot notation;
 				//'-W097': true,  // Ignore position of 'use strict';
-				//'-W100': true,  // ??
+				//'-W100': true,  // Ignore this character may get silently deleted by...;
+				//'-W117': true,  // Ignore 'a' is not defined;
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
-					angular: false //, SiwFormManager: false, SiwMapRenderer: false
+					angular:false, FileReader:false, FormData:false, google:false, grecaptcha:false, MarkerClusterer:false, module:false, OverlappingMarkerSpiderfier:true, SigUtils:true,
+					SiwClone:true, SiwColorGenerator:true, siwCompare:true, SiwFormManager:true, SiwMapIcons:true, SiwMapRenderer:true, SiwSenseItSensorData:true, SiwSenseItTransformations:true
 				}
 			},
-			config: 'static/src/js/app/config.js',
 			app:    'static/src/js/app/*.js',
 			ctrl:   'static/src/js/app/controllers/**/*.js',
 			directive: 'static/src/js/app/directives/*.js',
@@ -48,7 +50,7 @@ module.exports = function (grunt) {
 				files: {
 					'po/template.pot': [
 						'static/**/*.html',
-						'static/**/*.js'
+						'static/src/js/app/**/*.js'  // Exclude 'js/dist/**' files.
 					]
 				}
 			}
@@ -114,14 +116,10 @@ module.exports = function (grunt) {
 						'<%= js.srv %>/project-*.js'
 					]
 				},
-				options: {
-					mangle: false   // IMPORTANT - 'mangle' must be false for services!
-				}
+				options: { mangle: false  /* IMPORTANT - 'mangle' must be false for services! */ }
 			},
 			helpers: {
-				files: {
-					'<%= js.out %>/helpers.min.js': 'static/src/js/helpers/*.js'
-				}
+				files: { '<%= js.out %>/helpers.min.js': 'static/src/js/helpers/*.js' }
 			},
 			libs: {  // 3rd party libraries - order is significant - up to 'angular.js'!
 				files: {
@@ -136,11 +134,9 @@ module.exports = function (grunt) {
 						'<%= js.lib %>/oms.min.js'
 					]
 				},
-				options: {
-					banner: '/*!\n  All third-party libraries (nQuire-it).\n*/\n\n'
-				}
+				options: { banner: '/*!\n  All third-party libraries (nQuire-it).\n*/\n\n' }
 			},
-			options: {  // Global options.
+			options: {  // Global uglify options.
 				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n",
 				compress: true,
 				mangle: true,
@@ -165,16 +161,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 
 	grunt.registerTask('gettext', [
-		'nggettext_extract',
-		'nggettext_compile',
-		'msgInitMerge'
-	]);
-
-	grunt.registerTask('jshint-x', [
-		'jshint:app', 'jshint:directive', 'jshint:filter', 'jshint:serv', 'jshint:helper' // Not 'controllers' yet!
+		'nggettext_extract', 'nggettext_compile', 'msgInitMerge'
 	]);
 
 	grunt.registerTask('default', [
-		'gettext', 'sass', 'jshint-x', 'jshint:grunt', 'uglify', 'nice-package'
+		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
 	]);
 };
