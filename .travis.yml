@@ -17,7 +17,7 @@ before_script:
   - npm run setup-config-js
   - npm run setup-java
   #- ls static/src/js/app/ && ls app/
-  - npm run versions
+  - npm run echo-versions
 
 script:
   - grunt
@@ -27,6 +27,8 @@ script:
   - bash bin/travis-exit-java.sh
 
 after_script:
-  - npm run weblate-stats
+  #- npm run weblate-stats
+  - npm run version
+  - cat static/src/version.json
 
 #End.
