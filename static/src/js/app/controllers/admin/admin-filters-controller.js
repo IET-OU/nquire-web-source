@@ -13,7 +13,10 @@ angular.module('senseItWeb', null, null).controller('AdminFiltersCtrl', function
                 $tags.getList();
                 $alert.success("Tag successfully added: " + query);
                 // ..And, clear!
-                $scope.new_filter = {};
+                $scope.new_filter = { query: null, label: null };
+
+                $alert.debug('AdminFiltersCtrl: editForm.$setPristine()');
+                $scope.editForm.$setPristine();
             })
             .catch(function (resp) {
                 if ($tags.catchDuplicateTag(resp, "add")) {
