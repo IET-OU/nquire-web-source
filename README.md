@@ -1,5 +1,5 @@
 
-[![Build status — Travis-CI][travis-icon]][travis] [![License][gpl-icon]][gpl.txt]
+[![Build status — Travis-CI][travis-icon]][travis] [![License: GPL][gpl-icon]][LICENSE]
 [![Code Climate][climate-icon]][climate]
 [![Translation status][weblate-icon]][weblate]
 
@@ -40,7 +40,7 @@ It will then need to be added to our Weblate translation server.
 Licence
 -------
 
-nQuire-it is released under the GPLv3 licence. See [gpl.txt][] for more details.
+nQuire-it is released under the GPLv3 licence. See [LICENSE][] for more details.
 
 Releases
 --------
@@ -76,7 +76,7 @@ Added support for:
 [ou]: http://www.open.ac.uk/
 [funding]: http://www.nquire-it.org/#/about "Research funding: Nominet Trust"
 [gpl]: https://gnu.org/licenses/gpl.html
-[gpl.txt]: https://github.com/IET-OU/nquire-web-source/blob/master/gpl.txt
+[LICENSE]: https://github.com/IET-OU/nquire-web-source/blob/master/LICENSE.txt
     "GNU General Public License 3.0 onwards [GPL-3.0+]"
 [gpl-icon]: https://img.shields.io/badge/license-GLP--3.0%2B-blue.svg
 [travis]:  https://travis-ci.org/IET-OU/nquire-web-source
