@@ -100,6 +100,15 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
     });
   };
 
+  AdminManager.prototype.getVersion = function (scope) {
+    var self = this;
+    RestService.get('version.json').then(function (data) {
+      self.data.version = data;
+      scope.version = data;
+      scope.alert.debug('nQuire-it version:', data);
+    });
+  }
+
   return {
     get: function (scope, updateCallback) {
       var stopWatching = scope.$watch('admin.data', updateCallback);

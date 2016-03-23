@@ -3,5 +3,6 @@
 User-agent: *
 Disallow: /approval/
 Disallow: /approval
+Disallow: /#/admin
 
 #End.

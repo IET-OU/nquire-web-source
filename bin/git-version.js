@@ -6,7 +6,7 @@
   @see https://github.com/IET-OU/open-media-player-core/blob/master/src/Gitlib.php
 */
 
-// `npm install simple-git --save-dev`
+// USAGE:  npm install simple-git --save-dev && node bin/git-version.js --all
 
 var directory = __dirname + '/..'
   , json_file = directory + '/static/src' + '/version.json'
@@ -19,14 +19,18 @@ var directory = __dirname + '/..'
     lib: 'simple-git.js'
   };
 
-if (process.argv[ process.argv.length - 1 ] === '--all') {
-  version.npm_version = exec('npm --version');
-  version.mvn_version = exec('mvn --version', true);
-  version.node_version = process.version;
+if (matchArgv('--all')) {
+  version.extend = {
+    node_version: process.version,
+    npm_version: exec('npm --version'),
+    mvn_version: exec('mvn --version', true),
+    git_version: exec('git --version')
+  };
 }
-version.describe = exec('git describe --all --tags');
-version.branch = exec('git symbolic-ref --short HEAD');
-
+version.describe = exec('git describe --tags');
+version.branch = exec('git rev-parse --abbrev-ref HEAD');
+version.origin = exec('git config --get remote.origin.url');
+version.url = version.origin.replace(/git@/, 'https://').replace('.com:', '.com/');
 
 git.log([ '-1' ], function (err, data) {
   handleError(err, 'git.log');
@@ -37,11 +41,6 @@ git.log([ '-1' ], function (err, data) {
   version.date = log.date;
   version.message = log.message;
   version.author = '%s <%m>'.replace(/%s/, log.author_name).replace(/%m/, log.author_email);
-})
-.listRemote([ '--get-url' ], function (err, data) {
-  handleError(err, 'git.listRemote');
-
-  version.origin = data.replace(/\n/, '');
 })
 .then(function () {
   fs.writeFileSync(json_file, JSON.stringify(version, null, '\t'));
@@ -62,6 +61,11 @@ function handleError(err, where) {
     console.log(err);
     process.exit(1);
   }
+}
+
+function matchArgv(pattern) {
+  var size = process.argv.length;
+  return size > 2 && process.argv[ size - 1 ].match(pattern);
 }
 
 //End.

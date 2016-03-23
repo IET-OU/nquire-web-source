@@ -6,6 +6,7 @@ angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scop
     };
 
     AdminService.get($scope);
+    $scope.admin.getVersion($scope);
 
 
     /*! Useful admin utilities.
