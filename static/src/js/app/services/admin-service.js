@@ -107,7 +107,7 @@ angular.module('senseItServices', null, null).factory('AdminService', ['RestServ
       scope.version = data;
       scope.alert.debug('nQuire-it version:', data);
     });
-  }
+  };
 
   return {
     get: function (scope, updateCallback) {

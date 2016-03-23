@@ -13,6 +13,7 @@ var directory = __dirname + '/..'
   , git = require('simple-git')(directory)
   , fs = require('fs')
   , execSync = require('child_process').execSync
+  , carryon = true
   , version = {
     '#': 'ok',
     file_date: new Date().toISOString(),
@@ -22,12 +23,12 @@ var directory = __dirname + '/..'
 if (matchArgv('--all')) {
   version.extend = {
     node_version: process.version,
-    npm_version: exec('npm --version'),
-    mvn_version: exec('mvn --version', true),
+    npm_version: exec('npm --version', null, carryon),
+    mvn_version: exec('mvn --version', true, carryon),
     git_version: exec('git --version')
   };
 }
-version.describe = exec('git describe --tags');
+version.describe = exec('git describe --tags', null, carryon);
 version.branch = exec('git rev-parse --abbrev-ref HEAD');
 version.origin = exec('git config --get remote.origin.url');
 version.url = version.origin.replace(/git@/, 'https://').replace('.com:', '.com/');
@@ -50,15 +51,22 @@ git.log([ '-1' ], function (err, data) {
 
 // === Utilities ===
 
-function exec(command, split) {
-  var out = execSync(command).toString('utf-8').replace(/\n$/, '');
+function exec(command, split, carryon) {
+  try {
+    var out = execSync(command).toString('utf-8').replace(/\n$/, '');
+  } catch (ex) {
+    console.error(ex.name + ': ' + ex.message);
+    if (! carryon) {
+      process.exit(1);
+    }
+  }
   return split ? out.split(/\n/) : out;
 }
 
 function handleError(err, where) {
   if (err) {
-    console.log("ERROR! Where: " + (where || '?'));
-    console.log(err);
+    console.error("ERROR! Where: " + (where || '?'));
+    console.error(err);
     process.exit(1);
   }
 }
