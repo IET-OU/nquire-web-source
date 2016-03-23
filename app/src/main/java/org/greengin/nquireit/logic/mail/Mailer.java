@@ -20,6 +20,8 @@ public class Mailer {
     @Value("${server.smtpHost}")
     private String smtpHost = "smtpmail.open.ac.uk";
 
+    private String fromEmail = "no-reply@nquire-it.org";
+
     public boolean sendMail(String subject, String message, List<UserProfile> recipients, boolean useBcc) {
         if (recipients.isEmpty()) {
             System.out.println("Sending message '" + subject + "' - but no recipients!");
@@ -33,7 +35,7 @@ public class Mailer {
             Session session = Session.getInstance(properties, null);
             session.setDebug(true);
             MimeMessage msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("no-reply@nquire-it.org", "nQuire-it"));
+            msg.setFrom(new InternetAddress(this.fromEmail, "nQuire-it"));
             msg.setSubject("[nQuire-it] " + subject);
             msg.setText(message);
 
