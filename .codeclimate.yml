@@ -1,4 +1,4 @@
-# Code Climate Platform: https://codeclimate.com/github/IET-OU/nquire-web-source
+# Code Climate Platform - https://codeclimate.com/github/IET-OU/nquire-web-source
 ---
 engines:
   csslint:
@@ -32,6 +32,7 @@ exclude_paths:
   - "static/sass/bootstrap-*"
   - "static/src/css/*"
   - "static/src/fonts/*"
+  - "static/src/js/dist/*"
   - "static/src/js/libs/*"
   - "static/src/js/app/translations.js"
   - "static/src/media/*"

@@ -17,7 +17,7 @@ var directory = __dirname + '/..'
   , version = {
     '#': 'ok',
     file_date: new Date().toISOString(),
-    lib: 'simple-git.js'
+    lib: 'git-version.js'
   };
 
 if (matchArgv('--all')) {
@@ -25,7 +25,7 @@ if (matchArgv('--all')) {
     node_version: process.version,
     npm_version: exec('npm --version', null, carryon),
     mvn_version: exec('mvn --version', true, carryon),
-    git_version: exec('git --version')
+    git_version: exec('git --version').replace(/(git )?(version )?/, '')
   };
 }
 version.describe = exec('git describe --tags', null, carryon);
@@ -45,22 +45,23 @@ git.log([ '-1' ], function (err, data) {
 })
 .then(function () {
   fs.writeFileSync(json_file, JSON.stringify(version, null, '\t'));
-  console.log('File written: version.json');
+  console.error('File written: version.json');
 });
 
 
 // === Utilities ===
 
 function exec(command, split, carryon) {
+  var out;
   try {
-    var out = execSync(command).toString('utf-8').replace(/\n$/, '');
+    out = execSync(command).toString('utf-8').replace(/\n$/, '');
   } catch (ex) {
     console.error(ex.name + ': ' + ex.message);
     if (! carryon) {
       process.exit(1);
     }
   }
-  return split ? out.split(/\n/) : out;
+  return split && out ? out.split(/\n/) : out;
 }
 
 function handleError(err, where) {

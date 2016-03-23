@@ -28,7 +28,8 @@ script:
 
 after_script:
   #- npm run weblate-stats
-  - npm run version
+  #- npm run version
+  - node bin/git-versions.js --all
   - cat static/src/version.json
 
 #End.

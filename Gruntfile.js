@@ -28,7 +28,7 @@ module.exports = function (grunt) {
 				//'-W117': true,  // Ignore 'a' is not defined;
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
-					angular:false, FileReader:false, FormData:false, google:false, grecaptcha:false, MarkerClusterer:false, module:false, OverlappingMarkerSpiderfier:true, SigUtils:true,
+					angular:false, FileReader:false, FormData:false, google:false, grecaptcha:false, MarkerClusterer:false, OverlappingMarkerSpiderfier:true, SigUtils:true,
 					SiwClone:true, SiwColorGenerator:true, siwCompare:true, SiwFormManager:true, SiwMapIcons:true, SiwMapRenderer:true, SiwSenseItSensorData:true, SiwSenseItTransformations:true
 				}
 			},
@@ -38,7 +38,14 @@ module.exports = function (grunt) {
 			filter: 'static/src/js/app/filters/*.js',
 			serv:   'static/src/js/app/services/*.js',
 			helper: 'static/src/js/helpers/*.js',
-			grunt:  'Gruntfile.js'
+			bin: {
+				files: {
+					src: [ 'bin/*.js', 'Gruntfile.js' ]
+				},
+				options: {
+					node: true  //globals: { module:false, require:false, console:false, process:false, __dirname:false }
+			  }
+			}
 		},
 
 		nggettext_extract: {
@@ -134,7 +141,9 @@ module.exports = function (grunt) {
 						'<%= js.lib %>/oms.min.js'
 					]
 				},
-				options: { banner: '/*!\n  All third-party libraries (nQuire-it).\n*/\n\n' }
+				options: {
+					banner: "/*!\n  All 3rd-party libraries | nQuire-it | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n"
+				}
 			},
 			options: {  // Global uglify options.
 				banner: "/*!\n  nQuire-it | GPL | © The Open University | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n",
