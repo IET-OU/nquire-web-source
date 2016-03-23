@@ -13,7 +13,9 @@ var directory = __dirname + '/..'
   , git = require('simple-git')(directory)
   , fs = require('fs')
   , execSync = require('child_process').execSync
+  , tomcat = 'java -cp ${CATALINA_HOME}/lib/catalina.jar org.apache.catalina.util.ServerInfo'
   , carryon = true
+  , split = true
   , version = {
     '#': 'ok',
     file_date: new Date().toISOString(),
@@ -24,7 +26,8 @@ if (matchArgv('--all')) {
   version.extend = {
     node_version: process.version,
     npm_version: exec('npm --version', null, carryon),
-    mvn_version: exec('mvn --version', true, carryon),
+    maven_version: exec('mvn --version', split, carryon),
+    tomcat_version: exec(tomcat, split, carryon),
     git_version: exec('git --version').replace(/(git )?(version )?/, '')
   };
 }
