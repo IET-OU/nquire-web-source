@@ -9,14 +9,13 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
   'use strict';
 
-  var tag_label_hide = ".HIDE.new"
+  var tag_label_template = $rootScope.cfg.tag_label_template || '$1'  //Was: ".HIDE.new"
     , label_hide_regex = /(DISABLE|HIDE|PRIVATE)/
     , valid_tag_regex = /^[a-z0-9\-]+$/
     // http://stackoverflow.com/questions/18745643/how-to-write-regex-to-verify-a-comma-delimited-list-of-values
     , valid_multi_tag_regex = /^[a-z0-9\-]+(?:, ?[a-z0-9\-]*)*$/
     , error_timeout = 3000
-    , form_errors = {}
-    , manager;
+    , form_errors = {};
 
   var FilterTagManager = function () {
     this.data = {};
@@ -126,7 +125,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
       if (! (tag in query_list) ) {
         // Looks like a new tag - hide it initially!
-        label = tag.replace(/-/, ' ') + tag_label_hide;
+        label = tag.replace(/-/g, ' ').replace(/(.*)/, tag_label_template);  //Was: + tag_label_hide;
 
         //TODO: "manager.getList" gives "TypeError: Cannot read property 'data' of undefined at filter-tag-service.js:43"
         if (setFilterCallback) { setFilterCallback(label, tag); }
@@ -173,7 +172,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
   return {
     get: function (scope, updateCallback) {
       var stopWatching = scope.$watch('tags.data', updateCallback);
-      scope.tags = manager = new FilterTagManager();
+      scope.tags = new FilterTagManager();
       scope.$on('$destroy', stopWatching);
     }
   };

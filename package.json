@@ -55,6 +55,7 @@
   "scripts": {
     "bugs": "ghi | cat",
     "compile-java": "mvn compile -f app/pom.xml",
+    "echo-versions": "printf 'npm: '; npm --version; echo ''; mvn --version",
     "ps": "ps -af | egrep '(tomcat|httpd)' #| grep -v sh  # grep",
     "pull": "#git checkout package.json; git pull;\n grunt; npm run version",
     "setup-config-js": "cp -n static/src/js/app/config.js.DIST.html static/src/js/app/config.js",
@@ -62,7 +63,6 @@
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
     "version": "node bin/git-version.js  # --all",
-    "echo-versions": "printf 'npm: '; npm --version; echo ''; mvn --version",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }

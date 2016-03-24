@@ -6,7 +6,12 @@ angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scop
     };
 
     AdminService.get($scope);
-    $scope.admin.getVersion($scope);
+
+    if ($scope.adminAccess()) {
+        $scope.admin.getVersion($scope);
+    } else {
+        $scope.alert.debug('Not logged in admin.');
+    }
 
 
     /*! Useful admin utilities.

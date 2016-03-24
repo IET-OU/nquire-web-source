@@ -17,10 +17,13 @@ module.exports = function (grunt) {
 		},
 		jshint: {
 			options: {
+				bitwise: true,
 				curly: true,
 				eqeqeq: true,
+				futurehostile: true,
 				laxcomma: true,
 				undef: true,
+				//unused: true,
 				'-W018': true,    // Ignore confusing use of 'a';
 				'-W069': true,    // Ignore ['a'] is better written in dot notation;
 				//'-W097': true,  // Ignore position of 'use strict';
