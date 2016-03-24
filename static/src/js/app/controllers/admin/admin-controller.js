@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scope, $state, AdminService) {
+angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scope, $timeout, AdminService) {
     'use strict';
 
     $scope.adminAccess = function() {
@@ -7,11 +7,13 @@ angular.module('senseItWeb', null, null).controller('AdminCtrl', function ($scop
 
     AdminService.get($scope);
 
-    if ($scope.adminAccess()) {
-        $scope.admin.getVersion($scope);
-    } else {
-        $scope.alert.debug('Not logged in admin.');
-    }
+    $timeout(function () {
+        if ($scope.adminAccess()) {
+            $scope.admin.getVersion($scope);
+        } else {
+            $scope.alert.debug('Not logged in admin.');
+        }
+    }, 800);
 
 
     /*! Useful admin utilities.
