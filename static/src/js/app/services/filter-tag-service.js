@@ -111,7 +111,7 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
     var self = this
       , filter_r = filters && filters.split(/,/)
       , query_list = self.query_list
-      , it, tag, label;
+      , it, tag, label, count = 0;
 
     if (! filters) {
       return;
@@ -131,8 +131,10 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
         if (setFilterCallback) { setFilterCallback(label, tag); }
 
         $log.info("Tags.setMissingTags: ", [ tag, label ]);
+        count++;
       }
     }
+    return count;
   };
 
   FilterTagManager.prototype.validTag = function (query, which) {
