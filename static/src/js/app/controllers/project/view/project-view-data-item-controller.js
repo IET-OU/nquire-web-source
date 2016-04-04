@@ -1,5 +1,5 @@
 angular.module('senseItWeb', null, null).controller('ProjectViewDataItemCtrl', function ($scope, $state) {
-
+    'use strict';
 
     $scope.goto = {
         next: function () {
