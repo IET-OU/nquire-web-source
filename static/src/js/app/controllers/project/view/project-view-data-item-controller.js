@@ -15,7 +15,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewDataItemCtrl', f
             $scope.itemIndex = null;
             $scope.item = null;
             for (var i = 0; i < $scope.sortedData.data.length; i++) {
-                if ($scope.sortedData.data[i].id === $state.params.itemId) {
+                if ($scope.sortedData.data[i].id === parseInt($state.params.itemId)) {
                     $scope.itemIndex = {
                         index: i,
                         next: i < $scope.sortedData.data.length - 1 ? $scope.sortedData.data[i + 1].id : false,
