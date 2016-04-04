@@ -4,7 +4,8 @@
              class="col-xs-6 col-sm-4 col-md-3">
             <div class="spotit-item">
                 <div class="spotit-observation">
-                    <img data-ng-click="goToItem(item.id)" src="" data-ng-src="{{item.observation | uploadedThumb }}"/>
+                    <img data-ng-click="goToItem(item.id)" src="" data-ng-src="{{item.observation | uploadedThumb }}"
+                        role="button" tabindex="0" title="{{'Go to %s' | translate | replace: '%s' : item.title }}"/>
                 </div>
                 <div class="spotit-observation-title">
                     <p>
@@ -25,4 +26,3 @@
         </div>
     </div>
 </div>
-
