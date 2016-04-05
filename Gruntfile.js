@@ -17,6 +17,9 @@ module.exports = function (grunt) {
 		},
 
 		htmlangular: {
+			options: {
+				w3cproxy: httpProxy()
+			},
 			partials: {
 				src: [ '<%= js.part %>/layout/**/*.html', '<%= js.part %>/admin/*.html' ],
 				options: {
@@ -197,7 +200,27 @@ module.exports = function (grunt) {
 		'nggettext_extract', 'nggettext_compile', 'msgInitMerge'
 	]);
 
-	grunt.registerTask('default', [
+	grunt.registerTask('default', isTravis() ? [
+		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
+	] : [
 		'gettext', 'htmlangular:index', 'sass', 'jshint', 'uglify', 'nice-package'
 	]);
+
+
+
+	/* ================================== */
+
+	function httpProxy() {
+		var http_proxy = process.env.HTTP_PROXY || false; // Default is false, not null(?)
+    if (http_proxy) {
+			http_proxy = http_proxy.replace(/https?:\/\//, '');
+			http_proxy = 'http://' + http_proxy;
+		}
+		console.log('HTTP proxy?', http_proxy || '<none>');
+		return http_proxy;
+	}
+
+	function isTravis() {
+		return false;  //Was: process.env.TRAVIS || false;
+	}
 };
