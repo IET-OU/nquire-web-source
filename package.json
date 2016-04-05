@@ -27,6 +27,7 @@
     "grunt-contrib-jshint": "1.0.0",
     "grunt-contrib-uglify": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
+    "grunt-html-angular-validate": "0.5.7",
     "grunt-msg-init-merge": "0.0.5",
     "grunt-nice-package": "0.10.2",
     "grunt-sass": "1.1.0",

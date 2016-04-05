@@ -33,7 +33,7 @@
 
             <div role="alert">
               <div ng-switch="tags.formError('add')">
-                <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{new_filter.query}}</tt></p>
+                <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <code>{{new_filter.query}}</code></p>
                 <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
                 <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
                 <!--<p ng-switch-default translate>Sorry! Unknown error.</p>-->
@@ -67,7 +67,7 @@
                          translate-comment="Note that the term, eg. greek-schools should not be translated."/>
                   <div role="alert">
                     <div ng-switch="tags.formError('edit')">
-                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{form.values.query}}</tt></p>
+                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <code>{{form.values.query}}</code></p>
                       <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
                       <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
                     </div>

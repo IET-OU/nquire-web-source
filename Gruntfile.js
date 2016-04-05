@@ -15,6 +15,25 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+
+		htmlangular: {
+			partials: {
+				src: [ '<%= js.part %>/layout/**/*.html', '<%= js.part %>/admin/*.html' ],
+				options: {
+					customattrs: [ 'siw-user-link', 'translate-comment' ],
+					customtags: [ 'text-angular', 'translate' ],  //'X-ng-form'
+					relaxerror: [
+						'A numeric character reference expanded to carriage return.',  // Eg. "&#13;"
+						'Attribute “href” without an explicit value seen.', //' The attribute may be dropped by IE7.'
+						'Element “head” is missing a required instance of child element “title”.',
+						'Start tag seen without seeing a doctype first.',  //' Expected e.g. “<!DOCTYPE html>”.'
+						'End of file seen without seeing a doctype first.' //' Expected e.g. “<!DOCTYPE html>”.'
+					]
+				}
+			},
+			index: [ 'static/src/ie8.htm', 'static/src/index.html' ]
+		},
+
 		jshint: {
 			options: {
 				bitwise: true,
@@ -95,6 +114,7 @@ module.exports = function (grunt) {
 			libs, helpers, app.js, config, translations, services, directives, filters, controllers.
 		*/
 		js: {
+			part: 'static/src/partials',
 			out: 'static/src/js/dist',
 			app: 'static/src/js/app',
 			lib: 'static/src/js/libs',
@@ -169,6 +189,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-html-angular-validate');
 	grunt.loadNpmTasks('grunt-nice-package');
 	grunt.loadNpmTasks('grunt-sass');
 
@@ -177,6 +198,6 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('default', [
-		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
+		'gettext', 'htmlangular:index', 'sass', 'jshint', 'uglify', 'nice-package'
 	]);
 };
