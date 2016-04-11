@@ -26,7 +26,8 @@
 
 @mixin text-sidebar-teaser {
   @include text-regular;
-  color: $color-light-grey;
+  // Accessibility [a11y][Bug: #1]
+  color: darken( $color-light-grey, 16% );
 }
 
 @mixin text-sidebar-category {
@@ -157,5 +158,3 @@
   @include text-regular;
   font-size: 14px;
 }
-
-
