@@ -79,12 +79,12 @@ angular.module('senseItServices', null, null).factory('FilterTagService', ['Rest
 
   FilterTagManager.prototype.projectTags = function (project) {
     var self = this
-      , filter_r = project.filters && project.filters.split(/,/)
+      , filter_r = project && project.filters && project.filters.split(/,/)
       , query_list = self.query_list
       , tags = {}
       , it, tag, label;
 
-    if (! project.filters) {
+    if (! project || ! project.filters) {
       return;
     }
 
