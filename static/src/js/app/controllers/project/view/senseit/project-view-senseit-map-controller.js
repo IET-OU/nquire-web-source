@@ -103,10 +103,14 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSenseItMapCtrl',
             return {id: v.id, label: v.label(), weight: v.weight};
         }),
         value: function (item, v) {
-            if (!item || !item.varValue[v.id]) {
+            var varValue = item.varValue[ v.id ];
+
+            if (!item || !varValue) {
                 return 0;
             }
-            return item.varValue[v.id].v[0];
+            $scope.alert.debug("senseit-map-ctrl:", (varValue.v.length ? "ok": "bug?"), item, v);
+
+            return varValue.v.length ? varValue.v[ 0 ] : 0;
         },
         location: function (item) {
             try {
