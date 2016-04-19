@@ -485,6 +485,7 @@ msgstr "Date"
 #: static/src/partials/forum/forum-thread.html:15
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
+#: static/src/partials/project/view/spotit/data-item-spotit.html:31
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -606,6 +607,18 @@ msgstr "Adresse mail :"
 msgid "Ended"
 msgstr "Terminé"
 
+#: static/src/partials/project/view/project-view.html:15
+msgid "Error. Project not found."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:59
+msgid "Error. Spot-It mission item not found."
+msgstr ""
+
+#: static/src/partials/profile/profile-view.html:73
+msgid "Error. User profile not found."
+msgstr ""
+
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:15
 msgid "Explanation:"
 msgstr "Explication :"
@@ -632,7 +645,7 @@ msgid "Field type:"
 msgstr "Type de champ :"
 
 #: static/src/partials/admin/admin-projects.html:51
-msgid "Format: letters, numbers, dashes, commas, no accents."
+msgid "Format: lower-case letters, numbers, dashes, commas, no accents."
 msgstr ""
 
 #: static/src/partials/forum/forum-list.html:7
@@ -651,6 +664,20 @@ msgstr "Données géolocalisées :"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
 msgid "Go back to the list"
+msgstr "Retourner à la liste"
+
+#: static/src/partials/project/view/spotit/data-table-spotit.html:8
+msgid "Go to %s"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-data-map.html:23
+#, fuzzy
+msgid "Go to first"
+msgstr "Retourner à la liste"
+
+#: static/src/partials/project/view/senseit/senseit-data-map.html:36
+#, fuzzy
+msgid "Go to last"
 msgstr "Retourner à la liste"
 
 #: static/src/partials/admin/admin-projects.html:6
@@ -813,6 +840,10 @@ msgstr "Se déconnecter"
 msgid "Magnetic field"
 msgstr "Champ magnétique"
 
+#: static/src/partials/layout/header.html:11
+msgid "Main menu"
+msgstr ""
+
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:4
 msgid "Map"
 msgstr "Carte"
@@ -922,6 +953,14 @@ msgstr "Nouveau forum"
 msgid "New password:"
 msgstr "Nouveau mot de passe :"
 
+#: static/src/partials/project/view/senseit/senseit-data-map.html:33
+msgid "Next"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:13
+msgid "Next item"
+msgstr ""
+
 #: static/src/partials/admin/admin-users.html:35
 #: static/src/partials/profile/profile-logged-in.html:153
 #: static/src/partials/profile/profile-logged-in.html:160
@@ -945,7 +984,7 @@ msgstr "Aucune réponse n'a été choisie pour l'instant."
 msgid "No missions available at the moment."
 msgstr "Pas de missions disponible pour le moment."
 
-#: static/src/partials/project/view/spotit/data-table-spotit.html:12
+#: static/src/partials/project/view/spotit/data-table-spotit.html:13
 msgid "No title"
 msgstr "Pas de titre"
 
@@ -1078,6 +1117,14 @@ msgstr "Messages"
 msgid "Pressure"
 msgstr "Pression"
 
+#: static/src/partials/project/view/senseit/senseit-data-map.html:26
+msgid "Previous"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:7
+msgid "Previous item"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:24
 msgid "Profile image:"
 msgstr "Image de profil :"
@@ -1177,6 +1224,18 @@ msgstr "Signalements"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
 msgid "Reset"
 msgstr "Réinitialiser"
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:10
+msgid "Return to data view"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:23
+msgid "Rotate clockwise"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:27
+msgid "Rotate counter-clockwise"
+msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:21
 msgid "Samples / second"
@@ -1365,6 +1424,10 @@ msgstr "Se déconnecter"
 msgid "Single-line text"
 msgstr "Texte court (une ligne)"
 
+#: static/src/partials/profile/profile-logged-out.html:47
+msgid "Social logins"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:172
 #: static/src/partials/profile/profile-logged-in.html:202
 msgid "Someone comments on a forum thread that I created:"
@@ -1434,7 +1497,7 @@ msgstr ""
 "Désolé, vous avez déjà posté le même contenu ! Vous devriez le modifier "
 "avant de le poster."
 
-#: static/src/partials/admin/admin.html:15
+#: static/src/partials/admin/admin.html:19
 msgid "Sorry, you need administrator access to view this page."
 msgstr ""
 "Désolé, il est nécessaire d'avoir un accès administrateur pour cette page."
@@ -1510,7 +1573,8 @@ msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:31
 #: static/src/partials/admin/admin-filters.html:65
-msgid "Tag-term format: letters, numbers, dashes, no spaces, no accents."
+msgid ""
+"Tag-term format: lower-case letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:30
@@ -1549,10 +1613,15 @@ msgstr ""
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:41
-#: static/src/partials/admin/admin-filters.html:74
 #: static/src/partials/admin/admin-projects.html:57
 msgid "The tag term is not valid — no spaces or accents allowed."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:41
+#: static/src/partials/admin/admin-filters.html:74
+msgid ""
+"The tag term is not valid — no spaces or accents allowed. (Valid: <i>my-"
+"keyword</i>)"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:55
@@ -1613,6 +1682,11 @@ msgstr "Discussion"
 #: static/src/partials/forum/forum-list.html:9
 msgid "Threads"
 msgstr "Discussions"
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:39
+#, fuzzy
+msgid "title"
+msgstr "Titre"
 
 #: static/src/partials/admin/admin-projects.html:18
 #: static/src/partials/project/view/senseit/data-table-senseit.html:4
@@ -1707,6 +1781,12 @@ msgstr "En cours d'envoi…"
 #: static/src/partials/project/admin/project-admin-users.html:9
 msgid "User"
 msgstr "Utilisateur"
+
+#: static/src/partials/profile/profile-logged-in.html:1
+#: static/src/partials/profile/profile-logged-out.html:1
+#, fuzzy
+msgid "User profile"
+msgstr "Votre page de profil"
 
 #: static/src/partials/profile/profile-view.html:2
 msgid "User profile: {{profile.username}}"

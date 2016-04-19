@@ -201,12 +201,13 @@ module.exports = function (grunt) {
 		'nggettext_extract', 'nggettext_compile', 'msgInitMerge'
 	]);
 
-	grunt.registerTask('default', isTravis() ? [
-		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
-	] : [
+	grunt.registerTask('test', [
 		'gettext', 'htmlangular:index', 'sass', 'jshint', 'uglify', 'nice-package'
 	]);
 
+	grunt.registerTask('default', [
+		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
+	]);
 
 
 	/* ================================== */

@@ -20,7 +20,7 @@ before_script:
   - npm run echo-versions
 
 script:
-  - grunt
+  - npm test
   # Compile Java, removing 100s of 'Downloading ..' lines in log output ...
   - "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'"
   # .. Then, ensure compile errors are caught!

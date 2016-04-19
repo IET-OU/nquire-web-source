@@ -491,6 +491,7 @@ msgstr "Ημερομηνία"
 #: static/src/partials/forum/forum-thread.html:15
 #: static/src/partials/project/edit/senseit/project-edit-senseit-analysis.html:40
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:38
+#: static/src/partials/project/view/spotit/data-item-spotit.html:31
 msgid "Delete"
 msgstr "Διαγράφω"
 
@@ -612,6 +613,18 @@ msgstr "Ηλεκτρονικό ταχυδρομείο:"
 msgid "Ended"
 msgstr "Ολοκληρώθηκε"
 
+#: static/src/partials/project/view/project-view.html:15
+msgid "Error. Project not found."
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:59
+msgid "Error. Spot-It mission item not found."
+msgstr ""
+
+#: static/src/partials/profile/profile-view.html:73
+msgid "Error. User profile not found."
+msgstr ""
+
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:15
 msgid "Explanation:"
 msgstr "Επεξήγηση:"
@@ -639,7 +652,7 @@ msgid "Field type:"
 msgstr "Είδος πεδίου:"
 
 #: static/src/partials/admin/admin-projects.html:51
-msgid "Format: letters, numbers, dashes, commas, no accents."
+msgid "Format: lower-case letters, numbers, dashes, commas, no accents."
 msgstr ""
 
 #: static/src/partials/forum/forum-list.html:7
@@ -658,6 +671,20 @@ msgstr "Δεδομένα γεωτοποθέτησης:"
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-item.html:42
 msgid "Go back to the list"
+msgstr "Πηγαίνω πίσω στη λίστα"
+
+#: static/src/partials/project/view/spotit/data-table-spotit.html:8
+msgid "Go to %s"
+msgstr ""
+
+#: static/src/partials/project/view/senseit/senseit-data-map.html:23
+#, fuzzy
+msgid "Go to first"
+msgstr "Πηγαίνω πίσω στη λίστα"
+
+#: static/src/partials/project/view/senseit/senseit-data-map.html:36
+#, fuzzy
+msgid "Go to last"
 msgstr "Πηγαίνω πίσω στη λίστα"
 
 #: static/src/partials/admin/admin-projects.html:6
@@ -821,6 +848,10 @@ msgstr "Αποσυνδέομαι"
 msgid "Magnetic field"
 msgstr "Μαγνητικό πεδίο"
 
+#: static/src/partials/layout/header.html:11
+msgid "Main menu"
+msgstr ""
+
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:4
 msgid "Map"
 msgstr "Χάρτης"
@@ -931,6 +962,14 @@ msgstr "Νέος χώρος συζήτησης"
 msgid "New password:"
 msgstr "Νέος κωδικός:"
 
+#: static/src/partials/project/view/senseit/senseit-data-map.html:33
+msgid "Next"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:13
+msgid "Next item"
+msgstr ""
+
 #: static/src/partials/admin/admin-users.html:35
 #: static/src/partials/profile/profile-logged-in.html:153
 #: static/src/partials/profile/profile-logged-in.html:160
@@ -954,7 +993,7 @@ msgstr "Δεν επέλεξες καμία απάντηση ακόμη."
 msgid "No missions available at the moment."
 msgstr "Δεν υπάρχουν διαθέσιμες αποστολές προς το παρόν."
 
-#: static/src/partials/project/view/spotit/data-table-spotit.html:12
+#: static/src/partials/project/view/spotit/data-table-spotit.html:13
 msgid "No title"
 msgstr "Χωρίς τίτλο"
 
@@ -1085,6 +1124,14 @@ msgstr "Δημοσιεύσεις"
 msgid "Pressure"
 msgstr "Πίεση"
 
+#: static/src/partials/project/view/senseit/senseit-data-map.html:26
+msgid "Previous"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:7
+msgid "Previous item"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:24
 msgid "Profile image:"
 msgstr "Φωτογραφία προφίλ:"
@@ -1184,6 +1231,18 @@ msgstr "Αναφορές"
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:13
 msgid "Reset"
 msgstr "Επαναφέρω"
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:10
+msgid "Return to data view"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:23
+msgid "Rotate clockwise"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:27
+msgid "Rotate counter-clockwise"
+msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:21
 msgid "Samples / second"
@@ -1374,6 +1433,10 @@ msgstr "Αποσυνδέομαι"
 msgid "Single-line text"
 msgstr "Κείμενο μονής γραμμής"
 
+#: static/src/partials/profile/profile-logged-out.html:47
+msgid "Social logins"
+msgstr ""
+
 #: static/src/partials/profile/profile-logged-in.html:172
 #: static/src/partials/profile/profile-logged-in.html:202
 msgid "Someone comments on a forum thread that I created:"
@@ -1447,7 +1510,7 @@ msgstr ""
 "Συγγνώμη, ήδη δημοσίευσες το ίδιο περιεχόμενο! Ίσως χρειάζεται να το "
 "επεξεργαστείς πριν να το δημοσιεύσεις."
 
-#: static/src/partials/admin/admin.html:15
+#: static/src/partials/admin/admin.html:19
 msgid "Sorry, you need administrator access to view this page."
 msgstr "Συγγνώμη, μόνο ο διαχειριστής μπορεί να δει αυτή τη σελίδα."
 
@@ -1522,7 +1585,8 @@ msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:31
 #: static/src/partials/admin/admin-filters.html:65
-msgid "Tag-term format: letters, numbers, dashes, no spaces, no accents."
+msgid ""
+"Tag-term format: lower-case letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:30
@@ -1561,10 +1625,15 @@ msgstr ""
 msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:41
-#: static/src/partials/admin/admin-filters.html:74
 #: static/src/partials/admin/admin-projects.html:57
 msgid "The tag term is not valid — no spaces or accents allowed."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:41
+#: static/src/partials/admin/admin-filters.html:74
+msgid ""
+"The tag term is not valid — no spaces or accents allowed. (Valid: <i>my-"
+"keyword</i>)"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-view-outline.html:55
@@ -1626,6 +1695,11 @@ msgstr "Υποενότητα"
 #: static/src/partials/forum/forum-list.html:9
 msgid "Threads"
 msgstr "Υποενότητες"
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:39
+#, fuzzy
+msgid "title"
+msgstr "Τίτλος"
 
 #: static/src/partials/admin/admin-projects.html:18
 #: static/src/partials/project/view/senseit/data-table-senseit.html:4
@@ -1720,6 +1794,12 @@ msgstr "Ανεβαίνει…"
 #: static/src/partials/project/admin/project-admin-users.html:9
 msgid "User"
 msgstr "Χρήστης"
+
+#: static/src/partials/profile/profile-logged-in.html:1
+#: static/src/partials/profile/profile-logged-out.html:1
+#, fuzzy
+msgid "User profile"
+msgstr "Το προφίλ μου"
 
 #: static/src/partials/profile/profile-view.html:2
 msgid "User profile: {{profile.username}}"
