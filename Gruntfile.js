@@ -46,6 +46,7 @@ module.exports = function (grunt) {
 				laxcomma: true,
 				undef: true,
 				//unused: true,
+				// https://github.com/jshint/jshint/blob/master/src/messages.js#L80
 				'-W018': true,    // Ignore confusing use of 'a';
 				'-W069': true,    // Ignore ['a'] is better written in dot notation;
 				//'-W097': true,  // Ignore position of 'use strict';

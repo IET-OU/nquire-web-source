@@ -20,11 +20,11 @@
         {{item.title}}
         <button data-ng-if="item.author.id == status.profile.id"
                 class="btn btn-default" data-ng-click="form.open()" translate>Edit title</button>
-        <button ng-if="item.author.id == status.profile.id" title="{{'Rotate right' | translate}}"
+        <button ng-if="item.author.id == status.profile.id" title="{{'Rotate clockwise' | translate}}"
                 class="btn btn-default" data-ng-click="rotateImage('right')">
             <i class="fa fa-rotate-right"></i>
         </button>
-        <button ng-if="item.author.id == status.profile.id" title="{{'Rotate left' | translate}}"
+        <button ng-if="item.author.id == status.profile.id" title="{{'Rotate counter-clockwise' | translate}}"
                 class="btn btn-default" data-ng-click="rotateImage('left')">
             <i class="fa fa-rotate-left"></i>
         </button>
@@ -36,7 +36,7 @@
     <div class="spotit-item-title" data-ng-if="form.isOpen()">
         <form class="form-inline">
             <p>
-                <input class="form-control" data-ng-model="form.values.title" placeholder="title"/>
+                <input class="form-control" data-ng-model="form.values.title" aria-label="{{'title' | translate}}" placeholder="{{'title' | translate}}"/>
             <span class="btn-group">
                 <button class="btn btn-default" data-ng-click="form.save()" translate>Save</button>
                 <button class="btn btn-default" data-ng-click="form.cancel()" translate>Cancel</button>
