@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('AdminProjectsItemCtrl', function ($scope) {
+angular.module('senseItWeb', null, null).controller('AdminProjectsItemCtrl', function ($scope, $timeout) {
 
     if ($scope.project) {
 
@@ -8,7 +8,13 @@ angular.module('senseItWeb', null, null).controller('AdminProjectsItemCtrl', fun
               , projects = $scope.admin.data.projects
               , filters = projects[ idx ].filters;
 
-            $scope.tags.setMissingTags(filters, $scope.admin.setFilter);
+            var count = $scope.tags.setMissingTags(filters, $scope.admin.setFilter);
+            if (count) {
+                $timeout(function () {
+                    $scope.tags.getList();
+                }, 1500);
+                $scope.alert.success('Tags successfully added', count);
+            }
 
             $scope.admin.setProjectFilter(projects[ idx ].id, filters);
 

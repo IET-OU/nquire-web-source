@@ -1,7 +1,7 @@
 {
-  "name": "nQuire-it",
+  "name": "nquire-it",
   "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2016 The Open University (IET-OU)",
-  "version": "0.9.0",
+  "version": "1.1.0+beta",
   "author": "Eloy Villasclaras <eloy.villasclaras@gmail.com>",
   "bugs": {
     "url": "https://github.com/IET-OU/nquire-web-source/issues"
@@ -17,16 +17,24 @@
       "name": "Rich Lovelock / @richlove1"
     }
   ],
+  "dependencies": {
+    "angular": "1.2.27",
+    "jquery": "2.1.4"
+  },
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-angular-gettext": "2.1.0",
     "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-html-angular-validate": "0.5.7",
     "grunt-msg-init-merge": "0.0.5",
     "grunt-nice-package": "0.10.2",
-    "grunt-sass": "1.1.0"
+    "grunt-sass": "1.1.0",
+    "simple-git": "1.31.0"
   },
   "engines": {
-    "node": "> 0.10.0"
+    "node": "> 0.10.40"
   },
   "files": [
     "static/src/js/"
@@ -48,12 +56,14 @@
   "scripts": {
     "bugs": "ghi | cat",
     "compile-java": "mvn compile -f app/pom.xml",
+    "echo-versions": "printf 'npm: '; npm --version; echo ''; mvn --version",
     "ps": "ps -af | egrep '(tomcat|httpd)' #| grep -v sh  # grep",
+    "pull": "#git checkout package.json; git pull;\n grunt; npm run version",
     "setup-config-js": "cp -n static/src/js/app/config.js.DIST.html static/src/js/app/config.js",
     "setup-java": "cp -n app/pom.TEMPLATE.xml app/pom.xml",
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
-    "versions": "printf 'npm: '; npm --version; echo ''; mvn --version",
+    "version": "node bin/git-version.js  # --all",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }

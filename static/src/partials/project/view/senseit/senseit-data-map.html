@@ -20,20 +20,20 @@
     </form>
 
     <p class="btn-group" data-ng-if="sortedData.data.length > 0">
-        <button class="btn btn-default" data-ng-click="goto.first()">
+        <button class="btn btn-default" data-ng-click="goto.first()" title="{{'Go to first' | translate}}">
             <i class="fa fa-fast-backward"></i>
         </button>
-        <button class="btn btn-default" data-ng-click="goto.previous()">
+        <button class="btn btn-default" data-ng-click="goto.previous()" title="{{'Previous' | translate}}">
             <i class="fa fa-arrow-left"></i>
         </button>
         <button class="btn btn-default" data-ui-sref="project.view.data-list" data-ng-disabled="true">
             <span data-ng-if="mapData.selectedIndex >= 0">{{mapData.selectedIndex + 1}} / </span>
             {{sortedData.data.length}}
         </button>
-        <button class="btn btn-default" data-ng-click="goto.next()">
+        <button class="btn btn-default" data-ng-click="goto.next()" title="{{'Next' | translate}}">
             <i class="fa fa-arrow-right"></i>
         </button>
-        <button class="btn btn-default" data-ng-click="goto.last()">
+        <button class="btn btn-default" data-ng-click="goto.last()" title="{{'Go to last' | translate}}">
             <i class="fa fa-fast-forward"></i>
         </button>
     </p>

@@ -1,5 +1,12 @@
 package org.greengin.nquireit.controllers.base;
 
+/**
+ * nQuire-it - backend and web-service API for nQuire-it (Java sources).
+ *
+ * License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
+ * Copyright © 2014-2016 The Open University (IET-OU).
+ */
+
 import org.greengin.nquireit.logic.ContextBean;
 import org.greengin.nquireit.logic.base.FilterResponse;
 import org.greengin.nquireit.logic.base.OkFailResponse;
@@ -15,7 +22,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 import java.util.List;
-
 
 /**
  * Created by evilfer on 8/11/14.

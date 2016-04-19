@@ -10,4 +10,8 @@
     <div data-ng-switch-when="spotit">
         <div data-ng-include="'partials/project/view/home/project-view-spotit.html'"></div>
     </div>
+
+    <div data-ng-switch-default class="project-view-error error-http-4xx http-404 error-not-found">
+        <p translate>Error. Project not found.</p>
+    </div>
 </div>

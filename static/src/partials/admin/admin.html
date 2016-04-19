@@ -9,8 +9,12 @@
     </div>
 
     <div class="admin-content" data-ui-view></div>
+
+    <p class="version-info" id="version">nQuire-it: <a ng-href="{{version.url}}" ng-bind="version.describe || '[no version]'"
+       title="Version: {{version.describe}}&#13;Commit date: {{version.date}}&#13;{{version.message}}"></a>
+    </p>
 </div>
 
-<div data-ng-if="!adminAccess()" class="admin-page warn http-401 error-unauthorized">
+<div data-ng-if="!adminAccess()" class="admin-page warn error-http-4xx http-401 error-unauthorized">
     <p translate>Sorry, you need administrator access to view this page.</p>
 </div>

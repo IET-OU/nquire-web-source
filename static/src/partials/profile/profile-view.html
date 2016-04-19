@@ -1,6 +1,6 @@
 <div class="content-sidebar">
-    <div class="profile-header" translate>User profile: {{profile.username}}</div>
-    <div class="profile-page">
+    <div class="profile-header" data-ng-show="profile.username" translate>User profile: {{profile.username}}</div>
+    <div class="profile-page" data-ng-show="profile.username">
 
 
         <div class="profile-logged-in-left-section">
@@ -68,6 +68,10 @@
         </div>
     </div>
 
+
+    <div data-ng-if="! profile.username" class="profile-view-error error-http-4xx http-404 error-not-found">
+        <p translate>Error. User profile not found.</p>
+    </div>
 </div>
 
 <div class="sidebar-right" data-siw-sidebar-toggle>

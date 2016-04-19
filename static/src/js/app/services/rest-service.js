@@ -35,7 +35,7 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', f
     },
     get: function (path, data) {
       return service._promiserequest($http.get(path, {
-        params: $.extend({t: new Date().getTime()}, data)
+        params: angular.extend({t: new Date().getTime()}, data)
       }));
     },
     _createUploadPromise: function (method, path, data, files, convertToMultipart) {

@@ -7,7 +7,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSpotItItemCtrl',
 
     $scope.rotateImage = function(direction) {
         $scope.updateData($scope.item.id, {rotate: direction}).then(function(updateData) {
-            console.log(updateData);
+            $scope.alert.debug('rotateImage: ' + updateData);
 
             $scope.item = updateData;
             updateData.observation = updateData.observation + '?q=' + (new Date()).getTime();

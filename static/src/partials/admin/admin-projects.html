@@ -48,7 +48,7 @@
                    list="filter-list" ng-XX-required="1" ng-pattern="tags.patternMulti()"
                    pattern="^[a-z0-9\-]+(?:, ?[a-z0-9\-]*)*$" maxlength="128"
                    placeholder="{{'Comma separated tags (no accents)' | translate}}"
-                   title="{{'Format: letters, numbers, dashes, commas, no accents.' | translate}}"/>
+                   title="{{'Format: lower-case letters, numbers, dashes, commas, no accents.' | translate}}"/>
 
             <button class="btn btn-default btn-sm" data-ng-click="form.save()" type="submit"
                    ng-disabled="(editForm.tag.$invalid || editForm.tag.$error.required)" translate>Save</button>

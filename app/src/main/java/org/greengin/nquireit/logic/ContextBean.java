@@ -1,5 +1,12 @@
 package org.greengin.nquireit.logic;
 
+/**
+ * nQuire-it - backend and web-service API for nQuire-it (Java sources).
+ *
+ * License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
+ * Copyright © 2014-2016 The Open University (IET-OU).
+ */
+
 import lombok.Getter;
 import lombok.Setter;
 import org.greengin.nquireit.dao.*;

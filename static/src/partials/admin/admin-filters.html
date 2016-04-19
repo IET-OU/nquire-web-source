@@ -28,18 +28,18 @@
           </td>
           <td><input name="addTag" class="form-control" data-ng-model="new_filter.query"
               placeholder="{{ 'Tag-term, eg. %term (no accents)' | translate | replace: '%term' : 'greek-schools' }}"
-              title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
+              title="{{'Tag-term format: lower-case letters, numbers, dashes, no spaces, no accents.' | translate}}"
               data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"/>
 
             <div role="alert">
               <div ng-switch="tags.formError('add')">
-                <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{new_filter.query}}</tt></p>
+                <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <code>{{new_filter.query}}</code></p>
                 <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
                 <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
                 <!--<p ng-switch-default translate>Sorry! Unknown error.</p>-->
               </div>
               <p ng-if="(editForm.addTag.$invalid || editForm.addTag.$error.required) && editForm.addTag.$dirty"
-                translate>The tag term is not valid — no spaces or accents allowed.</p>
+                translate>The tag term is not valid — no spaces or accents allowed. (Valid: <i>my-keyword</i>)</p>
             </div>
           </td>
           <td><button class="btn btn-default" type="submit" ng-disabled="editForm.$invalid" translate>Add</button></td>
@@ -62,17 +62,17 @@
               <div data-ng-if="form.isOpen()">
                   <input name="tag" class="form-control" data-ng-model="form.values.query"
                          placeholder="{{ 'Tag-term, eg. %term (no accents)' | translate | replace: '%term' : 'greek-schools' }}"
-                         title="{{'Tag-term format: letters, numbers, dashes, no spaces, no accents.' | translate}}"
+                         title="{{'Tag-term format: lower-case letters, numbers, dashes, no spaces, no accents.' | translate}}"
                          data-ng-required="1" data-ng-pattern="tags.pattern()" pattern="[a-z0-9\-]+" maxlength="32"
                          translate-comment="Note that the term, eg. greek-schools should not be translated."/>
                   <div role="alert">
                     <div ng-switch="tags.formError('edit')">
-                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <tt>{{form.values.query}}</tt></p>
+                      <p ng-switch-when="duplicate-tag"><span translate>Sorry! I can't add a duplicate tag:</span> <code>{{form.values.query}}</code></p>
                       <p ng-switch-when="invalid-tag" translate>Sorry! The tag term is not valid — no spaces or accents allowed.</p>
                       <p ng-switch-when="empty-tag" translate>Sorry! This tag term is empty.</p>
                     </div>
                     <p ng-if="(editForm.tag.$invalid || editForm.tag.$error.required)"
-                        translate>The tag term is not valid — no spaces or accents allowed.</p>
+                        translate>The tag term is not valid — no spaces or accents allowed. (Valid: <i>my-keyword</i>)</p>
                   </div>
               </div>
           </td>

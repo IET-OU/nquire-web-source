@@ -1,4 +1,6 @@
-angular.module('senseItWeb', null, null).directive('siwVoteWidget', function (ModalService) {
+angular.module('senseItWeb', null, null).directive('siwVoteWidget', function (ModalService, $log) {
+    'use strict';
+
     return {
         templateUrl: 'partials/widgets/vote-widget.html',
         scope: {
@@ -7,6 +9,11 @@ angular.module('senseItWeb', null, null).directive('siwVoteWidget', function (Mo
         },
 
         controller: function ($scope, VoteService) {
+
+            if (! $scope.voteTarget) {
+                $log.error('Error, no voteTarget!');
+                return false;
+            }
 
             var enabled = function (value) {
                 return value === -2 ? $scope.voteManager.reportingEnabled() : $scope.voteManager.votingEnabled();

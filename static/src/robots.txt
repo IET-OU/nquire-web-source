@@ -3,5 +3,7 @@
 User-agent: *
 Disallow: /approval/
 Disallow: /approval
+Disallow: /#/admin
+Disallow: /ie8.htm
 
 #End.

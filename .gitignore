@@ -11,9 +11,16 @@ node_modules
 
 *.sass-cache
 
+static/src/js/dist/*
 static/src/js/app/min/
 
 *BAK*
 *copy*
 
 po/*.po~
+version.json
+
+*-report.json
+*-checkstyle.xml
+
+#End.

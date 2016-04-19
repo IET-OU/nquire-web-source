@@ -16,8 +16,11 @@ app to collect data from Android device sensors.
 Requirements
 ------------
 
-This Web app is build on [Spring 4.0][] and [AngularJS][].
+This Web app is built on [Spring 4.0][] and [AngularJS][].
 Other dependencies are listed in the file [`app/pom.xml`][].
+Javascript dependencies are listed in [`package.json`][].
+
+* See the compiled Java: [`IET-OU/nquire-web-compiled`][]
 
 I18N
 ----
@@ -66,9 +69,11 @@ Added support for:
 
 
 [`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/greek/app/pom.TEMPLATE.xml
+[`package.json`]: https://github.com/IET-OU/nquire-web-source/blob/greek/package.json#L20-L27
 [`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/Gruntfile.js#L55-L59
 [`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/static/src/js/app/config.js.DIST.html#L25-L49
 [nQuire-it]: https://github.com/IET-OU/nquire-web-source
+[`IET-OU/nquire-web-compiled`]: https://github.com/IET-OU/nquire-web-compiled
 [Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Android app"
 [sense-it-icon]: https://lh5.ggpht.com/SN_LLof2UbhxolOJ6IwnjkOLYLVXTpY3CpIDHzEOBbqPH-xiECx26XftvRmlgqvRl2Q=w300-rw
 [eloy]: https://github.com/evilfer

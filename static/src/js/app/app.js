@@ -1,8 +1,8 @@
 /*!
-  Angular app module for nQuire-it web site front-end.
+  nQuire-it - Angular app module for nQuire-it web front-end.
 
-  License:  GPLv3
-  © 2014-2016 The Open University. (IET-OU)
+  License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
+  Copyright © 2014-2016 The Open University (IET-OU).
 */
 
 angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.bootstrap', 'senseItServices', 'gettext'], null).config([

@@ -170,16 +170,17 @@ SiwMapRenderer.prototype.update = function () {
     this._calculateMaxMin();
 
     var heatData = [];
+    var debug = this.$scope.alert.debug;
 
 
     this._updateSelectedIndex();
-    console.log(this.mapData.selectedIndex);
+    debug('MapRenderer.update: ' + this.mapData.selectedIndex);
 
-    console.log(this.centerSet, this.dataList.data.length);
+    debug(this.centerSet, this.dataList.data.length);
 
     if (!this.centerSet && this.dataList.data.length > 0) {
         var center = this.mapData.selectedIndex >= 0 ? this.getLatLng(this.mapData.selectedIndex) : this.getLatLng(0);
-        console.log(center);
+        debug(center);
         if (center) {
             this.map.setZoom(this.markerFocusZoom);
             this.map.setCenter(center);

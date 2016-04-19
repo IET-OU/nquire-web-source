@@ -21,14 +21,15 @@
   height: $dim-profile-header-height;
   line-height: $dim-profile-header-height;
   color: $color-light-text;
-  background: $color-dark-grey;
+  // Accessibility etc. [a11y][Bug: #1]
+  background: darken( $color-dark-grey, 4%);
   padding-left: $dim-common-small-margin;
 
   span {
     margin-right: $dim-common-margin;
 
     a {
-      color: $color-dark-background-link;
+      color: lighten( $color-dark-background-link, 14% );  //[a11y]
 
       &.active {
         color: $color-light-text;

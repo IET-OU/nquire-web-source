@@ -49,8 +49,10 @@ table tr.ng-show {
 
 
 .admin-page.error-unauthorized p,
+.error-http-4xx,
 .error-not-found {
-  margin: 1.2em 0;
+  margin: 1.4em 0;
   //Or, font-size: 1.6rem;
   font-size: 1.15em;
+  text-align: center;
 }

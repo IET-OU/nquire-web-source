@@ -8,7 +8,7 @@ angular.module('senseItWeb', null, null).filter('htmlLinky', function () {
     /(<[^>]*)?((((ftp|https?):\/\/)|(mailto:)|(www\.))[A-Za-z0-9._%#+-\/]*)(\s*<\s*\/\s*a\s*>)?/;
 
   return function (text, target) {
-    if (!text) return text;
+    if (!text) { return text; }
     var match;
     var raw = text;
     var html = [];
