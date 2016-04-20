@@ -54,6 +54,7 @@ module.exports = function (grunt) {
 				//'-W117': true,  // Ignore 'a' is not defined;
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
+					_: false,
 					angular:false, FileReader:false, FormData:false, google:false, grecaptcha:false, MarkerClusterer:false, OverlappingMarkerSpiderfier:true, SigUtils:true,
 					SiwClone:true, SiwColorGenerator:true, siwCompare:true, SiwFormManager:true, SiwMapIcons:true, SiwMapRenderer:true, SiwSenseItSensorData:true, SiwSenseItTransformations:true
 				}
@@ -147,7 +148,7 @@ module.exports = function (grunt) {
 						'<%= js.srv %>/tracking-service.js',
 						'<%= js.srv %>/users-service.js',
 						'<%= js.srv %>/f**-service.js',   // 'file-reader', 'filter-tag', 'forum' (3)
-						'<%= js.srv %>/project-*.js'
+						'<%= js.srv %>/p**-service.js'    // 'project-*', 'page-title' (8)
 					]
 				},
 				options: { mangle: false  /* IMPORTANT - 'mangle' must be false for services! */ }

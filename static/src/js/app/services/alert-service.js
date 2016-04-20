@@ -1,7 +1,8 @@
 /*!
   Alert / 'flash' user-message service / Angular.JS (~1.2)
 
-  Created by nfreear on 16/12/2015.
+  Part of nQuire-it | GPL | © The Open University (IET).
+  Created by nfreear, 16/12/2015.
 
   http://fdietz.github.io/recipes-with-angular-js/common-user-interface-patterns/displaying-a-flash-notice-failure-message.html
 */
@@ -66,6 +67,9 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
     success: function (text, extra) {
       _message(text, "success ok");
       $log.info("Success (alert).", text, extra);
+    },
+    log: function (text, extra) {
+      $log.warn(text, extra);
     },
     // Approval/ test server [Bug: #5]
     isApproval: function () {

@@ -1,9 +1,16 @@
-angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, FilterTagService, AlertService, $location) {
+/*!
+  Main controller.
+
+  Part of nQuire-it | GPL | © The Open University (IET).
+*/
+
+angular.module('senseItWeb', null, null).controller('MainCtrl', function ($scope, OpenIdService, RestService, gettextCatalog, FilterTagService, AlertService, PageTitleService, $location) {
     'use strict';
 
     OpenIdService.registerWatcher($scope);
 
     $scope.alert = AlertService;
+    $scope.pageTitle = PageTitleService;
 
     initDebug($scope, $location);
 
