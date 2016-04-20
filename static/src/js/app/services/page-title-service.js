@@ -15,12 +15,16 @@ angular.module('senseItServices', null, null).factory('PageTitleService', ['$roo
   // https://docs.angularjs.org/error/$injector/unpr?p0=PageTiteServiceProvider%20%3C-%20PageTiteService
 
   var cfg = $scope.cfg
-    , default_title = cfg.page_title_default || _('nQuire-it — join missions to explore your world')
-    , title_template = cfg.page_title_template || _('%s — nQuire-it')  // [i18n]
+    , default_title = cfg.page_title_default || 'nQuire-it — join missions to explore your world'
+    , title_template = cfg.page_title_template || '%s — nQuire-it'  //[i18n] ?
+    , timeout = cfg.page_title_timeout || 200
     , selectors = [
-        '.project-section-description-text-title'
+        '.page-title-service'
+      , '.project-section-description-text-title'
       , '.project-section-content-header'
-      , '.content-sidebar [ class *= "-header" ]:first span:first' // .about-header, .forum-header, .profile-header ;
+      , '.forum-header'
+      , '.content-sidebar [ class *= "-header" ]:first span:first' // .about-header, .profile-header ..;
+      , '.admin-header .active'
     ]
     , $title = angular.element('title')
     ;
@@ -28,7 +32,7 @@ angular.module('senseItServices', null, null).factory('PageTitleService', ['$roo
   $scope.$on('$locationChangeSuccess', function (ev, current) {
     $timeout(function () {
       onRouteChange(ev, current);
-    }, 400);
+    }, timeout);
   });
 
 

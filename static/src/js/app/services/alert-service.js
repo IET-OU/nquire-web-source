@@ -15,7 +15,7 @@ angular.module('senseItServices', null, null).factory('AlertService', ['$rootSco
   var cfg = $rootScope.cfg
     , timeout_ms = cfg && cfg.alert_timeout || 4000
     , in_banner  = cfg && cfg.alert_banner  || true
-    , is_debug = $location.absUrl().match(/[\?&\/]debug=(\d)/)
+    , is_debug = $location.absUrl().match(/[\?&\/]debug=(\d)/) || (cfg && cfg.debug)
     , is_approval = $location.absUrl().match(/\/(approval|localhost|nquire\/|pegasos\.)/)
     , _debug = is_debug ? $log.warn : function () {}
     , queue = []
