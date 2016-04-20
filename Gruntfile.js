@@ -1,7 +1,10 @@
-/*! nQuire-it | GPL | © The Open University.
+/*! nQuire-it | GPL | © The Open University (IET).
 */
 module.exports = function (grunt) {
 	'use strict';
+
+	var pkg = grunt.file.readJSON('./package.json')
+	  , ver = grunt.file.readJSON('./static/src/version.json');
 
 	grunt.initConfig({
 		sass: {
@@ -54,7 +57,7 @@ module.exports = function (grunt) {
 				//'-W117': true,  // Ignore 'a' is not defined;
 				//'-W014': true,  // Ignore bad line breaking before '+';
 				globals: {
-					_: false,
+					//_: false,
 					angular:false, FileReader:false, FormData:false, google:false, grecaptcha:false, MarkerClusterer:false, OverlappingMarkerSpiderfier:true, SigUtils:true,
 					SiwClone:true, SiwColorGenerator:true, siwCompare:true, SiwFormManager:true, SiwMapIcons:true, SiwMapRenderer:true, SiwSenseItSensorData:true, SiwSenseItTransformations:true
 				}
@@ -198,6 +201,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-nice-package');
 	grunt.loadNpmTasks('grunt-sass');
 
+	grunt.registerTask('help', help);
+
 	grunt.registerTask('gettext', [
 		'nggettext_extract', 'nggettext_compile', 'msgInitMerge'
 	]);
@@ -215,15 +220,25 @@ module.exports = function (grunt) {
 
 	function httpProxy() {
 		var http_proxy = process.env.HTTP_PROXY || false; // Default is false, not null(?)
-    if (http_proxy) {
+		if (http_proxy) {
 			http_proxy = http_proxy.replace(/https?:\/\//, '');
 			http_proxy = 'http://' + http_proxy;
 		}
-		console.log('HTTP proxy?', http_proxy || '<none>');
+		grunt.log.debug('HTTP proxy?', http_proxy || '<none>');
 		return http_proxy;
 	}
 
 	function isTravis() {
 		return false;  //Was: process.env.TRAVIS || false;
+	}
+
+	function help() {
+		grunt.log.subhead('nQuire-it help\n');
+		grunt.log.ok(
+	'Run `grunt --help` to list available tasks.\n' +
+	'Copyright © 2016 The Open University (IET) <http://iet.open.ac.uk>\n' +
+	'License: GNU GPL (see LICENSE.txt)\n' +
+	'Version: ' + ver.describe
+		);
 	}
 };

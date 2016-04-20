@@ -58,7 +58,7 @@ msgstr[1] "{{feed.count}} usuarios en línea"
 msgid "{{forum.node.title}}: New thread"
 msgstr "{{forum.node.title}}: Nuevo tópico"
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:25
 msgid "{{MISSION}} missions"
 msgstr "misiones {{MISSION}}"
 
@@ -73,6 +73,10 @@ msgid "{{projectData.data.members}} member"
 msgid_plural "{{projectData.data.members}} members"
 msgstr[0] "{{projectData.data.members}} miembro"
 msgstr[1] "{{projectData.data.members}} miembros"
+
+#: static/src/js/app/config.js.DIST.html:20
+msgid "%s — nQuire-it"
+msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
@@ -583,7 +587,7 @@ msgstr "Email"
 msgid "Email already associated with a different account."
 msgstr ""
 
-#: static/src/js/app/controllers/layout/main-controller.js:13
+#: static/src/js/app/controllers/layout/main-controller.js:21
 #: static/src/js/app/controllers/profile/profile-controller.js:191
 #: static/src/js/app/controllers/profile/profile-controller.js:246
 msgid "Email cannot be empty."
@@ -621,7 +625,7 @@ msgstr ""
 msgid "Explanation:"
 msgstr "Explicación:"
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:23
 #, fuzzy
 msgid "Feature project"
 msgstr "Eliminar proyecto"
@@ -989,7 +993,7 @@ msgstr "Sin título"
 msgid "Not joined missions"
 msgstr "Misiones a las que no se ha unido"
 
-#: static/src/index.html:8
+#: static/src/index.html:8 static/src/js/app/config.js.DIST.html:19
 msgid "nQuire-it — join missions to explore your world"
 msgstr "nQuire-it — unirse a misiones para explorar el mundo"
 
@@ -1591,13 +1595,10 @@ msgstr "Textos"
 msgid "The label is required."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:19
-msgid "The site will be undergoing routine maintenance today, {{DATE}}."
+#: static/src/js/app/config.js.DIST.html:21
+#, fuzzy
+msgid "The site will be undergoing maintenance on {{DATE}}."
 msgstr "El sitio está bajo tareas de mantenimiento hoy, {{DATE}}."
-
-#: static/src/js/app/config.js.DIST.html:20
-msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
-msgstr "El sitio estará bajo tareas de mantenimiento mañana, {{DATE}}."
 
 #: static/src/partials/admin/admin-projects.html:57
 #, fuzzy
@@ -1729,7 +1730,7 @@ msgstr ""
 "Probar <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
 "null})\">sin condiciones de búsqueda</a>."
 
-#: static/src/js/app/config.js.DIST.html:23
+#: static/src/js/app/config.js.DIST.html:24
 #, fuzzy
 msgid "Unfeature"
 msgstr "¿Destacada?"
@@ -1738,7 +1739,7 @@ msgstr "¿Destacada?"
 msgid "Unlink {{providerName}} account"
 msgstr "Desenlazar cuenta de {{providerName}}"
 
-#: static/src/js/app/config.js.DIST.html:21
+#: static/src/js/app/config.js.DIST.html:22
 msgid ""
 "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
 "Twitter</a>."
@@ -1837,10 +1838,6 @@ msgstr "Votación"
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:17
 msgid "Voting stage"
 msgstr "Etapa de la votación"
-
-#: static/src/js/app/config.js.DIST.html:25
-msgid "Weather-it missions"
-msgstr "Misiones Weather-it"
 
 #: static/src/partials/projects/create.html:39
 #: static/src/partials/projects/projects.html:28
@@ -1962,3 +1959,9 @@ msgstr "Es necesario unirse a este proyecto para votar ideas."
 #: static/src/partials/profile/profile-logged-in.html:2
 msgid "Your profile page"
 msgstr "La página de su perfil"
+
+#~ msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
+#~ msgstr "El sitio estará bajo tareas de mantenimiento mañana, {{DATE}}."
+
+#~ msgid "Weather-it missions"
+#~ msgstr "Misiones Weather-it"

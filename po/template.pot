@@ -42,7 +42,7 @@ msgstr[1] ""
 msgid "{{forum.node.title}}: New thread"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:25
 msgid "{{MISSION}} missions"
 msgstr ""
 
@@ -57,6 +57,10 @@ msgid "{{projectData.data.members}} member"
 msgid_plural "{{projectData.data.members}} members"
 msgstr[0] ""
 msgstr[1] ""
+
+#: static/src/js/app/config.js.DIST.html:20
+msgid "%s — nQuire-it"
+msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid "<a href=\"\" data-ng-click=\"openIdService.loginAndComeBack()\">Sign in</a> to comment on this data series."
@@ -511,7 +515,7 @@ msgstr ""
 msgid "Email already associated with a different account."
 msgstr ""
 
-#: static/src/js/app/controllers/layout/main-controller.js:13
+#: static/src/js/app/controllers/layout/main-controller.js:21
 #: static/src/js/app/controllers/profile/profile-controller.js:191
 #: static/src/js/app/controllers/profile/profile-controller.js:246
 msgid "Email cannot be empty."
@@ -549,7 +553,7 @@ msgstr ""
 msgid "Explanation:"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:23
 msgid "Feature project"
 msgstr ""
 
@@ -896,6 +900,7 @@ msgid "Not joined missions"
 msgstr ""
 
 #: static/src/index.html:8
+#: static/src/js/app/config.js.DIST.html:19
 msgid "nQuire-it — join missions to explore your world"
 msgstr ""
 
@@ -1467,12 +1472,8 @@ msgstr ""
 msgid "The label is required."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:19
-msgid "The site will be undergoing routine maintenance today, {{DATE}}."
-msgstr ""
-
-#: static/src/js/app/config.js.DIST.html:20
-msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
+#: static/src/js/app/config.js.DIST.html:21
+msgid "The site will be undergoing maintenance on {{DATE}}."
 msgstr ""
 
 #: static/src/partials/admin/admin-projects.html:57
@@ -1566,7 +1567,7 @@ msgstr ""
 msgid "Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: null})\">without search conditions</a>."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:23
+#: static/src/js/app/config.js.DIST.html:24
 msgid "Unfeature"
 msgstr ""
 
@@ -1574,7 +1575,7 @@ msgstr ""
 msgid "Unlink {{providerName}} account"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:21
+#: static/src/js/app/config.js.DIST.html:22
 msgid "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on Twitter</a>."
 msgstr ""
 
@@ -1667,10 +1668,6 @@ msgstr ""
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:17
 msgid "Voting stage"
-msgstr ""
-
-#: static/src/js/app/config.js.DIST.html:25
-msgid "Weather-it missions"
 msgstr ""
 
 #: static/src/partials/projects/create.html:39

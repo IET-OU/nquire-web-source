@@ -59,7 +59,7 @@ msgstr[1] "{{feed.count}} οι χρήστες είναι συνδεδεμένο�
 msgid "{{forum.node.title}}: New thread"
 msgstr "{{forum.node.title}}: Νέα υποενότητα"
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:25
 msgid "{{MISSION}} missions"
 msgstr ""
 
@@ -74,6 +74,10 @@ msgid "{{projectData.data.members}} member"
 msgid_plural "{{projectData.data.members}} members"
 msgstr[0] "{{projectData.data.members}} χρήστης"
 msgstr[1] "{{projectData.data.members}} χρήστες"
+
+#: static/src/js/app/config.js.DIST.html:20
+msgid "%s — nQuire-it"
+msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
 msgid ""
@@ -591,7 +595,7 @@ msgstr "Ηλεκτρονικό ταχυδρομείο"
 msgid "Email already associated with a different account."
 msgstr ""
 
-#: static/src/js/app/controllers/layout/main-controller.js:13
+#: static/src/js/app/controllers/layout/main-controller.js:21
 #: static/src/js/app/controllers/profile/profile-controller.js:191
 #: static/src/js/app/controllers/profile/profile-controller.js:246
 msgid "Email cannot be empty."
@@ -629,7 +633,7 @@ msgstr ""
 msgid "Explanation:"
 msgstr "Επεξήγηση:"
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:23
 #, fuzzy
 msgid "Feature project"
 msgstr "Διαγράφω το πρότζεκτ"
@@ -1001,7 +1005,7 @@ msgstr "Χωρίς τίτλο"
 msgid "Not joined missions"
 msgstr "Αποστολές στις οποίες δεν έγινα μέλος"
 
-#: static/src/index.html:8
+#: static/src/index.html:8 static/src/js/app/config.js.DIST.html:19
 msgid "nQuire-it — join missions to explore your world"
 msgstr "nQuire-it — γίνομαι μέλος σε αποστολές για να εξερευνήσω τον κόσμο μου"
 
@@ -1617,12 +1621,8 @@ msgstr "Κείμενα"
 msgid "The label is required."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:19
-msgid "The site will be undergoing routine maintenance today, {{DATE}}."
-msgstr ""
-
-#: static/src/js/app/config.js.DIST.html:20
-msgid "The site will be undergoing routine maintenance tomorrow, {{DATE}}."
+#: static/src/js/app/config.js.DIST.html:21
+msgid "The site will be undergoing maintenance on {{DATE}}."
 msgstr ""
 
 #: static/src/partials/admin/admin-projects.html:57
@@ -1755,7 +1755,7 @@ msgstr ""
 "Προσπάθησε χωρίς τους <a href=\"\" data-ui-sref=\"home({kw: null, status: "
 "null, type: null})\">όρους αναζήτησης</a>."
 
-#: static/src/js/app/config.js.DIST.html:23
+#: static/src/js/app/config.js.DIST.html:24
 #, fuzzy
 msgid "Unfeature"
 msgstr "Προτεινόμενο;"
@@ -1764,7 +1764,7 @@ msgstr "Προτεινόμενο;"
 msgid "Unlink {{providerName}} account"
 msgstr "Αποσυνδέω {{providerName}} το λογαριασμό"
 
-#: static/src/js/app/config.js.DIST.html:21
+#: static/src/js/app/config.js.DIST.html:22
 msgid ""
 "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
 "Twitter</a>."
@@ -1861,11 +1861,6 @@ msgstr "Ψηφοφορία"
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:17
 msgid "Voting stage"
 msgstr "Στάδιο ψηφοφορίας"
-
-#: static/src/js/app/config.js.DIST.html:25
-#, fuzzy
-msgid "Weather-it missions"
-msgstr "Προτεινόμενες αποστολές"
 
 #: static/src/partials/projects/create.html:39
 #: static/src/partials/projects/projects.html:28
@@ -1990,6 +1985,10 @@ msgstr "Χρειάζεται να γίνω μέλος σε αυτό το πρό�
 #: static/src/partials/profile/profile-logged-in.html:2
 msgid "Your profile page"
 msgstr "Το προφίλ μου"
+
+#, fuzzy
+#~ msgid "Weather-it missions"
+#~ msgstr "Προτεινόμενες αποστολές"
 
 #~ msgid "English"
 #~ msgstr "English – Αγγλικά"
