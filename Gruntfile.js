@@ -159,6 +159,14 @@ module.exports = function (grunt) {
 			helpers: {
 				files: { '<%= js.out %>/helpers.min.js': 'static/src/js/helpers/*.js' }
 			},
+			jquery: {
+				files: {
+					'<%= js.out %>/jquery-2.x.min.js': 'node_modules/jquery/dist/jquery.min.js'
+				},
+				options: {
+					banner: "/*!\n  3rd-party library | nQuire-it | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n"
+				}
+			},
 			libs: {  // 3rd party libraries - order is significant - up to 'angular.js'!
 				files: {
 					'<%= js.out %>/libs.min.js': [

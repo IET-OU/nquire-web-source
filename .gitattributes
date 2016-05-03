@@ -5,6 +5,6 @@ static/src/css/*  -diff
 static/src/js/app/translations.js  -diff
 po/*.po -diff
 po/template.pot -diff
+## *.xml -diff
 
-
-#End
+#End.
