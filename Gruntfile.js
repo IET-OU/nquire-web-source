@@ -86,26 +86,22 @@ module.exports = function (grunt) {
 				},
 				files: {
 					'po/template.pot': [
-						'static/**/*.html',
+						'static/**/*.html',   //'static/src/partials/**/*.html',
 						'static/src/js/app/**/*.js'  // Exclude 'js/dist/**' files.
 					]
 				}
 			}
 		},
 		nggettext_compile: {
-			all: {
+			nQuire_it: {
 				files: {
-					'static/src/js/app/translations.js': [
-						'po/*.po'
-					]
+					'static/src/js/app/translations.js': [ 'po/*.po' ]
 				}
 			}
 		},
-		msgInitMerge: {
-			your_target: {
-				src: [
-					'po/template.pot'
-				],
+		msgInitMerge: {  // requires Grunt ~0.4.5.
+			nQuire_it: {
+				src: [ 'po/template.pot' ],
 				options: {
 					// I18n / translation - list available languages, except 'en' [Bug: #3]
 					'locales': [

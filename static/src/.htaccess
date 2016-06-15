@@ -4,6 +4,9 @@
 #
 
 
+Options  +FollowSymlinks
+
+
 # Note, the rewrite rules need to be in ".htaccess".
 # When I tried them in "httpd/*/*_nquire.conf" the ENV variables (REQUEST_FILENAME) weren't available.
 
@@ -16,6 +19,7 @@
     RewriteRule  ^index\.html - [L]
     RewriteCond  %{REQUEST_FILENAME} !-f
     RewriteCond  %{REQUEST_FILENAME} !-d
+    RewriteCond  %{REQUEST_URI}  !.*\.(jpe?g|png|css|js)
     ###RewriteRule . /index.php [L]
     RewriteRule  . /index.html [L]
 </IfModule>
