@@ -6,7 +6,10 @@ node_js:
   - "0.10"
 
 git:
-  depth: 10
+  depth: 16
+
+before_install:
+  - git fetch --tags --depth=15
 
 install:
   - npm install -g npm

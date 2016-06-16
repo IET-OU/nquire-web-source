@@ -56,6 +56,9 @@ git.log([ '-1' ], function (err, data) {
 
 function exec(command, split, carryon) {
   var out;
+  if (carryon) {
+    command += ' || true';
+  }
   try {
     out = execSync(command).toString('utf-8').replace(/\n$/, '');
   } catch (ex) {
