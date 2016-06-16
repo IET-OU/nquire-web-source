@@ -9,7 +9,7 @@ git:
   depth: 16
 
 before_install:
-  - git fetch --tags --depth=15
+  - git fetch --tags --depth=16
 
 install:
   - npm install -g npm
@@ -34,5 +34,6 @@ after_script:
   #- npm run version
   - node bin/git-version.js --all
   - cat static/src/version.json
+  - cat npm-debug.log
 
 #End.
