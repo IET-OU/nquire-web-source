@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 	'use strict';
 
 	var pkg = grunt.file.readJSON('./package.json')
-	  , ver = grunt.file.readJSON('./static/src/version.json');
+	;
 
 	grunt.initConfig({
 		sass: {
@@ -237,12 +237,14 @@ module.exports = function (grunt) {
 	}
 
 	function help() {
+		var version = grunt.file.readJSON('./static/src/version.json');
+
 		grunt.log.subhead('nQuire-it help\n');
 		grunt.log.ok(
 	'Run `grunt --help` to list available tasks.\n' +
 	'Copyright © 2016 The Open University (IET) <http://iet.open.ac.uk>\n' +
 	'License: GNU GPL (see LICENSE.txt)\n' +
-	'Version: ' + ver.describe
+	'Version: ' + version.describe
 		);
 	}
 };
