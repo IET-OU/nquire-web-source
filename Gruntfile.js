@@ -172,7 +172,7 @@ module.exports = function (grunt) {
 						'<%= js.lib %>/angular-**.js',    // '-gettext', '-sanitize', '-ui-router' (3)
 						'<%= js.lib %>/textAngular**.js', // + '-sanitize' (2)
 						'<%= js.lib %>/ui-bootstrap-tpls-0.11.0.min.js',
-						'<%= js.lib %>/markerclusterer_packed.js',
+						'<%= js.lib %>/markerclusterer.min.js',
 						'<%= js.lib %>/oms.min.js'
 					]
 				},
