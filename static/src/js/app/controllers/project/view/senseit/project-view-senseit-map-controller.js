@@ -12,27 +12,34 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSenseItMapCtrl',
     };
 
     $scope.goto = {
-        index: function (index) {
-            $scope.mapData.selected = $scope.sortedData.data[index].id;
+        index: function (index, delta) {
+            var testIndex = index;
+            while(!$scope.sortedData.data[testIndex].geolocation) {
+                testIndex = (testIndex + delta + $scope.sortedData.data.length) % $scope.sortedData.data.length;
+                if (testIndex === index) {
+                  break;
+                }
+            }
+
+            $scope.mapData.selected = $scope.sortedData.data[testIndex].id;
         },
         first: function () {
-            this.index(0);
+            this.index(0, 1);
         },
         next: function () {
             if ($scope.mapData.selectedIndex >= 0) {
-                this.index($scope.mapData.selectedIndex < $scope.sortedData.data.length - 1 ? $scope.mapData.selectedIndex + 1 : 0);
+                this.index($scope.mapData.selectedIndex < $scope.sortedData.data.length - 1 ? $scope.mapData.selectedIndex + 1 : 0, 1);
             }
         },
         previous: function () {
             if ($scope.mapData.selectedIndex >= 0) {
-                this.index($scope.mapData.selectedIndex > 0 ? $scope.mapData.selectedIndex - 1 : $scope.sortedData.data.length - 1);
+                this.index($scope.mapData.selectedIndex > 0 ? $scope.mapData.selectedIndex - 1 : $scope.sortedData.data.length - 1, -1);
             }
         },
         last: function () {
-            this.index($scope.sortedData.data.length - 1);
+            this.index($scope.sortedData.data.length - 1, -1);
         }
     };
-
 
     $scope.mapData = {
         selected: $state.params.item,

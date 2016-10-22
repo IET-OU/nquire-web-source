@@ -22,7 +22,7 @@ var SiwMapRenderer = function ($scope, element, mapData, dataList) {
 };
 
 SiwMapRenderer.prototype._updateSelectedIndex = function () {
-    this.mapData.selectedIndex = this._indexById(this.mapData.selected);
+    this.mapData.selectedIndex = this._indexById(parseInt(this.mapData.selected));
     if (this.mapData.selectedIndex < 0 && this.dataList.data.length > 0) {
         this.mapData.selectedIndex = 0;
         this.mapData.selected = this.dataList.data[0].id;

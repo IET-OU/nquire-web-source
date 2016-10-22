@@ -28,7 +28,7 @@
         </button>
         <button class="btn btn-default" data-ui-sref="project.view.data-list" data-ng-disabled="true">
             <span data-ng-if="mapData.selectedIndex >= 0">{{mapData.selectedIndex + 1}} / </span>
-            {{sortedData.data.length}}
+            {{geolocatedData.length}}
         </button>
         <button class="btn btn-default" data-ng-click="goto.next()" title="{{'Next' | translate}}">
             <i class="fa fa-arrow-right"></i>
