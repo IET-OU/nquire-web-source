@@ -38,8 +38,8 @@
                 <p>
                     <small>
                         <a href data-ng-click="plots.togglePlot(item)" translate>Toggle plot</a>
-                        <span data-ng-if="projectData.project.activity.profile.geolocated"> | </span>
-                        <a href data-ng-if="projectData.project.activity.profile.geolocated" data-ui-sref="project.view.data-map({item: item.id})" translate>Open map</a>
+                        <span data-ng-if="projectData.project.activity.profile.geolocated && item.geolocation"> | </span>
+                        <a href data-ng-if="projectData.project.activity.profile.geolocated && item.geolocation" data-ui-sref="project.view.data-map({item: item.id})" translate>Open map</a>
                     </small>
                 </p>
             </div>
