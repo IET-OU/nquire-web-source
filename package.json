@@ -1,6 +1,6 @@
 {
   "name": "nquire-it",
-  "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2016 The Open University (IET-OU)",
+  "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2017 The Open University (IET-OU)",
   "version": "1.1.0+beta",
   "author": "Eloy Villasclaras <eloy.villasclaras@gmail.com>",
   "bugs": {
@@ -18,8 +18,8 @@
     }
   ],
   "dependencies": {
-    "angular": "1.2.29",
-    "jquery": "2.1.4"
+    "angular": "1.5.7",
+    "jquery": "2.2.4"
   },
   "devDependencies": {
     "grunt": "0.4.5",
@@ -31,7 +31,7 @@
     "grunt-msg-init-merge": "0.0.5",
     "grunt-nice-package": "0.10.2",
     "grunt-sass": "1.2.0",
-    "simple-git": "1.37.0"
+    "simple-git": "1.65.0"
   },
   "engines": {
     "node": "> 0.10.40"

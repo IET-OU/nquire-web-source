@@ -65,7 +65,7 @@ Added support for:
 
 
 ---
-[nQuire-it][]: © 2014-2016 [The Open University][ou]. ([Institute of Educational Technology][iet])
+[nQuire-it][]: © 2014-2017 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
 [`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/greek/app/pom.TEMPLATE.xml
