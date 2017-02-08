@@ -117,6 +117,7 @@ module.exports = function (grunt) {
 		/* Javascript page order:
 			libs, helpers, app.js, config, translations, services, directives, filters, controllers.
 		*/
+		nm: 'node_modules',
 		js: {
 			part: 'static/src/partials',
 			out: 'static/src/js/dist',
@@ -166,17 +167,22 @@ module.exports = function (grunt) {
 			libs: {  // 3rd party libraries - order is significant - up to 'angular.js'!
 				files: {
 					'<%= js.out %>/libs.min.js': [
-						'node_modules/jquery/dist/jquery.min.js', // v2.1.0 >> v2.1.4;
-						'<%= js.lib %>/bootstrap.js',     // v3.1.1.
-						'node_modules/angular/angular.min.js',    // v1.2.13 >> v1.2.27;
-						'<%= js.lib %>/angular-**.js',    // '-gettext', '-sanitize', '-ui-router' (3)
-						'<%= js.lib %>/textAngular**.js', // + '-sanitize' (2)
-						'<%= js.lib %>/ui-bootstrap-tpls-0.11.0.min.js',
+						'node_modules/jquery/dist/jquery.min.js', // v2.2.x;
+						'<%= nm %>/bootstrap-sass/javascripts/bootstrap.min.js', // v3.3.x;
+						'<%= nm %>/angular/angular.min.js',    // v1.5.x;
+						'<%= nm %>/angular-gettext/dist/angular-gettext.min.js',  // v2.3.x;
+						'<%= nm %>/textangular/dist/textAngular-*.min.js', // -rangy 1.3.0 + -sanitize;
+						'<%= nm %>/textangular/dist/textAngular.min.js',  // v1.5.x;
+						'<%= nm %>/angular-ui-router/release/angular-ui-router.min.js',  // v0.4.2;
+						'<%= nm %>/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',  // v2.5.x;
 						'<%= js.lib %>/markerclusterer.min.js',
-						'<%= js.lib %>/oms.min.js'
+						'<%= js.lib %>/oms.min.js'  // v0.3.3
 					]
 				},
 				options: {
+					mangle: false,  /* Apparently needed - otherwise we get
+						"Uncaught RangeError: Maximum call stack size exceeded at l (textAngular-rangy.min.js:23)"
+						(Also: https://docs.angularjs.org/error/$injector/undef?p0=PageTitleService) */
 					banner: "/*!\n  All 3rd-party libraries | nQuire-it | <%= grunt.template.today('yyyy-mm-dd HH:MM:ss') %>.\n*/\n\n"
 				}
 			},

@@ -19,7 +19,13 @@
   ],
   "dependencies": {
     "angular": "1.5.7",
-    "jquery": "2.2.4"
+    "angular-gettext": "2.3.8",
+    "angular-ui-bootstrap": "2.5.0",
+    "angular-ui-router": "0.4.2",
+    "bootstrap-sass": "3.3.7",
+    "font-awesome": "4.7.0",
+    "jquery": "2.2.4",
+    "textangular": "1.5.16"
   },
   "devDependencies": {
     "grunt": "0.4.5",

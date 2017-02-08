@@ -27,7 +27,7 @@ angular.module('senseItServices', null, null).factory('PageTitleService', ['$roo
       , '.admin-header .active'
     ]
     , $title = angular.element('title')
-    ;
+    , service = {};
 
   $scope.$on('$locationChangeSuccess', function (ev, current) {
     $timeout(function () {
@@ -59,4 +59,6 @@ angular.module('senseItServices', null, null).factory('PageTitleService', ['$roo
   }
 
   alert.debug('Page title service');
+
+  return service;
 }]);

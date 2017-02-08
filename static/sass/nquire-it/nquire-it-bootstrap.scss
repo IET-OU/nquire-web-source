@@ -1,8 +1,21 @@
 
-@import "../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap";
-@import "../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap/theme";
+/*!
+  nQuire-it | GPL | © The Open University | (No timestamp)
+*/
+
+
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/theme";
+
+//@import "../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap";
+//@import "../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap/theme";
+
 
 @import "ext/file-widget";
+
+/*!
+  nQuire-it stylesheet starts.
+*/
 
 @import "layout/background";
 @import "layout/layout";
