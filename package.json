@@ -35,7 +35,7 @@
     "grunt-contrib-watch": "1.0.0",
     "grunt-html-angular-validate": "0.5.8",
     "grunt-msg-init-merge": "0.0.5",
-    "grunt-nice-package": "0.10.2",
+    "grunt-nice-package": "0.10.3",
     "grunt-sass": "1.2.0",
     "simple-git": "1.65.0"
   },
