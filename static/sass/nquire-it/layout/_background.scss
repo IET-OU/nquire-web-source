@@ -1,5 +1,6 @@
 
-@import '../../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap';
+@import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//Was: @import '../../bootstrap-sass-3.1.1/vendor/assets/stylesheets/bootstrap';
 
 #page-background {
   background: url('images/background.png') repeat;
