@@ -1,6 +1,8 @@
 
-angular.module('senseItServices', null, null).factory('RestService', ['$http', function ($http) {
+angular.module('senseItServices', null, null).factory('RestService', ['$http', 'senseItConfig', function ($http, senseItConfig) {
   'use strict';
+
+  var url_template = senseItConfig.api_url_template || '{p}';
 
   var service = {
     errorListeners: [],
@@ -34,6 +36,8 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', f
       }
     },
     get: function (path, data) {
+      path = url_template.replace('{p}', path);
+
       return service._promiserequest($http.get(path, {
         params: angular.extend({t: new Date().getTime()}, data)
       }));
@@ -88,6 +92,8 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', f
      * @returns {*}
      */
     post: function (path, data, files, convertToMultipart) {
+      path = url_template.replace('{p}', path);
+
       return service._createUploadPromise('post', path, data, files, convertToMultipart || false);
     },
     /**
@@ -98,9 +104,13 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', f
      * @returns {*}
      */
     put: function (path, data, files) {
+      path = url_template.replace('{p}', path);
+
       return service._createUploadPromise('put', path, data, files);
     },
     delete: function (path) {
+      path = url_template.replace('{p}', path);
+
       return service._promiserequest($http.delete(path));
     },
     setToken: function (token) {
