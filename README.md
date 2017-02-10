@@ -18,7 +18,7 @@ Requirements
 
 This Web app is built on [Spring 4.0][] and [AngularJS][].
 Other dependencies are listed in the file [`app/pom.xml`][].
-Javascript dependencies are listed in [`package.json`][].
+Client-side & Javascript dependencies are listed in [`package.json`][].
 
 * See the compiled Java: [`IET-OU/nquire-web-compiled`][]
 
@@ -68,10 +68,13 @@ Added support for:
 [nQuire-it][]: © 2014-2017 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
-[`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/greek/app/pom.TEMPLATE.xml
-[`package.json`]: https://github.com/IET-OU/nquire-web-source/blob/greek/package.json#L20-L27
-[`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/Gruntfile.js#L55-L59
-[`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/greek/static/src/js/app/config.js.DIST.html#L25-L49
+[`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/app/pom.TEMPLATE.xml
+[`package.json`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/package.json#L20-L29
+    "Client-side 'dependencies' in package JSON."
+[`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/Gruntfile.js#L107-L111
+    "'locales' list in Gruntfile."
+[`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/static/src/js/app/config.js.DIST.html#L33-L44
+    "'langs' list in config.JS template."
 [nQuire-it]: https://github.com/IET-OU/nquire-web-source
 [`IET-OU/nquire-web-compiled`]: https://github.com/IET-OU/nquire-web-compiled
 [Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Android app"

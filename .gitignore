@@ -24,4 +24,7 @@ version.json
 *-checkstyle.xml
 npm-debug.log
 
+*.php
+
+
 #End.
