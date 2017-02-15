@@ -4,7 +4,6 @@
   Nick Freear, 10 February 2017.
 
   http://stackoverflow.com/questions/12371159/how-to-get-evaluated-attributes-inside-a-custom-directive
-  (http://stackoverflow.com/questions/26506841/change-angular-directive-element-attribute-dynamically)
 */
 
 angular.module('senseItWeb', null, null).directive('siwSrc', ['senseItConfig', function (senseItConfig) {
@@ -29,12 +28,6 @@ angular.module('senseItWeb', null, null).directive('siwSrc', ['senseItConfig', f
           element.attr('src', url_template.replace('{p}', interpolated_src));
         });
 
-        /*scope: .$watch(attrs.siwSrc, function (interpolated_src) {
-          element.attr('src', interpolated_src);
-        });*/
-
-        //attrs.$set('src', attrs.$get('siwSrc'));
-        //$compile(element)(scope);
       }
     };
 }]);

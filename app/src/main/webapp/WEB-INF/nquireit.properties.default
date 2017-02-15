@@ -21,7 +21,7 @@ google.consumerSecret=secret
 twitter.consumerKey=key
 twitter.consumerSecret=secret
 
-# reCaptcha site key - see: 'static/src/js/app/config.js'
+# reCaptcha site key - need to set in: 'static/src/js/app/config.js'
 recaptcha.siteKey=key
 recaptcha.secretKey=secret
 

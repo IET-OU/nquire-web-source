@@ -1,8 +1,23 @@
 
-angular.module('senseItServices', null, null).factory('RestService', ['$http', 'senseItConfig', function ($http, senseItConfig) {
+angular.module('senseItServices', null, null)
+    .factory('RestConfig', ['$http', 'senseItConfig', function ($httpProvider, senseItConfig) {
   'use strict';
 
   var url_template = senseItConfig.api_url_template || '{p}';
+
+  $httpProvider.defaults.useXDomain = true;
+  $httpProvider.defaults.withCredentials = true;
+
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+  return {
+    url: function (path) {
+      return url_template.replace('{p}', path);
+    }
+  };
+}])
+    .factory('RestService', ['$http', 'RestConfig', function ($http, RestConfig) {
+  'use strict';
 
   var service = {
     errorListeners: [],
@@ -36,7 +51,7 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', '
       }
     },
     get: function (path, data) {
-      path = url_template.replace('{p}', path);
+      path = RestConfig.url(path);
 
       return service._promiserequest($http.get(path, {
         params: angular.extend({t: new Date().getTime()}, data)
@@ -92,7 +107,7 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', '
      * @returns {*}
      */
     post: function (path, data, files, convertToMultipart) {
-      path = url_template.replace('{p}', path);
+      path = RestConfig.url(path);
 
       return service._createUploadPromise('post', path, data, files, convertToMultipart || false);
     },
@@ -104,12 +119,12 @@ angular.module('senseItServices', null, null).factory('RestService', ['$http', '
      * @returns {*}
      */
     put: function (path, data, files) {
-      path = url_template.replace('{p}', path);
+      path = RestConfig.url(path);
 
       return service._createUploadPromise('put', path, data, files);
     },
     delete: function (path) {
-      path = url_template.replace('{p}', path);
+      path = RestConfig.url(path);
 
       return service._promiserequest($http.delete(path));
     },
