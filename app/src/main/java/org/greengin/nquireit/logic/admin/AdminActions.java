@@ -4,7 +4,7 @@ package org.greengin.nquireit.logic.admin;
  * nQuire-it - backend and web-service API for nQuire-it (Java sources).
  *
  * License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
- * Copyright © 2014-2016 The Open University (IET-OU).
+ * Copyright © 2014-2017 The Open University (IET-OU).
  */
 
 import org.greengin.nquireit.entities.projects.Project;

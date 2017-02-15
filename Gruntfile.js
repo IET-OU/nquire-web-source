@@ -248,7 +248,7 @@ module.exports = function (grunt) {
 		grunt.log.subhead('nQuire-it help\n');
 		grunt.log.ok(
 	'Run `grunt --help` to list available tasks.\n' +
-	'Copyright © 2016 The Open University (IET) <http://iet.open.ac.uk>\n' +
+	'Copyright © 2017 The Open University (IET) <http://iet.open.ac.uk>\n' +
 	'License: GNU GPL (see LICENSE.txt)\n' +
 	'Version: ' + version.describe
 		);

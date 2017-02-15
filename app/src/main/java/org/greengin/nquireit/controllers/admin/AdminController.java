@@ -4,7 +4,7 @@ package org.greengin.nquireit.controllers.admin;
  * nquire-it - backend and web-service API for nQuire-it (Java sources).
  *
  * License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
- * © 2014-2016 The Open University (IET-OU).
+ * © 2014-2017 The Open University (IET-OU).
  */
 
 import com.mangofactory.jsonview.ResponseView;
