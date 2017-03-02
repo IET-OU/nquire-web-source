@@ -11,6 +11,8 @@ import org.greengin.nquireit.logic.rating.CommentRequest;
 import org.greengin.nquireit.logic.rating.VoteCount;
 import org.greengin.nquireit.logic.rating.VoteRequest;
 import org.greengin.nquireit.utils.TimeValue;
+import org.greengin.nquireit.utils.CSVWebWriter;
+import org.greengin.nquireit.utils.SiComparator;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 
+
 @Controller
 @RequestMapping(value = "/api/project/{projectId}/senseit/data")
 public class SenseItDataController extends AbstractSenseItController {
@@ -35,8 +38,67 @@ public class SenseItDataController extends AbstractSenseItController {
         return createManager(projectId, request).getData();
     }
 
+/*
+  1. The "csv" method needs moving to a more generic place, eg. controllers/projects/ProjectController.java
+  2. "createManager()" needs to become more generic, or be replaced?
+  3. Some kind of fork, for Sense-it CSV versus Spot-it/Win-it CSV?
+*/
+    @RequestMapping(value = "/csv-test", method = RequestMethod.GET)
+    public void csvTest(@PathVariable("projectId") Long projectId, HttpServletRequest request, HttpServletResponse response) {
+        try {
+          CSVWebWriter writer = CSVWebWriter.open(response, projectId);
+          String[] entries = "first#second#third".split("#");
+          writer.writeNext(entries);
+          writer.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @RequestMapping(value = "/csv", method = RequestMethod.GET)
     public void csv(@PathVariable("projectId") Long projectId, HttpServletRequest request, HttpServletResponse response) {
+        Collection<SenseItSeries> series = createManager(projectId, request).getData();
+
+        try {
+            CSVWebWriter csv = CSVWebWriter.open(response, projectId);
+
+            Iterator<SenseItSeries> it = series.iterator();
+
+            while (it.hasNext()) {
+                SenseItSeries sis = it.next();
+
+                csv.writeCell(sis.getTitle());
+                csv.writeCell(sis.getAuthor().getUsername());
+                csv.writeDate(sis.getDate());
+
+                List<Map.Entry<Long, String>> sensors = new ArrayList<Map.Entry<Long, String>>(sis.getSensors().entrySet());
+                Collections.sort(sensors, SiComparator.sensor());
+                for (Map.Entry<Long, String> entry : sensors) {
+                    csv.writeCell(entry.getValue());
+                }
+
+                List<Map.Entry<String, TimeValue>> values = new ArrayList<Map.Entry<String, TimeValue>>(sis.getVarValue().entrySet());
+                Collections.sort(values, SiComparator.values());
+                for (Map.Entry<String, TimeValue> entry : values) {
+                    if (entry.getValue().getV().length > 0) {
+                        csv.writeFloat(entry.getValue().getV()[0]);
+                    } else {
+                        csv.writeCell(null);  //pw.print(",");
+                    }
+                }
+
+                csv.writeNext();
+            }
+
+            csv.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @RequestMapping(value = "/csv-orig", method = RequestMethod.GET)
+    public void csvOrig(@PathVariable("projectId") Long projectId, HttpServletRequest request, HttpServletResponse response) {
         Collection<SenseItSeries> series = createManager(projectId, request).getData();
         response.setContentType("text/csv");
         response.setHeader("Content-Disposition", String.format("attachment; filename=\"%d.csv\"", projectId));
