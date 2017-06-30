@@ -253,7 +253,7 @@ public class ProfileController {
             String msgTmpl = "login".equals(action) ? "Sign in with %s" : "Link %s account";
             String scopes = "";
             if ("facebook".equals(provider)) {
-                scopes = "email,user_likes,friends_likes,publish_stream";
+                scopes = "public_profile,user_about_me,email,user_likes,publish_actions";
             } else if ("google".equals(provider)) {
                 scopes = "email";
             } else if ("twitter".equals(provider)) {

@@ -69,7 +69,7 @@ public class ProfileControllerTests extends TestsBase {
     @Test
     public void testLoggin() throws Exception {
 
-        context.getUsersManager().providerSignIn("username", "provider", "id");
+        context.getUsersManager().providerSignIn("username", "email@test.com","provider", "id");
 
         checkUserCount(1);
         checkUser(0, "username", "provider", "id");
