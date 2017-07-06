@@ -201,16 +201,18 @@ public class UserServiceBean implements UserDetailsService, InitializingBean {
         return status(connections, request.getSession());
     }
 
-    public UserProfile providerSignIn(String username, String providerId, String providerUserId) {
+    public UserProfile providerSignIn(String username, String email, String providerId, String providerUserId) {
         UserProfile existingUser = context.getUserProfileDao().loadUserByProviderUserId(providerId, providerUserId);
         if (existingUser != null) {
             return existingUser;
         } else {
-            String email = null;
-
-            if (username.matches("^\\S+@\\S+\\.\\S+$")) {
+            if (email == null && username != null && username.matches("^\\S+@\\S+\\.\\S+$")) {
                 email = username;
                 username = username.substring(0, username.indexOf('@'));
+            }
+
+            if (username == null && email != null) {
+                username = email.substring(0, email.indexOf('@'));
             }
 
             String initialUsername = username;

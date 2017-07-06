@@ -215,6 +215,7 @@ public class CustomProviderSignInController2 implements InitializingBean {
             Connection<?> connection = connectSupport.completeConnection(connectionFactory, request);
             return handleSignIn(connection, connectionFactory, request);
         } catch (Exception e) {
+            e.printStackTrace();
             return signInError(e);
             //logger.error("Exception while completing OAuth 2 connection: ", e);
             //return redirect(URIBuilder.fromUri(signInUrl).queryParam("error", "provider").build().toString());
@@ -252,14 +253,15 @@ public class CustomProviderSignInController2 implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         this.connectSupport = new ConnectSupport(sessionStrategy);
         this.connectSupport.setUseAuthenticateUrl(true);
-    };
+        connectSupport.setApplicationUrl(applicationUrlBase);
+    }
 
     // internal helpers
 
     private RedirectView handleSignIn(Connection<?> connection, ConnectionFactory<?> connectionFactory, NativeWebRequest request) {
         List<String> userIds = usersConnectionRepository.findUserIdsWithConnection(connection);
         if (userIds.size() == 0) {
-            ProviderSignInAttempt signInAttempt = new ProviderSignInAttempt(connection, connectionFactoryLocator, usersConnectionRepository);
+            ProviderSignInAttempt signInAttempt = new ProviderSignInAttempt(connection);//, connectionFactoryLocator, usersConnectionRepository);
             sessionStrategy.setAttribute(request, ProviderSignInAttempt.SESSION_ATTRIBUTE, signInAttempt);
             return redirect(signUpUrl);
         } else if (userIds.size() == 1) {

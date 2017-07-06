@@ -26,7 +26,7 @@ public class SocialAdapter implements SignInAdapter, ConnectionSignUp {
         UserProfile currentUser = userServiceBean.currentUser();
         org.springframework.social.connect.UserProfile oauthProfile = connection.fetchUserProfile();
         ConnectionData data = connection.createData();
-        UserProfile user = userServiceBean.providerSignIn(oauthProfile.getUsername(), data.getProviderId(), data.getProviderUserId());
+        UserProfile user = userServiceBean.providerSignIn(oauthProfile.getUsername(), oauthProfile.getEmail(), data.getProviderId(), data.getProviderUserId());
 
         if (user != null) {
             if (currentUser == null || "login".equals(action) || user.equals(currentUser)) {
@@ -45,7 +45,7 @@ public class SocialAdapter implements SignInAdapter, ConnectionSignUp {
         if (current == null) {
             org.springframework.social.connect.UserProfile profile = connection.fetchUserProfile();
             ConnectionData data = connection.createData();
-            UserProfile user = userServiceBean.providerSignIn(profile.getUsername(), data.getProviderId(), data.getProviderUserId());
+            UserProfile user = userServiceBean.providerSignIn(profile.getUsername(), profile.getEmail(), data.getProviderId(), data.getProviderUserId());
 
             return user.getUsername();
         } else {
