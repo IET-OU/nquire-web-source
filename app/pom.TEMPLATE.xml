@@ -233,7 +233,7 @@
             [WARNING] The artifact jfreechart:jfreechart:jar:1.0.0 has been relocated to jfree:jfreechart:jar:1.0.0
             -->
             <artifactId>jfreechart</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.13</version>
         </dependency>
 
         <dependency>
