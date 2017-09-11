@@ -26,6 +26,7 @@ import java.util.Vector;
 
 public class ProjectActions extends AbstractContentManager {
 
+    private static final int PROEJCTS_PER_PAGE = 12;
 
     protected Long projectId;
     protected Project project;
@@ -69,9 +70,9 @@ public class ProjectActions extends AbstractContentManager {
     /**
      * any user actions *
      */
-    public ProjectListResponse getProjects(String typeStr, String status, String filter, String tag, String keyword) {
+    public ProjectListResponse getProjects(String typeStr, String status, String filter, String tag, String keyword, String pageStr) {
 
-        List<ProjectResponse> filtered = new Vector<ProjectResponse>();
+        List<Project> filtered = new Vector<Project>();
         HashMap<String, Integer> categories = new HashMap<String, Integer>();
 
         categories.put("challenge", 0);
@@ -87,6 +88,12 @@ public class ProjectActions extends AbstractContentManager {
         boolean onlyNotJoined = "not-joined".equals(status);
         boolean onlyMine = "mine".equals(status);
         boolean useKeyword = !"".equals(keyword);
+        int page;
+        try {
+            page = Integer.parseInt(pageStr, 10);
+        } catch (NumberFormatException e) {
+            page = 0;
+        }
 
         ProjectType type = null;
         if ("sense-it".equals(typeStr)) {
@@ -106,9 +113,10 @@ public class ProjectActions extends AbstractContentManager {
         if (hasAccess(PermissionType.BROWSE)) {
 
             for (Project p : context.getProjectDao().getProjects(type, !"all".equals(filter), filter)) {
+                boolean requireAccessInfo = !p.getOpen() || !anyStatus;
+                AccessLevel access = requireAccessInfo ? context.getSubscriptionManager().getAccessLevel(p, user) : null;
 
-                AccessLevel access = context.getSubscriptionManager().getAccessLevel(p, user);
-                if (access.isAdmin() || p.getOpen()) {
+                if (p.getOpen() || access.isAdmin()) {
 
                     String projectType = p.getType().getValue();
 
@@ -123,14 +131,11 @@ public class ProjectActions extends AbstractContentManager {
                     }
 
                     if (add) {
-                        filtered.add(projectResponse(p));
+                        filtered.add(p);
                     }
 
-
                     categories.put(projectType, categories.get(projectType) + 1);
-
                     allCount++;
-
                 }
             }
         }
@@ -139,9 +144,20 @@ public class ProjectActions extends AbstractContentManager {
 
 
         ProjectListResponse response = new ProjectListResponse();
-        response.setList(filtered);
         response.setCategories(categories);
+        response.setResultCount(filtered.size());
+        if (page > 0) {
+            int from = Math.min(filtered.size(), (page - 1) * PROEJCTS_PER_PAGE);
+            int to = Math.min(filtered.size(), page * PROEJCTS_PER_PAGE);
+            filtered = filtered.subList(from, to);
+        }
 
+        List<ProjectResponse> projectResponses = new Vector<ProjectResponse>();
+        for (Project p : filtered) {
+            projectResponses.add(projectResponse(p));
+        }
+
+        response.setList(projectResponses);
         return response;
     }
 
@@ -327,15 +343,15 @@ public class ProjectActions extends AbstractContentManager {
 
             Mailer mailer = new Mailer();
             mailer.sendMail(
-                "New mission comment - " + project.getTitle(),
-                "Hello nQuire-it user,\n\n" +
-                "There is a new comment on the mission '" + project.getTitle() + "' from '" + user.getUsername() + "':\n" +
-                "http://www.nquire-it.org/#/project/" + project.getId() + "\n\n" +
-                "To stop receiving these messages, update your notification preferences at:\n" +
-                "http://www.nquire-it.org/#/profile\n\n" +
-                "Warm regards,\nnQuire-it team",
-                context.getUserProfileDao().commentNotifications(project.getId(), user.getId()),
-                true
+                    "New mission comment - " + project.getTitle(),
+                    "Hello nQuire-it user,\n\n" +
+                            "There is a new comment on the mission '" + project.getTitle() + "' from '" + user.getUsername() + "':\n" +
+                            "http://www.nquire-it.org/#/project/" + project.getId() + "\n\n" +
+                            "To stop receiving these messages, update your notification preferences at:\n" +
+                            "http://www.nquire-it.org/#/profile\n\n" +
+                            "Warm regards,\nnQuire-it team",
+                    context.getUserProfileDao().commentNotifications(project.getId(), user.getId()),
+                    true
             );
 
             return project.getComments();

@@ -18,4 +18,8 @@ public class ProjectListResponse {
     @Getter
     @Setter
     HashMap<String, Integer> categories;
+
+    @Getter
+    @Setter
+    int resultCount;
 }
