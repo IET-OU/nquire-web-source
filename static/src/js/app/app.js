@@ -16,7 +16,7 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
 
     $stateProvider
       .state('home', {
-        url: '/home?type&filter&tag&status&kw&debug',
+        url: '/home?type&filter&tag&status&kw&debug&page',
         templateUrl: 'partials/projects/projects.html',
         controller: 'ProjectListCtrl'
       })

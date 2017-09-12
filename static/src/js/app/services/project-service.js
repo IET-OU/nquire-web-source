@@ -71,6 +71,7 @@ angular.module('senseItServices', null, null).factory('ProjectService', ['RestSe
         var self = this;
 
         RestService.get('api/projects', this._query).then(function (data) {
+            self.data.resultCount = data.resultCount;
             self.data.projects = data.list;
             self.data.categories = data.categories;
             self.data.ready = true;
@@ -79,6 +80,7 @@ angular.module('senseItServices', null, null).factory('ProjectService', ['RestSe
 
 
     ProjectListWatcher.prototype.query = function (query) {
+      console.log(query);
         this._query = query;
         this._reload();
     };

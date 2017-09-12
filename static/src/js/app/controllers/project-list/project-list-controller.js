@@ -12,6 +12,7 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
         filter: $state.params.filter, //|| $state.params.tag,
         tag:    $state.params.tag,
         kw: $state.params.kw,
+        page: $state.params.page || "1",
         onlyFeatured: $state.params.filter !== 'all' && ! $state.params.tag,
         hasConditions: $state.params.type || $state.params.status || $state.params.kw
     };
@@ -55,6 +56,61 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
         } else {
             return $scope.projectList.projects;
         }
+    };
+
+    var paginationData = {
+        resultCount: 0,
+        currentPage: 0,
+        items: []
+    };
+
+    $scope.pagination = function() {
+        if ($scope.projectList.resultCount !== paginationData.resultCount || $scope.projectListFilter.page !== paginationData.currentPage) {
+            paginationData.resultCount = $scope.projectList.resultCount;
+            paginationData.currentPage = $scope.projectListFilter.page;
+
+            if (paginationData.resultCount === 0) {
+                paginationData.items = [];
+            } else {
+                var pages = [];
+                pages.push(1);
+
+                var pageCount = Math.ceil(paginationData.resultCount / 12.0);
+                pageCount = 10;
+
+                var mainGroupDistance = 2;
+
+                var currentPage = parseInt(paginationData.currentPage);
+                var mainGroupMin = Math.min(pageCount, Math.max(2, currentPage - mainGroupDistance));
+                var mainGroupMax = Math.min(pageCount - 1, currentPage + mainGroupDistance);
+
+                if (mainGroupMin > 2) {
+                    pages.push(0);
+                }
+
+                for (var i = mainGroupMin; i <= mainGroupMax; i++) {
+                    pages.push(i);
+                }
+
+                if (mainGroupMax < pageCount - 1) {
+                    pages.push(0);
+                }
+
+                pages.push(pageCount);
+                paginationData.items = pages.map(function (page) {
+                    if (page > 0) {
+                        return {
+                            page: page,
+                            className: page === currentPage ? "active" : ""
+                        };
+                    } else {
+                        return {label: "...", className: "disabled"};
+                    }
+                });
+            }
+        }
+
+        return paginationData.items;
     };
 
 
