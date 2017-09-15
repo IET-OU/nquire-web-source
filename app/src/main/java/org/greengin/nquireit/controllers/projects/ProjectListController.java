@@ -29,8 +29,8 @@ public class ProjectListController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     @ResponseView(Views.UserName.class)
-    public ProjectListResponse projectList(@RequestParam(value = "type", defaultValue = "") String type, @RequestParam(value = "status", defaultValue = "") String status, @RequestParam(value = "filter", defaultValue = "") String filter, @RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(value = "kw", defaultValue = "") String keyword, HttpServletRequest request) {
-        return createProjectManager(request).getProjects(type, status, filter, tag, keyword);
+    public ProjectListResponse projectList(@RequestParam(value = "type", defaultValue = "") String type, @RequestParam(value = "status", defaultValue = "") String status, @RequestParam(value = "filter", defaultValue = "") String filter, @RequestParam(value = "tag", defaultValue = "") String tag, @RequestParam(value = "kw", defaultValue = "") String keyword, @RequestParam(value = "page", defaultValue = "0") String page, HttpServletRequest request) {
+        return createProjectManager(request).getProjects(type, status, filter, tag, keyword, page);
     }
 
     @RequestMapping(value = "/mine", method = RequestMethod.GET)

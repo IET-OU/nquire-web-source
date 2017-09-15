@@ -16,7 +16,7 @@ import java.util.Vector;
 
 @Component
 public class LogsDao {
-    static final String RECENT_USERS_QUERY = "SELECT DISTINCT l.actor FROM Log l WHERE l.timestamp > :time ORDER BY l.timestamp DESC";
+    static final String RECENT_USERS_QUERY = "SELECT DISTINCT l.actor FROM Log l WHERE l.timestamp > :time";
     static final String CHECK_RECENT_USER_QUERY = "SELECT l.type FROM Log l WHERE l.timestamp > :time AND l.actor = :user ORDER BY l.timestamp DESC";
 
     @PersistenceContext
