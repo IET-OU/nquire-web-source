@@ -80,6 +80,14 @@
     margin: $dim-common-small-margin 0;
   }
 
+  iframe[ src *= youtube ] {
+    height: 128px;
+    width: 104%;
+
+    position: relative;
+    left: -3px;
+  }
+
   .sidebar-header {
     @include text-sidebar-category;
   }
