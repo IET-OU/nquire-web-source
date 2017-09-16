@@ -68,13 +68,15 @@
             </div>
         </div>
     </div>
-    <div class="pagination">
-        <li data-ng-repeat="item in pagination()"
-            data-ng-class="item.className">
-            <a data-ng-if="item.page"
-               data-ui-sref="home({page: item.page})">{{item.page}}</a>
-            <span data-ng-if="!item.page" class="disabled">{{item.label}}</span>
-        </li>
+    <div class="text-center">
+        <div class="pagination">
+            <li data-ng-repeat="item in pagination()"
+                data-ng-class="item.className">
+                <a data-ng-if="item.page"
+                   data-ui-sref="home({page: item.page})">{{item.page}}</a>
+                <span data-ng-if="!item.page" class="disabled">{{item.label}}</span>
+            </li>
+        </div>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-angular.module('senseItWeb', null, null).controller('ProjectEditCtrl', function ($scope, $state, ProjectService, ModalService) {
+angular.module('senseItWeb', null, null).controller('ProjectEditCtrl', function ($scope, $rootScope, $state, ProjectService, ModalService) {
 
     $scope.templates.menu = null;
 
@@ -17,8 +17,15 @@ angular.module('senseItWeb', null, null).controller('ProjectEditCtrl', function 
                         return 'Yes, delete project ' + title;
                     },
                     ok: function() {
+                        var query = $rootScope.projectListFilter &&
+                          ["type", "filter", "tag", "status", "kw", "page"].filter(function (key) {
+                            return !!$rootScope.projectListFilter[key];
+                        }).reduce(function (acc, key) {
+                            acc[key] = $rootScope.projectListFilter[key];
+                            return acc;
+                        }, {});
                         $scope.projectWatcher.deleteProject().then(function() {
-                            $state.go('home');
+                            $state.go('home', query);
                         });
 
                         return true;

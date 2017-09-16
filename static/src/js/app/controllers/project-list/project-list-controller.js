@@ -1,12 +1,11 @@
 
 
 
-angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function ($scope, $state, ProjectService) {
+angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function ($scope, $rootScope, $state, ProjectService) {
 
     ProjectService.watchList($scope);
 
-
-    $scope.projectListFilter = {
+    $rootScope.projectListFilter = $scope.projectListFilter = {
         type: $state.params.type,
         status: $state.params.status,
         filter: $state.params.filter, //|| $state.params.tag,
@@ -76,7 +75,6 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
                 pages.push(1);
 
                 var pageCount = Math.ceil(paginationData.resultCount / 12.0);
-                pageCount = 10;
 
                 var mainGroupDistance = 2;
 
@@ -96,7 +94,10 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
                     pages.push(0);
                 }
 
-                pages.push(pageCount);
+                if (pageCount > 1) {
+                    pages.push(pageCount);
+                }
+
                 paginationData.items = pages.map(function (page) {
                     if (page > 0) {
                         return {
