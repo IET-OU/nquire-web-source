@@ -13,8 +13,7 @@ app to collect data from Android device sensors.
 * <http://www.nquire-it.org>
 
 
-Requirements
-------------
+## Requirements
 
 This Web app is built on [Spring 4.0][] and [AngularJS][].
 Other dependencies are listed in the file [`app/pom.xml`][].
@@ -22,8 +21,21 @@ Client-side & Javascript dependencies are listed in [`package.json`][].
 
 * See the compiled Java: [`IET-OU/nquire-web-compiled`][]
 
-I18N
-----
+## Install, build, test
+
+```sh
+cp app/pom.TEMPLATE.xml app/pom.xml
+npm install
+npm install grunt@1 -g
+npm run java
+npm run cp-compiled
+# ...
+grunt
+npm test
+```
+
+## Translation
+### I18N
 
 Updating the .PO files requires grunt.
 
@@ -40,13 +52,11 @@ To add a new user-interface language, ensure that it is listed in:
 
 It will then need to be added to our Weblate translation server.
 
-Licence
--------
+## Licence
 
 nQuire-it is released under the GPLv3 licence. See [LICENSE][] for more details.
 
-Releases
---------
+## Releases
 
 16-03-2014
 Added support for:

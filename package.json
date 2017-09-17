@@ -61,7 +61,8 @@
   },
   "scripts": {
     "bugs": "ghi | cat",
-    "compile-java": "mvn compile -f app/pom.xml",
+    "java": "mvn compile -f app/pom.xml",
+    "cp-compiled": "cp -r app/target/classes/org/greengin/nquireit/ ../nquire-web-compiled/classes/org/greengin/nquireit",
     "echo-versions": "printf 'npm: '; npm --version; echo ''; mvn --version",
     "ps": "ps -af | egrep '(tomcat|httpd)' #| grep -v sh  # grep",
     "pull": "#git checkout package.json; git pull;\n grunt; npm run version",
