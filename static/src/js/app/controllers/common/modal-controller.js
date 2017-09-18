@@ -1,10 +1,10 @@
-angular.module('senseItWeb', null, null).controller('ModalCtrl', function ($scope, $modalInstance, data, OpenIdService) {
+angular.module('senseItWeb', null, null).controller('ModalCtrl', function ($scope, $uibModalInstance, data, OpenIdService) {
 
     $scope.data = data;
 
     $scope.ok = function () {
         if (!data.ok || data.ok()) {
-            $modalInstance.close('ok');
+            $uibModalInstance.close('ok');
         }
     };
 
@@ -17,11 +17,11 @@ angular.module('senseItWeb', null, null).controller('ModalCtrl', function ($scop
     $scope.editDisabled = data.editDisabled;
 
     $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
+        $uibModalInstance.dismiss('cancel');
     };
 
     $scope.close = function (callback) {
-        $modalInstance.dismiss('cancel');
+        $uibModalInstance.dismiss('cancel');
         if (callback) {
             return callback();
         }

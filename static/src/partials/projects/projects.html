@@ -3,8 +3,14 @@
         <div data-ng-if="projectList.projects.length == 0 && projectList.ready" class="warn http-404 error-not-found">
             <p translate>No missions available at the moment.</p>
             <ul>
-                <li data-ng-if="projectListFilter.onlyFeatured" translate>Try <a href data-ui-sref="home({filter: 'all'})">selecting all missions</a>.</li>
-                <li data-ng-if="projectListFilter.hasConditions" translate>Try <a href data-ui-sref="home({kw: null, status: null, type: null})">without search conditions</a>.</li>
+                <li data-ng-if="projectListFilter.onlyFeatured" translate>Try <a href
+                                                                                 data-ui-sref="home({filter: 'all'})">selecting
+                    all missions</a>.
+                </li>
+                <li data-ng-if="projectListFilter.hasConditions" translate>Try <a href
+                                                                                  data-ui-sref="home({kw: null, status: null, type: null})">without
+                    search conditions</a>.
+                </li>
             </ul>
         </div>
         <div data-ng-repeat="projectData in projectList.projects" class="col-xs-12 col-sm-6 col-lg-4">
@@ -42,7 +48,9 @@
                         </ul>
                     </div>
 
-                    <div class="project-item-author" translate>A mission created by <span data-siw-user-link="projectData.project.author"></span>.</div>
+                    <div class="project-item-author" translate>A mission created by <span
+                            data-siw-user-link="projectData.project.author"></span>.
+                    </div>
                 </div>
                 <div class="project-item-banner">
                     <a href data-ui-sref="project.view.home({projectId: projectData.project.id})">
@@ -58,6 +66,16 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="pagination">
+            <li data-ng-repeat="item in pagination()"
+                data-ng-class="item.className">
+                <a data-ng-if="item.page"
+                   data-ui-sref="home({page: item.page})">{{item.page}}</a>
+                <span data-ng-if="!item.page" class="disabled">{{item.label}}</span>
+            </li>
         </div>
     </div>
 </div>

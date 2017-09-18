@@ -71,6 +71,7 @@ angular.module('senseItServices', null, null).factory('ProjectService', ['RestSe
         var self = this;
 
         RestService.get('api/projects', this._query).then(function (data) {
+            self.data.resultCount = data.resultCount;
             self.data.projects = data.list;
             self.data.categories = data.categories;
             self.data.ready = true;
