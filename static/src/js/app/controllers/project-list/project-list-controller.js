@@ -68,7 +68,7 @@ angular.module('senseItWeb', null, null).controller('ProjectListCtrl', function 
             paginationData.resultCount = $scope.projectList.resultCount;
             paginationData.currentPage = $scope.projectListFilter.page;
 
-            if (paginationData.resultCount === 0) {
+            if (!paginationData.resultCount) {
                 paginationData.items = [];
             } else {
                 var pages = [];
