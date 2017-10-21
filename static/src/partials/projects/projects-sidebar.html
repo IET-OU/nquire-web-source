@@ -21,7 +21,7 @@
 
             <li data-ng-if="cfg.custom_filters && tag.active" data-ng-repeat="tag in tags.data.filters" class="custom">
                 <a data-ui-sref="home({type: projectListFilter.type, status: projectListFilter.status, filter: null, tag: tag.query, page: null})"
-                   data-ng-class="menuItemClass('filter', tag.query)" data-ng-bind-html="tag.label"></a>
+                   data-ng-class="menuItemClass('tag', tag.query)" data-ng-bind-html="tag.label"></a>
             </li>
         </ul>
     </div>
