@@ -4,16 +4,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: static/src/partials/profile/profile-logged-out.html:48
-msgid "…or sign in using one of the following identity providers:"
-msgstr ""
-
 #: static/src/partials/projects/projects-sidebar-feeds.html:14
 msgid "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref=\"forum.thread({threadId: item.threadId})\">{{item.threadTitle}}</a>"
 msgstr ""
 
 #: static/src/partials/projects/projects-sidebar-feeds.html:5
 msgid "\"<span class=\"feed-comment\">{{item.comment}}</span>\" in <a data-ui-sref=\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:24
+msgid "%s — nQuire-it"
 msgstr ""
 
 #: static/src/partials/project/admin/challenge/project-admin-challenge-page.html:23
@@ -30,36 +30,6 @@ msgstr ""
 
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:39
 msgid "(Single-line text)"
-msgstr ""
-
-#: static/src/partials/projects/projects-sidebar-feeds.html:26
-msgid "{{feed.count}} user is online"
-msgid_plural "{{feed.count}} users are online"
-msgstr[0] ""
-msgstr[1] ""
-
-#: static/src/partials/forum/forum-node-new-thread.html:1
-msgid "{{forum.node.title}}: New thread"
-msgstr ""
-
-#: static/src/js/app/config.js.DIST.html:25
-msgid "{{MISSION}} missions"
-msgstr ""
-
-#: static/src/partials/project/view/spotit/spotit-project-data.html:3
-msgid "{{projectData.data.data}} image"
-msgid_plural "{{projectData.data.data}} images"
-msgstr[0] ""
-msgstr[1] ""
-
-#: static/src/partials/project/view/spotit/spotit-project-data.html:2
-msgid "{{projectData.data.members}} member"
-msgid_plural "{{projectData.data.members}} members"
-msgstr[0] ""
-msgstr[1] ""
-
-#: static/src/js/app/config.js.DIST.html:20
-msgid "%s — nQuire-it"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-posting-disabled.html:1
@@ -98,10 +68,6 @@ msgstr ""
 msgid "<a href=\"\" data-ui-sref=\"project.view.home\">Join</a> this mission to discuss about this picture."
 msgstr ""
 
-#: static/src/partials/project/view/senseit/senseit-project-data.html:7
-msgid "<b>{{projectData.data.data}}</b> series"
-msgstr ""
-
 #: static/src/partials/project/view/challenge/project-view-challenge-outcome.html:30
 msgid "<b>Explanation:</b> {{outcome.explanation}}"
 msgstr ""
@@ -118,12 +84,23 @@ msgstr ""
 msgid "<b>Win-it</b> mission"
 msgstr ""
 
+#: static/src/partials/project/view/senseit/senseit-project-data.html:7
+msgid "<b>{{projectData.data.data}}</b> series"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:5
+msgid ""
+"<em>Tags</em> allow you to group related nQuire-it missions.\n"
+"      They will appear in the right side-bar on the home page, and should be used sparingly.\n"
+"      Check below to see if your tag already exists, before creating a new one."
+msgstr ""
+
 #: static/src/partials/comments.html:41
 msgid "<span class=\"comment-author-username\" siw-user-link=\"comment.author\"></span> said:"
 msgstr ""
 
 #: static/src/partials/project/blocks/project-metadata.html:6
-#: static/src/partials/project/blocks/project-title-edit.html:25
+#: static/src/partials/project/blocks/project-title-edit.html:30
 msgid "<span class=\"project-section-description-text-mission\">Mission:</span> {{projectData.project.title}}"
 msgstr ""
 
@@ -139,19 +116,19 @@ msgstr ""
 msgid "<span class=\"sidebar-type-winit\">Win-it</span> missions"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:53
+#: static/src/partials/projects/projects.html:62
 msgid "A <span class=\"project-item-banner-type\">Sense-it</span> mission"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:54
+#: static/src/partials/projects/projects.html:63
 msgid "A <span class=\"project-item-banner-type\">Spot-it</span> mission"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:55
+#: static/src/partials/projects/projects.html:64
 msgid "A <span class=\"project-item-banner-type\">Win-it</span> mission"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:44
+#: static/src/partials/projects/projects.html:51
 msgid "A mission created by <span data-siw-user-link=\"projectData.project.author\"></span>."
 msgstr ""
 
@@ -172,7 +149,7 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-filters.html:54
 #: static/src/partials/admin/admin-texts.html:33
 msgid "Add"
 msgstr ""
@@ -244,7 +221,7 @@ msgstr ""
 msgid "Are you sure you want to delete data <b>{{data.item.title}}</b>?"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:83
+#: static/src/partials/admin/admin-filters.html:92
 msgid "Are you sure you want to delete the <i>%s</i> tag?"
 msgstr ""
 
@@ -260,7 +237,7 @@ msgstr ""
 msgid "Awaiting response from {{data.provider.name}}…"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:89
+#: static/src/partials/admin/admin-filters.html:98
 #: static/src/partials/admin/admin-projects.html:55
 #: static/src/partials/admin/admin-texts.html:60
 #: static/src/partials/comments.html:19
@@ -276,8 +253,8 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:32
 #: static/src/partials/profile/profile-logged-in.html:60
 #: static/src/partials/profile/profile-logged-in.html:82
-#: static/src/partials/project/blocks/project-title-edit.html:19
-#: static/src/partials/project/blocks/project-title-edit.html:51
+#: static/src/partials/project/blocks/project-title-edit.html:24
+#: static/src/partials/project/blocks/project-title-edit.html:56
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:27
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:33
 #: static/src/partials/project/edit/project-edit-details-page.html:55
@@ -409,7 +386,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:82
+#: static/src/partials/admin/admin-filters.html:91
 #: static/src/partials/admin/admin-reported.html:29
 #: static/src/partials/comments.html:48
 #: static/src/partials/forum/forum-list-category.html:8
@@ -439,7 +416,7 @@ msgstr ""
 msgid "Delete series"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:84
+#: static/src/partials/admin/admin-filters.html:93
 msgid "Delete tag?"
 msgstr ""
 
@@ -471,7 +448,7 @@ msgstr ""
 msgid "Download CSV"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:81
+#: static/src/partials/admin/admin-filters.html:90
 #: static/src/partials/admin/admin-texts.html:56
 #: static/src/partials/forum/forum-list-category.html:7
 #: static/src/partials/forum/forum-list-forum.html:7
@@ -482,7 +459,7 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:49
 #: static/src/partials/profile/profile-logged-in.html:70
 #: static/src/partials/project/blocks/project-menu.html:5
-#: static/src/partials/project/blocks/project-title-edit.html:33
+#: static/src/partials/project/blocks/project-title-edit.html:38
 #: static/src/partials/project/edit/challenge/project-edit-challenge-field.html:45
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:39
 #: static/src/partials/project/edit/project-edit-details-page.html:18
@@ -503,10 +480,6 @@ msgstr ""
 msgid "Edit title"
 msgstr ""
 
-#: static/src/partials/admin/admin-users.html:17
-msgid "email"
-msgstr ""
-
 #: static/src/partials/social/social-post-dialog.html:62
 msgid "Email"
 msgstr ""
@@ -515,7 +488,7 @@ msgstr ""
 msgid "Email already associated with a different account."
 msgstr ""
 
-#: static/src/js/app/controllers/layout/main-controller.js:21
+#: static/src/js/app/controllers/layout/main-controller.js:20
 #: static/src/js/app/controllers/profile/profile-controller.js:191
 #: static/src/js/app/controllers/profile/profile-controller.js:246
 msgid "Email cannot be empty."
@@ -533,7 +506,7 @@ msgid "Email:"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-project-data.html:7
-#: static/src/partials/projects/projects.html:39
+#: static/src/partials/projects/projects.html:46
 msgid "Ended"
 msgstr ""
 
@@ -553,7 +526,7 @@ msgstr ""
 msgid "Explanation:"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:23
+#: static/src/js/app/config.js.DIST.html:27
 msgid "Feature project"
 msgstr ""
 
@@ -623,7 +596,7 @@ msgstr ""
 msgid "Grant permission"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:26
+#: static/src/js/app/config.js.DIST.html:30
 msgid "Greek schools missions"
 msgstr ""
 
@@ -690,14 +663,14 @@ msgstr ""
 msgid "Joined projects:"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:14
+#: static/src/partials/admin/admin-filters.html:23
 msgid "Label"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:24
-#: static/src/partials/admin/admin-filters.html:25
-#: static/src/partials/admin/admin-filters.html:54
-#: static/src/partials/admin/admin-filters.html:55
+#: static/src/partials/admin/admin-filters.html:33
+#: static/src/partials/admin/admin-filters.html:34
+#: static/src/partials/admin/admin-filters.html:63
+#: static/src/partials/admin/admin-filters.html:64
 msgid "Label, eg. Greek Schools missions"
 msgstr ""
 
@@ -801,11 +774,12 @@ msgstr ""
 msgid "Mission discussion"
 msgstr ""
 
-#: static/src/partials/project/blocks/project-title-edit.html:28
-#: static/src/partials/project/blocks/project-title-edit.html:45
+#: static/src/partials/project/blocks/project-title-edit.html:33
+#: static/src/partials/project/blocks/project-title-edit.html:50
 msgid "Mission list teaser:"
 msgstr ""
 
+#: static/src/partials/project/edit/project-edit-outline-page.html:9
 #: static/src/partials/project/view/home/project-view-home-page.html:25
 msgid "Mission outline"
 msgstr ""
@@ -897,15 +871,6 @@ msgstr ""
 
 #: static/src/partials/projects/projects-sidebar.html:62
 msgid "Not joined missions"
-msgstr ""
-
-#: static/src/index.html:8
-#: static/src/js/app/config.js.DIST.html:19
-msgid "nQuire-it — join missions to explore your world"
-msgstr ""
-
-#: static/src/partials/layout/header.html:5
-msgid "nQuire-it home page"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:7
@@ -1048,7 +1013,7 @@ msgstr ""
 msgid "Project image:"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:66
+#: static/src/partials/projects/projects.html:85
 msgid "Project sidebar"
 msgstr ""
 
@@ -1056,16 +1021,16 @@ msgstr ""
 msgid "Projects"
 msgstr ""
 
-#: static/src/partials/profile/profile-view.html:14
-msgid "Projects created by {{profile.username}}:"
+#: static/src/partials/profile/profile-project-list.html:14
+msgid "Projects Iʼve joined:"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:297
 msgid "Projects created by me:"
 msgstr ""
 
-#: static/src/partials/profile/profile-project-list.html:14
-msgid "Projects Iʼve joined:"
+#: static/src/partials/profile/profile-view.html:14
+msgid "Projects created by {{profile.username}}:"
 msgstr ""
 
 #: static/src/partials/profile/profile-view.html:25
@@ -1142,7 +1107,7 @@ msgstr ""
 msgid "Samples / second"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:87
+#: static/src/partials/admin/admin-filters.html:96
 #: static/src/partials/admin/admin-projects.html:53
 #: static/src/partials/admin/admin-texts.html:59
 #: static/src/partials/forum/forum-list-category.html:34
@@ -1154,8 +1119,8 @@ msgstr ""
 #: static/src/partials/profile/profile-logged-in.html:31
 #: static/src/partials/profile/profile-logged-in.html:59
 #: static/src/partials/profile/profile-logged-in.html:81
-#: static/src/partials/project/blocks/project-title-edit.html:18
-#: static/src/partials/project/blocks/project-title-edit.html:50
+#: static/src/partials/project/blocks/project-title-edit.html:23
+#: static/src/partials/project/blocks/project-title-edit.html:55
 #: static/src/partials/project/edit/challenge/project-edit-challenge-page.html:32
 #: static/src/partials/project/edit/project-edit-details-page.html:54
 #: static/src/partials/project/edit/project-edit-outline-page.html:27
@@ -1239,12 +1204,12 @@ msgstr ""
 msgid "Send your idea"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:37
+#: static/src/partials/projects/projects.html:44
 msgid "Send your ideas"
 msgstr ""
 
 #: static/src/partials/projects/create.html:6
-#: static/src/partials/projects/projects.html:26
+#: static/src/partials/projects/projects.html:33
 msgid "Sense-it"
 msgstr ""
 
@@ -1281,10 +1246,6 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
-#: static/src/partials/social/social-post-dialog.html:10
-msgid "Sign in with {{data.provider.name}}"
-msgstr ""
-
 #: static/src/partials/profile/profile-logged-out.html:54
 msgid "Sign in with Facebook"
 msgstr ""
@@ -1299,6 +1260,10 @@ msgstr ""
 
 #: static/src/partials/profile/profile-logged-out.html:21
 msgid "Sign in with your username and password:"
+msgstr ""
+
+#: static/src/partials/social/social-post-dialog.html:10
+msgid "Sign in with {{data.provider.name}}"
 msgstr ""
 
 #: static/src/partials/layout/header.html:50
@@ -1338,6 +1303,21 @@ msgstr ""
 msgid "Someone posts to a mission that I created:"
 msgstr ""
 
+#: static/src/partials/admin/admin-filters.html:45
+#: static/src/partials/admin/admin-filters.html:79
+msgid "Sorry! I can't add a duplicate tag:"
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:46
+#: static/src/partials/admin/admin-filters.html:80
+msgid "Sorry! The tag term is not valid — no spaces or accents allowed."
+msgstr ""
+
+#: static/src/partials/admin/admin-filters.html:47
+#: static/src/partials/admin/admin-filters.html:81
+msgid "Sorry! This tag term is empty."
+msgstr ""
+
 #: static/src/partials/social/social-post-dialog.html:33
 msgid "Sorry, there was a problem when trying to post your comment."
 msgstr ""
@@ -1370,27 +1350,12 @@ msgstr ""
 msgid "Sorry, you need administrator access to view this page."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:36
-#: static/src/partials/admin/admin-filters.html:70
-msgid "Sorry! I can't add a duplicate tag:"
-msgstr ""
-
-#: static/src/partials/admin/admin-filters.html:37
-#: static/src/partials/admin/admin-filters.html:71
-msgid "Sorry! The tag term is not valid — no spaces or accents allowed."
-msgstr ""
-
-#: static/src/partials/admin/admin-filters.html:38
-#: static/src/partials/admin/admin-filters.html:72
-msgid "Sorry! This tag term is empty."
-msgstr ""
-
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:10
 msgid "Sound"
 msgstr ""
 
 #: static/src/partials/projects/create.html:19
-#: static/src/partials/projects/projects.html:27
+#: static/src/partials/projects/projects.html:34
 msgid "Spot-it"
 msgstr ""
 
@@ -1435,17 +1400,17 @@ msgstr ""
 msgid "Tag-based filters"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:15
+#: static/src/partials/admin/admin-filters.html:24
 msgid "Tag-term"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:31
-#: static/src/partials/admin/admin-filters.html:65
+#: static/src/partials/admin/admin-filters.html:40
+#: static/src/partials/admin/admin-filters.html:74
 msgid "Tag-term format: lower-case letters, numbers, dashes, no spaces, no accents."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:30
-#: static/src/partials/admin/admin-filters.html:64
+#: static/src/partials/admin/admin-filters.html:39
+#: static/src/partials/admin/admin-filters.html:73
 msgid "Tag-term, eg. %term (no accents)"
 msgstr ""
 
@@ -1467,12 +1432,16 @@ msgstr ""
 msgid "Texts"
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:27
-#: static/src/partials/admin/admin-filters.html:57
+#: static/src/partials/admin/admin-filters.html:36
+#: static/src/partials/admin/admin-filters.html:66
 msgid "The label is required."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:21
+#: static/src/partials/project/blocks/project-title-edit.html:14
+msgid "The mission image should be 303 × 144 pixels."
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:25
 msgid "The site will be undergoing maintenance on {{DATE}}."
 msgstr ""
 
@@ -1480,8 +1449,8 @@ msgstr ""
 msgid "The tag term is not valid — no spaces or accents allowed."
 msgstr ""
 
-#: static/src/partials/admin/admin-filters.html:41
-#: static/src/partials/admin/admin-filters.html:74
+#: static/src/partials/admin/admin-filters.html:50
+#: static/src/partials/admin/admin-filters.html:83
 msgid "The tag term is not valid — no spaces or accents allowed. (Valid: <i>my-keyword</i>)"
 msgstr ""
 
@@ -1523,10 +1492,6 @@ msgstr ""
 msgid "Threads"
 msgstr ""
 
-#: static/src/partials/project/view/spotit/data-item-spotit.html:39
-msgid "title"
-msgstr ""
-
 #: static/src/partials/admin/admin-projects.html:18
 #: static/src/partials/project/view/senseit/data-table-senseit.html:4
 #: static/src/partials/project/view/senseit/senseit-data-map.html:4
@@ -1536,7 +1501,7 @@ msgstr ""
 #: static/src/partials/forum/forum-list-category.html:25
 #: static/src/partials/forum/forum-list-forum.html:15
 #: static/src/partials/forum/forum-node-new-thread.html:6
-#: static/src/partials/project/blocks/project-title-edit.html:40
+#: static/src/partials/project/blocks/project-title-edit.html:45
 #: static/src/partials/project/edit/project-edit-details-page.html:42
 #: static/src/partials/project/view/spotit/project-view-spotit-upload.html:24
 #: static/src/partials/projects/create.html:117
@@ -1551,7 +1516,7 @@ msgstr ""
 msgid "Toggle plot"
 msgstr ""
 
-#: static/src/partials/projects/projects.html:65
+#: static/src/partials/projects/projects.html:84
 msgid "Toggle sidebar"
 msgstr ""
 
@@ -1560,14 +1525,18 @@ msgid "Total users: %number"
 msgstr ""
 
 #: static/src/partials/projects/projects.html:6
-msgid "Try <a href=\"\" data-ui-sref=\"home({filter: 'all'})\">selecting all missions</a>."
+msgid ""
+"Try <a href=\"\" data-ui-sref=\"home({filter: 'all'})\">selecting\n"
+"                    all missions</a>."
 msgstr ""
 
-#: static/src/partials/projects/projects.html:7
-msgid "Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: null})\">without search conditions</a>."
+#: static/src/partials/projects/projects.html:10
+msgid ""
+"Try <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: null})\">without\n"
+"                    search conditions</a>."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:28
 msgid "Unfeature"
 msgstr ""
 
@@ -1575,7 +1544,7 @@ msgstr ""
 msgid "Unlink {{providerName}} account"
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:22
+#: static/src/js/app/config.js.DIST.html:26
 msgid "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on Twitter</a>."
 msgstr ""
 
@@ -1662,7 +1631,7 @@ msgid "Votes"
 msgstr ""
 
 #: static/src/partials/project/view/challenge/challenge-project-data.html:6
-#: static/src/partials/projects/projects.html:38
+#: static/src/partials/projects/projects.html:45
 msgid "Voting"
 msgstr ""
 
@@ -1671,7 +1640,7 @@ msgid "Voting stage"
 msgstr ""
 
 #: static/src/partials/projects/create.html:39
-#: static/src/partials/projects/projects.html:28
+#: static/src/partials/projects/projects.html:35
 msgid "Win-it"
 msgstr ""
 
@@ -1750,4 +1719,51 @@ msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:2
 msgid "Your profile page"
+msgstr ""
+
+#: static/src/partials/admin/admin-users.html:17
+msgid "email"
+msgstr ""
+
+#: static/src/partials/layout/header.html:5
+msgid "nQuire-it home page"
+msgstr ""
+
+#: static/src/index.html:8
+#: static/src/js/app/config.js.DIST.html:23
+msgid "nQuire-it — join missions to explore your world"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/data-item-spotit.html:39
+msgid "title"
+msgstr ""
+
+#: static/src/js/app/config.js.DIST.html:29
+msgid "{{MISSION}} missions"
+msgstr ""
+
+#: static/src/partials/projects/projects-sidebar-feeds.html:26
+msgid "{{feed.count}} user is online"
+msgid_plural "{{feed.count}} users are online"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/forum/forum-node-new-thread.html:1
+msgid "{{forum.node.title}}: New thread"
+msgstr ""
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:3
+msgid "{{projectData.data.data}} image"
+msgid_plural "{{projectData.data.data}} images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/project/view/spotit/spotit-project-data.html:2
+msgid "{{projectData.data.members}} member"
+msgid_plural "{{projectData.data.members}} members"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/src/partials/profile/profile-logged-out.html:48
+msgid "…or sign in using one of the following identity providers:"
 msgstr ""

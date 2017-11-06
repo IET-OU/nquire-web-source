@@ -12236,6 +12236,11 @@ a {
     font-weight: 400;
     color: #5f5f5f;
     margin: 10px 0; }
+  .sidebar-right iframe[src*=youtube] {
+    height: 128px;
+    width: 104%;
+    position: relative;
+    left: -3px; }
   .sidebar-right .sidebar-header {
     font-weight: 700;
     color: #444444; }
@@ -12983,6 +12988,11 @@ a {
     font-weight: 400;
     color: #5f5f5f;
     margin: 10px 0; }
+  .sidebar-right iframe[src*=youtube] {
+    height: 128px;
+    width: 104%;
+    position: relative;
+    left: -3px; }
   .sidebar-right .sidebar-header {
     font-weight: 700;
     color: #444444; }
