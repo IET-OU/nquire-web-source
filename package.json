@@ -30,6 +30,7 @@
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-angular-gettext": "2.2.2",
+    "grunt-cli": "1.2.0",
     "grunt-contrib-jshint": "1.0.0",
     "grunt-contrib-uglify": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
@@ -60,6 +61,7 @@
     "url": "https://github.com/IET-OU/nquire-web-source"
   },
   "scripts": {
+    "build": "grunt",
     "bugs": "ghi | cat",
     "java": "mvn compile -f app/pom.xml",
     "cp-compiled": "cp -r app/target/classes/org/greengin/nquireit/ ../nquire-web-compiled/classes/org/greengin/nquireit",
