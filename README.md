@@ -52,9 +52,6 @@ To add a new user-interface language, ensure that it is listed in:
 
 It will then need to be added to our Weblate translation server.
 
-## Licence
-
-nQuire-it is released under the GPLv3 licence. See [LICENSE][] for more details.
 
 ## Releases
 
@@ -68,11 +65,14 @@ Added support for:
 ## Acknowledgements
 
 * Original developer: [Eloy Villasclaras / @evilfer][eloy]
-* Research [funding][]
+* Research [funding][].
 
 
 <!-- [![Sense-it][sense-it-icon]][Sense-it] -->
 
+## License
+
+nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 
 ---
 [nQuire-it][]: © 2014-2017 [The Open University][ou]. ([Institute of Educational Technology][iet])
@@ -109,6 +109,7 @@ Added support for:
 
 [Spring 4.0]: http://projects.spring.io/spring-framework "Spring Java framework"
 [AngularJS]: https://angularjs.org/
-
+[privacy-gdoc]: https://drive.google.com/file/d/0B4POymbCOfVwekdjb2lMWjI4RlE/edit
+    "nQuire-it website & Sense – it application. 4th Sept 2014 [PDF] 183 kB."
 
 [End]: //end.
