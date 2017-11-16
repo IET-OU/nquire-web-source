@@ -25,12 +25,12 @@ Client-side & Javascript dependencies are listed in [`package.json`][].
 
 ```sh
 cp app/pom.TEMPLATE.xml app/pom.xml
+cp static/src/index.DIST.html static/src/index.html
 npm install
-npm install grunt@1 -g
 npm run java
 npm run cp-compiled
 # ...
-grunt
+npm run build
 npm test
 ```
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*!
   Output version.JSON containing Git commit & other version info.
 

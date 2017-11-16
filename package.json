@@ -38,6 +38,7 @@
     "grunt-msg-init-merge": "0.0.5",
     "grunt-nice-package": "0.10.3",
     "grunt-sass": "1.2.0",
+    "replace": "^0.3.0",
     "simple-git": "1.65.0"
   },
   "engines": {
@@ -61,7 +62,7 @@
     "url": "https://github.com/IET-OU/nquire-web-source"
   },
   "scripts": {
-    "build": "grunt",
+    "build": "grunt && npm run version",
     "bugs": "ghi | cat",
     "java": "mvn compile -f app/pom.xml",
     "cp-compiled": "cp -r app/target/classes/org/greengin/nquireit/ ../nquire-web-compiled/classes/org/greengin/nquireit",
@@ -74,7 +75,7 @@
     "test-all": "npm run version || grunt test",
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
-    "version": "node bin/git-version.js || true;  # --all",
+    "version": "bin/git-version.js && bin/replace.js;  # --all",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }
