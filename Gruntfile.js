@@ -73,6 +73,7 @@ module.exports = function (grunt) {
 					src: [ 'bin/*.js', 'Gruntfile.js' ]
 				},
 				options: {
+					esversion: 6,
 					node: true  //globals: { module:false, require:false, console:false, process:false, __dirname:false }
 			  }
 			}
