@@ -10,14 +10,15 @@
 const replace = require('replace');
 const version = require('./../static/src/version.json');
 const INDEX_HTML = path('/../static/src/index.html');
-const rand = getRandomInt(11, 1000);
+const CONFIG_JS  = path('/../static/src/js/app/config.js');
+const RAND = getRandomInt(11, 1000);
 
-console.warn('Version.json ~ describe, rand:', version.describe, rand);
+console.warn('Version.json ~ describe, rand:', version.describe, RAND);
 
 replace({
   paths: [ INDEX_HTML ],
   regex: /\.(css|js)\?r=(_RAND_|[^\"]+)/g,
-  replacement: '.$1?r=' + rand,
+  replacement: '.$1?r=' + RAND,
   count: true,
   recursive: false
 });
@@ -26,6 +27,22 @@ replace({
   paths: [ INDEX_HTML ],
   regex: /content="nQuire-it\/(_VERSION_|[^\"]+)"/,
   replacement: 'content="nQuire-it/%s"'.replace(/%s/, version.describe),
+  count: true,
+  recursive: false
+});
+
+replace({
+  paths: [ CONFIG_JS ],
+  regex: /version: ['"][\w_\.\-]+['"],/,
+  replacement: 'version: "%s",'.replace(/%s/, version.describe),
+  count: true,
+  recursive: false
+});
+
+replace({
+  paths: [ CONFIG_JS ],
+  regex: /build_time: ['"][\w_\.\-:]+['"],/,
+  replacement: 'build_time: "%s",'.replace(/%s/, new Date().toISOString()),
   count: true,
   recursive: false
 });

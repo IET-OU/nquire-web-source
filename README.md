@@ -24,8 +24,8 @@ Client-side & Javascript dependencies are listed in [`package.json`][].
 ## Install, build, test
 
 ```sh
-cp app/pom.TEMPLATE.xml app/pom.xml
-cp static/src/index.DIST.html static/src/index.html
+cp -n app/pom.TEMPLATE.xml app/pom.xml
+npm run copy-conf
 npm install
 npm run java
 npm run cp-compiled

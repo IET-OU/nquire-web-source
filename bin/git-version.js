@@ -20,7 +20,7 @@ var directory = __dirname + '/..'
   , split = true
   , version = {
     '#': 'ok',
-    file_date: new Date().toISOString(),
+    build_time: new Date().toISOString(),
     lib: 'git-version.js'
   };
 
@@ -33,7 +33,7 @@ if (matchArgv('--all')) {
     git_version: exec('git --version').replace(/(git )?(version )?/, '')
   };
 }
-version.describe = exec('git describe --tags', null, carryon);
+version.describe = exec('git describe --tags --long', null, carryon);
 version.branch = exec('git rev-parse --abbrev-ref HEAD');
 version.origin = exec('git config --get remote.origin.url');
 version.url = version.origin.replace(/git@/, 'https://').replace('.com:', '.com/');
