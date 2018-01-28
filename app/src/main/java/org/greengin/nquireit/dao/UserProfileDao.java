@@ -31,6 +31,7 @@ public class UserProfileDao {
     static final String USER_EMAIL_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.email)=LOWER(:email)";
     static final String UPDATE_USER_CONNECTIONS = "UPDATE UserConnection SET userId = ? WHERE userId = ?";
     static final String DELETE_USER_CONNECTION = "DELETE FROM UserConnection WHERE userId = ? AND providerId = ?";
+    static final String INSERT_USER_CONNECTIONS = "INSERT IGNORE INTO UserConnection (userId, providerId, providerUserId) VALUES(?, ?, ?)";
 
     @PersistenceContext
     EntityManager em;
@@ -263,5 +264,15 @@ public class UserProfileDao {
         }
         em.persist(user);
         em.remove(user);
+    }
+
+
+    @Transactional
+    public void forceConnection(UserProfile user, String providerId, String providerUserId) {
+        Query query = em.createNativeQuery(INSERT_USER_CONNECTIONS);
+        query.setParameter(1, user.getUsername());
+        query.setParameter(2, providerId);
+        query.setParameter(3, providerUserId);
+        query.executeUpdate();
     }
 }

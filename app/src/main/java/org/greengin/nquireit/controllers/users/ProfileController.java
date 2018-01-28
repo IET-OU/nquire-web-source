@@ -1,6 +1,7 @@
 package org.greengin.nquireit.controllers.users;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -9,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
+import com.google.api.client.http.apache.ApacheHttpTransport;
+import com.google.api.client.json.jackson2.JacksonFactory;
 import com.mangofactory.jsonview.ResponseView;
 import org.apache.commons.lang3.text.WordUtils;
 import org.greengin.nquireit.entities.users.UserProfile;
@@ -54,6 +59,9 @@ public class ProfileController {
 
     @Autowired
     ContextBean context;
+
+    @Value("${google.consumerKey}")
+    private String googleConsumerKey;
 
 
     private HashMap<String, Connection<?>> getConnections() {
@@ -101,6 +109,39 @@ public class ProfileController {
         StatusResponse response = context.getUsersManager().status(getConnections(), request.getSession());
         boolean completed = new UserProfileActions(context, request).updateProfile(response, data);
         return completed ? response : null;
+    }
+
+    @RequestMapping(value = "/api/security/token/google", method = RequestMethod.POST)
+    @ResponseBody
+    @ResponseView(value = Views.UserProfileData.class)
+    public StatusResponse tokenAuth(@RequestParam String idTokenString,
+                                    HttpServletRequest request,
+                                    HttpServletResponse response) {
+
+        GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new ApacheHttpTransport(), new JacksonFactory())
+                .setAudience(Collections.singletonList(googleConsumerKey))
+                .build();
+
+        System.out.println("token: " + idTokenString);
+
+        try {
+            GoogleIdToken idToken = verifier.verify(idTokenString);
+            if (idToken != null) {
+                GoogleIdToken.Payload payload = idToken.getPayload();
+                String email = payload.getEmail();
+                UserProfile user = context.getUsersManager().providerSignIn(email, email, "google", email);
+                if (user != null) {
+                    context.getUserProfileDao().forceConnection(user, "google", email);
+                    context.getUsersManager().login(user, request, response);
+                }
+            } else {
+                System.out.println("Invalid ID token.");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return context.getUsersManager().status(getConnections(), request.getSession());
     }
 
     @RequestMapping(value = "/api/security/profile/image/files", method = RequestMethod.POST)
