@@ -31,7 +31,12 @@ public class UserProfileDao {
     static final String USER_EMAIL_QUERY = "SELECT u from UserProfile u WHERE LOWER(u.email)=LOWER(:email)";
     static final String UPDATE_USER_CONNECTIONS = "UPDATE UserConnection SET userId = ? WHERE userId = ?";
     static final String DELETE_USER_CONNECTION = "DELETE FROM UserConnection WHERE userId = ? AND providerId = ?";
-    static final String INSERT_USER_CONNECTIONS = "INSERT IGNORE INTO UserConnection (userId, providerId, providerUserId) VALUES(?, ?, ?)";
+
+    static final String INSERT_USER_CONNECTIONS = "INSERT INTO UserConnection (userId, providerId, providerUserId, rank, accessToken) \n" +
+            "SELECT * FROM (SELECT :userId as userId, :providerId as providerId, :providerUserId as providerUserId, 1, '') AS tmp\n" +
+            "WHERE NOT EXISTS (\n" +
+            "    SELECT * FROM UserConnection WHERE providerId = :providerId and providerUserId = :providerUserId\n" +
+            ") LIMIT 1";
 
     @PersistenceContext
     EntityManager em;
@@ -268,11 +273,11 @@ public class UserProfileDao {
 
 
     @Transactional
-    public void forceConnection(UserProfile user, String providerId, String providerUserId) {
+    public void createConnection(UserProfile user, String providerId, String providerUserId) {
         Query query = em.createNativeQuery(INSERT_USER_CONNECTIONS);
-        query.setParameter(1, user.getUsername());
-        query.setParameter(2, providerId);
-        query.setParameter(3, providerUserId);
+        query.setParameter("userId", user.getUsername());
+        query.setParameter("providerId", providerId);
+        query.setParameter("providerUserId", providerUserId);
         query.executeUpdate();
     }
 }

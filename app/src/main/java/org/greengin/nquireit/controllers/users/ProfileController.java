@@ -122,8 +122,6 @@ public class ProfileController {
                 .setAudience(Collections.singletonList(googleConsumerKey))
                 .build();
 
-        System.out.println("token: " + idTokenString);
-
         try {
             GoogleIdToken idToken = verifier.verify(idTokenString);
             if (idToken != null) {
@@ -131,7 +129,7 @@ public class ProfileController {
                 String email = payload.getEmail();
                 UserProfile user = context.getUsersManager().providerSignIn(email, email, "google", email);
                 if (user != null) {
-                    context.getUserProfileDao().forceConnection(user, "google", email);
+                    context.getUserProfileDao().createConnection(user, "google", email);
                     context.getUsersManager().login(user, request, response);
                 }
             } else {
