@@ -5,5 +5,6 @@ Disallow: /approval/
 Disallow: /approval
 Disallow: /#/admin
 Disallow: /ie8.htm
+Disallow: /index.DIST.html
 
 #End.

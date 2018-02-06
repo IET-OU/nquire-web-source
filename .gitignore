@@ -1,3 +1,7 @@
+
+static/src/index.html
+
+
 app/src/main/webapp/WEB-INF/nquireit.properties
 app/src/main/webapp/WEB-INF/nquireit-tests.properties
 app/src/main/webapp/files*

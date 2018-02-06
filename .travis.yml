@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "4"
+  - "6"
   # Was: "4" << Currently gives a `deprecated` warning for lodash. (Grunt bug: 1403)
   #- "0.12"
   #- "0.10"
@@ -9,30 +9,27 @@ git:
   depth: 16
 
 before_install:
-  - git fetch --tags --depth=16
+  #- git fetch --tags --depth=16
 
 install:
-  - npm install -g npm
-  - npm install -g grunt-cli
   - npm install
 
 before_script:
-  - npm run setup-config-js
-  - npm run setup-java
+  - npm run copy-conf
+  - npm run copy-java-pom
   #- ls static/src/js/app/ && ls app/
   - npm run echo-versions
 
 script:
   - npm test
+  - npm run build
   # Compile Java, removing 100s of 'Downloading ..' lines in log output ...
-  - "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'"
+  - npm run tr-compile-java
   # .. Then, ensure compile errors are caught!
   - bash bin/travis-exit-java.sh
 
 after_script:
   #- npm run weblate-stats
-  #- npm run version
-  - node bin/git-version.js --all
   - cat static/src/version.json
   - cat npm-debug.log
 
