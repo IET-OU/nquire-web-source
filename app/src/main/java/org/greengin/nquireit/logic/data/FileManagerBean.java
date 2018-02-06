@@ -53,6 +53,8 @@ public class FileManagerBean implements InitializingBean {
     public String uploadFile(String context, String filename, InputStream input) throws IOException {
         File folder = new File(path, context);
 
+        System.out.println(path.getAbsolutePath());
+
         if (folder.exists() || folder.mkdirs()) {
 
             String name = null;
