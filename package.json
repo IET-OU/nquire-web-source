@@ -1,7 +1,7 @@
 {
   "name": "nquire-it",
-  "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2017 The Open University (IET-OU)",
-  "version": "1.2.0+dev",
+  "description": "Our aim is to help you explore your world by joining and creating scientific missions. © 2014-2018 The Open University (IET-OU)",
+  "version": "1.3.0+beta",
   "author": "Eloy Villasclaras <eloy.villasclaras@gmail.com>",
   "bugs": {
     "url": "https://github.com/IET-OU/nquire-web-source/issues"
@@ -24,25 +24,28 @@
     "angular-ui-router": "0.4.2",
     "bootstrap-sass": "3.3.7",
     "font-awesome": "4.7.0",
-    "jquery": "2.2.4",
+    "jquery": "3.3.1",
     "textangular": "1.5.16"
+  },
+  "X-dependencies": {
+    "jquery": "2.2.4"
   },
   "devDependencies": {
     "grunt": "0.4.5",
-    "grunt-angular-gettext": "2.2.2",
+    "grunt-angular-gettext": "2.3.6",
     "grunt-cli": "1.2.0",
-    "grunt-contrib-jshint": "1.0.0",
-    "grunt-contrib-uglify": "1.0.1",
+    "grunt-contrib-jshint": "1.1.0",
+    "grunt-contrib-uglify": "3.1.0",
     "grunt-contrib-watch": "1.0.0",
-    "grunt-html-angular-validate": "0.5.8",
+    "grunt-html-angular-validate": "0.5.9",
     "grunt-msg-init-merge": "0.0.5",
-    "grunt-nice-package": "0.10.3",
-    "grunt-sass": "1.2.0",
-    "replace": "^0.3.0",
-    "simple-git": "1.65.0"
+    "grunt-nice-package": "0.10.4",
+    "grunt-sass": "2.0.0",
+    "replace": "0.3.0",
+    "simple-git": "1.82.0"
   },
   "engines": {
-    "node": "> 0.10.40"
+    "node": ">= 4.0.0"
   },
   "files": [
     "static/src/js/"
@@ -56,10 +59,11 @@
     "student"
   ],
   "license": "GPL-3.0+",
+  "main": "Gruntfile.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/IET-OU/nquire-web-source"
+    "url": "https://github.com/IET-OU/nquire-web-source.git"
   },
   "scripts": {
     "build": "grunt && npm run version",
