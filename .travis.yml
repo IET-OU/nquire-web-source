@@ -1,9 +1,9 @@
+# Dual-language ~ Node.js + Java.
+
 language: node_js
-node_js:
-  - "6"
+
+node_js: "6"
   # Was: "4" << Currently gives a `deprecated` warning for lodash. (Grunt bug: 1403)
-  #- "0.12"
-  #- "0.10"
 
 git:
   depth: 16
@@ -11,8 +11,7 @@ git:
 before_install:
   #- git fetch --tags --depth=16
 
-install:
-  - npm install
+install: npm install
 
 before_script:
   - npm run copy-conf
@@ -21,8 +20,8 @@ before_script:
   - npm run echo-versions
 
 script:
+  # Note: "npm run build" duplicates "npm test".
   - npm test
-  - npm run build
   # Compile Java, removing 100s of 'Downloading ..' lines in log output ...
   - npm run tr-compile-java
   # .. Then, ensure compile errors are caught!
@@ -33,4 +32,4 @@ after_script:
   - cat static/src/version.json
   - cat npm-debug.log
 
-#End.
+# End.
