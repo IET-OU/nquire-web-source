@@ -32,6 +32,12 @@ public class UserProfileDao {
     static final String UPDATE_USER_CONNECTIONS = "UPDATE UserConnection SET userId = ? WHERE userId = ?";
     static final String DELETE_USER_CONNECTION = "DELETE FROM UserConnection WHERE userId = ? AND providerId = ?";
 
+    static final String INSERT_USER_CONNECTIONS = "INSERT INTO UserConnection (userId, providerId, providerUserId, rank, accessToken) \n" +
+            "SELECT * FROM (SELECT :userId as userId, :providerId as providerId, :providerUserId as providerUserId, 1, '') AS tmp\n" +
+            "WHERE NOT EXISTS (\n" +
+            "    SELECT * FROM UserConnection WHERE providerId = :providerId and providerUserId = :providerUserId\n" +
+            ") LIMIT 1";
+
     @PersistenceContext
     EntityManager em;
 
@@ -263,5 +269,15 @@ public class UserProfileDao {
         }
         em.persist(user);
         em.remove(user);
+    }
+
+
+    @Transactional
+    public void createConnection(UserProfile user, String providerId, String providerUserId) {
+        Query query = em.createNativeQuery(INSERT_USER_CONNECTIONS);
+        query.setParameter("userId", user.getUsername());
+        query.setParameter("providerId", providerId);
+        query.setParameter("providerUserId", providerUserId);
+        query.executeUpdate();
     }
 }
