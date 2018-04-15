@@ -23,6 +23,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
+          <factory-entry name="${persistence.unit}" />
           <factory-entry name="nquire-it-jpa" value="dataSource" />
           <factory-entry name="nquire-it-jpa-tests" />
         </datasource-mapping>
