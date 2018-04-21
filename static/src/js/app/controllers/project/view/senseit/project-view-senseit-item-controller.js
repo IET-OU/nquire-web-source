@@ -18,7 +18,7 @@ angular.module('senseItWeb', null, null).controller('ProjectViewSenseItItemCtrl'
             return $scope.status.logged;
         },
         getPath: function (target) {
-            return $scope.commentThread + '/comments/' + target.id + '/vote';
+            return '/api/' + $scope.commentThread.path + '/comments/' + target.id + '/vote';
         }
     } : null;
 
