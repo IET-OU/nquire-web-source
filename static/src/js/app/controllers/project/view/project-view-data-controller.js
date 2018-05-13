@@ -29,7 +29,9 @@ angular.module('senseItWeb', null, null).controller('ProjectViewDataCtrl', funct
 
     $scope.dataVoteManager = {
         votingEnabled: function () {
-            return $scope.status.logged && $scope.projectData.access.member && $scope.projectData.project.open;
+            return $scope.status.logged &&
+              ($scope.projectData.access.admin ||
+                ($scope.projectData.access.member && $scope.projectData.project.open));
         },
         reportingEnabled: function() {
             return $scope.status.logged;
