@@ -157,7 +157,7 @@ public abstract class DataActions<E extends AbstractDataProjectItem, F extends A
     }
 
     public VoteCount voteItem(Long itemId, VoteRequest voteData) {
-        if (hasAccess(PermissionType.PROJECT_MEMBER_ACTION) || (loggedWithToken && voteData.isReport())) {
+        if (hasAccess(PermissionType.PROJECT_COMMENT) || (loggedWithToken && voteData.isReport())) {
             AbstractDataProjectItem item = context.getDataActivityDao().getItem(AbstractDataProjectItem.class, itemId);
             if (item != null && item.getDataStore() == activity) {
                 return context.getVoteDao().vote(user, item, voteData);
