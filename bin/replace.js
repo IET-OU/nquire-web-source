@@ -13,6 +13,9 @@ const INDEX_HTML = path('/../static/src/index.html');
 const CONFIG_JS  = path('/../static/src/js/app/config.js');
 const RAND = getRandomInt(11, 1000);
 
+const PKG = require('./../package.json');
+const ENV = require('./../.env.json');
+
 console.warn('Version.json ~ describe, rand:', version.describe, RAND);
 
 replace({
@@ -27,6 +30,14 @@ replace({
   paths: [ INDEX_HTML ],
   regex: /content="nQuire-it\/(_VERSION_|[^\"]+)"/,
   replacement: 'content="nQuire-it/%s"'.replace(/%s/, version.describe),
+  count: true,
+  recursive: false
+});
+
+replace({
+  paths: [ INDEX_HTML ],
+  regex: /\/maps\/api\/js\?key=(_GOOGLE_MAP_KEY_|\w+)/,
+  replacement: '/maps/api/js?key=%s'.replace(/%s/, ENV._GOOGLE_MAP_KEY_),
   count: true,
   recursive: false
 });

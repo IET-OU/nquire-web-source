@@ -1,6 +1,6 @@
 
 static/src/index.html
-
+.env.json
 
 app/src/main/webapp/WEB-INF/nquireit.properties
 app/src/main/webapp/WEB-INF/nquireit-tests.properties
