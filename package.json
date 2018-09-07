@@ -41,8 +41,8 @@
     "grunt-msg-init-merge": "0.0.5",
     "grunt-nice-package": "0.10.4",
     "grunt-sass": "2.0.0",
-    "replace": "0.3.0",
-    "simple-git": "1.82.0"
+    "replace": "^1.0.0",
+    "simple-git": "^1.96.0"
   },
   "engines": {
     "node": ">= 4.0.0"
