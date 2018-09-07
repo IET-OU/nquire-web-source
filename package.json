@@ -65,8 +65,9 @@
     "type": "git",
     "url": "https://github.com/IET-OU/nquire-web-source.git"
   },
+  "X_env_file": "./.env.json",
   "scripts": {
-    "build": "grunt && npm run version",
+    "build": "grunt",
     "bugs": "ghi | cat",
     "java": "mvn compile -f app/pom.xml",
     "cp-compiled": "cp -r app/target/classes/org/greengin/nquireit/ ../nquire-web-compiled/classes/org/greengin/nquireit",
@@ -79,7 +80,7 @@
     "test-all": "npm run version || grunt test",
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
-    "version": "bin/git-version.js && bin/replace.js;  # --all",
+    "version": "grunt git:version.json && grunt replace:config+html;  # --all",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }
