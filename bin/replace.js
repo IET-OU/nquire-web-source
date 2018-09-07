@@ -36,7 +36,7 @@ replace({
 
 replace({
   paths: [ INDEX_HTML ],
-  regex: /\/maps\/api\/js\?key=(_GOOGLE_MAP_KEY_|\w+)/,
+  regex: /\/maps\/api\/js\?key=(_GOOGLE_MAP_KEY_|[\w_\-]+)/,
   replacement: '/maps/api/js?key=%s'.replace(/%s/, ENV._GOOGLE_MAP_KEY_),
   count: true,
   recursive: false
