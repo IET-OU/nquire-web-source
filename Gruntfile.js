@@ -204,7 +204,6 @@ module.exports = function (grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-angular-gettext');
-	grunt.loadNpmTasks('grunt-msg-init-merge');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -215,7 +214,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('help', help);
 
 	grunt.registerTask('gettext', [
-		'nggettext_extract', 'nggettext_compile', 'msgInitMerge'
+		'nggettext_extract', 'nggettext_compile'
 	]);
 
 	grunt.registerTask('test', [
