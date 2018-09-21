@@ -222,9 +222,21 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('default', [
-		'gettext', 'sass', 'jshint', 'uglify', 'nice-package'
+		'gettext', 'sass', 'jshint', 'uglify', 'nice-package', 'git:version.json', 'replace:config+html'
 	]);
 
+	grunt.registerTask('git:version.json',	'Output version.JSON containing Git commit & other version info.', function () {
+		var done = this.async();
+
+		require('./bin/git-version.js')(grunt, done);
+	});
+
+	grunt.registerTask(
+		'replace:config+html',
+		'Update a "random" parameter for all <script> and CSS includes in "index.html". Plus, add version, add Google Map API key ...',
+		function () {
+			require('./bin/replace.js')(grunt);
+	});
 
 	/* ================================== */
 

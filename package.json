@@ -6,6 +6,7 @@
   "X-dependencies": {
     "jquery": "2.2.4"
   },
+  "X_env_file": "./.env.json",
   "bugs": {
     "url": "https://github.com/IET-OU/nquire-web-source/issues"
   },
@@ -78,7 +79,7 @@
     "test-all": "npm run version || grunt test",
     "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
     "tr-exit-java": "bash bin/travis-exit-java.sh",
-    "version": "bin/git-version.js && bin/replace.js;  # --all",
+    "version": "grunt git:version.json && grunt replace:config+html;  # --all",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }
 }
