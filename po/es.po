@@ -27,7 +27,7 @@ msgstr ""
 "\"<span class=\"feed-comment\">{{item.comment}}</span>\" en <a data-ui-sref="
 "\"project.view.home({projectId: item.threadId})\">{{item.threadTitle}}</a>"
 
-#: static/src/js/app/config.js.DIST.html:24
+#: static/src/js/app/config.js.DIST.html:27
 msgid "%s — nQuire-it"
 msgstr ""
 
@@ -139,9 +139,9 @@ msgstr "<b>{{projectData.data.data}}</b> series"
 
 #: static/src/partials/admin/admin-filters.html:5
 msgid ""
-"<em>Tags</em> allow you to group related nQuire-it missions.\n"
+"<em>Tags</em> allow you to group related nQuire-it missions.\r\n"
 "      They will appear in the right side-bar on the home page, and should be "
-"used sparingly.\n"
+"used sparingly.\r\n"
 "      Check below to see if your tag already exists, before creating a new "
 "one."
 msgstr ""
@@ -477,8 +477,9 @@ msgid "Delete project"
 msgstr "Eliminar proyecto"
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
+#, fuzzy
 msgid ""
-"Delete sensor\n"
+"Delete sensor\r\n"
 "            input"
 msgstr ""
 "Eliminar lectura\n"
@@ -599,7 +600,7 @@ msgstr ""
 msgid "Explanation:"
 msgstr "Explicación:"
 
-#: static/src/js/app/config.js.DIST.html:27
+#: static/src/js/app/config.js.DIST.html:30
 #, fuzzy
 msgid "Feature project"
 msgstr "Eliminar proyecto"
@@ -672,7 +673,7 @@ msgstr ""
 msgid "Grant permission"
 msgstr "Otorgar permiso"
 
-#: static/src/js/app/config.js.DIST.html:30
+#: static/src/js/app/config.js.DIST.html:33
 msgid "Greek schools missions"
 msgstr "Misiones de escuelas griegas"
 
@@ -1566,7 +1567,7 @@ msgstr ""
 msgid "The mission image should be 303 × 144 pixels."
 msgstr ""
 
-#: static/src/js/app/config.js.DIST.html:25
+#: static/src/js/app/config.js.DIST.html:28
 #, fuzzy
 msgid "The site will be undergoing maintenance on {{DATE}}."
 msgstr "El sitio está bajo tareas de mantenimiento hoy, {{DATE}}."
@@ -1699,7 +1700,7 @@ msgstr ""
 "Probar <a href=\"\" data-ui-sref=\"home({kw: null, status: null, type: "
 "null})\">sin condiciones de búsqueda</a>."
 
-#: static/src/js/app/config.js.DIST.html:28
+#: static/src/js/app/config.js.DIST.html:31
 #, fuzzy
 msgid "Unfeature"
 msgstr "¿Destacada?"
@@ -1708,7 +1709,7 @@ msgstr "¿Destacada?"
 msgid "Unlink {{providerName}} account"
 msgstr "Desenlazar cuenta de {{providerName}}"
 
-#: static/src/js/app/config.js.DIST.html:26
+#: static/src/js/app/config.js.DIST.html:29
 msgid ""
 "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on "
 "Twitter</a>."
@@ -1937,7 +1938,8 @@ msgstr "email"
 msgid "nQuire-it home page"
 msgstr "Página principal de nQuire-it"
 
-#: static/src/index.html:8 static/src/js/app/config.js.DIST.html:23
+#: static/src/index.DIST.html:8 static/src/index.html:8
+#: static/src/js/app/config.js.DIST.html:26
 msgid "nQuire-it — join missions to explore your world"
 msgstr "nQuire-it — unirse a misiones para explorar el mundo"
 
@@ -1946,7 +1948,7 @@ msgstr "nQuire-it — unirse a misiones para explorar el mundo"
 msgid "title"
 msgstr "Título"
 
-#: static/src/js/app/config.js.DIST.html:29
+#: static/src/js/app/config.js.DIST.html:32
 msgid "{{MISSION}} missions"
 msgstr "misiones {{MISSION}}"
 
