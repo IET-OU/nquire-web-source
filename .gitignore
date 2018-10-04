@@ -9,7 +9,7 @@ app/target
 app/pom.xml
 
 static/src/js/app/config.js
-
+static/src/css/nquire-it-bootstrap.css
 .idea
 node_modules
 
