@@ -222,7 +222,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('default', [
-		'sass', 'jshint', 'uglify', 'nice-package', 'git:version.json', 'replace:config+html'
+		'sass', 'jshint', 'uglify', 'nice-package', 'replace:config+html'
 	]);
 
 	grunt.registerTask('git:version.json',	'Output version.JSON containing Git commit & other version info.', function () {
