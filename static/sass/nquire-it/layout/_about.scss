@@ -5,9 +5,13 @@
 .about-container {
   margin: 0;
 
-  .about-header {
+  div[ role = heading ] { // Was: .about-header {
     @include basic-header;
   }
+
+  h1 { font-size: 2.4rem; }
+
+  h2 { font-size: 2.1rem; }
 
   .about-content {
     padding: $dim-common-margin;
@@ -39,5 +43,11 @@
         transition: all 0.8s;
       }
     }
+  }
+}
+
+.privacy-content {
+  .pdf-link {
+    display: none;
   }
 }

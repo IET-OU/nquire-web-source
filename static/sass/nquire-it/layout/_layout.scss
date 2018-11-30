@@ -21,6 +21,7 @@ table tr.ng-show {
 #main {
   position: relative;
   .main-content-section {
+    min-height: 1125px; // Was: min-height: 20em;
 
     .main-content {
       height: 100%;
@@ -40,6 +41,19 @@ table tr.ng-show {
     //@extend .container-fluid;
     @extend .container;
     //padding: $dim-common-margin 0 0 0;
+
+    .footer-content {
+      border-top: 2px solid #999;
+      color: #aaa;
+      font-size: .9em;
+      padding: 10px 20px 20px;
+      margin-top: 3em;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 .4rem;
+    }
 
     @media (min-width: $screen-md-min) {
       padding: 0 $dim-common-small-margin $dim-common-margin $dim-common-margin;
