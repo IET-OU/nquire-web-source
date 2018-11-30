@@ -9,9 +9,19 @@
     @include basic-header;
   }
 
-  h1 { font-size: 2.4rem; }
+  h1 { font-size: 2.2rem; }
 
-  h2 { font-size: 2.1rem; }
+  h2 { font-size: 1.9rem; }
+
+  abbr,
+  time {
+    border-bottom: 1px dotted gray;
+  }
+
+  .revised {
+    font-style: italic;
+    margin: 0 0 20px;
+  }
 
   .about-content {
     padding: $dim-common-margin;
