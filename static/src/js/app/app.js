@@ -2,7 +2,7 @@
   nQuire-it - Angular app module for nQuire-it web front-end.
 
   License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
-  Copyright © 2014-2017 The Open University (IET-OU).
+  Copyright © 2014-2019 The Open University (IET-OU).
 */
 
 angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.bootstrap', 'senseItServices', 'gettext'], null).config([
@@ -23,6 +23,10 @@ angular.module('senseItWeb', ['ngSanitize', 'ui.router', 'textAngular', 'ui.boot
       .state('about', {
         url: '/about',
         templateUrl: 'partials/layout/about.html'
+      })
+      .state('privacy', {
+        url: '/privacy',
+        templateUrl: 'partials/layout/privacy.html'
       })
       .state('create', {
         url: '/create',
