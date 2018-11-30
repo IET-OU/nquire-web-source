@@ -3,7 +3,6 @@
 [![Code Climate][climate-icon]][climate]
 [![Translation status][weblate-icon]][weblate]
 
-
 # nQuire-it
 
 nQuire-it is a web application that allows users to create, manage and complete
@@ -11,7 +10,6 @@ scientific projects based on their interests. It is linked with [Sense-it][], an
 app to collect data from Android device sensors.
 
 * <http://www.nquire-it.org>
-
 
 ## Requirements
 
@@ -52,7 +50,6 @@ To add a new user-interface language, ensure that it is listed in:
 
 It will then need to be added to our Weblate translation server.
 
-
 ## Releases
 
 16-03-2014
@@ -61,14 +58,16 @@ Added support for:
  - user-defined plots.
  - custom fields in data table.
 
-
 ## Acknowledgements
 
 * Original developer: [Eloy Villasclaras / @evilfer][eloy]
 * Research [funding][].
 
-
 <!-- [![Sense-it][sense-it-icon]][Sense-it] -->
+
+## GDPR
+
+Details of GDPR / privacy fixes can be found in [Bug #68][].
 
 ## License
 
@@ -90,8 +89,8 @@ nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 [Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Android app"
 [sense-it-icon]: https://lh5.ggpht.com/SN_LLof2UbhxolOJ6IwnjkOLYLVXTpY3CpIDHzEOBbqPH-xiECx26XftvRmlgqvRl2Q=w300-rw
 [eloy]: https://github.com/evilfer
-[iet]: http://iet.open.ac.uk/
-[ou]: http://www.open.ac.uk/
+[iet]: https://iet.open.ac.uk/
+[ou]: https://www.open.ac.uk/
 [funding]: http://www.nquire-it.org/#/about "Research funding: Nominet Trust"
 [gpl]: https://gnu.org/licenses/gpl.html
 [LICENSE]: https://github.com/IET-OU/nquire-web-source/blob/master/LICENSE.txt
@@ -111,5 +110,6 @@ nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 [AngularJS]: https://angularjs.org/
 [privacy-gdoc]: https://drive.google.com/file/d/0B4POymbCOfVwekdjb2lMWjI4RlE/edit
     "nQuire-it website & Sense – it application. 4th Sept 2014 [PDF] 183 kB."
+[bug #68]: https://github.com/IET-OU/nquire-web-source/issues/68 "GDPR"
 
-[End]: //end.
+[End]: //.
