@@ -11,7 +11,7 @@
       nQuire-it - backend and web-service API for nQuire-it (Java sources).
 
       License: GNU GPL-3.0+ (https://gnu.org/licenses/gpl.html)
-      Copyright © 2014-2017 The Open University (IET-OU).
+      Copyright © 2014-2019 The Open University (IET-OU).
     -->
 
     <properties>
@@ -355,6 +355,7 @@
                 </configuration>
             </plugin>
 
+            <!-- May need commenting. (NDF) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>

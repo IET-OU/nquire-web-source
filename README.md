@@ -75,7 +75,7 @@ Added support for:
 nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 
 ---
-[nQuire-it][]: © 2014-2018 [The Open University][ou]. ([Institute of Educational Technology][iet])
+[nQuire-it][]: © 2014-2019 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
 [`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/app/pom.TEMPLATE.xml
