@@ -1,7 +1,6 @@
 angular.module('senseItWeb').directive('siwMap', [function () {
     return {
 
-
         controller: function ($scope, $element) {
             $scope.renderer = new SiwMapRenderer($scope, $element, $scope.mapData, $scope.sortedData);
 
