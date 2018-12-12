@@ -29,6 +29,6 @@ version.json
 npm-debug.log
 
 *.php
+.v8flags.*.json
 
-
-#End.
+# End.

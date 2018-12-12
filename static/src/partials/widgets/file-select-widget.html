@@ -12,10 +12,7 @@
 
 <span class="btn btn-default btn-file" data-ng-class="{'btn-sm': hasFile}">
     {{hasFile ? 'Select different file' : 'Select file'}}
-    <input type="file" onchange="angular.element(this).scope().fileChosen(this.files[0])"/>
+    <input type="file" accept=".jpg,image/*" onchange="angular.element(this).scope().fileChosen(this.files[0])"/>
 </span>
 <br/>
 <span data-ng-if="selectedFile" translate>Selected file: {{selectedFile.name}}</span>
-
-
-
