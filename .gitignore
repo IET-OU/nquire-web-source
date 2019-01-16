@@ -30,5 +30,6 @@ npm-debug.log
 
 *.php
 .v8flags.*.json
+.DS_Store
 
 # End.
