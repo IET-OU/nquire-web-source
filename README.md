@@ -18,8 +18,9 @@ Other dependencies are listed in the file [`app/pom.xml`][].
 Client-side & Javascript dependencies are listed in [`package.json`][].
 
 * See the compiled Java: [`IET-OU/nquire-web-compiled`][]
+* See the Android app:   [`nQuire/sciencetoolkit`][gh-app]
 
-## Install, build, test
+## Install .. build .. test
 
 ```sh
 cp -n app/pom.TEMPLATE.xml app/pom.xml
@@ -74,7 +75,7 @@ Details of GDPR / privacy fixes can be found in [Bug #68][].
 nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 
 ---
-[nQuire-it][]: © 2014-2019 [The Open University][ou]. ([Institute of Educational Technology][iet])
+[nQuire-it][]: [©][c] 2014-2019 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
 [`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/app/pom.TEMPLATE.xml
@@ -86,11 +87,13 @@ nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
     "'langs' list in config.JS template."
 [nQuire-it]: https://github.com/IET-OU/nquire-web-source
 [`IET-OU/nquire-web-compiled`]: https://github.com/IET-OU/nquire-web-compiled
-[Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Android app"
+[Sense-it]: https://play.google.com/store/apps/details?id=org.greengin.sciencetoolkit "Sense-it Android app — on Google Play"
 [sense-it-icon]: https://lh5.ggpht.com/SN_LLof2UbhxolOJ6IwnjkOLYLVXTpY3CpIDHzEOBbqPH-xiECx26XftvRmlgqvRl2Q=w300-rw
+[gh-app]: https://github.com/nQuire/sciencetoolkit
 [eloy]: https://github.com/evilfer
 [iet]: https://iet.open.ac.uk/
 [ou]: https://www.open.ac.uk/
+[c]: https://www.open.ac.uk/copyright "Copyright © 2014-2019 The Open University (IET)."
 [funding]: http://www.nquire-it.org/#/about "Research funding: Nominet Trust"
 [gpl]: https://gnu.org/licenses/gpl.html
 [LICENSE]: https://github.com/IET-OU/nquire-web-source/blob/master/LICENSE.txt
