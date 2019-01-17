@@ -47,7 +47,7 @@ npm install grunt-angular-gettext --save-dev
 To add a new user-interface language, ensure that it is listed in:
 
 * [`Gruntfile.js`][]
-* [`static/src/js/app/config.js`][]
+* [`static/src/js/app/config.js`][config]
 
 It will then need to be added to our Weblate translation server.
 
@@ -58,6 +58,10 @@ Added support for:
  - uploading data from Sense-it.
  - user-defined plots.
  - custom fields in data table.
+
+[![Visit nQuire-it.org (Mapa de ruido)][ss-1]][nq]
+
+[![Video intro to nQuire-it.org - YouTube][yt-img]][yt]
 
 ## Acknowledgements
 
@@ -78,12 +82,13 @@ nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
 [nQuire-it][]: [©][c] 2014-2019 [The Open University][ou]. ([Institute of Educational Technology][iet])
 
 
+[nq]: http://www.nquire-it.org/#/home "nQuire-it: Young Citizen Inquiry"
 [`app/pom.xml`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/app/pom.TEMPLATE.xml
 [`package.json`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/package.json#L20-L29
     "Client-side 'dependencies' in package JSON."
 [`Gruntfile.js`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/Gruntfile.js#L107-L111
     "'locales' list in Gruntfile."
-[`static/src/js/app/config.js`]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/static/src/js/app/config.js.DIST.html#L33-L44
+[config]: https://github.com/IET-OU/nquire-web-source/blob/1.2-branch/static/src/js/app/config.js.DIST.html#L33-L44
     "'langs' list in config.JS template."
 [nQuire-it]: https://github.com/IET-OU/nquire-web-source
 [`IET-OU/nquire-web-compiled`]: https://github.com/IET-OU/nquire-web-compiled
@@ -109,10 +114,16 @@ nQuire-it is released under the GPLv3 license. See [LICENSE][] for more details.
     "Translation status [percent]"
 [weblate-icon]: http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg
 
+[img-1]: http://www.nquire-it.org/files/image/1376281/mapa-de-ruido-oficial-2.jpg "Mission: Mapa de ruido"
+[ss]: https://shrinktheweb.com/reqstatus?status=1&hash=13e169b98be9ee228506d1750ecf074e
+[ss-1]: https://images.shrinktheweb.com/xino.php?stwembed=1&stwaccesskeyid=3ab2d75e4b4621d&stwhash=2fb50197a5&stwsize=320x240&stwurl=http://www.nquire-it.org/#/home
+[yt]: https://youtu.be/wmdxny0cuwk# "Introduction to www.nQuire-it.org — on YouTube"
+[yt-img]: https://i.ytimg.com/vi/wmdxny0cuwk/default.jpg
+
 [Spring 4.0]: http://projects.spring.io/spring-framework "Spring Java framework"
 [AngularJS]: https://angularjs.org/
 [privacy-gdoc]: https://drive.google.com/file/d/0B4POymbCOfVwekdjb2lMWjI4RlE/edit
     "nQuire-it website & Sense – it application. 4th Sept 2014 [PDF] 183 kB."
-[bug #68]: https://github.com/IET-OU/nquire-web-source/issues/68 "GDPR"
+[bug #68]: https://github.com/IET-OU/nquire-web-source/issues/68 "GDPR/privacy"
 
 [End]: //.
