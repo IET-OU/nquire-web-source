@@ -5,13 +5,15 @@ language: node_js
 node_js: "6"
   # Was: "4" << Currently gives a `deprecated` warning for lodash. (Grunt bug: 1403)
 
+cache: npm
+
 git:
   depth: 16
 
 before_install:
   #- git fetch --tags --depth=16
 
-install: npm install
+# install: npm ci
 
 before_script:
   - npm run copy-conf
@@ -31,5 +33,7 @@ after_script:
   #- npm run weblate-stats
   - cat static/src/version.json
   - cat npm-debug.log
+  - npm audit
+  - npm outdated
 
 # End.

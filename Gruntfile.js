@@ -207,8 +207,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-html-angular-validate');
-	grunt.loadNpmTasks('grunt-nice-package');
+	// Was: grunt.loadNpmTasks('grunt-html-angular-validate');
+	// Was: grunt.loadNpmTasks('grunt-nice-package');
 	grunt.loadNpmTasks('grunt-sass');
 
 	grunt.registerTask('help', help);
@@ -218,11 +218,11 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('test', [
-		'gettext', 'htmlangular:index', 'sass', 'jshint', 'uglify', 'nice-package'
+		'gettext', /*'htmlangular:index',*/ 'sass', 'jshint', 'uglify', // Was: 'nice-package'
 	]);
 
 	grunt.registerTask('default', [
-		'sass', 'jshint', 'uglify', 'nice-package', 'replace:config+html'
+		'sass', 'jshint', 'uglify', /*'nice-package',*/ 'replace:config+html'
 	]);
 
 	grunt.registerTask('git:version.json',	'Output version.JSON containing Git commit & other version info.', function () {
