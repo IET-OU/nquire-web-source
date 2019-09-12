@@ -2,7 +2,7 @@
 
 language: node_js
 
-node_js: "6"
+node_js: 8 # Was: "6"
   # Was: "4" << Currently gives a `deprecated` warning for lodash. (Grunt bug: 1403)
 
 cache: npm
@@ -25,7 +25,7 @@ script:
   # Note: "npm run build" duplicates "npm test".
   - npm test
   # Compile Java, removing 100s of 'Downloading ..' lines in log output ...
-  - npm run tr-compile-java
+  - npm run compile-java-ci
   # .. Then, ensure compile errors are caught!
   - bash bin/travis-exit-java.sh
 

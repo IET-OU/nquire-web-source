@@ -24,7 +24,7 @@
   "dependencies": {
     "angular": "1.5.7",
     "angular-gettext": "^2.4.1",
-    "angular-ui-bootstrap": "2.5.0",
+    "angular-ui-bootstrap": "^2.5.6",
     "angular-ui-router": "0.4.2",
     "bootstrap-sass": "^3.4.1",
     "font-awesome": "4.7.0",
@@ -35,9 +35,10 @@
     "grunt-angular-gettext": "^2.4.1",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-jshint": "^2.1.0",
-    "grunt-contrib-uglify": "3.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "1.1.0",
     "grunt-sass": "^2.1.0",
+    "live-server": "^1.2.1",
     "replace": "^1.1.0",
     "simple-git": "^1.113.0"
   },
@@ -77,10 +78,11 @@
     "java": "mvn compile -f app/pom.xml",
     "ps": "ps -af | egrep '(tomcat|httpd)' #| grep -v sh  # grep",
     "pull": "# git checkout package.json; git pull;\n grunt; npm run version",
+    "start": "live-server --port=9000 --open=static/src/ --middleware=../../../bin/test-middleware -V # --proxy=static/src/api:",
     "test": "grunt test",
     "test-all": "npm run version || grunt test",
-    "tr-compile-java": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
-    "tr-exit-java": "bash bin/travis-exit-java.sh",
+    "compile-java-ci": "mvn compile -f app/pom.xml | tee app/mvn.log | egrep '(ERROR|WARN|INFO)'",
+    "exit-java-ci": "bash bin/travis-exit-java.sh",
     "version": "grunt git:version.json && grunt replace:config+html;  # --all",
     "weblate-stats": "wget -q -O - http://weblate.iet.open.ac.uk/widgets/nquire-it/-/shields-badge.svg | egrep -o '\\d+%' | tail -n1"
   }

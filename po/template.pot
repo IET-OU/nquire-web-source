@@ -90,8 +90,8 @@ msgstr ""
 
 #: static/src/partials/admin/admin-filters.html:5
 msgid ""
-"<em>Tags</em> allow you to group related nQuire-it missions.\r\n"
-"      They will appear in the right side-bar on the home page, and should be used sparingly.\r\n"
+"<em>Tags</em> allow you to group related nQuire-it missions.\n"
+"      They will appear in the right side-bar on the home page, and should be used sparingly.\n"
 "      Check below to see if your tag already exists, before creating a new one."
 msgstr ""
 
@@ -230,6 +230,7 @@ msgstr ""
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:24
 #: static/src/partials/project/view/senseit/data-table-senseit.html:5
 #: static/src/partials/project/view/senseit/senseit-data-map.html:5
+#: static/src/partials/project/view/spotit/spotit-data-map.html:4
 msgid "Author"
 msgstr ""
 
@@ -294,7 +295,7 @@ msgstr ""
 msgid "Choose language"
 msgstr ""
 
-#: static/src/partials/layout/footer.html:6
+#: static/src/partials/layout/footer.html:12
 msgid "Choose language:"
 msgstr ""
 
@@ -383,6 +384,7 @@ msgstr ""
 
 #: static/src/partials/project/view/senseit/data-table-senseit.html:6
 #: static/src/partials/project/view/senseit/senseit-data-map.html:6
+#: static/src/partials/project/view/spotit/spotit-data-map.html:5
 msgid "Date"
 msgstr ""
 
@@ -408,7 +410,7 @@ msgstr ""
 
 #: static/src/partials/project/edit/senseit/project-edit-senseit-sensor.html:55
 msgid ""
-"Delete sensor\r\n"
+"Delete sensor\n"
 "            input"
 msgstr ""
 
@@ -514,7 +516,7 @@ msgstr ""
 msgid "Error. Project not found."
 msgstr ""
 
-#: static/src/partials/project/view/spotit/data-item-spotit.html:59
+#: static/src/partials/project/view/spotit/data-item-spotit.html:60
 msgid "Error. Spot-It mission item not found."
 msgstr ""
 
@@ -573,10 +575,12 @@ msgid "Go to %s"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:23
+#: static/src/partials/project/view/spotit/spotit-data-map.html:19
 msgid "Go to first"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:36
+#: static/src/partials/project/view/spotit/spotit-data-map.html:32
 msgid "Go to last"
 msgstr ""
 
@@ -736,6 +740,7 @@ msgid "Main menu"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-view-menu.html:4
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:4
 msgid "Map"
 msgstr ""
 
@@ -835,6 +840,7 @@ msgid "New password:"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:33
+#: static/src/partials/project/view/spotit/spotit-data-map.html:29
 msgid "Next"
 msgstr ""
 
@@ -985,11 +991,16 @@ msgid "Pressure"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:26
+#: static/src/partials/project/view/spotit/spotit-data-map.html:22
 msgid "Previous"
 msgstr ""
 
 #: static/src/partials/project/view/spotit/data-item-spotit.html:7
 msgid "Previous item"
+msgstr ""
+
+#: static/src/partials/layout/privacy.html:5
+msgid "Privacy Policy"
 msgstr ""
 
 #: static/src/partials/profile/profile-logged-in.html:24
@@ -1231,6 +1242,7 @@ msgid "Share this"
 msgstr ""
 
 #: static/src/partials/project/view/senseit/senseit-data-map.html:15
+#: static/src/partials/project/view/spotit/spotit-data-map.html:11
 msgid "Show value:"
 msgstr ""
 
@@ -1548,7 +1560,7 @@ msgstr ""
 msgid "Updates via <a href=\\\"https://twitter.com/nQuireit\\\">@nQuireit on Twitter</a>."
 msgstr ""
 
-#: static/src/partials/project/view/spotit/spotit-view-menu.html:4
+#: static/src/partials/project/view/spotit/spotit-view-menu.html:5
 msgid "Upload"
 msgstr ""
 
@@ -1627,6 +1639,7 @@ msgstr ""
 #: static/src/partials/project/view/challenge/project-view-challenge-answers-table.html:26
 #: static/src/partials/project/view/senseit/data-table-senseit.html:10
 #: static/src/partials/project/view/senseit/senseit-data-map.html:10
+#: static/src/partials/project/view/spotit/spotit-data-map.html:6
 msgid "Votes"
 msgstr ""
 
