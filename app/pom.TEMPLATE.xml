@@ -160,7 +160,7 @@
         <dependency>
             <groupId>org.springframework.social</groupId>
             <artifactId>spring-social-google</artifactId>
-            <version>1.0.0.M3</version>
+            <version>1.0.0.RELEASE</version><!-- Was: 1.0.0.M3 -->
         </dependency>
 
         <dependency>
@@ -292,7 +292,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <dependency>
             <groupId>org.dbunit</groupId>
             <artifactId>dbunit</artifactId>
@@ -375,6 +374,22 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Java security audit :~ https://github.com/sonatype/ossindex-maven -->
+            <plugin>
+              <groupId>org.sonatype.ossindex.maven</groupId>
+              <artifactId>ossindex-maven-plugin</artifactId>
+              <version>3.1.0</version>
+              <executions>
+                <execution>
+                  <id>audit-dependencies</id>
+                  <phase>validate</phase>
+                  <goals>
+                    <goal>audit</goal>
+                  </goals>
+                </execution>
+              </executions>
             </plugin>
 
         </plugins>
