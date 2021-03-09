@@ -8,7 +8,9 @@ updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     # Only allow updates to the lockfile for npm and
     # ignore any version updates that affect the manifest
     versioning-strategy: lockfile-only
+    # Allow up to 10 open pull requests for npm dependencies ('0' disables ?!)
+    open-pull-requests-limit: 8
